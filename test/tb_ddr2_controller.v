@@ -14,6 +14,9 @@ module tb_ddr2_controller;
     reg  [1:0]  SZ;
     reg  [24:0] ADDR;
     reg         cmd_put;
+    // Optional host-visible rank select; defaults to single-rank (0) but can be
+    // driven in multi-rank scenarios to exercise per-rank CS# steering.
+    reg         RANK_SEL;
     reg  [15:0] DIN;
     reg         put_dataFIFO;
     reg         FETCHING;
@@ -23,7 +26,8 @@ module tb_ddr2_controller;
     wire        READY;
     wire        VALIDOUT;
     wire        NOTFULL;
-    wire        C0_CSBAR_PAD;
+    // Two-rank CS# vector driven by the controller (active low).
+    wire [1:0]  C0_CSBAR_PAD;
     wire        C0_RASBAR_PAD;
     wire        C0_CASBAR_PAD;
     wire        C0_WEBAR_PAD;
@@ -180,6 +184,9 @@ module tb_ddr2_controller;
         .CMD(CMD),
         .SZ(SZ),
         .ADDR(ADDR),
+        // Rank select driven from the testbench so we can exercise both
+        // single-rank (RANK_SEL=0) and multi-rank (RANK_SEL toggling) traffic.
+        .RANK_SEL(RANK_SEL),
         .cmd_put(cmd_put),
         .DIN(DIN),
         .put_dataFIFO(put_dataFIFO),
@@ -219,16 +226,43 @@ module tb_ddr2_controller;
     wire        MEM_RD_VALID;
     wire [31:0] MEM_RD_ADDR;
     wire [15:0] MEM_RD_DATA;
+
+    // Allow build-time override of the memory model's key parameters so that
+    // regressions can sweep different logical memory sizes, read latencies and
+    // rank counts without editing the testbench source. The defaults preserve
+    // the original behavior:
+    //   MEM_DEPTH  = 1024 words
+    //   READ_LAT   = 24 cycles
+    //   RANK_BITS  = 1 (two-rank-capable model, rank 0 used here)
+`ifdef MEM_DEPTH_OVERRIDE
+    localparam integer MEM_DEPTH_TB  = `MEM_DEPTH_OVERRIDE;
+`else
+    localparam integer MEM_DEPTH_TB  = 1024;
+`endif
+`ifdef READ_LAT_OVERRIDE
+    localparam integer READ_LAT_TB   = `READ_LAT_OVERRIDE;
+`else
+    localparam integer READ_LAT_TB   = 24;
+`endif
+`ifdef RANK_BITS_OVERRIDE
+    localparam integer RANK_BITS_TB  = `RANK_BITS_OVERRIDE;
+`else
+    localparam integer RANK_BITS_TB  = 1;
+`endif
+
     ddr2_simple_mem #(
-        .MEM_DEPTH(1024),
+        .MEM_DEPTH(MEM_DEPTH_TB),
         // Align READ latency with controller's internal SCREAD/SCREND timing
         // so that the model begins driving data while the return path is
         // actively capturing it.
-        .READ_LAT(24)
+        .READ_LAT(READ_LAT_TB),
+        // Enable a two-rank model and drive its CS# vector directly from the
+        // controller's per-rank CS# outputs.
+        .RANK_BITS(RANK_BITS_TB)
     ) u_mem (
         .clk(CLK),
         .cke_pad(C0_CKE_PAD),
-        .csbar_pad(C0_CSBAR_PAD),
+        .csbar_pad_vec(C0_CSBAR_PAD),
         .rasbar_pad(C0_RASBAR_PAD),
         .casbar_pad(C0_CASBAR_PAD),
         .webar_pad(C0_WEBAR_PAD),
@@ -272,7 +306,8 @@ module tb_ddr2_controller;
         .clk(CLK),
         .reset(RESET),
         .cke_pad(C0_CKE_PAD),
-        .csbar_pad(C0_CSBAR_PAD),
+        // Any-rank CS# (active low when any rank is selected).
+        .csbar_pad(&C0_CSBAR_PAD),
         .rasbar_pad(C0_RASBAR_PAD),
         .casbar_pad(C0_CASBAR_PAD),
         .webar_pad(C0_WEBAR_PAD)
@@ -283,7 +318,20 @@ module tb_ddr2_controller;
         .clk(CLK),
         .reset(RESET),
         .cke_pad(C0_CKE_PAD),
-        .csbar_pad(C0_CSBAR_PAD),
+        .csbar_pad(&C0_CSBAR_PAD),
+        .rasbar_pad(C0_RASBAR_PAD),
+        .casbar_pad(C0_CASBAR_PAD),
+        .webar_pad(C0_WEBAR_PAD),
+        .ba_pad(C0_BA_PAD)
+    );
+
+    // Turnaround / write-or-read-to-precharge timing checker:
+    // enforces tWTR, tRTW, tWR and tRTP at the pad level using a coarse model.
+    ddr2_turnaround_checker u_turnaround_chk (
+        .clk(CLK),
+        .reset(RESET),
+        .cke_pad(C0_CKE_PAD),
+        .csbar_pad_any(&C0_CSBAR_PAD),
         .rasbar_pad(C0_RASBAR_PAD),
         .casbar_pad(C0_CASBAR_PAD),
         .webar_pad(C0_WEBAR_PAD),
@@ -295,7 +343,7 @@ module tb_ddr2_controller;
         .clk(CLK),
         .reset(RESET),
         .cke_pad(C0_CKE_PAD),
-        .csbar_pad(C0_CSBAR_PAD),
+        .csbar_pad(&C0_CSBAR_PAD),
         .rasbar_pad(C0_RASBAR_PAD),
         .casbar_pad(C0_CASBAR_PAD),
         .webar_pad(C0_WEBAR_PAD),
@@ -308,7 +356,7 @@ module tb_ddr2_controller;
         .clk(CLK),
         .reset(RESET),
         .cke_pad(C0_CKE_PAD),
-        .csbar_pad(C0_CSBAR_PAD),
+        .csbar_pad(&C0_CSBAR_PAD),
         .rasbar_pad(C0_RASBAR_PAD),
         .casbar_pad(C0_CASBAR_PAD),
         .webar_pad(C0_WEBAR_PAD),
@@ -355,6 +403,9 @@ module tb_ddr2_controller;
         input [24:0] addr;
         reg   [15:0] data;
         begin
+            // Default legacy behavior: drive all traffic to rank 0. Multi-rank
+            // scenarios use the ranked wrapper task below.
+            RANK_SEL = 1'b0;
             data = pattern_for_addr(addr);
 
             // Issue scalar write.
@@ -408,6 +459,9 @@ module tb_ddr2_controller;
         integer      beat;
         integer      wait_cycles;
         begin
+            // Default legacy behavior: drive all traffic to rank 0. Multi-rank
+            // scenarios use the ranked wrapper task below.
+            RANK_SEL = 1'b0;
             // Determine number of words for this SZ (8,16,24,32).
             case (sz)
                 2'b00: nwords = 8;
@@ -507,6 +561,35 @@ module tb_ddr2_controller;
         end
     endtask
 
+    // ------------------------------------------------------------------------
+    // Multi-rank helper tasks
+    // ------------------------------------------------------------------------
+
+    // Same as do_scalar_rw, but allows selecting a logical rank. This exercises
+    // the controller's rank_select path and the memory model's per-rank CS#
+    // vector while reusing the existing scalar scenario.
+    task automatic do_scalar_rw_ranked;
+        input [24:0] addr;
+        input        rank;
+        begin
+            RANK_SEL = rank;
+            do_scalar_rw(addr);
+        end
+    endtask
+
+    // Same as do_block_rw, but allows selecting a logical rank. This keeps the
+    // host-visible traffic identical while steering DDR2 bus activity to the
+    // requested rank.
+    task automatic do_block_rw_ranked;
+        input [24:0] base_addr;
+        input [1:0]  sz;
+        input        rank;
+        begin
+            RANK_SEL = rank;
+            do_block_rw(base_addr, sz);
+        end
+    endtask
+
     // Scalar read without any prior write to the same address.
     // Expected outcome: scoreboard flags "read from unknown addr" and the
     // simulation terminates via $fatal. This is compiled only when
@@ -574,6 +657,46 @@ module tb_ddr2_controller;
 
             $display("[%0t] Randomized traffic phase completed.", $time);
         end
+    endtask
+
+    // ------------------------------------------------------------------------
+    // Turnaround-focused tests (tWTR / tRTW) and multi-rank corner cases.
+    // ------------------------------------------------------------------------
+
+    task automatic test_turnarounds;
+        reg [24:0] addr0;
+        reg [24:0] addr1;
+    begin
+        $display("[%0t] Starting tWTR / tRTW turnaround stress...", $time);
+        addr0 = 25'd100;
+        addr1 = 25'd132;
+
+        // WRITE then READ to exercise WRITE→READ (tWTR) behavior.
+        do_scalar_rw(addr0);
+
+        // READ then WRITE pattern at a nearby address to exercise READ→WRITE.
+        do_scalar_rw(addr1);
+        do_scalar_rw(addr1 + 25'd8);
+    end
+    endtask
+
+    task automatic test_multi_rank_corners;
+        integer k;
+        reg [24:0] base_addr;
+    begin
+        $display("[%0t] Starting multi-rank corner test...", $time);
+        base_addr = 25'd256;
+
+        // Alternate scalar traffic between ranks at the same logical addresses.
+        for (k = 0; k < 8; k = k + 1) begin
+            do_scalar_rw_ranked(base_addr + k[24:0], 1'b0);
+            do_scalar_rw_ranked(base_addr + k[24:0], 1'b1);
+        end
+
+        // Block traffic to identical base addresses on both ranks.
+        do_block_rw_ranked(25'd384, 2'b01, 1'b0);
+        do_block_rw_ranked(25'd384, 2'b01, 1'b1);
+    end
     endtask
 
     // ------------------------------------------------------------------------
@@ -650,6 +773,7 @@ module tb_ddr2_controller;
         DIN      = 16'b0;
         put_dataFIFO = 0;
         FETCHING = 0;
+        RANK_SEL = 1'b0;
         repeat (10) @(posedge CLK);
         RESET = 0;
         @(posedge CLK);
@@ -771,8 +895,32 @@ module tb_ddr2_controller;
         // --------------------------------------------------------------------
         run_random_traffic();
 
+        // --------------------------------------------------------------------
+        // Test 6: Multi-rank bus-level exercise
+        // - Requires the memory model to be instantiated with RANK_BITS_TB>=1.
+        // - Reuses existing scalar/block scenarios while toggling RANK_SEL so
+        //   that the controller and memory model see traffic on multiple ranks
+        //   over the same shared DDR2 bus.
+        // --------------------------------------------------------------------
+        $display("[%0t] Starting multi-rank bus-level exercise (rank 0 vs rank 1)...", $time);
+        // Scalar writes/reads to the same logical addresses on two ranks.
+        do_scalar_rw_ranked(25'd32,  1'b0);
+        do_scalar_rw_ranked(25'd32,  1'b1);
+        do_scalar_rw_ranked(25'd128, 1'b0);
+        do_scalar_rw_ranked(25'd128, 1'b1);
+
+        // Block traffic with identical base addresses but different ranks.
+        do_block_rw_ranked(25'd256, 2'b00, 1'b0);
+        do_block_rw_ranked(25'd256, 2'b00, 1'b1);
+        do_block_rw_ranked(25'd384, 2'b01, 1'b0);
+        do_block_rw_ranked(25'd384, 2'b01, 1'b1);
+
         // Allow a bit more time for any final refresh / turnaround.
         repeat (2000) @(posedge CLK);
+
+        // Additional directed turnaround and multi-rank corner testing.
+        test_turnarounds();
+        test_multi_rank_corners();
 
         // Report simple functional coverage summary.
         $display("----------------------------------------------------------------");

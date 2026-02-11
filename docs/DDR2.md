@@ -99,11 +99,12 @@ The architecture is organized into five main layers:
 
 ### Main Sub-Blocks
 
-1. **`ddr2_init_engine`**: Performs JEDEC-compliant power-up, precharge, refresh, and mode-register programming
-2. **`ddr2_protocol_engine`**: Core protocol engine; sequences ACTIVATE/READ/WRITE/REFRESH, manages latencies, block transfers, and DQS/data timing
-3. **FIFO instances**: Input data FIFO, input command FIFO, and return FIFO for `{address, data}` pairs
-4. **`ddr2_ring_buffer8`**: 8-deep DDR input ring buffer that uses DQS edges to capture and align read data
-5. **`ddr2_phy`**: PHY/SSTL interface providing pad-level SSTL18 DDR2 signaling
+1. **`ddr2_init_engine`**: Performs JEDEC-compliant power-up, precharge, refresh, and mode-register programming.
+2. **`ddr2_protocol_engine`**: Core protocol engine; sequences ACTIVATE/READ/WRITE/REFRESH, manages latencies, block transfers, and coarse timing/refresh counters.
+3. **FIFO instances**: Input data FIFO, input command FIFO, and return FIFO for `{address, data}` pairs.
+4. **`ddr2_ring_buffer8`**: 8-deep DDR input ring buffer that captures one 16‑bit word per `CLK` cycle after a `listen` pulse (clk-synchronous capture aligned with the simplified DDR2 model).
+5. **`ddr2_phy`**: PHY/SSTL interface providing pad-level SSTL18 DDR2 signaling and generating `CK`/`CK#` as a divide‑by‑2 of `CLK`.
+6. **`ddr2_server_controller` (wrapper, optional)**: 64‑bit host-facing wrapper that instantiates four `ddr2_controller` slices in lockstep, with slice 0 connected to the external DDR2 pins and slices 1–3 used for host‑visible data widening (primarily in simulation today).
 
 ---
 

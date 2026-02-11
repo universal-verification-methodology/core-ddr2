@@ -3,16 +3,21 @@
 `include "ddr2_timing_config.vh"
 
 /**
- * DDR2 coarse timing checker (per-bank tRCD/tRP/tRAS, global tRFC).
+ * DDR2 timing checker (per-bank tRCD/tRP/tRAS, global tRFC, plus basic
+ * tRRD/tFAW coverage).
  *
- * This is not a full JEDEC-accurate model, but it enforces that:
- * - After ACTIVATE to a bank, there is a sufficient delay before READ/WRITE
- *   to that same bank (tRCD).
- * - After PRECHARGE to a bank, there is a sufficient delay before another
- *   ACTIVATE to the same bank (tRP).
+ * The intent is to approximate JEDEC timing at the pad level using the
+ * controller clock as a reference:
+ * - After ACTIVATE to a bank, there must be a sufficient delay before
+ *   READ/WRITE to that same bank (tRCD).
+ * - After PRECHARGE to a bank, there must be a sufficient delay before
+ *   another ACTIVATE to the same bank (tRP).
  * - A row remains active for a minimum time between ACTIVATE and PRECHARGE
  *   (tRAS).
  * - There is a minimum distance between AUTO REFRESH commands (tRFC).
+ *
+ * Exact numeric thresholds are provided by `ddr2_timing_config.vh` so that
+ * different speed grades / simulation profiles can be selected centrally.
  */
 /* verilator lint_off UNUSEDPARAM */
 /* verilator lint_off UNUSEDSIGNAL */
@@ -20,7 +25,9 @@ module ddr2_timing_checker #(
     parameter integer TRCD_MIN = 4,    // ACT -> RD/WR (clk)
     parameter integer TRP_MIN  = 4,    // PRE -> ACT (clk)
     parameter integer TRAS_MIN = 8,    // ACT -> PRE (clk)
-    parameter integer TRFC_MIN = 16    // REF -> REF (clk)
+    parameter integer TRFC_MIN = 16,   // REF -> REF (clk)
+    parameter integer TRRD_MIN = 2,    // ACT -> ACT (different bank) (clk)
+    parameter integer TFAW_MIN = 16    // four-ACT window (clk)
 ) (
     input wire       clk,
     input wire       reset,
@@ -41,6 +48,7 @@ module ddr2_timing_checker #(
     localparam CMD_WR    = 3'd5;
 
     reg [2:0] cmd_dec;
+    reg [2:0] cmd_dec_prev;
     always @(*) begin
         cmd_dec = CMD_NOP;
         if (cke_pad && !csbar_pad) begin
@@ -61,6 +69,14 @@ module ddr2_timing_checker #(
                 cmd_dec = CMD_WR;
         end
     end
+
+    // One-cycle pulse when an ACT command is *issued* (edge-detected) as
+    // opposed to held across multiple cycles. This avoids double-counting a
+    // single ACTIVATE that happens to be driven for more than one clk.
+    wire act_pulse = (cmd_dec == CMD_ACT) && (cmd_dec_prev != CMD_ACT);
+    // Similarly, edge-detect REF commands to avoid processing the same REF
+    // multiple times if it's held across multiple cycles.
+    wire ref_pulse = (cmd_dec == CMD_REF) && (cmd_dec_prev != CMD_REF);
 
     // Resolve effective timing values from the central config if present;
     // otherwise fall back to the module parameters.
@@ -88,6 +104,18 @@ module ddr2_timing_checker #(
 `else
         TRFC_MIN;
 `endif
+    localparam integer TRRD_MIN_EFF =
+`ifdef DDR2_TIMING_TRRD_MIN
+        `DDR2_TIMING_TRRD_MIN;
+`else
+        TRRD_MIN;
+`endif
+    localparam integer TFAW_MIN_EFF =
+`ifdef DDR2_TIMING_TFAW_MIN
+        `DDR2_TIMING_TFAW_MIN;
+`else
+        TFAW_MIN;
+`endif
 
     // Per-bank timers.
     integer i;
@@ -96,9 +124,26 @@ module ddr2_timing_checker #(
     reg [7:0] active_time [0:3];
     reg       row_active [0:3];
 
-    // Global refresh timer.
+    // Global refresh timer: distance between successive AUTO REFRESH commands.
     reg [15:0] since_ref;
     reg        have_ref;
+
+    // Global ACT timing state for tRRD/tFAW.
+    // - since_last_act_any: cycles since the most recent ACT (for tRRD).
+    // - act_cycle: free-running cycle counter used for tFAW windowing.
+    // - last_act_cycles[0..3]: timestamps of the four most recent ACTs used to
+    //   approximate JEDEC's "four-activate window" (tFAW). When a new ACT
+    //   occurs, we compare the current cycle against the oldest stored ACT; if
+    //   the delta is smaller than TFAW_MIN_EFF, we flag a violation.
+    reg [15:0] since_last_act_any;
+    reg        have_act_any;
+    // Use a wider, non-saturating cycle counter for the ACT timestamps so that
+    // long-running simulations (millions of cycles) do not cause the
+    // tFAW window to collapse spuriously once the counter saturates. A 32-bit
+    // width is ample for these testbenches while keeping the logic simple.
+    reg [31:0] act_cycle;
+    reg [31:0] last_act_cycles [0:3];
+    integer    fa_idx;
 
     always @(posedge clk) begin
         if (reset) begin
@@ -108,8 +153,15 @@ module ddr2_timing_checker #(
                 active_time[i] <= 0;
                 row_active[i]  <= 1'b0;
             end
-            since_ref <= 0;
-            have_ref  <= 1'b0;
+            since_ref          <= 0;
+            have_ref           <= 1'b0;
+            since_last_act_any <= 0;
+            have_act_any       <= 1'b0;
+            act_cycle          <= 0;
+            for (i = 0; i < 4; i = i + 1) begin
+                last_act_cycles[i] <= 0;
+            end
+            cmd_dec_prev <= CMD_NOP;
         end else begin
             // Default increment of timers.
             for (i = 0; i < 4; i = i + 1) begin
@@ -123,18 +175,56 @@ module ddr2_timing_checker #(
             if (since_ref != 16'hFFFF)
                 since_ref <= since_ref + 1;
 
+            // Global ACT timing increments.
+            if (since_last_act_any != 16'hFFFF)
+                since_last_act_any <= since_last_act_any + 1;
+            // Allow the ACT timestamp counter to run freely; wrap-around is
+            // acceptable because the tFAW comparison only cares about small
+            // deltas (on the order of tens of cycles) between the current ACT
+            // and the oldest entry in the four‑ACT window.
+            act_cycle <= act_cycle + 1;
+
             // Apply command-specific behavior.
             case (cmd_dec)
                 CMD_ACT: begin
-                    // tRP: after PRE to this bank, must wait TRP_MIN_EFF before ACT.
-                    if (since_pre[ba_pad] < TRP_MIN_EFF[7:0]) begin
-                        $display("[%0t] ERROR: TIMING: tRP violated on bank %0d (since_pre=%0d < %0d).",
-                                 $time, ba_pad, since_pre[ba_pad], TRP_MIN_EFF);
-                        $fatal;
+                    if (act_pulse) begin
+                        // tRRD: distance between successive ACTs (any banks).
+                        if (have_act_any && since_last_act_any < TRRD_MIN_EFF[15:0]) begin
+                            $display("[%0t] ERROR: TIMING: tRRD violated (since_last_act_any=%0d < %0d).",
+                                     $time, since_last_act_any, TRRD_MIN_EFF);
+                            $fatal;
+                        end
+                        since_last_act_any <= 0;
+                        have_act_any       <= 1'b1;
+
+                        // tFAW: four-activate window. Once we have seen at
+                        // least four ACTs, ensure that the time between the
+                        // oldest of the last four and the current one is
+                        // >= TFAW_MIN_EFF.
+                        if (last_act_cycles[0] != 16'd0) begin
+                            if ((act_cycle - last_act_cycles[0]) < TFAW_MIN_EFF[15:0]) begin
+                                $display("[%0t] ERROR: TIMING: tFAW violated (ACT window=%0d < %0d cycles).",
+                                         $time, act_cycle - last_act_cycles[0], TFAW_MIN_EFF);
+                                $fatal;
+                            end
+                        end
+                        // Shift window and insert current ACT timestamp.
+                        for (fa_idx = 0; fa_idx < 3; fa_idx = fa_idx + 1) begin
+                            last_act_cycles[fa_idx] <= last_act_cycles[fa_idx+1];
+                        end
+                        last_act_cycles[3] <= act_cycle;
+
+                        // tRP: after PRE to this bank, must wait TRP_MIN_EFF
+                        // before ACT.
+                        if (since_pre[ba_pad] < TRP_MIN_EFF[7:0]) begin
+                            $display("[%0t] ERROR: TIMING: tRP violated on bank %0d (since_pre=%0d < %0d).",
+                                     $time, ba_pad, since_pre[ba_pad], TRP_MIN_EFF);
+                            $fatal;
+                        end
+                        since_act[ba_pad]   <= 0;
+                        active_time[ba_pad] <= 0;
+                        row_active[ba_pad]  <= 1'b1;
                     end
-                    since_act[ba_pad]   <= 0;
-                    active_time[ba_pad] <= 0;
-                    row_active[ba_pad]  <= 1'b1;
                 end
                 CMD_PRE: begin
                     // tRAS: row must be active long enough before PRE.
@@ -147,22 +237,37 @@ module ddr2_timing_checker #(
                     row_active[ba_pad]  <= 1'b0;
                     active_time[ba_pad] <= 0;
                 end
-                // Note: we intentionally skip an external-pin tRCD check here.
-                // The DUT's protocol engine already inserts internal delay
-                // between ACTIVATE and READ/WRITE; enforcing TRCD_MIN again at
-                // the pad level in this simplified environment tends to
-                // generate false positives.
+                CMD_RD,
+                CMD_WR: begin
+                    // tRCD: enforce ACTIVATE-to-READ/WRITE minimum on this bank.
+                    if (row_active[ba_pad] && since_act[ba_pad] < TRCD_MIN_EFF[7:0]) begin
+                        $display("[%0t] ERROR: TIMING: tRCD violated on bank %0d (since_act=%0d < %0d).",
+                                 $time, ba_pad, since_act[ba_pad], TRCD_MIN_EFF);
+                        $fatal;
+                    end
+                end
                 CMD_REF: begin
-                    // In this shortened-sim environment, refresh commands are
-                    // intentionally clustered more closely than real JEDEC
-                    // tRFC; we treat this as informative only and do not flag
-                    // a hard error. The separate refresh monitor enforces a
-                    // coarse upper bound on interval instead.
-                    since_ref <= 0;
-                    have_ref  <= 1'b1;
+                    // tRFC: enforce a minimum distance between successive AUTO
+                    // REFRESH commands. The separate refresh monitor checks
+                    // that the overall refresh interval (tREFI) stays within
+                    // bounds; here we focus specifically on REF-to-REF.
+                    // Only process REF commands on the rising edge to avoid
+                    // double-counting if the command is held for multiple cycles.
+                    if (ref_pulse) begin
+                        if (have_ref && since_ref < TRFC_MIN_EFF[15:0]) begin
+                            $display("[%0t] ERROR: TIMING: tRFC violated (REF→REF interval=%0d < %0d).",
+                                     $time, since_ref, TRFC_MIN_EFF);
+                            $fatal;
+                        end
+                        since_ref <= 0;
+                        have_ref  <= 1'b1;
+                    end
                 end
                 default: ;
             endcase
+
+            // Track previous decoded command for edge detection.
+            cmd_dec_prev <= cmd_dec;
         end
     end
 

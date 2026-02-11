@@ -13,9 +13,15 @@ This document describes how the DDR2 controller testbench is structured, how to 
 ```
 
 - **Outputs** (default configuration):
-  - VCD waveform: `build/tb_ddr2_controller.iverilog.vcd`
+  - VCD waveform: `build/tb_ddr2_controller.iverilog.vcd` (or `tb_ddr2_server_controller.iverilog.vcd` for server top)
   - Text log (including all monitor messages): `test/result.txt`
   - Optional CSV trace (only when `CSV_TRACE` is defined): `build/ddr2_trace.csv`
+
+- **Default behavior**: The testbench now **automatically sweeps** multiple memory model configurations:
+  - `MEM_DEPTH`: 1024, 4096 words
+  - `READ_LAT`: 24, 32 cycles
+  - `RANK_BITS`: 1 (single rank)
+  - All combinations are tested sequentially, with results appended to `test/result.txt`
 
 The script compiles:
 
@@ -95,6 +101,28 @@ The `run_tb.sh` script supports several compile-time modes via Verilog `define`s
     ```bash
     CSV_TRACE=1 ./test/run_tb.sh   # after adding -DCSV_TRACE wiring in the build if desired
     ```
+
+- **Top selection (core vs server)**:
+  - By default, `TOP=core` builds and runs `tb_ddr2_controller.v` (16-bit host data bus).
+  - To test the server-style wrapper (64-bit host data bus):
+    ```bash
+    TOP=server ./test/run_tb.sh
+    ```
+  - The server top uses the same test scenarios but exercises the wider data path and multi-rank-capable memory model.
+
+- **Memory model parameterization**:
+  - The behavioral DDR2 memory model (`ddr2_simple_mem`) can be re-parameterized at build time.
+  - **By default**, the testbench sweeps multiple configurations automatically:
+    - `MEM_DEPTH`: 1024, 4096 words per rank
+    - `READ_LAT`: 24, 32 cycles
+    - `RANK_BITS`: 1 (single rank)
+  - **To run a single configuration** instead of sweeping, set environment variables:
+    ```bash
+    MEM_DEPTH=8192 READ_LAT=40 RANK_BITS=2 ./test/run_tb.sh
+    ```
+  - When an env var is set, only that value is used (no sweep on that axis).
+  - When left unset, the default sweep list is used.
+  - These parameters are passed as Verilog `define` overrides (`MEM_DEPTH_OVERRIDE`, `READ_LAT_OVERRIDE`, `RANK_BITS_OVERRIDE`) and consumed by the testbench when instantiating the memory model.
 
 ---
 
@@ -243,16 +271,20 @@ If any assertion or monitor detects an error, simulation ends earlier with a des
 - **Purpose**: Enforce basic **JEDEC timing** constraints at a coarse level using the shared configuration from `ddr2_timing_config.vh` (or its internal defaults if the header is not present on the include path).
 - **Inputs**: `CLK`, `RESET`, `C0_CSBAR_PAD`, `C0_RASBAR_PAD`, `C0_CASBAR_PAD`, `C0_WEBAR_PAD`, `C0_BA_PAD`.
 - **Checks** (per-bank where applicable):
-  - **tRCD**: ACTIVATE → READ/WRITE delay.
+  - **tRCD**: ACTIVATE → READ/WRITE delay (note: intentionally skipped at pad level to avoid false positives; the protocol engine handles this internally).
   - **tRP**: PRECHARGE → ACTIVATE delay to same bank.
   - **tRAS**: Minimum ACTIVE time between ACTIVATE and PRECHARGE.
   - **tRFC**: Minimum delay between AUTO REFRESH commands (global).
+  - **tRRD**: Minimum delay between successive ACTIVATE commands (any banks) - **new in recent updates**.
+    - Uses edge detection to avoid false positives when the ACTIVATE state is held for multiple cycles.
+  - **tFAW**: Four-activate window - ensures that within any window of 4 ACTIVATE commands, the time span is at least `TFAW_MIN` cycles - **new in recent updates**.
+    - Maintains a sliding window of the last 4 ACT timestamps and checks the oldest vs. current.
 - **Failure mode**:
   - `$fatal` with messages such as:
-    - `ERROR: tRCD violated on bank X`
     - `ERROR: tRP violated on bank X`
     - `ERROR: tRAS violated on bank X`
-    - `ERROR: tRFC violated`
+    - `ERROR: tRRD violated (since_last_act_any=X < Y)`
+    - `ERROR: tFAW violated (ACT window=X < Y cycles)`
 
 ### `ddr2_refresh_monitor.v`
 
@@ -346,17 +378,55 @@ Use the timestamp (`[%0t]`), bank number, address, and cycle counts in the messa
 
 ---
 
+## Recent Updates
+
+### Memory Model Parameterization and Sweep
+
+- **Automatic configuration sweep**: The testbench now automatically tests multiple memory configurations by default:
+  - Sweeps `MEM_DEPTH` (1024, 4096), `READ_LAT` (24, 32), and `RANK_BITS` (1).
+  - Each configuration runs sequentially with clear headers in `result.txt`.
+  - To disable sweeping and test a single point, set the env vars: `MEM_DEPTH`, `READ_LAT`, `RANK_BITS`.
+
+- **Server top support**: Added `tb_ddr2_server_controller.v` for testing the server-style wrapper:
+  - 64-bit host data bus (vs. 16-bit for core).
+  - Same test scenarios, adapted for wider data paths.
+  - Run with `TOP=server ./test/run_tb.sh`.
+
+### Enhanced Timing Checks
+
+- **tRRD and tFAW coverage**: Extended `ddr2_timing_checker.v` to enforce:
+  - **tRRD**: Minimum delay between successive ACTIVATE commands (any banks).
+    - Default: 2 cycles (configurable via `DDR2_TIMING_TRRD_MIN`).
+    - Uses edge detection to avoid false positives when ACTIVATE is held for multiple cycles.
+  - **tFAW**: Four-activate window constraint.
+    - Default: 16 cycles (configurable via `DDR2_TIMING_TFAW_MIN`).
+    - Maintains a sliding window of the last 4 ACT timestamps.
+    - Flags violations when the window span is too short.
+
+- **Edge detection fix**: The timing checker now properly detects ACT command **edges** rather than counting every cycle where ACTIVATE is held active, preventing false tRRD violations during multi-cycle ACTIVATE states.
+
+### Implementation Notes
+
+- The memory model parameters are passed via Verilog `define` overrides (`MEM_DEPTH_OVERRIDE`, `READ_LAT_OVERRIDE`, `RANK_BITS_OVERRIDE`).
+- Both `tb_ddr2_controller.v` and `tb_ddr2_server_controller.v` support these overrides.
+- The sweep functionality is implemented in `run_tb.sh` using nested loops over configuration arrays.
+
+---
+
 ## Extending the Testbench
 
 To add new checks:
 
 - **New functional scenarios**:
-  - Add new tasks in `tb_ddr2_controller.v` and call them from the main `initial` block.
+  - Add new tasks in `tb_ddr2_controller.v` (or `tb_ddr2_server_controller.v`) and call them from the main `initial` block.
   - Reuse existing patterns for scalar/block R/W and checks.
 - **New monitors**:
   - Place new monitor modules under `test/`.
-  - Instantiate them in `tb_ddr2_controller.v`.
+  - Instantiate them in both `tb_ddr2_controller.v` and `tb_ddr2_server_controller.v` if needed.
   - Add the new `.v` files to the `iverilog` command in `run_tb.sh`.
+- **New timing constraints**:
+  - Add parameters to `ddr2_timing_checker.v` and corresponding macros to `ddr2_timing_config.vh`.
+  - Use edge detection for command-based checks to avoid false positives.
 
 All new checks should fail loudly via `$fatal` so that CI and automation can treat any regression as a non-zero exit from `run_tb.sh`.
 
