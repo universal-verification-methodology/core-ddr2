@@ -1,0 +1,11 @@
+build/
+
+# Python cache and virtualenvs (optional but recommended)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE / editor settings (optional)
+.vscode/
+.idea/
