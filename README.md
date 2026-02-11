@@ -4,7 +4,7 @@
 [![Status: Experimental](https://img.shields.io/badge/status-experimental-orange.svg)](https://github.com/your-org/core-ddr2)
 [![Tests: Icarus Verilog](https://img.shields.io/badge/tests-Icarus%20Verilog-brightgreen.svg)](https://github.com/your-org/core-ddr2/tree/main/test)
 
-This repository contains a JEDEC-style DDR2 SDRAM controller targeting the Micron `mt47h32m16_37e` device (512 Mb, x16, 4 banks). The controller exposes a simple FIFO-like front-end interface and maps host commands into DDR2 transactions, including full power-up initialization, periodic refresh, scalar and block reads/writes, and DQS-based data capture.
+This repository contains a JEDEC-style DDR2 SDRAM controller targeting the memory device (512 Mb, x16, 4 banks). The controller exposes a simple FIFO-like front-end interface and maps host commands into DDR2 transactions, including full power-up initialization, periodic refresh, scalar and block reads/writes, and DQS-based data capture.
 
 The detailed architecture is specified in `DDR2.md`, and the verification and simulation flow is described in `test/TESTING.md`. This `README` provides a practical overview and entry point.
 
