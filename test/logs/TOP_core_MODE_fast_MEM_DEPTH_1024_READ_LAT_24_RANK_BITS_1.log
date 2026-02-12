@@ -1,6 +1,3 @@
-----------------------------------------------------------------
-Config: TOP=core, MODE=fast, MEM_DEPTH=1024, READ_LAT=24, RANK_BITS=1
-----------------------------------------------------------------
 VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [23000] INITDDR asserted, waiting for READY (init takes ~100k cycles)...
 [665000] Detected AUTO REFRESH command on DDR2 bus.

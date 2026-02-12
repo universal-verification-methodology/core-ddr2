@@ -30,6 +30,12 @@ module ddr2_phy (
     input  wire [1:0]   prot_dqs_o,
     input  wire         ts_i,     // 1 = drive DQ/DQS (write)
     input  wire         ri_i,     // 1 = read phase (high-Z drive)
+    // Optional power-management hook: when pm_use_cke_override is high, CKE is
+    // driven from pm_cke_value instead of the default (init_cke before READY,
+    // constant 1 after READY). This is used by the protocol engine to enter
+    // and exit self-refresh by pulling CKE low while holding the bus at NOP.
+    input  wire         pm_use_cke_override,
+    input  wire         pm_cke_value,
     // To pads
     output wire         ck_pad,
     output wire         ckbar_pad,
@@ -55,7 +61,9 @@ module ddr2_phy (
     assign ck_pad   = ck_reg;
     assign ckbar_pad = ~ck_reg;
 
-    assign cke_pad  = ready ? 1'b1 : init_cke;
+    assign cke_pad  = ready
+                      ? (pm_use_cke_override ? pm_cke_value : 1'b1)
+                      : init_cke;
     assign csbar_pad= ready ? prot_csbar : init_csbar;
     assign rasbar_pad= ready ? prot_rasbar : init_rasbar;
     assign casbar_pad= ready ? prot_casbar : init_casbar;

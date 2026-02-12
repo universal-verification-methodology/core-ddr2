@@ -40,11 +40,16 @@ module ddr2_ring_buffer8 (
             r4 <= 16'b0; r5 <= 16'b0; r6 <= 16'b0; r7 <= 16'b0;
         end else begin
             // Start capture on listen pulse if not already capturing.
+            // Sample the first beat (r0) on the listen cycle so the protocol
+            // engine can push it into the return FIFO immediately without
+            // reading stale/undefined data. Set cap_index to 1 so the next
+            // cycle stores into r1 (not r0 again).
             if (listen && !capturing) begin
                 capturing <= 1'b1;
-                cap_index <= 3'd0;
+                cap_index <= 3'd1;
+                r0        <= din;
             end else if (capturing) begin
-                // Store current DIN into the appropriate slot.
+                // Store current DIN into the appropriate slot (r1..r7).
                 case (cap_index)
                     3'd0: r0 <= din;
                     3'd1: r1 <= din;

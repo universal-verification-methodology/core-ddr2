@@ -10,31 +10,58 @@ module ddr2_controller #(
     // the original fixed configuration (512 Mb x16 device → 64 MiB logical
     // space). Higher-level wrappers (e.g. ddr2_server_controller) can
     // eventually override this when building larger logical systems.
-    parameter integer ADDR_WIDTH = 25
+    parameter integer ADDR_WIDTH = 25,
+    // Number of rank-selection bits. With RANK_BITS=1 the controller can steer
+    // traffic between two physical ranks via a 2-bit CS# vector. Higher values
+    // allow 2**RANK_BITS ranks when the board-level interface exposes matching
+    // CS# pads.
+    parameter integer RANK_BITS  = 1
 ) (
     input  wire         CLK,
     input  wire         RESET,
     input  wire         INITDDR,
+    // Optional host-driven power-management controls:
+    //   - SELFREF_REQ/SELFREF_EXIT: coarse self-refresh entry/exit.
+    //   - PWRDOWN_REQ/PWRDOWN_EXIT: coarse precharge power-down entry/exit.
+    input  wire         SELFREF_REQ,
+    input  wire         SELFREF_EXIT,
+    input  wire         PWRDOWN_REQ,
+    input  wire         PWRDOWN_EXIT,
     input  wire [2:0]   CMD,
     input  wire [1:0]   SZ,
     input  wire [ADDR_WIDTH-1:0]  ADDR,
-    // Optional rank select from the higher-level wrapper. In the baseline
-    // single-rank configuration this is tied low.
-    input  wire         RANK_SEL,
+    // Optional rank select from the higher-level wrapper. In a single-rank
+    // configuration this is tied to zero; when RANK_BITS>1 it carries a
+    // logical rank index in the range [0, 2**RANK_BITS-1].
+    input  wire [RANK_BITS-1:0]   RANK_SEL,
     input  wire         cmd_put,       // assert one cycle to enqueue command
     input  wire [15:0]  DIN,
     input  wire         put_dataFIFO,
     input  wire         FETCHING,
+    // Optional runtime DLL reconfiguration controls:
+    //   - DLL_REQ: request a DLL mode change when the controller is idle.
+    //   - DLL_MODE: 0 = DLL on (normal), 1 = DLL off (if supported by device).
+    input  wire         DLL_REQ,
+    input  wire         DLL_MODE,
     output wire [15:0]  DOUT,
     output wire [ADDR_WIDTH-1:0]  RADDR,
     output wire [6:0]   FILLCOUNT,
     output wire         READY,
     output wire         VALIDOUT,
     output wire         NOTFULL,
-    // Per-rank CS# outputs (active low). In the current configuration we
-    // support two ranks and derive which pad to assert from the protocol
-    // engine's latched rank select.
-    output wire [1:0]   C0_CSBAR_PAD,
+    // Optional status visibility for power/DLL modes; these can be tied into
+    // a status register block or observed directly in higher-level wrappers.
+    output wire         SELFREF_ACTIVE,
+    output wire         PWRDOWN_ACTIVE,
+    // Indicates that a runtime DLL reconfiguration is in progress; host should
+    // avoid issuing timing-sensitive traffic until this flag deasserts.
+    output wire         DLL_BUSY,
+    // Per-rank CS# outputs (active low). The width is 2**RANK_BITS so that
+    // the controller can scale from a single rank (RANK_BITS=0, not typically
+    // used here) up to multi-rank configurations (e.g. 2, 4, 8 ranks). The
+    // internal PHY continues to drive a single shared CS# line; this vector
+    // is derived by fanning that line out based on the latched rank index.
+    output wire [(1<<RANK_BITS)-1:0]   C0_CSBAR_PAD,
     output wire         C0_RASBAR_PAD,
     output wire         C0_CASBAR_PAD,
     output wire         C0_WEBAR_PAD,
@@ -118,8 +145,16 @@ module ddr2_controller #(
     wire [15:0] prot_dq_o;
     wire [1:0]  prot_dqs_o;
     wire        ts_i, ri_i;
+    // Self-refresh status from the protocol engine; used to override CKE in
+    // the PHY so that the DDR2 device actually enters self-refresh.
+    wire        selfref_active;
+    // Precharge power-down status from the protocol engine; also used to
+    // control the CKE override in the PHY so that the DDR2 device can enter a
+    // coarse JEDEC-style power-down mode.
+    wire        pdown_active;
+    wire        dll_busy_int;
     // Rank select associated with the protocol engine's current command.
-    wire        prot_rank_sel;
+    wire [RANK_BITS-1:0] prot_rank_sel;
 
     // Internal single-CS# line driven by the PHY; fanned out to per-rank
     // CS# pads below based on init_ready / prot_rank_sel.
@@ -291,9 +326,12 @@ module ddr2_controller #(
     assign RADDR    = return_fifo_out[40:16];
     assign VALIDOUT = validout_r;  // valid one cycle after FETCHING (FIFO has 1-cycle read latency)
 `endif
-    assign READY    = init_ready;
+    assign READY          = init_ready;
     // Host can only enqueue when both command and data FIFOs can accept data.
-    assign NOTFULL  = (FILLCOUNT < 7'd33) && notfull_cmdFIFO && notfull_dataFIFO;
+    assign NOTFULL        = (FILLCOUNT < 7'd33) && notfull_cmdFIFO && notfull_dataFIFO;
+    assign SELFREF_ACTIVE = selfref_active;
+    assign PWRDOWN_ACTIVE = pdown_active;
+    assign DLL_BUSY = dll_busy_int;
 
     ddr2_init_engine u_init (
         .clk(CLK),
@@ -313,11 +351,16 @@ module ddr2_controller #(
     );
 
     ddr2_protocol_engine #(
-        .ADDR_WIDTH     (ADDR_WIDTH)
+        .ADDR_WIDTH     (ADDR_WIDTH),
+        .RANK_BITS      (RANK_BITS)
     ) u_prot (
         .clk(CLK),
         .reset(RESET),
         .ready_init_i(init_ready),
+        .selfref_req_i(SELFREF_REQ),
+        .selfref_exit_i(SELFREF_EXIT),
+        .pdown_req_i(PWRDOWN_REQ),
+        .pdown_exit_i(PWRDOWN_EXIT),
         .rank_sel_i(RANK_SEL),
         .addr_cmdFIFO_i(addr_cmd),
         .cmd_cmdFIFO_i(cmd_cmd),
@@ -327,6 +370,8 @@ module ddr2_controller #(
         .fullBar_returnFIFO_i(fullBar_returnFIFO),
         .fillcount_returnFIFO_i(fillcount_return),
         .ringBuff_dout_i(ring_dout),
+        .dll_req_i(DLL_REQ),
+        .dll_mode_i(DLL_MODE),
         .get_cmdFIFO_o(get_cmdFIFO),
         .get_dataFIFO_o(get_dataFIFO),
         .put_returnFIFO_o(put_returnFIFO_raw),
@@ -344,6 +389,9 @@ module ddr2_controller #(
         .dqs_SSTL_o(prot_dqs_o),
         .ts_i_o(ts_i),
         .ri_i_o(ri_i),
+        .selfref_active_o(selfref_active),
+        .pdown_active_o(pdown_active),
+        .dll_busy_o(dll_busy_int),
         .rank_sel_o(prot_rank_sel)
     );
 
@@ -381,6 +429,10 @@ module ddr2_controller #(
         .prot_dqs_o(prot_dqs_o),
         .ts_i(ts_i),
         .ri_i(ri_i),
+        // During self-refresh or precharge power-down, override CKE to 0;
+        // otherwise allow the PHY to use its default behavior (1 after init).
+        .pm_use_cke_override(selfref_active || pdown_active),
+        .pm_cke_value(1'b0),
         .ck_pad(C0_CK_PAD),
         .ckbar_pad(C0_CKBAR_PAD),
         .cke_pad(C0_CKE_PAD),
@@ -399,13 +451,38 @@ module ddr2_controller #(
         .dqs_i(dqs_phy_i)
     );
 
-    // Fan out the single internal CS# line onto a simple two-rank vector:
-    // - During initialization (init_ready=0), broadcast CS# to both ranks.
-    // - Once ready, assert CS# only on the rank selected by the protocol
-    //   engine's latched rank index while keeping the other rank deselected.
-    assign C0_CSBAR_PAD = init_ready
-        ? (prot_rank_sel ? {csbar_bus, 1'b1} : {1'b1, csbar_bus})
-        : {2{csbar_bus}};
+    // ------------------------------------------------------------------------
+    // CS# fan-out for multi-rank configurations
+    // ------------------------------------------------------------------------
+    //
+    // The PHY drives a single internal CS# line (csbar_bus) representing the
+    // controller's intent to select "the current rank" on a given cycle. We
+    // map this onto a one-hot vector of CS# pads:
+    //   - During initialization (init_ready==0) we *broadcast* CS# to all
+    //     ranks so that power-up and MRS/EMRS programming reach every device.
+    //   - Once READY, we assert CS# only on the rank selected by the protocol
+    //     engine's latched rank index (prot_rank_sel) while keeping all other
+    //     ranks deselected.
+    //
+    // This keeps the PHY and protocol engine rank-agnostic while allowing the
+    // top-level to scale from 2 to 4, 8, ... ranks via RANK_BITS.
+    localparam integer NUM_RANKS = (1 << RANK_BITS);
+    reg [NUM_RANKS-1:0] csbar_vec;
+    integer r;
+
+    always @* begin
+        if (!init_ready) begin
+            // Broadcast CS# to all ranks during init.
+            csbar_vec = {NUM_RANKS{csbar_bus}};
+        end else begin
+            // Default all ranks to inactive (CS#=1) then enable only the
+            // selected rank index with the internal CS# value.
+            csbar_vec = {NUM_RANKS{1'b1}};
+            csbar_vec[prot_rank_sel] = csbar_bus;
+        end
+    end
+
+    assign C0_CSBAR_PAD = csbar_vec;
 
 endmodule
 /* verilator lint_on UNUSEDSIGNAL */

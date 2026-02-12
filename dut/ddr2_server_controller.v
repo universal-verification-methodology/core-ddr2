@@ -39,6 +39,14 @@ module ddr2_server_controller #(
     input  wire         CLK,
     input  wire         RESET,
     input  wire         INITDDR,
+    // Optional host-driven power-management controls mirrored from the core
+    // controller interface so that the server-style wrapper can participate in
+    // the same self-refresh / precharge power-down scenarios exercised by the
+    // core-top testbench.
+    input  wire         SELFREF_REQ,
+    input  wire         SELFREF_EXIT,
+    input  wire         PWRDOWN_REQ,
+    input  wire         PWRDOWN_EXIT,
     input  wire [2:0]   CMD,
     input  wire [1:0]   SZ,
     // Host-visible logical word address. In future we will treat the upper
@@ -52,6 +60,11 @@ module ddr2_server_controller #(
     input  wire [63:0]  DIN,
     input  wire         put_dataFIFO,
     input  wire         FETCHING,
+    // Propagate runtime DLL controls down to the core slice; currently only
+    // slice 0 exposes DLL status externally, but all slices see the same
+    // DLL_REQ / DLL_MODE controls.
+    input  wire         DLL_REQ,
+    input  wire         DLL_MODE,
     output wire [63:0]  DOUT,
     // Host-visible return address. For now this is just a zero-extended copy
     // of the core controller's RADDR; in multi-rank/channel configurations
@@ -61,6 +74,9 @@ module ddr2_server_controller #(
     output wire         READY,
     output wire         VALIDOUT,
     output wire         NOTFULL,
+    output wire         SELFREF_ACTIVE,
+    output wire         PWRDOWN_ACTIVE,
+    output wire         DLL_BUSY,
     // Two-rank chip-select vector on the DDR2 bus (active low).
     output wire [1:0]   C0_CSBAR_PAD,
     output wire         C0_RASBAR_PAD,
@@ -132,6 +148,8 @@ module ddr2_server_controller #(
     wire        ready0;
     wire        validout0;
     wire        notfull0;
+    wire        selfref_active0;
+    wire        pdown_active0;
 
     // Slice 0: fully connected to external DDR2 pads and used as the reference
     // for READY/NOTFULL/VALIDOUT/FILLCOUNT. In SIM_DIRECT_READ mode, this
@@ -142,6 +160,10 @@ module ddr2_server_controller #(
         .CLK           (CLK),
         .RESET         (RESET),
         .INITDDR       (INITDDR),
+        .SELFREF_REQ   (SELFREF_REQ),
+        .SELFREF_EXIT  (SELFREF_EXIT),
+        .PWRDOWN_REQ   (PWRDOWN_REQ),
+        .PWRDOWN_EXIT  (PWRDOWN_EXIT),
         .CMD           (CMD),
         .SZ            (SZ),
         .ADDR          (core_addr),
@@ -154,12 +176,17 @@ module ddr2_server_controller #(
         .DIN           (DIN[15:0]),
         .put_dataFIFO  (put_dataFIFO),
         .FETCHING      (FETCHING),
+        .DLL_REQ       (DLL_REQ),
+        .DLL_MODE      (DLL_MODE),
         .DOUT          (core_dout0),
         .RADDR         (core_raddr0),
         .FILLCOUNT     (fillcount0),
         .READY         (ready0),
         .VALIDOUT      (validout0),
         .NOTFULL       (notfull0),
+        .SELFREF_ACTIVE(selfref_active0),
+        .PWRDOWN_ACTIVE(pdown_active0),
+        .DLL_BUSY      (DLL_BUSY),
         .C0_CSBAR_PAD  (C0_CSBAR_PAD),
         .C0_RASBAR_PAD (C0_RASBAR_PAD),
         .C0_CASBAR_PAD (C0_CASBAR_PAD),
@@ -185,7 +212,7 @@ module ddr2_server_controller #(
     // interfaces are not exposed at the top level; they are intended to model
     // additional x16 devices from a host/data-path perspective when using the
     // simplified SIM_DIRECT_READ mode.
-    wire        csbar_pad_dummy1, csbar_pad_dummy2, csbar_pad_dummy3;
+    wire [1:0]  csbar_pad_dummy1, csbar_pad_dummy2, csbar_pad_dummy3;
     wire        rasbar_pad_dummy1, rasbar_pad_dummy2, rasbar_pad_dummy3;
     wire        casbar_pad_dummy1, casbar_pad_dummy2, casbar_pad_dummy3;
     wire        webar_pad_dummy1, webar_pad_dummy2, webar_pad_dummy3;
@@ -206,6 +233,10 @@ module ddr2_server_controller #(
         .CLK           (CLK),
         .RESET         (RESET),
         .INITDDR       (INITDDR),
+        .SELFREF_REQ   (SELFREF_REQ),
+        .SELFREF_EXIT  (SELFREF_EXIT),
+        .PWRDOWN_REQ   (PWRDOWN_REQ),
+        .PWRDOWN_EXIT  (PWRDOWN_EXIT),
         .CMD           (CMD),
         .SZ            (SZ),
         .ADDR          (core_addr),
@@ -214,12 +245,15 @@ module ddr2_server_controller #(
         .DIN           (DIN[31:16]),
         .put_dataFIFO  (put_dataFIFO),
         .FETCHING      (FETCHING),
+        .DLL_REQ       (DLL_REQ),
+        .DLL_MODE      (DLL_MODE),
         .DOUT          (core_dout1),
         .RADDR         (core_raddr1),
         .FILLCOUNT     (/* unused */),
         .READY         (/* unused */),
         .VALIDOUT      (/* unused */),
         .NOTFULL       (/* unused */),
+        .DLL_BUSY      (/* unused */),
         .C0_CSBAR_PAD  (csbar_pad_dummy1),
         .C0_RASBAR_PAD (rasbar_pad_dummy1),
         .C0_CASBAR_PAD (casbar_pad_dummy1),
@@ -247,6 +281,10 @@ module ddr2_server_controller #(
         .CLK           (CLK),
         .RESET         (RESET),
         .INITDDR       (INITDDR),
+        .SELFREF_REQ   (SELFREF_REQ),
+        .SELFREF_EXIT  (SELFREF_EXIT),
+        .PWRDOWN_REQ   (PWRDOWN_REQ),
+        .PWRDOWN_EXIT  (PWRDOWN_EXIT),
         .CMD           (CMD),
         .SZ            (SZ),
         .ADDR          (core_addr),
@@ -255,12 +293,15 @@ module ddr2_server_controller #(
         .DIN           (DIN[47:32]),
         .put_dataFIFO  (put_dataFIFO),
         .FETCHING      (FETCHING),
+        .DLL_REQ       (DLL_REQ),
+        .DLL_MODE      (DLL_MODE),
         .DOUT          (core_dout2),
         .RADDR         (core_raddr2),
         .FILLCOUNT     (/* unused */),
         .READY         (/* unused */),
         .VALIDOUT      (/* unused */),
         .NOTFULL       (/* unused */),
+        .DLL_BUSY      (/* unused */),
         .C0_CSBAR_PAD  (csbar_pad_dummy2),
         .C0_RASBAR_PAD (rasbar_pad_dummy2),
         .C0_CASBAR_PAD (casbar_pad_dummy2),
@@ -288,6 +329,10 @@ module ddr2_server_controller #(
         .CLK           (CLK),
         .RESET         (RESET),
         .INITDDR       (INITDDR),
+        .SELFREF_REQ   (SELFREF_REQ),
+        .SELFREF_EXIT  (SELFREF_EXIT),
+        .PWRDOWN_REQ   (PWRDOWN_REQ),
+        .PWRDOWN_EXIT  (PWRDOWN_EXIT),
         .CMD           (CMD),
         .SZ            (SZ),
         .ADDR          (core_addr),
@@ -296,12 +341,15 @@ module ddr2_server_controller #(
         .DIN           (DIN[63:48]),
         .put_dataFIFO  (put_dataFIFO),
         .FETCHING      (FETCHING),
+        .DLL_REQ       (DLL_REQ),
+        .DLL_MODE      (DLL_MODE),
         .DOUT          (core_dout3),
         .RADDR         (core_raddr3),
         .FILLCOUNT     (/* unused */),
         .READY         (/* unused */),
         .VALIDOUT      (/* unused */),
         .NOTFULL       (/* unused */),
+        .DLL_BUSY      (/* unused */),
         .C0_CSBAR_PAD  (csbar_pad_dummy3),
         .C0_RASBAR_PAD (rasbar_pad_dummy3),
         .C0_CASBAR_PAD (casbar_pad_dummy3),
@@ -330,10 +378,12 @@ module ddr2_server_controller #(
 
     // Aggregate 4×16-bit slice data into the 64-bit host bus.
     assign DOUT      = {core_dout3, core_dout2, core_dout1, core_dout0};
-    assign FILLCOUNT = fillcount0;
-    assign READY     = ready0;
-    assign VALIDOUT  = validout0;
-    assign NOTFULL   = notfull0;
+    assign FILLCOUNT      = fillcount0;
+    assign READY          = ready0;
+    assign VALIDOUT       = validout0;
+    assign NOTFULL        = notfull0;
+    assign SELFREF_ACTIVE = selfref_active0;
+    assign PWRDOWN_ACTIVE = pdown_active0;
 
 endmodule
 /* verilator lint_on UNUSEDSIGNAL */

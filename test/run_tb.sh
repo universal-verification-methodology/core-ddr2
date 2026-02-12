@@ -8,21 +8,29 @@ DUT="$PROJECT_ROOT/dut"
 TEST="$PROJECT_ROOT/test"
 BUILD="${BUILD:-$PROJECT_ROOT/build}"
 RESULT="${RESULT:-$TEST/result.txt}"
+LOG_DIR="$TEST/logs"
 mkdir -p "$BUILD"
+mkdir -p "$LOG_DIR"
 cd "$BUILD"
 echo "Compiling DUT and testbench..."
 
-# By default we build a "fast" configuration that uses:
+# By default we build configurations with:
 #   -DSIM_SHORT_INIT : shortened init time so tests complete quickly
-#   -DSIM_DIRECT_READ: bypasses the full DDR2 return path and drives
+#   -DSTRICT_JEDEC   : enforce strict JEDEC timing bounds (refresh intervals, etc.)
+#   -DSIM_DIRECT_READ: (in "fast" mode) bypasses the full DDR2 return path and drives
 #                     host-visible read data from a simplified model
 #                     inside the controller. This is useful for quick
 #                     bring-up and functional checks.
 #
-# For a more production-like, full bus-level verification (including
-# the closed-loop DQ path and timing-sensitive monitors), unset
-# SIM_DIRECT_READ by exporting FULL_BUS=1 before running this script:
-#   FULL_BUS=1 ./test/run_tb.sh
+# Default behavior: sweeps both "core" and "server" tops, and both "fast" and "full" modes.
+# This provides comprehensive coverage including:
+#   - Fast mode: quick functional checks with simplified read path
+#   - Full mode: production-like, full bus-level verification (including
+#                the closed-loop DQ path and timing-sensitive monitors)
+#
+# To run a single configuration, set environment variables:
+#   TOP=core FULL_BUS=1 ./test/run_tb.sh    # Run only core top in full bus mode
+#   TOP=server FULL_BUS=0 ./test/run_tb.sh  # Run only server top in fast mode
 #
 # The behavioral DDR2 memory model (`ddr2_simple_mem`) can also be
 # re-parameterized at build time. By default this script will sweep a
@@ -35,7 +43,7 @@ echo "Compiling DUT and testbench..."
 # If an env var is set, only that value is used (no sweep on that axis).
 # If it is left unset, a small default list is swept.
 
-BASE_SIM_DEFINES="-g2012 -DSIM_SHORT_INIT"
+BASE_SIM_DEFINES="-g2012 -DSIM_SHORT_INIT -DSTRICT_JEDEC"
 
 # Enable negative tests (expected to fail via $fatal) by exporting
 # NEGATIVE_TESTS=1 before running this script. By default, only the
@@ -84,7 +92,12 @@ fi
 if [ -n "${RANK_BITS:-}" ]; then
   RANK_BITS_LIST=("${RANK_BITS}")
 else
-  RANK_BITS_LIST=(1)
+  # By default, exercise multi-rank configurations across a small sweep of
+  # logical rank counts: 2, 4 and 8 ranks (RANK_BITS = 1, 2, 3). Each point
+  # overrides both the testbench memory model (via RANK_BITS_OVERRIDE) and the
+  # DUT parameters (RANK_BITS on ddr2_controller / ddr2_protocol_engine) so
+  # that the CS# vector widths and rank indices stay consistent end-to-end.
+  RANK_BITS_LIST=(1 2 3)
 fi
 
 echo "Sweeping memory model configurations..."
@@ -109,9 +122,14 @@ for md in "${MEM_DEPTH_LIST[@]}"; do
           SIM_MODE_DEFINES="$SIM_MODE_DEFINES -DSIM_DIRECT_READ"
         fi
 
-        SIM_DEFINES="$SIM_MODE_DEFINES -DMEM_DEPTH_OVERRIDE=${md} -DREAD_LAT_OVERRIDE=${rl} -DRANK_BITS_OVERRIDE=${rb}"
+        SIM_DEFINES="$SIM_MODE_DEFINES -DMEM_DEPTH_OVERRIDE=${md} -DREAD_LAT_OVERRIDE=${rl} -DRANK_BITS_OVERRIDE=${rb} -Pddr2_controller.RANK_BITS=${rb} -Pddr2_protocol_engine.RANK_BITS=${rb}"
 
         for top in "${TOP_LIST[@]}"; do
+          LOG_TAG="TOP=${top}_MODE=${mode}_MEM_DEPTH=${md}_READ_LAT=${rl}_RANK_BITS=${rb}"
+          # Make the log file name shell- and filesystem-friendly by removing '=' and ','.
+          LOG_FILE_BASENAME=$(echo "${LOG_TAG}" | tr ' =' '__')
+          LOG_FILE="$LOG_DIR/${LOG_FILE_BASENAME}.log"
+
           echo "----------------------------------------------------------------" | tee -a "$RESULT"
           echo "Config: TOP=${top}, MODE=${mode}, MEM_DEPTH=${md}, READ_LAT=${rl}, RANK_BITS=${rb}" | tee -a "$RESULT"
           echo "----------------------------------------------------------------" | tee -a "$RESULT"
@@ -132,11 +150,14 @@ for md in "${MEM_DEPTH_LIST[@]}"; do
                 "$TEST/ddr2_turnaround_checker.v" \
                 "$TEST/ddr2_bank_checker.v" \
                 "$TEST/ddr2_dqs_monitor.v" \
+                "$TEST/ddr2_ocd_zq_monitor.v" \
+                "$TEST/ddr2_power_monitor.v" \
                 "$TEST/ddr2_fifo_monitor.v" \
                 "$TEST/ddr2_refresh_monitor.v" \
                 "$TEST/tb_ddr2_server_controller.v"
             echo "Running simulation for server top (MODE=${mode}, READ_LAT=${rl})..."
-            vvp tb_ddr2_server_controller.vvp 2>&1 | tee -a "$RESULT"
+            echo "Log: $LOG_FILE"
+            vvp tb_ddr2_server_controller.vvp 2>&1 | tee "$LOG_FILE" | tee -a "$RESULT"
             echo "Done. VCD: $BUILD/tb_ddr2_server_controller.iverilog.vcd"
           else
             echo "Building tb_ddr2_controller (TOP=core, MODE=${mode})..."
@@ -153,11 +174,14 @@ for md in "${MEM_DEPTH_LIST[@]}"; do
                 "$TEST/ddr2_turnaround_checker.v" \
                 "$TEST/ddr2_bank_checker.v" \
                 "$TEST/ddr2_dqs_monitor.v" \
+                "$TEST/ddr2_ocd_zq_monitor.v" \
+                "$TEST/ddr2_power_monitor.v" \
                 "$TEST/ddr2_fifo_monitor.v" \
                 "$TEST/ddr2_refresh_monitor.v" \
                 "$TEST/tb_ddr2_controller.v"
             echo "Running simulation for core top (MODE=${mode}, READ_LAT=${rl})..."
-            vvp tb_ddr2_controller.vvp 2>&1 | tee -a "$RESULT"
+            echo "Log: $LOG_FILE"
+            vvp tb_ddr2_controller.vvp 2>&1 | tee "$LOG_FILE" | tee -a "$RESULT"
             echo "Done. VCD: $BUILD/tb_ddr2_controller.iverilog.vcd"
           fi
         done

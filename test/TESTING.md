@@ -17,10 +17,14 @@ This document describes how the DDR2 controller testbench is structured, how to 
   - Text log (including all monitor messages): `test/result.txt`
   - Optional CSV trace (only when `CSV_TRACE` is defined): `build/ddr2_trace.csv`
 
-- **Default behavior**: The testbench now **automatically sweeps** multiple memory model configurations:
-  - `MEM_DEPTH`: 1024, 4096 words
-  - `READ_LAT`: 24, 32 cycles
-  - `RANK_BITS`: 1 (single rank)
+- **Default behavior**: The testbench **automatically sweeps** a matrix of configurations by default:
+  - **Tops**: `core` and `server` (both tested)
+  - **Modes**: `fast` (SIM_DIRECT_READ) and `full` (full bus-level)
+  - **Memory / rank configurations**:
+    - `MEM_DEPTH`: 1024, 4096 words per rank
+    - `READ_LAT`: 24, 32 cycles (fast mode), 24 cycles (full mode)
+    - `RANK_BITS`: 1, 2, 3 (2, 4, and 8 logical ranks)
+  - **JEDEC compliance**: `STRICT_JEDEC` mode is **enabled by default** for strict timing verification
   - All combinations are tested sequentially, with results appended to `test/result.txt`
 
 The script compiles:
@@ -50,28 +54,50 @@ On any serious mismatch or timing violation, the simulation calls **`$fatal`**, 
 
 ## Simulation Modes and Defines
 
-The `run_tb.sh` script supports several compile-time modes via Verilog `define`s, selected by environment variables:
+The `run_tb.sh` script supports several compile-time modes via Verilog `define`s. **By default, all configurations are tested** (both tops and both modes).
 
-- **Fast functional mode (default)**:
-  - Enabled flags: `SIM_SHORT_INIT`, `SIM_DIRECT_READ`
+### Default Behavior
+
+When run without environment variables, the script automatically sweeps:
+- **Both tops**: `core` (16-bit) and `server` (64-bit)
+- **Both modes**: `fast` and `full`
+- **All memory configurations**: Multiple `MEM_DEPTH` and `READ_LAT` combinations
+
+**Default compile flags** (always enabled):
+- `SIM_SHORT_INIT`: Shortened DDR2 init time for faster regressions
+- `STRICT_JEDEC`: **Enabled by default** - enforces strict JEDEC timing bounds (refresh intervals, etc.)
+
+### Simulation Modes
+
+- **Fast functional mode**:
+  - Additional flags: `SIM_DIRECT_READ`
   - Behavior:
     - Shortened DDR2 init time so regressions complete quickly.
     - Read data is driven by a simplified internal model (`SIM_DIRECT_READ` path), so the host-visible interface is deterministic and checked cycle-by-cycle via the scoreboard (`sb_check`).
-  - How to run:
-    ```bash
-    ./test/run_tb.sh
-    ```
+  - Included in default sweep: Yes (runs automatically)
   - Recommended for: day-to-day regressions and CI.
 
 - **Full bus-level mode (closed-loop DDR2 bus)**:
-  - Enabled flags: `SIM_SHORT_INIT`, **no** `SIM_DIRECT_READ` (set `FULL_BUS=1`).
+  - Additional flags: **no** `SIM_DIRECT_READ` (set `FULL_BUS=1` to run only this mode).
   - Behavior:
     - Data returns through the full DDR2 bus and `ddr2_simple_mem` model; the testbench enforces that `VALIDOUT` never asserts before any `MEM_RD_VALID`, and the pin-level monitors (`ddr2_timing_checker`, `ddr2_refresh_monitor`, `ddr2_bank_checker`, `ddr2_dqs_monitor`, `ddr2_fifo_monitor`) validate protocol/timing.
-  - How to run:
-    ```bash
-    FULL_BUS=1 ./test/run_tb.sh
-    ```
+  - Included in default sweep: Yes (runs automatically)
   - Recommended for: deeper protocol/timing sweeps when you care about the full DQ/DQS path.
+
+### Running Single Configurations
+
+To run a single configuration instead of the full sweep:
+
+```bash
+# Run only core top in fast mode
+TOP=core FULL_BUS=0 ./test/run_tb.sh
+
+# Run only server top in full bus mode
+TOP=server FULL_BUS=1 ./test/run_tb.sh
+
+# Run single memory configuration
+TOP=core MEM_DEPTH=1024 READ_LAT=24 ./test/run_tb.sh
+```
 
 - **Negative tests (expected failures)**:
   - Enabled flags: `NEGATIVE_TESTS=1` (in addition to one of the modes above).
@@ -103,26 +129,29 @@ The `run_tb.sh` script supports several compile-time modes via Verilog `define`s
     ```
 
 - **Top selection (core vs server)**:
-  - By default, `TOP=core` builds and runs `tb_ddr2_controller.v` (16-bit host data bus).
-  - To test the server-style wrapper (64-bit host data bus):
+  - **By default**, both `core` and `server` tops are tested automatically.
+  - `core`: 16-bit host data bus (`tb_ddr2_controller.v`)
+  - `server`: 64-bit host data bus (`tb_ddr2_server_controller.v`)
+  - To test only one top:
     ```bash
-    TOP=server ./test/run_tb.sh
+    TOP=core ./test/run_tb.sh      # Test only core top
+    TOP=server ./test/run_tb.sh     # Test only server top
     ```
   - The server top uses the same test scenarios but exercises the wider data path and multi-rank-capable memory model.
 
-- **Memory model parameterization**:
-  - The behavioral DDR2 memory model (`ddr2_simple_mem`) can be re-parameterized at build time.
+- **Memory model and rank parameterization**:
+  - The behavioral DDR2 memory model (`ddr2_simple_mem`) and the DUT rank configuration can both be re-parameterized at build time.
   - **By default**, the testbench sweeps multiple configurations automatically:
     - `MEM_DEPTH`: 1024, 4096 words per rank
-    - `READ_LAT`: 24, 32 cycles
-    - `RANK_BITS`: 1 (single rank)
+    - `READ_LAT`: 24, 32 cycles (fast mode), 24 cycles (full mode)
+    - `RANK_BITS`: 1, 2, 3 (2, 4, 8 logical ranks); this value drives both the memory model's rank count and the DUT's `RANK_BITS` parameter so that CS# widths and rank indices stay consistent end-to-end.
   - **To run a single configuration** instead of sweeping, set environment variables:
     ```bash
     MEM_DEPTH=8192 READ_LAT=40 RANK_BITS=2 ./test/run_tb.sh
     ```
   - When an env var is set, only that value is used (no sweep on that axis).
   - When left unset, the default sweep list is used.
-  - These parameters are passed as Verilog `define` overrides (`MEM_DEPTH_OVERRIDE`, `READ_LAT_OVERRIDE`, `RANK_BITS_OVERRIDE`) and consumed by the testbench when instantiating the memory model.
+  - These parameters are passed as Verilog `define` overrides (`MEM_DEPTH_OVERRIDE`, `READ_LAT_OVERRIDE`, `RANK_BITS_OVERRIDE`) and, for `RANK_BITS`, also as parameter overrides to the DUT (`ddr2_controller.RANK_BITS` and `ddr2_protocol_engine.RANK_BITS`) so the multi-rank configuration is exercised end-to-end.
 
 ---
 
@@ -132,18 +161,28 @@ The coarse timing used by the monitors is centralized in `test/ddr2_timing_confi
 
 The key macros (all in controller clock cycles) are:
 
-- `DDR2_TIMING_TRCD_MIN`: ACT → RD/WR minimum delay.
-- `DDR2_TIMING_TRP_MIN`: PRE → ACT minimum delay to the same bank.
-- `DDR2_TIMING_TRAS_MIN`: ACT → PRE minimum active time per row.
-- `DDR2_TIMING_TRFC_MIN`: minimum delay between AUTO REFRESH commands (coarse).
+- `DDR2_TIMING_TRCD_MIN`: **4 cycles** (8 ns) - ACT → RD/WR minimum delay (JEDEC: 2 DDR2 cycles = 4 controller cycles ✅)
+- `DDR2_TIMING_TRP_MIN`: **4 cycles** (8 ns) - PRE → ACT minimum delay to the same bank (JEDEC: 2 DDR2 cycles = 4 controller cycles ✅)
+- `DDR2_TIMING_TRAS_MIN`: **20 cycles** (40 ns) - ACT → PRE minimum active time per row (JEDEC: 10 DDR2 cycles = 20 controller cycles ✅)
+- `DDR2_TIMING_TRFC_MIN`: **100 cycles** (200 ns) - minimum delay between AUTO REFRESH commands (JEDEC: 50 DDR2 cycles = 100 controller cycles ✅)
 - `DDR2_TIMING_TREFI_MIN_CLK`: minimum allowed refresh interval (0 disables the “too frequent” check).
 - `DDR2_TIMING_TREFI_MAX_CLK`: maximum allowed refresh interval (detects starved refresh).
 
-In the default **simulation** profile:
+### Refresh Interval Configuration
 
-- `TRCD_MIN`, `TRP_MIN`, and `TRAS_MIN` are set to small, JEDEC‑like values to catch obvious timing violations without making the run overly long.
-- `TREFI_MIN_CLK` is set to `0` (the controller purposely compresses refresh intervals under `SIM_SHORT_INIT`).
-- `TREFI_MAX_CLK` is a generous upper bound (100k cycles) so a stuck or starved refresh scheduler still triggers a failure.
+Refresh interval bounds depend on whether `STRICT_JEDEC` is defined:
+
+- **With `STRICT_JEDEC` (default)**:
+  - `TREFI_MIN_CLK`: 3600 cycles (~7.2 µs)
+  - `TREFI_MAX_CLK`: 4200 cycles (~8.4 µs)
+  - Enforces tight bounds around the controller's nominal refresh policy (~3.8k–3.9k cycles)
+
+- **Without `STRICT_JEDEC`** (relaxed mode):
+  - `TREFI_MIN_CLK`: 0 (disables "too frequent" check)
+  - `TREFI_MAX_CLK`: 100000 cycles (detects starved refresh)
+  - Allows compressed refresh intervals for faster simulation
+
+**Note**: `STRICT_JEDEC` is **enabled by default** in `run_tb.sh` to ensure JEDEC compliance verification.
 
 To adapt the monitors to a different target:
 
@@ -380,17 +419,35 @@ Use the timestamp (`[%0t]`), bank number, address, and cycle counts in the messa
 
 ## Recent Updates
 
+### JEDEC Compliance Improvements (2026-02-12)
+
+- **STRICT_JEDEC enabled by default**: The test script now enables `STRICT_JEDEC` mode by default to enforce strict JEDEC timing bounds across all test configurations.
+
+- **Timing parameter fixes**:
+  - **tRAS**: Updated from 8 to **20 controller cycles** (40 ns) to match JEDEC requirement
+  - **tRFC**: Standardized to **100 controller cycles** (200 ns) across all modules:
+    - Timing checker: Updated from 16 to 100 cycles
+    - Init engine: Updated from 399 to 100 cycles
+    - Protocol engine: Updated CNT_RIDL from 55 to 99 cycles (with counter width extension)
+  - All critical timing parameters (tRCD, tRP, tRAS, tRFC) now meet JEDEC DDR2 specifications
+
+- **Comprehensive test coverage**: The default test run now sweeps:
+  - Both tops (`core` and `server`)
+  - Both modes (`fast` and `full`)
+  - Multiple memory configurations
+  - All with STRICT_JEDEC timing verification enabled
+
 ### Memory Model Parameterization and Sweep
 
-- **Automatic configuration sweep**: The testbench now automatically tests multiple memory configurations by default:
-  - Sweeps `MEM_DEPTH` (1024, 4096), `READ_LAT` (24, 32), and `RANK_BITS` (1).
+- **Automatic configuration sweep**: The testbench automatically tests multiple memory and rank configurations by default:
+  - Sweeps `MEM_DEPTH` (1024, 4096), `READ_LAT` (24, 32), and `RANK_BITS` (1, 2, 3 → 2/4/8 ranks).
   - Each configuration runs sequentially with clear headers in `result.txt`.
   - To disable sweeping and test a single point, set the env vars: `MEM_DEPTH`, `READ_LAT`, `RANK_BITS`.
 
 - **Server top support**: Added `tb_ddr2_server_controller.v` for testing the server-style wrapper:
   - 64-bit host data bus (vs. 16-bit for core).
   - Same test scenarios, adapted for wider data paths.
-  - Run with `TOP=server ./test/run_tb.sh`.
+  - **Included in default sweep** - both tops are tested automatically.
 
 ### Enhanced Timing Checks
 
@@ -404,6 +461,15 @@ Use the timestamp (`[%0t]`), bank number, address, and cycle counts in the messa
     - Flags violations when the window span is too short.
 
 - **Edge detection fix**: The timing checker now properly detects ACT command **edges** rather than counting every cycle where ACTIVATE is held active, preventing false tRRD violations during multi-cycle ACTIVATE states.
+
+### Low-Power and Power-Mode Checks
+
+- **Self-refresh and precharge power-down flows**:
+  - The RTL protocol engine now implements explicit **self-refresh** and **precharge power-down** entry/exit FSMs, plus an **auto self-refresh** policy based on long idle periods.
+  - The core and server testbenches drive these via `SELFREF_REQ/SELFREF_EXIT` and `PWRDOWN_REQ/PWRDOWN_EXIT` and then rerun scalar/block R/W traffic to confirm correct resume behavior.
+- **Power-mode monitor**:
+  - New `ddr2_power_monitor.v` checks that when `CKE` is low and any-rank `CS#` is asserted, the DDR2 command bus carries only NOPs.
+  - Instantiated in both `tb_ddr2_controller.v` and `tb_ddr2_server_controller.v` alongside the existing timing/refresh/bank/DQS/FIFO monitors.
 
 ### Implementation Notes
 
