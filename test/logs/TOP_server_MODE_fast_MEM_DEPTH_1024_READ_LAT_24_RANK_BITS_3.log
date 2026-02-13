@@ -71,16 +71,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2351000] PROT: ISSUE_READ bank=0 row=0 col=0 cs=1 ras=1 cas=1 we=1
 [2351000] PROT: ISSUE_READ bank=0 row=0 col=0 cs=1 ras=1 cas=1 we=1
 [2351000] PROT: ISSUE_READ bank=0 row=0 col=0 cs=1 ras=1 cas=1 we=1
-[2353000] MEM: READ decode rank=0 bank=0 row=0 col=1
+[2353000] MEM: READ decode rank=7 bank=0 row=0 col=1
 [2353000] MEM: READ cmd received rank=0 bank=0 row=0 col=1
-[2405000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
-[2407000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
-[2409000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
-[2411000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
-[2413000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
-[2415000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
-[2417000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
-[2419000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[2405000] MEM: READ beat=0 rank=7 idx=1 data=0x0000
+[2407000] MEM: READ beat=1 rank=7 idx=2 data=0x0000
+[2409000] MEM: READ beat=2 rank=7 idx=3 data=0x0000
+[2411000] MEM: READ beat=3 rank=7 idx=4 data=0x0000
+[2413000] MEM: READ beat=4 rank=7 idx=5 data=0x0000
+[2415000] MEM: READ beat=5 rank=7 idx=6 data=0x0000
+[2417000] MEM: READ beat=6 rank=7 idx=7 data=0x0000
+[2419000] MEM: READ beat=7 rank=7 idx=8 data=0x0000
 [2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
 [2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
 [2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
@@ -111,7 +111,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2447000] PROT: GETCMD state cnt=0
 [2447000] PROT: GETCMD addr=1 cmd=10 sz=0 rank_sel=0
 [2463000] DQS_MON: WRITE detected, starting DQS observation window.
-[2463000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=3
+[2463000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=3
 [2479000] MEM: WRITE burst committed base_idx=3 data=0x0000
 [2529000] DQS_MON: window complete, edge_cnt=7.
 [2861000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
@@ -148,16 +148,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2885000] PROT: ISSUE_READ bank=0 row=0 col=1 cs=1 ras=1 cas=1 we=1
 [2885000] PROT: ISSUE_READ bank=0 row=0 col=1 cs=1 ras=1 cas=1 we=1
 [2885000] PROT: ISSUE_READ bank=0 row=0 col=1 cs=1 ras=1 cas=1 we=1
-[2887000] MEM: READ decode rank=0 bank=0 row=0 col=3
-[2887000] MEM: READ cmd received rank=0 bank=0 row=0 col=3
-[2939000] MEM: READ beat=0 rank=0 idx=3 data=0x0000
-[2941000] MEM: READ beat=1 rank=0 idx=4 data=0x0000
-[2943000] MEM: READ beat=2 rank=0 idx=5 data=0x0000
-[2945000] MEM: READ beat=3 rank=0 idx=6 data=0x0000
-[2947000] MEM: READ beat=4 rank=0 idx=7 data=0x0000
-[2949000] MEM: READ beat=5 rank=0 idx=8 data=0x0000
-[2951000] MEM: READ beat=6 rank=0 idx=9 data=0x0000
-[2953000] MEM: READ beat=7 rank=0 idx=10 data=0x0000
+[2887000] MEM: READ decode rank=7 bank=0 row=0 col=3
+[2887000] MEM: READ cmd received rank=7 bank=0 row=0 col=3
+[2939000] MEM: READ beat=0 rank=7 idx=3 data=0x0000
+[2941000] MEM: READ beat=1 rank=7 idx=4 data=0x0000
+[2943000] MEM: READ beat=2 rank=7 idx=5 data=0x0000
+[2945000] MEM: READ beat=3 rank=7 idx=6 data=0x0000
+[2947000] MEM: READ beat=4 rank=7 idx=7 data=0x0000
+[2949000] MEM: READ beat=5 rank=7 idx=8 data=0x0000
+[2951000] MEM: READ beat=6 rank=7 idx=9 data=0x0000
+[2953000] MEM: READ beat=7 rank=7 idx=10 data=0x0000
 [2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
@@ -188,7 +188,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2981000] PROT: GETCMD state cnt=0
 [2981000] PROT: GETCMD addr=128 cmd=10 sz=0 rank_sel=0
 [2997000] DQS_MON: WRITE detected, starting DQS observation window.
-[2997000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=65
+[2997000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=65
 [3013000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [3063000] DQS_MON: window complete, edge_cnt=7.
 [3395000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
@@ -225,16 +225,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [3419000] PROT: ISSUE_READ bank=0 row=0 col=32 cs=1 ras=1 cas=1 we=1
 [3419000] PROT: ISSUE_READ bank=0 row=0 col=32 cs=1 ras=1 cas=1 we=1
 [3419000] PROT: ISSUE_READ bank=0 row=0 col=32 cs=1 ras=1 cas=1 we=1
-[3421000] MEM: READ decode rank=0 bank=0 row=0 col=65
-[3421000] MEM: READ cmd received rank=0 bank=0 row=0 col=65
-[3473000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
-[3475000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
-[3477000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
-[3479000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
-[3481000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
-[3483000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
-[3485000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
-[3487000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[3421000] MEM: READ decode rank=7 bank=0 row=0 col=65
+[3421000] MEM: READ cmd received rank=7 bank=0 row=0 col=65
+[3473000] MEM: READ beat=0 rank=7 idx=1 data=0x0000
+[3475000] MEM: READ beat=1 rank=7 idx=2 data=0x0000
+[3477000] MEM: READ beat=2 rank=7 idx=3 data=0x0000
+[3479000] MEM: READ beat=3 rank=7 idx=4 data=0x0000
+[3481000] MEM: READ beat=4 rank=7 idx=5 data=0x0000
+[3483000] MEM: READ beat=5 rank=7 idx=6 data=0x0000
+[3485000] MEM: READ beat=6 rank=7 idx=7 data=0x0000
+[3487000] MEM: READ beat=7 rank=7 idx=8 data=0x0000
 [3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
 [3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
 [3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
@@ -265,7 +265,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [3515000] PROT: GETCMD state cnt=0
 [3515000] PROT: GETCMD addr=512 cmd=10 sz=0 rank_sel=0
 [3531000] DQS_MON: WRITE detected, starting DQS observation window.
-[3531000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=257
+[3531000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=257
 [3547000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [3597000] DQS_MON: window complete, edge_cnt=7.
 [3929000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
@@ -302,16 +302,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [3953000] PROT: ISSUE_READ bank=0 row=0 col=128 cs=1 ras=1 cas=1 we=1
 [3953000] PROT: ISSUE_READ bank=0 row=0 col=128 cs=1 ras=1 cas=1 we=1
 [3953000] PROT: ISSUE_READ bank=0 row=0 col=128 cs=1 ras=1 cas=1 we=1
-[3955000] MEM: READ decode rank=0 bank=0 row=0 col=257
-[3955000] MEM: READ cmd received rank=0 bank=0 row=0 col=257
-[4007000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
-[4009000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
-[4011000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
-[4013000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
-[4015000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
-[4017000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
-[4019000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
-[4021000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[3955000] MEM: READ decode rank=7 bank=0 row=0 col=257
+[3955000] MEM: READ cmd received rank=7 bank=0 row=0 col=257
+[4007000] MEM: READ beat=0 rank=7 idx=1 data=0x0000
+[4009000] MEM: READ beat=1 rank=7 idx=2 data=0x0000
+[4011000] MEM: READ beat=2 rank=7 idx=3 data=0x0000
+[4013000] MEM: READ beat=3 rank=7 idx=4 data=0x0000
+[4015000] MEM: READ beat=4 rank=7 idx=5 data=0x0000
+[4017000] MEM: READ beat=5 rank=7 idx=6 data=0x0000
+[4019000] MEM: READ beat=6 rank=7 idx=7 data=0x0000
+[4021000] MEM: READ beat=7 rank=7 idx=8 data=0x0000
 [4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
 [4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
 [4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
@@ -342,7 +342,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [4049000] PROT: GETCMD state cnt=0
 [4049000] PROT: GETCMD addr=32 cmd=100 sz=0 rank_sel=0
 [4079000] DQS_MON: WRITE detected, starting DQS observation window.
-[4079000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=17
+[4079000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=17
 [4095000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [4145000] DQS_MON: window complete, edge_cnt=7.
 [5295000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
@@ -391,16 +391,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [5315000] READ observed (server top): RADDR=39 DOUT=0x82a582a582a582a5
 [5315000] BLR beat 7 observed: RADDR=39 DOUT=0x82a582a582a582a5
 [5315000] BLW/BLR sequence OK: base_addr=32 SZ=0 (nwords=8)
-[5335000] MEM: READ decode rank=0 bank=0 row=0 col=17
-[5335000] MEM: READ cmd received rank=0 bank=0 row=0 col=17
-[5387000] MEM: READ beat=0 rank=0 idx=17 data=0x0000
-[5389000] MEM: READ beat=1 rank=0 idx=18 data=0x0000
-[5391000] MEM: READ beat=2 rank=0 idx=19 data=0x0000
-[5393000] MEM: READ beat=3 rank=0 idx=20 data=0x0000
-[5395000] MEM: READ beat=4 rank=0 idx=21 data=0x0000
-[5397000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
-[5399000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
-[5401000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
+[5335000] MEM: READ decode rank=7 bank=0 row=0 col=17
+[5335000] MEM: READ cmd received rank=7 bank=0 row=0 col=17
+[5387000] MEM: READ beat=0 rank=7 idx=17 data=0x0000
+[5389000] MEM: READ beat=1 rank=7 idx=18 data=0x0000
+[5391000] MEM: READ beat=2 rank=7 idx=19 data=0x0000
+[5393000] MEM: READ beat=3 rank=7 idx=20 data=0x0000
+[5395000] MEM: READ beat=4 rank=7 idx=21 data=0x0000
+[5397000] MEM: READ beat=5 rank=7 idx=22 data=0x0000
+[5399000] MEM: READ beat=6 rank=7 idx=23 data=0x0000
+[5401000] MEM: READ beat=7 rank=7 idx=24 data=0x0000
 [5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
 [5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
 [5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
@@ -431,11 +431,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [5527000] PROT: GETCMD state cnt=0
 [5527000] PROT: GETCMD addr=256 cmd=100 sz=1 rank_sel=0
 [5557000] DQS_MON: WRITE detected, starting DQS observation window.
-[5557000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=128
+[5557000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=128
 [5573000] MEM: WRITE burst committed base_idx=0 data=0x0000
 [5623000] DQS_MON: window complete, edge_cnt=7.
 [5653000] DQS_MON: WRITE detected, starting DQS observation window.
-[5653000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=145
+[5653000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=145
 [5669000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [5719000] DQS_MON: window complete, edge_cnt=7.
 [6805000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
@@ -500,16 +500,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [6841000] READ observed (server top): RADDR=271 DOUT=0xaaa4aaa4aaa4aaa4
 [6841000] BLR beat 15 observed: RADDR=271 DOUT=0xaaa4aaa4aaa4aaa4
 [6841000] BLW/BLR sequence OK: base_addr=256 SZ=1 (nwords=16)
-[6845000] MEM: READ decode rank=0 bank=0 row=0 col=128
-[6845000] MEM: READ cmd received rank=0 bank=0 row=0 col=128
-[6897000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
-[6899000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
-[6901000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
-[6903000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
-[6905000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
-[6907000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
-[6909000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
-[6911000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[6845000] MEM: READ decode rank=7 bank=0 row=0 col=128
+[6845000] MEM: READ cmd received rank=7 bank=0 row=0 col=128
+[6897000] MEM: READ beat=0 rank=7 idx=0 data=0x0000
+[6899000] MEM: READ beat=1 rank=7 idx=1 data=0x0000
+[6901000] MEM: READ beat=2 rank=7 idx=2 data=0x0000
+[6903000] MEM: READ beat=3 rank=7 idx=3 data=0x0000
+[6905000] MEM: READ beat=4 rank=7 idx=4 data=0x0000
+[6907000] MEM: READ beat=5 rank=7 idx=5 data=0x0000
+[6909000] MEM: READ beat=6 rank=7 idx=6 data=0x0000
+[6911000] MEM: READ beat=7 rank=7 idx=7 data=0x0000
 [7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
 [7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
 [7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
@@ -540,15 +540,15 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [7053000] PROT: GETCMD state cnt=0
 [7053000] PROT: GETCMD addr=384 cmd=100 sz=10 rank_sel=0
 [7083000] DQS_MON: WRITE detected, starting DQS observation window.
-[7083000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=192
+[7083000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=192
 [7099000] MEM: WRITE burst committed base_idx=0 data=0x0000
 [7149000] DQS_MON: window complete, edge_cnt=7.
 [7195000] DQS_MON: WRITE detected, starting DQS observation window.
-[7195000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=208
+[7195000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=208
 [7211000] MEM: WRITE burst committed base_idx=16 data=0x0000
 [7261000] DQS_MON: window complete, edge_cnt=7.
 [7307000] DQS_MON: WRITE detected, starting DQS observation window.
-[7307000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=225
+[7307000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=225
 [7323000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [7373000] DQS_MON: window complete, edge_cnt=7.
 [8169000] REF_MON: First AUTO REFRESH observed.
@@ -619,8 +619,8 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [8403000] BLR beat 17 observed: RADDR=401 DOUT=0x34a434a434a434a4
 [8405000] READ observed (server top): RADDR=402 DOUT=0x37a437a437a437a4
 [8405000] BLR beat 18 observed: RADDR=402 DOUT=0x37a437a437a437a4
-[8405000] MEM: READ decode rank=0 bank=0 row=0 col=192
-[8405000] MEM: READ cmd received rank=0 bank=0 row=0 col=192
+[8405000] MEM: READ decode rank=7 bank=0 row=0 col=192
+[8405000] MEM: READ cmd received rank=7 bank=0 row=0 col=192
 [8407000] READ observed (server top): RADDR=403 DOUT=0x36a436a436a436a4
 [8407000] BLR beat 19 observed: RADDR=403 DOUT=0x36a436a436a436a4
 [8409000] READ observed (server top): RADDR=404 DOUT=0x31a431a431a431a4
@@ -632,14 +632,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [8415000] READ observed (server top): RADDR=407 DOUT=0x32a432a432a432a4
 [8415000] BLR beat 23 observed: RADDR=407 DOUT=0x32a432a432a432a4
 [8415000] BLW/BLR sequence OK: base_addr=384 SZ=2 (nwords=24)
-[8457000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
-[8459000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
-[8461000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
-[8463000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
-[8465000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
-[8467000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
-[8469000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
-[8471000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[8457000] MEM: READ beat=0 rank=7 idx=0 data=0x0000
+[8459000] MEM: READ beat=1 rank=7 idx=1 data=0x0000
+[8461000] MEM: READ beat=2 rank=7 idx=2 data=0x0000
+[8463000] MEM: READ beat=3 rank=7 idx=3 data=0x0000
+[8465000] MEM: READ beat=4 rank=7 idx=4 data=0x0000
+[8467000] MEM: READ beat=5 rank=7 idx=5 data=0x0000
+[8469000] MEM: READ beat=6 rank=7 idx=6 data=0x0000
+[8471000] MEM: READ beat=7 rank=7 idx=7 data=0x0000
 [8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
 [8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
 [8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
@@ -670,19 +670,19 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [8627000] PROT: GETCMD state cnt=0
 [8627000] PROT: GETCMD addr=512 cmd=100 sz=11 rank_sel=0
 [8657000] DQS_MON: WRITE detected, starting DQS observation window.
-[8657000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=256
+[8657000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=256
 [8673000] MEM: WRITE burst committed base_idx=0 data=0x0000
 [8723000] DQS_MON: window complete, edge_cnt=7.
 [8785000] DQS_MON: WRITE detected, starting DQS observation window.
-[8785000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=272
+[8785000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=272
 [8801000] MEM: WRITE burst committed base_idx=16 data=0x0000
 [8851000] DQS_MON: window complete, edge_cnt=7.
 [8913000] DQS_MON: WRITE detected, starting DQS observation window.
-[8913000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=288
+[8913000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=288
 [8929000] MEM: WRITE burst committed base_idx=0 data=0x0000
 [8979000] DQS_MON: window complete, edge_cnt=7.
 [9041000] DQS_MON: WRITE detected, starting DQS observation window.
-[9041000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=305
+[9041000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=305
 [9057000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [9107000] DQS_MON: window complete, edge_cnt=7.
 [9969000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
@@ -750,8 +750,8 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10007000] BLR beat 16 observed: RADDR=528 DOUT=0xb5a7b5a7b5a7b5a7
 [10009000] READ observed (server top): RADDR=529 DOUT=0xb4a7b4a7b4a7b4a7
 [10009000] BLR beat 17 observed: RADDR=529 DOUT=0xb4a7b4a7b4a7b4a7
-[10009000] MEM: READ decode rank=0 bank=0 row=0 col=256
-[10009000] MEM: READ cmd received rank=0 bank=0 row=0 col=256
+[10009000] MEM: READ decode rank=7 bank=0 row=0 col=256
+[10009000] MEM: READ cmd received rank=7 bank=0 row=0 col=256
 [10011000] READ observed (server top): RADDR=530 DOUT=0xb7a7b7a7b7a7b7a7
 [10011000] BLR beat 18 observed: RADDR=530 DOUT=0xb7a7b7a7b7a7b7a7
 [10013000] READ observed (server top): RADDR=531 DOUT=0xb6a7b6a7b6a7b6a7
@@ -781,14 +781,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10037000] READ observed (server top): RADDR=543 DOUT=0xbaa7baa7baa7baa7
 [10037000] BLR beat 31 observed: RADDR=543 DOUT=0xbaa7baa7baa7baa7
 [10037000] BLW/BLR sequence OK: base_addr=512 SZ=3 (nwords=32)
-[10061000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
-[10063000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
-[10065000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
-[10067000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
-[10069000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
-[10071000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
-[10073000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
-[10075000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[10061000] MEM: READ beat=0 rank=7 idx=0 data=0x0000
+[10063000] MEM: READ beat=1 rank=7 idx=1 data=0x0000
+[10065000] MEM: READ beat=2 rank=7 idx=2 data=0x0000
+[10067000] MEM: READ beat=3 rank=7 idx=3 data=0x0000
+[10069000] MEM: READ beat=4 rank=7 idx=4 data=0x0000
+[10071000] MEM: READ beat=5 rank=7 idx=5 data=0x0000
+[10073000] MEM: READ beat=6 rank=7 idx=6 data=0x0000
+[10075000] MEM: READ beat=7 rank=7 idx=7 data=0x0000
 [10237000] (server) Starting FIFO stress / refresh-interleaving test...
 [10239000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
 [10239000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
@@ -820,7 +820,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10249000] PROT: GETCMD state cnt=0
 [10249000] PROT: GETCMD addr=600 cmd=10 sz=0 rank_sel=0
 [10265000] DQS_MON: WRITE detected, starting DQS observation window.
-[10265000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=289
+[10265000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=289
 [10281000] MEM: WRITE burst committed base_idx=97 data=0x0000
 [10331000] DQS_MON: window complete, edge_cnt=7.
 [10663000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
@@ -857,16 +857,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10687000] PROT: ISSUE_READ bank=3 row=0 col=144 cs=1 ras=1 cas=1 we=1
 [10687000] PROT: ISSUE_READ bank=3 row=0 col=144 cs=1 ras=1 cas=1 we=1
 [10687000] PROT: ISSUE_READ bank=3 row=0 col=144 cs=1 ras=1 cas=1 we=1
-[10689000] MEM: READ decode rank=0 bank=3 row=0 col=289
-[10689000] MEM: READ cmd received rank=0 bank=3 row=0 col=289
-[10741000] MEM: READ beat=0 rank=0 idx=97 data=0x0000
-[10743000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
-[10745000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
-[10747000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
-[10749000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
-[10751000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
-[10753000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
-[10755000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
+[10689000] MEM: READ decode rank=7 bank=3 row=0 col=289
+[10689000] MEM: READ cmd received rank=7 bank=3 row=0 col=289
+[10741000] MEM: READ beat=0 rank=7 idx=97 data=0x0000
+[10743000] MEM: READ beat=1 rank=7 idx=98 data=0x0000
+[10745000] MEM: READ beat=2 rank=7 idx=99 data=0x0000
+[10747000] MEM: READ beat=3 rank=7 idx=100 data=0x0000
+[10749000] MEM: READ beat=4 rank=7 idx=101 data=0x0000
+[10751000] MEM: READ beat=5 rank=7 idx=102 data=0x0000
+[10753000] MEM: READ beat=6 rank=7 idx=103 data=0x0000
+[10755000] MEM: READ beat=7 rank=7 idx=104 data=0x0000
 [10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
 [10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
 [10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
@@ -897,11 +897,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10783000] PROT: GETCMD state cnt=0
 [10783000] PROT: GETCMD addr=700 cmd=100 sz=1 rank_sel=0
 [10813000] DQS_MON: WRITE detected, starting DQS observation window.
-[10813000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=344
+[10813000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=344
 [10829000] MEM: WRITE burst committed base_idx=120 data=0x0000
 [10879000] DQS_MON: window complete, edge_cnt=7.
 [10909000] DQS_MON: WRITE detected, starting DQS observation window.
-[10909000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=361
+[10909000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=361
 [10925000] MEM: WRITE burst committed base_idx=105 data=0x0000
 [10975000] DQS_MON: window complete, edge_cnt=7.
 [12061000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
@@ -966,16 +966,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12097000] READ observed (server top): RADDR=715 DOUT=0x6ea76ea76ea76ea7
 [12097000] BLR beat 15 observed: RADDR=715 DOUT=0x6ea76ea76ea76ea7
 [12097000] BLW/BLR sequence OK: base_addr=700 SZ=1 (nwords=16)
-[12101000] MEM: READ decode rank=0 bank=3 row=0 col=344
-[12101000] MEM: READ cmd received rank=0 bank=3 row=0 col=344
-[12153000] MEM: READ beat=0 rank=0 idx=120 data=0x0000
-[12155000] MEM: READ beat=1 rank=0 idx=121 data=0x0000
-[12157000] MEM: READ beat=2 rank=0 idx=122 data=0x0000
-[12159000] MEM: READ beat=3 rank=0 idx=123 data=0x0000
-[12161000] MEM: READ beat=4 rank=0 idx=124 data=0x0000
-[12163000] MEM: READ beat=5 rank=0 idx=125 data=0x0000
-[12165000] MEM: READ beat=6 rank=0 idx=126 data=0x0000
-[12167000] MEM: READ beat=7 rank=0 idx=127 data=0x0000
+[12101000] MEM: READ decode rank=7 bank=3 row=0 col=344
+[12101000] MEM: READ cmd received rank=7 bank=3 row=0 col=344
+[12153000] MEM: READ beat=0 rank=7 idx=120 data=0x0000
+[12155000] MEM: READ beat=1 rank=7 idx=121 data=0x0000
+[12157000] MEM: READ beat=2 rank=7 idx=122 data=0x0000
+[12159000] MEM: READ beat=3 rank=7 idx=123 data=0x0000
+[12161000] MEM: READ beat=4 rank=7 idx=124 data=0x0000
+[12163000] MEM: READ beat=5 rank=7 idx=125 data=0x0000
+[12165000] MEM: READ beat=6 rank=7 idx=126 data=0x0000
+[12167000] MEM: READ beat=7 rank=7 idx=127 data=0x0000
 [12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
 [12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
 [12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
@@ -1006,7 +1006,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12309000] PROT: GETCMD state cnt=0
 [12309000] PROT: GETCMD addr=601 cmd=10 sz=0 rank_sel=0
 [12325000] DQS_MON: WRITE detected, starting DQS observation window.
-[12325000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=291
+[12325000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=291
 [12341000] MEM: WRITE burst committed base_idx=99 data=0x0000
 [12391000] DQS_MON: window complete, edge_cnt=7.
 [12723000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
@@ -1043,16 +1043,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12747000] PROT: ISSUE_READ bank=3 row=0 col=145 cs=1 ras=1 cas=1 we=1
 [12747000] PROT: ISSUE_READ bank=3 row=0 col=145 cs=1 ras=1 cas=1 we=1
 [12747000] PROT: ISSUE_READ bank=3 row=0 col=145 cs=1 ras=1 cas=1 we=1
-[12749000] MEM: READ decode rank=0 bank=3 row=0 col=291
-[12749000] MEM: READ cmd received rank=0 bank=3 row=0 col=291
-[12801000] MEM: READ beat=0 rank=0 idx=99 data=0x0000
-[12803000] MEM: READ beat=1 rank=0 idx=100 data=0x0000
-[12805000] MEM: READ beat=2 rank=0 idx=101 data=0x0000
-[12807000] MEM: READ beat=3 rank=0 idx=102 data=0x0000
-[12809000] MEM: READ beat=4 rank=0 idx=103 data=0x0000
-[12811000] MEM: READ beat=5 rank=0 idx=104 data=0x0000
-[12813000] MEM: READ beat=6 rank=0 idx=105 data=0x0000
-[12815000] MEM: READ beat=7 rank=0 idx=106 data=0x0000
+[12749000] MEM: READ decode rank=7 bank=3 row=0 col=291
+[12749000] MEM: READ cmd received rank=7 bank=3 row=0 col=291
+[12801000] MEM: READ beat=0 rank=7 idx=99 data=0x0000
+[12803000] MEM: READ beat=1 rank=7 idx=100 data=0x0000
+[12805000] MEM: READ beat=2 rank=7 idx=101 data=0x0000
+[12807000] MEM: READ beat=3 rank=7 idx=102 data=0x0000
+[12809000] MEM: READ beat=4 rank=7 idx=103 data=0x0000
+[12811000] MEM: READ beat=5 rank=7 idx=104 data=0x0000
+[12813000] MEM: READ beat=6 rank=7 idx=105 data=0x0000
+[12815000] MEM: READ beat=7 rank=7 idx=106 data=0x0000
 [12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
 [12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
 [12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
@@ -1083,11 +1083,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12843000] PROT: GETCMD state cnt=0
 [12843000] PROT: GETCMD addr=740 cmd=100 sz=1 rank_sel=0
 [12873000] DQS_MON: WRITE detected, starting DQS observation window.
-[12873000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=376
+[12873000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=376
 [12889000] MEM: WRITE burst committed base_idx=24 data=0x0000
 [12939000] DQS_MON: window complete, edge_cnt=7.
 [12969000] DQS_MON: WRITE detected, starting DQS observation window.
-[12969000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=393
+[12969000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=393
 [12985000] MEM: WRITE burst committed base_idx=9 data=0x0000
 [13035000] DQS_MON: window complete, edge_cnt=7.
 [14121000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
@@ -1152,16 +1152,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [14157000] READ observed (server top): RADDR=755 DOUT=0x56a756a756a756a7
 [14157000] BLR beat 15 observed: RADDR=755 DOUT=0x56a756a756a756a7
 [14157000] BLW/BLR sequence OK: base_addr=740 SZ=1 (nwords=16)
-[14161000] MEM: READ decode rank=0 bank=0 row=0 col=376
-[14161000] MEM: READ cmd received rank=0 bank=0 row=0 col=376
-[14213000] MEM: READ beat=0 rank=0 idx=24 data=0x0000
-[14215000] MEM: READ beat=1 rank=0 idx=25 data=0x0000
-[14217000] MEM: READ beat=2 rank=0 idx=26 data=0x0000
-[14219000] MEM: READ beat=3 rank=0 idx=27 data=0x0000
-[14221000] MEM: READ beat=4 rank=0 idx=28 data=0x0000
-[14223000] MEM: READ beat=5 rank=0 idx=29 data=0x0000
-[14225000] MEM: READ beat=6 rank=0 idx=30 data=0x0000
-[14227000] MEM: READ beat=7 rank=0 idx=31 data=0x0000
+[14161000] MEM: READ decode rank=7 bank=0 row=0 col=376
+[14161000] MEM: READ cmd received rank=7 bank=0 row=0 col=376
+[14213000] MEM: READ beat=0 rank=7 idx=24 data=0x0000
+[14215000] MEM: READ beat=1 rank=7 idx=25 data=0x0000
+[14217000] MEM: READ beat=2 rank=7 idx=26 data=0x0000
+[14219000] MEM: READ beat=3 rank=7 idx=27 data=0x0000
+[14221000] MEM: READ beat=4 rank=7 idx=28 data=0x0000
+[14223000] MEM: READ beat=5 rank=7 idx=29 data=0x0000
+[14225000] MEM: READ beat=6 rank=7 idx=30 data=0x0000
+[14227000] MEM: READ beat=7 rank=7 idx=31 data=0x0000
 [14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
 [14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
 [14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
@@ -1192,7 +1192,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [14369000] PROT: GETCMD state cnt=0
 [14369000] PROT: GETCMD addr=602 cmd=10 sz=0 rank_sel=0
 [14385000] DQS_MON: WRITE detected, starting DQS observation window.
-[14385000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=293
+[14385000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=293
 [14401000] MEM: WRITE burst committed base_idx=101 data=0x0000
 [14451000] DQS_MON: window complete, edge_cnt=7.
 [14783000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
@@ -1229,16 +1229,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [14807000] PROT: ISSUE_READ bank=3 row=0 col=146 cs=1 ras=1 cas=1 we=1
 [14807000] PROT: ISSUE_READ bank=3 row=0 col=146 cs=1 ras=1 cas=1 we=1
 [14807000] PROT: ISSUE_READ bank=3 row=0 col=146 cs=1 ras=1 cas=1 we=1
-[14809000] MEM: READ decode rank=0 bank=3 row=0 col=293
-[14809000] MEM: READ cmd received rank=0 bank=3 row=0 col=293
-[14861000] MEM: READ beat=0 rank=0 idx=101 data=0x0000
-[14863000] MEM: READ beat=1 rank=0 idx=102 data=0x0000
-[14865000] MEM: READ beat=2 rank=0 idx=103 data=0x0000
-[14867000] MEM: READ beat=3 rank=0 idx=104 data=0x0000
-[14869000] MEM: READ beat=4 rank=0 idx=105 data=0x0000
-[14871000] MEM: READ beat=5 rank=0 idx=106 data=0x0000
-[14873000] MEM: READ beat=6 rank=0 idx=107 data=0x0000
-[14875000] MEM: READ beat=7 rank=0 idx=108 data=0x0000
+[14809000] MEM: READ decode rank=7 bank=3 row=0 col=293
+[14809000] MEM: READ cmd received rank=7 bank=3 row=0 col=293
+[14861000] MEM: READ beat=0 rank=7 idx=101 data=0x0000
+[14863000] MEM: READ beat=1 rank=7 idx=102 data=0x0000
+[14865000] MEM: READ beat=2 rank=7 idx=103 data=0x0000
+[14867000] MEM: READ beat=3 rank=7 idx=104 data=0x0000
+[14869000] MEM: READ beat=4 rank=7 idx=105 data=0x0000
+[14871000] MEM: READ beat=5 rank=7 idx=106 data=0x0000
+[14873000] MEM: READ beat=6 rank=7 idx=107 data=0x0000
+[14875000] MEM: READ beat=7 rank=7 idx=108 data=0x0000
 [14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
 [14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
 [14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
@@ -1270,11 +1270,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [15123000] PROT: GETCMD state cnt=0
 [15123000] PROT: GETCMD addr=780 cmd=100 sz=1 rank_sel=0
 [15153000] DQS_MON: WRITE detected, starting DQS observation window.
-[15153000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=392
+[15153000] MEM: WRITE cmd received rank=7 bank=1 row=0 col=392
 [15169000] MEM: WRITE burst committed base_idx=40 data=0x0000
 [15219000] DQS_MON: window complete, edge_cnt=7.
 [15249000] DQS_MON: WRITE detected, starting DQS observation window.
-[15249000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=409
+[15249000] MEM: WRITE cmd received rank=7 bank=1 row=0 col=409
 [15265000] MEM: WRITE burst committed base_idx=57 data=0x0000
 [15315000] DQS_MON: window complete, edge_cnt=7.
 [16181000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
@@ -1339,16 +1339,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16217000] READ observed (server top): RADDR=795 DOUT=0xbea6bea6bea6bea6
 [16217000] BLR beat 15 observed: RADDR=795 DOUT=0xbea6bea6bea6bea6
 [16217000] BLW/BLR sequence OK: base_addr=780 SZ=1 (nwords=16)
-[16221000] MEM: READ decode rank=0 bank=1 row=0 col=392
-[16221000] MEM: READ cmd received rank=0 bank=1 row=0 col=392
-[16273000] MEM: READ beat=0 rank=0 idx=40 data=0x0000
-[16275000] MEM: READ beat=1 rank=0 idx=41 data=0x0000
-[16277000] MEM: READ beat=2 rank=0 idx=42 data=0x0000
-[16279000] MEM: READ beat=3 rank=0 idx=43 data=0x0000
-[16281000] MEM: READ beat=4 rank=0 idx=44 data=0x0000
-[16283000] MEM: READ beat=5 rank=0 idx=45 data=0x0000
-[16285000] MEM: READ beat=6 rank=0 idx=46 data=0x0000
-[16287000] MEM: READ beat=7 rank=0 idx=47 data=0x0000
+[16221000] MEM: READ decode rank=7 bank=1 row=0 col=392
+[16221000] MEM: READ cmd received rank=7 bank=1 row=0 col=392
+[16273000] MEM: READ beat=0 rank=7 idx=40 data=0x0000
+[16275000] MEM: READ beat=1 rank=7 idx=41 data=0x0000
+[16277000] MEM: READ beat=2 rank=7 idx=42 data=0x0000
+[16279000] MEM: READ beat=3 rank=7 idx=43 data=0x0000
+[16281000] MEM: READ beat=4 rank=7 idx=44 data=0x0000
+[16283000] MEM: READ beat=5 rank=7 idx=45 data=0x0000
+[16285000] MEM: READ beat=6 rank=7 idx=46 data=0x0000
+[16287000] MEM: READ beat=7 rank=7 idx=47 data=0x0000
 [16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
 [16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
 [16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
@@ -1379,7 +1379,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16429000] PROT: GETCMD state cnt=0
 [16429000] PROT: GETCMD addr=603 cmd=10 sz=0 rank_sel=0
 [16445000] DQS_MON: WRITE detected, starting DQS observation window.
-[16445000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=295
+[16445000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=295
 [16461000] MEM: WRITE burst committed base_idx=103 data=0x0000
 [16511000] DQS_MON: window complete, edge_cnt=7.
 [16843000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
@@ -1416,16 +1416,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16867000] PROT: ISSUE_READ bank=3 row=0 col=147 cs=1 ras=1 cas=1 we=1
 [16867000] PROT: ISSUE_READ bank=3 row=0 col=147 cs=1 ras=1 cas=1 we=1
 [16867000] PROT: ISSUE_READ bank=3 row=0 col=147 cs=1 ras=1 cas=1 we=1
-[16869000] MEM: READ decode rank=0 bank=3 row=0 col=295
-[16869000] MEM: READ cmd received rank=0 bank=3 row=0 col=295
-[16921000] MEM: READ beat=0 rank=0 idx=103 data=0x0000
-[16923000] MEM: READ beat=1 rank=0 idx=104 data=0x0000
-[16925000] MEM: READ beat=2 rank=0 idx=105 data=0x0000
-[16927000] MEM: READ beat=3 rank=0 idx=106 data=0x0000
-[16929000] MEM: READ beat=4 rank=0 idx=107 data=0x0000
-[16931000] MEM: READ beat=5 rank=0 idx=108 data=0x0000
-[16933000] MEM: READ beat=6 rank=0 idx=109 data=0x0000
-[16935000] MEM: READ beat=7 rank=0 idx=110 data=0x0000
+[16869000] MEM: READ decode rank=7 bank=3 row=0 col=295
+[16869000] MEM: READ cmd received rank=7 bank=3 row=0 col=295
+[16921000] MEM: READ beat=0 rank=7 idx=103 data=0x0000
+[16923000] MEM: READ beat=1 rank=7 idx=104 data=0x0000
+[16925000] MEM: READ beat=2 rank=7 idx=105 data=0x0000
+[16927000] MEM: READ beat=3 rank=7 idx=106 data=0x0000
+[16929000] MEM: READ beat=4 rank=7 idx=107 data=0x0000
+[16931000] MEM: READ beat=5 rank=7 idx=108 data=0x0000
+[16933000] MEM: READ beat=6 rank=7 idx=109 data=0x0000
+[16935000] MEM: READ beat=7 rank=7 idx=110 data=0x0000
 [16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
 [16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
 [16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
@@ -1456,11 +1456,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16963000] PROT: GETCMD state cnt=0
 [16963000] PROT: GETCMD addr=820 cmd=100 sz=1 rank_sel=0
 [16993000] DQS_MON: WRITE detected, starting DQS observation window.
-[16993000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=408
+[16993000] MEM: WRITE cmd received rank=7 bank=2 row=0 col=408
 [17009000] MEM: WRITE burst committed base_idx=88 data=0x0000
 [17059000] DQS_MON: window complete, edge_cnt=7.
 [17089000] DQS_MON: WRITE detected, starting DQS observation window.
-[17089000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=425
+[17089000] MEM: WRITE cmd received rank=7 bank=2 row=0 col=425
 [17105000] MEM: WRITE burst committed base_idx=73 data=0x0000
 [17155000] DQS_MON: window complete, edge_cnt=7.
 [18241000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
@@ -1525,16 +1525,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [18277000] READ observed (server top): RADDR=835 DOUT=0xe6a6e6a6e6a6e6a6
 [18277000] BLR beat 15 observed: RADDR=835 DOUT=0xe6a6e6a6e6a6e6a6
 [18277000] BLW/BLR sequence OK: base_addr=820 SZ=1 (nwords=16)
-[18281000] MEM: READ decode rank=0 bank=2 row=0 col=408
-[18281000] MEM: READ cmd received rank=0 bank=2 row=0 col=408
-[18333000] MEM: READ beat=0 rank=0 idx=88 data=0x0000
-[18335000] MEM: READ beat=1 rank=0 idx=89 data=0x0000
-[18337000] MEM: READ beat=2 rank=0 idx=90 data=0x0000
-[18339000] MEM: READ beat=3 rank=0 idx=91 data=0x0000
-[18341000] MEM: READ beat=4 rank=0 idx=92 data=0x0000
-[18343000] MEM: READ beat=5 rank=0 idx=93 data=0x0000
-[18345000] MEM: READ beat=6 rank=0 idx=94 data=0x0000
-[18347000] MEM: READ beat=7 rank=0 idx=95 data=0x0000
+[18281000] MEM: READ decode rank=7 bank=2 row=0 col=408
+[18281000] MEM: READ cmd received rank=7 bank=2 row=0 col=408
+[18333000] MEM: READ beat=0 rank=7 idx=88 data=0x0000
+[18335000] MEM: READ beat=1 rank=7 idx=89 data=0x0000
+[18337000] MEM: READ beat=2 rank=7 idx=90 data=0x0000
+[18339000] MEM: READ beat=3 rank=7 idx=91 data=0x0000
+[18341000] MEM: READ beat=4 rank=7 idx=92 data=0x0000
+[18343000] MEM: READ beat=5 rank=7 idx=93 data=0x0000
+[18345000] MEM: READ beat=6 rank=7 idx=94 data=0x0000
+[18347000] MEM: READ beat=7 rank=7 idx=95 data=0x0000
 [18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
 [18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
 [18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
@@ -1565,7 +1565,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [18489000] PROT: GETCMD state cnt=0
 [18489000] PROT: GETCMD addr=604 cmd=10 sz=0 rank_sel=0
 [18505000] DQS_MON: WRITE detected, starting DQS observation window.
-[18505000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=297
+[18505000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=297
 [18521000] MEM: WRITE burst committed base_idx=105 data=0x0000
 [18571000] DQS_MON: window complete, edge_cnt=7.
 [18903000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
@@ -1602,16 +1602,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [18927000] PROT: ISSUE_READ bank=3 row=0 col=148 cs=1 ras=1 cas=1 we=1
 [18927000] PROT: ISSUE_READ bank=3 row=0 col=148 cs=1 ras=1 cas=1 we=1
 [18927000] PROT: ISSUE_READ bank=3 row=0 col=148 cs=1 ras=1 cas=1 we=1
-[18929000] MEM: READ decode rank=0 bank=3 row=0 col=297
-[18929000] MEM: READ cmd received rank=0 bank=3 row=0 col=297
-[18981000] MEM: READ beat=0 rank=0 idx=105 data=0x0000
-[18983000] MEM: READ beat=1 rank=0 idx=106 data=0x0000
-[18985000] MEM: READ beat=2 rank=0 idx=107 data=0x0000
-[18987000] MEM: READ beat=3 rank=0 idx=108 data=0x0000
-[18989000] MEM: READ beat=4 rank=0 idx=109 data=0x0000
-[18991000] MEM: READ beat=5 rank=0 idx=110 data=0x0000
-[18993000] MEM: READ beat=6 rank=0 idx=111 data=0x0000
-[18995000] MEM: READ beat=7 rank=0 idx=112 data=0x0000
+[18929000] MEM: READ decode rank=7 bank=3 row=0 col=297
+[18929000] MEM: READ cmd received rank=7 bank=3 row=0 col=297
+[18981000] MEM: READ beat=0 rank=7 idx=105 data=0x0000
+[18983000] MEM: READ beat=1 rank=7 idx=106 data=0x0000
+[18985000] MEM: READ beat=2 rank=7 idx=107 data=0x0000
+[18987000] MEM: READ beat=3 rank=7 idx=108 data=0x0000
+[18989000] MEM: READ beat=4 rank=7 idx=109 data=0x0000
+[18991000] MEM: READ beat=5 rank=7 idx=110 data=0x0000
+[18993000] MEM: READ beat=6 rank=7 idx=111 data=0x0000
+[18995000] MEM: READ beat=7 rank=7 idx=112 data=0x0000
 [19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
 [19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
 [19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
@@ -1642,11 +1642,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [19023000] PROT: GETCMD state cnt=0
 [19023000] PROT: GETCMD addr=860 cmd=100 sz=1 rank_sel=0
 [19053000] DQS_MON: WRITE detected, starting DQS observation window.
-[19053000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=424
+[19053000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=424
 [19069000] MEM: WRITE burst committed base_idx=104 data=0x0000
 [19119000] DQS_MON: window complete, edge_cnt=7.
 [19149000] DQS_MON: WRITE detected, starting DQS observation window.
-[19149000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=441
+[19149000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=441
 [19165000] MEM: WRITE burst committed base_idx=121 data=0x0000
 [19215000] DQS_MON: window complete, edge_cnt=7.
 [20301000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
@@ -1711,16 +1711,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [20337000] READ observed (server top): RADDR=875 DOUT=0xcea6cea6cea6cea6
 [20337000] BLR beat 15 observed: RADDR=875 DOUT=0xcea6cea6cea6cea6
 [20337000] BLW/BLR sequence OK: base_addr=860 SZ=1 (nwords=16)
-[20341000] MEM: READ decode rank=0 bank=3 row=0 col=424
-[20341000] MEM: READ cmd received rank=0 bank=3 row=0 col=424
-[20393000] MEM: READ beat=0 rank=0 idx=104 data=0x0000
-[20395000] MEM: READ beat=1 rank=0 idx=105 data=0x0000
-[20397000] MEM: READ beat=2 rank=0 idx=106 data=0x0000
-[20399000] MEM: READ beat=3 rank=0 idx=107 data=0x0000
-[20401000] MEM: READ beat=4 rank=0 idx=108 data=0x0000
-[20403000] MEM: READ beat=5 rank=0 idx=109 data=0x0000
-[20405000] MEM: READ beat=6 rank=0 idx=110 data=0x0000
-[20407000] MEM: READ beat=7 rank=0 idx=111 data=0x0000
+[20341000] MEM: READ decode rank=7 bank=3 row=0 col=424
+[20341000] MEM: READ cmd received rank=7 bank=3 row=0 col=424
+[20393000] MEM: READ beat=0 rank=7 idx=104 data=0x0000
+[20395000] MEM: READ beat=1 rank=7 idx=105 data=0x0000
+[20397000] MEM: READ beat=2 rank=7 idx=106 data=0x0000
+[20399000] MEM: READ beat=3 rank=7 idx=107 data=0x0000
+[20401000] MEM: READ beat=4 rank=7 idx=108 data=0x0000
+[20403000] MEM: READ beat=5 rank=7 idx=109 data=0x0000
+[20405000] MEM: READ beat=6 rank=7 idx=110 data=0x0000
+[20407000] MEM: READ beat=7 rank=7 idx=111 data=0x0000
 [20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
 [20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
 [20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
@@ -1751,7 +1751,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [20549000] PROT: GETCMD state cnt=0
 [20549000] PROT: GETCMD addr=605 cmd=10 sz=0 rank_sel=0
 [20565000] DQS_MON: WRITE detected, starting DQS observation window.
-[20565000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=299
+[20565000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=299
 [20581000] MEM: WRITE burst committed base_idx=107 data=0x0000
 [20631000] DQS_MON: window complete, edge_cnt=7.
 [20963000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
@@ -1788,16 +1788,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [20987000] PROT: ISSUE_READ bank=3 row=0 col=149 cs=1 ras=1 cas=1 we=1
 [20987000] PROT: ISSUE_READ bank=3 row=0 col=149 cs=1 ras=1 cas=1 we=1
 [20987000] PROT: ISSUE_READ bank=3 row=0 col=149 cs=1 ras=1 cas=1 we=1
-[20989000] MEM: READ decode rank=0 bank=3 row=0 col=299
-[20989000] MEM: READ cmd received rank=0 bank=3 row=0 col=299
-[21041000] MEM: READ beat=0 rank=0 idx=107 data=0x0000
-[21043000] MEM: READ beat=1 rank=0 idx=108 data=0x0000
-[21045000] MEM: READ beat=2 rank=0 idx=109 data=0x0000
-[21047000] MEM: READ beat=3 rank=0 idx=110 data=0x0000
-[21049000] MEM: READ beat=4 rank=0 idx=111 data=0x0000
-[21051000] MEM: READ beat=5 rank=0 idx=112 data=0x0000
-[21053000] MEM: READ beat=6 rank=0 idx=113 data=0x0000
-[21055000] MEM: READ beat=7 rank=0 idx=114 data=0x0000
+[20989000] MEM: READ decode rank=7 bank=3 row=0 col=299
+[20989000] MEM: READ cmd received rank=7 bank=3 row=0 col=299
+[21041000] MEM: READ beat=0 rank=7 idx=107 data=0x0000
+[21043000] MEM: READ beat=1 rank=7 idx=108 data=0x0000
+[21045000] MEM: READ beat=2 rank=7 idx=109 data=0x0000
+[21047000] MEM: READ beat=3 rank=7 idx=110 data=0x0000
+[21049000] MEM: READ beat=4 rank=7 idx=111 data=0x0000
+[21051000] MEM: READ beat=5 rank=7 idx=112 data=0x0000
+[21053000] MEM: READ beat=6 rank=7 idx=113 data=0x0000
+[21055000] MEM: READ beat=7 rank=7 idx=114 data=0x0000
 [21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
 [21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
 [21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
@@ -1828,11 +1828,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [21083000] PROT: GETCMD state cnt=0
 [21083000] PROT: GETCMD addr=900 cmd=100 sz=1 rank_sel=0
 [21113000] DQS_MON: WRITE detected, starting DQS observation window.
-[21113000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=456
+[21113000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=456
 [21129000] MEM: WRITE burst committed base_idx=8 data=0x0000
 [21179000] DQS_MON: window complete, edge_cnt=7.
 [21209000] DQS_MON: WRITE detected, starting DQS observation window.
-[21209000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=473
+[21209000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=473
 [21225000] MEM: WRITE burst committed base_idx=25 data=0x0000
 [21275000] DQS_MON: window complete, edge_cnt=7.
 [21479000] REF_MON: AUTO REFRESH interval = 3281 cycles.
@@ -1898,16 +1898,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [22397000] READ observed (server top): RADDR=915 DOUT=0x36a636a636a636a6
 [22397000] BLR beat 15 observed: RADDR=915 DOUT=0x36a636a636a636a6
 [22397000] BLW/BLR sequence OK: base_addr=900 SZ=1 (nwords=16)
-[22401000] MEM: READ decode rank=0 bank=0 row=0 col=456
-[22401000] MEM: READ cmd received rank=0 bank=0 row=0 col=456
-[22453000] MEM: READ beat=0 rank=0 idx=8 data=0x0000
-[22455000] MEM: READ beat=1 rank=0 idx=9 data=0x0000
-[22457000] MEM: READ beat=2 rank=0 idx=10 data=0x0000
-[22459000] MEM: READ beat=3 rank=0 idx=11 data=0x0000
-[22461000] MEM: READ beat=4 rank=0 idx=12 data=0x0000
-[22463000] MEM: READ beat=5 rank=0 idx=13 data=0x0000
-[22465000] MEM: READ beat=6 rank=0 idx=14 data=0x0000
-[22467000] MEM: READ beat=7 rank=0 idx=15 data=0x0000
+[22401000] MEM: READ decode rank=7 bank=0 row=0 col=456
+[22401000] MEM: READ cmd received rank=7 bank=0 row=0 col=456
+[22453000] MEM: READ beat=0 rank=7 idx=8 data=0x0000
+[22455000] MEM: READ beat=1 rank=7 idx=9 data=0x0000
+[22457000] MEM: READ beat=2 rank=7 idx=10 data=0x0000
+[22459000] MEM: READ beat=3 rank=7 idx=11 data=0x0000
+[22461000] MEM: READ beat=4 rank=7 idx=12 data=0x0000
+[22463000] MEM: READ beat=5 rank=7 idx=13 data=0x0000
+[22465000] MEM: READ beat=6 rank=7 idx=14 data=0x0000
+[22467000] MEM: READ beat=7 rank=7 idx=15 data=0x0000
 [22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
 [22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
 [22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
@@ -1938,7 +1938,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [22609000] PROT: GETCMD state cnt=0
 [22609000] PROT: GETCMD addr=606 cmd=10 sz=0 rank_sel=0
 [22625000] DQS_MON: WRITE detected, starting DQS observation window.
-[22625000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=301
+[22625000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=301
 [22641000] MEM: WRITE burst committed base_idx=109 data=0x0000
 [22691000] DQS_MON: window complete, edge_cnt=7.
 [23023000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
@@ -1975,16 +1975,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [23047000] PROT: ISSUE_READ bank=3 row=0 col=150 cs=1 ras=1 cas=1 we=1
 [23047000] PROT: ISSUE_READ bank=3 row=0 col=150 cs=1 ras=1 cas=1 we=1
 [23047000] PROT: ISSUE_READ bank=3 row=0 col=150 cs=1 ras=1 cas=1 we=1
-[23049000] MEM: READ decode rank=0 bank=3 row=0 col=301
-[23049000] MEM: READ cmd received rank=0 bank=3 row=0 col=301
-[23101000] MEM: READ beat=0 rank=0 idx=109 data=0x0000
-[23103000] MEM: READ beat=1 rank=0 idx=110 data=0x0000
-[23105000] MEM: READ beat=2 rank=0 idx=111 data=0x0000
-[23107000] MEM: READ beat=3 rank=0 idx=112 data=0x0000
-[23109000] MEM: READ beat=4 rank=0 idx=113 data=0x0000
-[23111000] MEM: READ beat=5 rank=0 idx=114 data=0x0000
-[23113000] MEM: READ beat=6 rank=0 idx=115 data=0x0000
-[23115000] MEM: READ beat=7 rank=0 idx=116 data=0x0000
+[23049000] MEM: READ decode rank=7 bank=3 row=0 col=301
+[23049000] MEM: READ cmd received rank=7 bank=3 row=0 col=301
+[23101000] MEM: READ beat=0 rank=7 idx=109 data=0x0000
+[23103000] MEM: READ beat=1 rank=7 idx=110 data=0x0000
+[23105000] MEM: READ beat=2 rank=7 idx=111 data=0x0000
+[23107000] MEM: READ beat=3 rank=7 idx=112 data=0x0000
+[23109000] MEM: READ beat=4 rank=7 idx=113 data=0x0000
+[23111000] MEM: READ beat=5 rank=7 idx=114 data=0x0000
+[23113000] MEM: READ beat=6 rank=7 idx=115 data=0x0000
+[23115000] MEM: READ beat=7 rank=7 idx=116 data=0x0000
 [23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
 [23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
 [23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
@@ -2015,11 +2015,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [23143000] PROT: GETCMD state cnt=0
 [23143000] PROT: GETCMD addr=940 cmd=100 sz=1 rank_sel=0
 [23173000] DQS_MON: WRITE detected, starting DQS observation window.
-[23173000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=472
+[23173000] MEM: WRITE cmd received rank=7 bank=1 row=0 col=472
 [23189000] MEM: WRITE burst committed base_idx=56 data=0x0000
 [23239000] DQS_MON: window complete, edge_cnt=7.
 [23269000] DQS_MON: WRITE detected, starting DQS observation window.
-[23269000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=489
+[23269000] MEM: WRITE cmd received rank=7 bank=1 row=0 col=489
 [23285000] MEM: WRITE burst committed base_idx=41 data=0x0000
 [23335000] DQS_MON: window complete, edge_cnt=7.
 [24421000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
@@ -2084,16 +2084,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [24457000] READ observed (server top): RADDR=955 DOUT=0x1ea61ea61ea61ea6
 [24457000] BLR beat 15 observed: RADDR=955 DOUT=0x1ea61ea61ea61ea6
 [24457000] BLW/BLR sequence OK: base_addr=940 SZ=1 (nwords=16)
-[24461000] MEM: READ decode rank=0 bank=1 row=0 col=472
-[24461000] MEM: READ cmd received rank=0 bank=1 row=0 col=472
-[24513000] MEM: READ beat=0 rank=0 idx=56 data=0x0000
-[24515000] MEM: READ beat=1 rank=0 idx=57 data=0x0000
-[24517000] MEM: READ beat=2 rank=0 idx=58 data=0x0000
-[24519000] MEM: READ beat=3 rank=0 idx=59 data=0x0000
-[24521000] MEM: READ beat=4 rank=0 idx=60 data=0x0000
-[24523000] MEM: READ beat=5 rank=0 idx=61 data=0x0000
-[24525000] MEM: READ beat=6 rank=0 idx=62 data=0x0000
-[24527000] MEM: READ beat=7 rank=0 idx=63 data=0x0000
+[24461000] MEM: READ decode rank=7 bank=1 row=0 col=472
+[24461000] MEM: READ cmd received rank=7 bank=1 row=0 col=472
+[24513000] MEM: READ beat=0 rank=7 idx=56 data=0x0000
+[24515000] MEM: READ beat=1 rank=7 idx=57 data=0x0000
+[24517000] MEM: READ beat=2 rank=7 idx=58 data=0x0000
+[24519000] MEM: READ beat=3 rank=7 idx=59 data=0x0000
+[24521000] MEM: READ beat=4 rank=7 idx=60 data=0x0000
+[24523000] MEM: READ beat=5 rank=7 idx=61 data=0x0000
+[24525000] MEM: READ beat=6 rank=7 idx=62 data=0x0000
+[24527000] MEM: READ beat=7 rank=7 idx=63 data=0x0000
 [24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
 [24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
 [24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
@@ -2124,7 +2124,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [24669000] PROT: GETCMD state cnt=0
 [24669000] PROT: GETCMD addr=607 cmd=10 sz=0 rank_sel=0
 [24685000] DQS_MON: WRITE detected, starting DQS observation window.
-[24685000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=303
+[24685000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=303
 [24701000] MEM: WRITE burst committed base_idx=111 data=0x0000
 [24751000] DQS_MON: window complete, edge_cnt=7.
 [25083000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
@@ -2161,16 +2161,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [25107000] PROT: ISSUE_READ bank=3 row=0 col=151 cs=1 ras=1 cas=1 we=1
 [25107000] PROT: ISSUE_READ bank=3 row=0 col=151 cs=1 ras=1 cas=1 we=1
 [25107000] PROT: ISSUE_READ bank=3 row=0 col=151 cs=1 ras=1 cas=1 we=1
-[25109000] MEM: READ decode rank=0 bank=3 row=0 col=303
-[25109000] MEM: READ cmd received rank=0 bank=3 row=0 col=303
-[25161000] MEM: READ beat=0 rank=0 idx=111 data=0x0000
-[25163000] MEM: READ beat=1 rank=0 idx=112 data=0x0000
-[25165000] MEM: READ beat=2 rank=0 idx=113 data=0x0000
-[25167000] MEM: READ beat=3 rank=0 idx=114 data=0x0000
-[25169000] MEM: READ beat=4 rank=0 idx=115 data=0x0000
-[25171000] MEM: READ beat=5 rank=0 idx=116 data=0x0000
-[25173000] MEM: READ beat=6 rank=0 idx=117 data=0x0000
-[25175000] MEM: READ beat=7 rank=0 idx=118 data=0x0000
+[25109000] MEM: READ decode rank=7 bank=3 row=0 col=303
+[25109000] MEM: READ cmd received rank=7 bank=3 row=0 col=303
+[25161000] MEM: READ beat=0 rank=7 idx=111 data=0x0000
+[25163000] MEM: READ beat=1 rank=7 idx=112 data=0x0000
+[25165000] MEM: READ beat=2 rank=7 idx=113 data=0x0000
+[25167000] MEM: READ beat=3 rank=7 idx=114 data=0x0000
+[25169000] MEM: READ beat=4 rank=7 idx=115 data=0x0000
+[25171000] MEM: READ beat=5 rank=7 idx=116 data=0x0000
+[25173000] MEM: READ beat=6 rank=7 idx=117 data=0x0000
+[25175000] MEM: READ beat=7 rank=7 idx=118 data=0x0000
 [25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
 [25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
 [25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
@@ -2201,11 +2201,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [25203000] PROT: GETCMD state cnt=0
 [25203000] PROT: GETCMD addr=980 cmd=100 sz=1 rank_sel=0
 [25233000] DQS_MON: WRITE detected, starting DQS observation window.
-[25233000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=488
+[25233000] MEM: WRITE cmd received rank=7 bank=2 row=0 col=488
 [25249000] MEM: WRITE burst committed base_idx=72 data=0x0000
 [25299000] DQS_MON: window complete, edge_cnt=7.
 [25329000] DQS_MON: WRITE detected, starting DQS observation window.
-[25329000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=505
+[25329000] MEM: WRITE cmd received rank=7 bank=2 row=0 col=505
 [25345000] MEM: WRITE burst committed base_idx=89 data=0x0000
 [25395000] DQS_MON: window complete, edge_cnt=7.
 [26481000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
@@ -2270,16 +2270,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [26517000] READ observed (server top): RADDR=995 DOUT=0x46a646a646a646a6
 [26517000] BLR beat 15 observed: RADDR=995 DOUT=0x46a646a646a646a6
 [26517000] BLW/BLR sequence OK: base_addr=980 SZ=1 (nwords=16)
-[26521000] MEM: READ decode rank=0 bank=2 row=0 col=488
-[26521000] MEM: READ cmd received rank=0 bank=2 row=0 col=488
-[26573000] MEM: READ beat=0 rank=0 idx=72 data=0x0000
-[26575000] MEM: READ beat=1 rank=0 idx=73 data=0x0000
-[26577000] MEM: READ beat=2 rank=0 idx=74 data=0x0000
-[26579000] MEM: READ beat=3 rank=0 idx=75 data=0x0000
-[26581000] MEM: READ beat=4 rank=0 idx=76 data=0x0000
-[26583000] MEM: READ beat=5 rank=0 idx=77 data=0x0000
-[26585000] MEM: READ beat=6 rank=0 idx=78 data=0x0000
-[26587000] MEM: READ beat=7 rank=0 idx=79 data=0x0000
+[26521000] MEM: READ decode rank=7 bank=2 row=0 col=488
+[26521000] MEM: READ cmd received rank=7 bank=2 row=0 col=488
+[26573000] MEM: READ beat=0 rank=7 idx=72 data=0x0000
+[26575000] MEM: READ beat=1 rank=7 idx=73 data=0x0000
+[26577000] MEM: READ beat=2 rank=7 idx=74 data=0x0000
+[26579000] MEM: READ beat=3 rank=7 idx=75 data=0x0000
+[26581000] MEM: READ beat=4 rank=7 idx=76 data=0x0000
+[26583000] MEM: READ beat=5 rank=7 idx=77 data=0x0000
+[26585000] MEM: READ beat=6 rank=7 idx=78 data=0x0000
+[26587000] MEM: READ beat=7 rank=7 idx=79 data=0x0000
 [26717000] (server) Starting reset-during-traffic robustness test...
 [26719000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
 [26719000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
@@ -2311,7 +2311,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [26729000] PROT: GETCMD state cnt=0
 [26729000] PROT: GETCMD addr=900 cmd=10 sz=0 rank_sel=0
 [26745000] DQS_MON: WRITE detected, starting DQS observation window.
-[26745000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=457
+[26745000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=457
 [26761000] MEM: WRITE burst committed base_idx=9 data=0x0000
 [26811000] DQS_MON: window complete, edge_cnt=7.
 [27143000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
@@ -2348,16 +2348,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [27167000] PROT: ISSUE_READ bank=0 row=0 col=228 cs=1 ras=1 cas=1 we=1
 [27167000] PROT: ISSUE_READ bank=0 row=0 col=228 cs=1 ras=1 cas=1 we=1
 [27167000] PROT: ISSUE_READ bank=0 row=0 col=228 cs=1 ras=1 cas=1 we=1
-[27169000] MEM: READ decode rank=0 bank=0 row=0 col=457
-[27169000] MEM: READ cmd received rank=0 bank=0 row=0 col=457
-[27221000] MEM: READ beat=0 rank=0 idx=9 data=0x0000
-[27223000] MEM: READ beat=1 rank=0 idx=10 data=0x0000
-[27225000] MEM: READ beat=2 rank=0 idx=11 data=0x0000
-[27227000] MEM: READ beat=3 rank=0 idx=12 data=0x0000
-[27229000] MEM: READ beat=4 rank=0 idx=13 data=0x0000
-[27231000] MEM: READ beat=5 rank=0 idx=14 data=0x0000
-[27233000] MEM: READ beat=6 rank=0 idx=15 data=0x0000
-[27235000] MEM: READ beat=7 rank=0 idx=16 data=0x0000
+[27169000] MEM: READ decode rank=7 bank=0 row=0 col=457
+[27169000] MEM: READ cmd received rank=7 bank=0 row=0 col=457
+[27221000] MEM: READ beat=0 rank=7 idx=9 data=0x0000
+[27223000] MEM: READ beat=1 rank=7 idx=10 data=0x0000
+[27225000] MEM: READ beat=2 rank=7 idx=11 data=0x0000
+[27227000] MEM: READ beat=3 rank=7 idx=12 data=0x0000
+[27229000] MEM: READ beat=4 rank=7 idx=13 data=0x0000
+[27231000] MEM: READ beat=5 rank=7 idx=14 data=0x0000
+[27233000] MEM: READ beat=6 rank=7 idx=15 data=0x0000
+[27235000] MEM: READ beat=7 rank=7 idx=16 data=0x0000
 [27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
 [27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
 [27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
@@ -2388,7 +2388,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [27263000] PROT: GETCMD state cnt=0
 [27263000] PROT: GETCMD addr=920 cmd=100 sz=0 rank_sel=0
 [27293000] DQS_MON: WRITE detected, starting DQS observation window.
-[27293000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=449
+[27293000] MEM: WRITE cmd received rank=7 bank=3 row=0 col=449
 [27309000] MEM: WRITE burst committed base_idx=97 data=0x0000
 [27359000] DQS_MON: window complete, edge_cnt=7.
 [27705000] REF_MON: AUTO REFRESH interval = 3113 cycles.
@@ -2438,16 +2438,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [28529000] READ observed (server top): RADDR=927 DOUT=0x3aa63aa63aa63aa6
 [28529000] BLR beat 7 observed: RADDR=927 DOUT=0x3aa63aa63aa63aa6
 [28529000] BLW/BLR sequence OK: base_addr=920 SZ=0 (nwords=8)
-[28549000] MEM: READ decode rank=0 bank=3 row=0 col=449
-[28549000] MEM: READ cmd received rank=0 bank=3 row=0 col=449
-[28601000] MEM: READ beat=0 rank=0 idx=97 data=0x0000
-[28603000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
-[28605000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
-[28607000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
-[28609000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
-[28611000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
-[28613000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
-[28615000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
+[28549000] MEM: READ decode rank=7 bank=3 row=0 col=449
+[28549000] MEM: READ cmd received rank=7 bank=3 row=0 col=449
+[28601000] MEM: READ beat=0 rank=7 idx=97 data=0x0000
+[28603000] MEM: READ beat=1 rank=7 idx=98 data=0x0000
+[28605000] MEM: READ beat=2 rank=7 idx=99 data=0x0000
+[28607000] MEM: READ beat=3 rank=7 idx=100 data=0x0000
+[28609000] MEM: READ beat=4 rank=7 idx=101 data=0x0000
+[28611000] MEM: READ beat=5 rank=7 idx=102 data=0x0000
+[28613000] MEM: READ beat=6 rank=7 idx=103 data=0x0000
+[28615000] MEM: READ beat=7 rank=7 idx=104 data=0x0000
 [28729000] (server) Asserting RESET in the middle of activity...
 [28753000] (server) Re-INITDDR asserted after mid-traffic reset, waiting for READY...
 [29395000] Detected AUTO REFRESH command on DDR2 bus (server top).
@@ -2483,7 +2483,7 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [30641000] PROT: GETCMD state cnt=0
 [30641000] PROT: GETCMD addr=32 cmd=10 sz=0 rank_sel=0
 [30657000] DQS_MON: WRITE detected, starting DQS observation window.
-[30657000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=17
+[30657000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=17
 [30673000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [30723000] DQS_MON: window complete, edge_cnt=7.
 [31055000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
@@ -2520,16 +2520,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [31079000] PROT: ISSUE_READ bank=0 row=0 col=8 cs=1 ras=1 cas=1 we=1
 [31079000] PROT: ISSUE_READ bank=0 row=0 col=8 cs=1 ras=1 cas=1 we=1
 [31079000] PROT: ISSUE_READ bank=0 row=0 col=8 cs=1 ras=1 cas=1 we=1
-[31081000] MEM: READ decode rank=0 bank=0 row=0 col=17
-[31081000] MEM: READ cmd received rank=0 bank=0 row=0 col=17
-[31133000] MEM: READ beat=0 rank=0 idx=17 data=0x0000
-[31135000] MEM: READ beat=1 rank=0 idx=18 data=0x0000
-[31137000] MEM: READ beat=2 rank=0 idx=19 data=0x0000
-[31139000] MEM: READ beat=3 rank=0 idx=20 data=0x0000
-[31141000] MEM: READ beat=4 rank=0 idx=21 data=0x0000
-[31143000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
-[31145000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
-[31147000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
+[31081000] MEM: READ decode rank=7 bank=0 row=0 col=17
+[31081000] MEM: READ cmd received rank=7 bank=0 row=0 col=17
+[31133000] MEM: READ beat=0 rank=7 idx=17 data=0x0000
+[31135000] MEM: READ beat=1 rank=7 idx=18 data=0x0000
+[31137000] MEM: READ beat=2 rank=7 idx=19 data=0x0000
+[31139000] MEM: READ beat=3 rank=7 idx=20 data=0x0000
+[31141000] MEM: READ beat=4 rank=7 idx=21 data=0x0000
+[31143000] MEM: READ beat=5 rank=7 idx=22 data=0x0000
+[31145000] MEM: READ beat=6 rank=7 idx=23 data=0x0000
+[31147000] MEM: READ beat=7 rank=7 idx=24 data=0x0000
 [31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
 [31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
 [31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
@@ -2560,11 +2560,11 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [31175000] PROT: GETCMD state cnt=0
 [31175000] PROT: GETCMD addr=64 cmd=100 sz=1 rank_sel=0
 [31205000] DQS_MON: WRITE detected, starting DQS observation window.
-[31205000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=32
+[31205000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=32
 [31221000] MEM: WRITE burst committed base_idx=0 data=0x0000
 [31271000] DQS_MON: window complete, edge_cnt=7.
 [31301000] DQS_MON: WRITE detected, starting DQS observation window.
-[31301000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=49
+[31301000] MEM: WRITE cmd received rank=7 bank=0 row=0 col=49
 [31317000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [31367000] DQS_MON: window complete, edge_cnt=7.
 [32453000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
@@ -2629,16 +2629,16 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [32489000] READ observed (server top): RADDR=79 DOUT=0xeaa5eaa5eaa5eaa5
 [32489000] BLR beat 15 observed: RADDR=79 DOUT=0xeaa5eaa5eaa5eaa5
 [32489000] BLW/BLR sequence OK: base_addr=64 SZ=1 (nwords=16)
-[32493000] MEM: READ decode rank=0 bank=0 row=0 col=32
-[32493000] MEM: READ cmd received rank=0 bank=0 row=0 col=32
-[32545000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
-[32547000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
-[32549000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
-[32551000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
-[32553000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
-[32555000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
-[32557000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
-[32559000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[32493000] MEM: READ decode rank=7 bank=0 row=0 col=32
+[32493000] MEM: READ cmd received rank=7 bank=0 row=0 col=32
+[32545000] MEM: READ beat=0 rank=7 idx=0 data=0x0000
+[32547000] MEM: READ beat=1 rank=7 idx=1 data=0x0000
+[32549000] MEM: READ beat=2 rank=7 idx=2 data=0x0000
+[32551000] MEM: READ beat=3 rank=7 idx=3 data=0x0000
+[32553000] MEM: READ beat=4 rank=7 idx=4 data=0x0000
+[32555000] MEM: READ beat=5 rank=7 idx=5 data=0x0000
+[32557000] MEM: READ beat=6 rank=7 idx=6 data=0x0000
+[32559000] MEM: READ beat=7 rank=7 idx=7 data=0x0000
 [32689000] (server) Starting manual self-refresh / power-down tests...
 [32691000] (server) Asserting SELFREF_REQ...
 [36693000] (server) Asserting SELFREF_EXIT...

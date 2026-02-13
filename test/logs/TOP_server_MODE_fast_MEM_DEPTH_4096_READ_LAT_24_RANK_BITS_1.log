@@ -3893,40 +3893,4 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [370663000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=392 (FILLCOUNT=24, proceeding and relying on FIFO overrun checks).
 [370665000] BLW issued: base_addr=392 SZ=0 (nwords=8)
 [411901000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=392 (FILLCOUNT=26, skipping block read to avoid VALIDOUT timeout).
-[411901000] BLW/BLR sequence OK: base_addr=392 SZ=0 (nwords=8)
-[452105000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=664 (FILLCOUNT=26, proceeding and relying on FIFO overrun checks).
-[452107000] BLW issued: base_addr=664 SZ=0 (nwords=8)
-[493343000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=664 (FILLCOUNT=28, skipping block read to avoid VALIDOUT timeout).
-[493343000] BLW/BLR sequence OK: base_addr=664 SZ=0 (nwords=8)
-[533547000] INFO: (server) NOTFULL still low before SCW enqueue at addr=905 (FILLCOUNT=28, proceeding and relying on FIFO overrun checks).
-[533549000] SCW issued (server): addr=905 data16=0x2ca6
-[573953000] INFO: (server) NOTFULL still low before SCR enqueue at addr=905 (FILLCOUNT=28, skipping read to avoid VALIDOUT timeout).
-[614057000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=208 (FILLCOUNT=28, proceeding and relying on FIFO overrun checks).
-[614059000] BLW issued: base_addr=208 SZ=1 (nwords=16)
-[655327000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=208 (FILLCOUNT=30, skipping block read to avoid VALIDOUT timeout).
-[655327000] BLW/BLR sequence OK: base_addr=208 SZ=1 (nwords=16)
-[695531000] INFO: (server) NOTFULL still low before SCW enqueue at addr=780 (FILLCOUNT=30, proceeding and relying on FIFO overrun checks).
-[695533000] SCW issued (server): addr=780 data16=0xa9a6
-[735937000] INFO: (server) NOTFULL still low before SCR enqueue at addr=780 (FILLCOUNT=30, skipping read to avoid VALIDOUT timeout).
-[776041000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=624 (FILLCOUNT=30, proceeding and relying on FIFO overrun checks).
-[776043000] BLW issued: base_addr=624 SZ=1 (nwords=16)
-[817311000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=624 (FILLCOUNT=32, skipping block read to avoid VALIDOUT timeout).
-[817311000] BLW/BLR sequence OK: base_addr=624 SZ=1 (nwords=16)
-[857515000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=120 (FILLCOUNT=32, proceeding and relying on FIFO overrun checks).
-[857517000] BLW issued: base_addr=120 SZ=0 (nwords=8)
-[857519000] FIFO_MON: FILLCOUNT entered high-water region (fillcount=33).
-[898753000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=120 (FILLCOUNT=34, skipping block read to avoid VALIDOUT timeout).
-[898753000] BLW/BLR sequence OK: base_addr=120 SZ=0 (nwords=8)
-[898953000] Randomized traffic phase (server top) completed.
-----------------------------------------------------------------
-DDR2 SERVER controller functional coverage (approximate):
-  SCW count = 46
-  SCR count = 46
-  BLW count = 74
-  BLR count = 74
-  SZ=00 count = 156
-  SZ=01 count = 56
-  SZ=10 count = 16
-  SZ=11 count = 12
-----------------------------------------------------------------
-[902953000] (server) All tests completed successfully.
+[411901000] BLW/BLR sequence OK: base_addr=392 SZ=0 (nw

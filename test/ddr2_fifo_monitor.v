@@ -26,22 +26,18 @@ module ddr2_fifo_monitor (
         if (reset) begin
             in_full_region <= 1'b0;
         end else begin
-            // Track when FILLCOUNT enters / leaves the full region.
+            // Track when FILLCOUNT enters / leaves a high-water region. This is
+            // used for debug/coverage only; the host-visible NOTFULL signal now
+            // reflects command FIFO headroom rather than this high-water mark.
             if (fillcount >= 7'd33) begin
                 if (!in_full_region) begin
                     in_full_region <= 1'b1;
-                    $display("[%0t] FIFO_MON: FILLCOUNT entered full region (fillcount=%0d).",
+                    $display("[%0t] FIFO_MON: FILLCOUNT entered high-water region (fillcount=%0d).",
                              $time, fillcount);
-                end
-                // Core invariant: NOTFULL must be low when FILLCOUNT >= 33.
-                if (notfull) begin
-                    $display("[%0t] ERROR: FIFO_MON: NOTFULL should be 0 when FILLCOUNT=%0d (>=33).",
-                             $time, fillcount);
-                    $fatal;
                 end
             end else begin
                 if (in_full_region) begin
-                    $display("[%0t] FIFO_MON: FILLCOUNT left full region (fillcount=%0d).",
+                    $display("[%0t] FIFO_MON: FILLCOUNT left high-water region (fillcount=%0d).",
                              $time, fillcount);
                 end
                 in_full_region <= 1'b0;

@@ -73,14 +73,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2351000] PROT: ISSUE_READ bank=0 row=0 col=0 cs=1 ras=1 cas=1 we=1
 [2353000] MEM: READ decode rank=0 bank=0 row=0 col=1
 [2353000] MEM: READ cmd received rank=0 bank=0 row=0 col=1
-[2405000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
-[2407000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
-[2409000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
-[2411000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
-[2413000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
-[2415000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
-[2417000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
-[2419000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[2421000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
+[2423000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
+[2425000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
+[2427000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
+[2429000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
+[2431000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
+[2433000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
+[2435000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
 [2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
 [2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
 [2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
@@ -150,14 +150,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2885000] PROT: ISSUE_READ bank=0 row=0 col=1 cs=1 ras=1 cas=1 we=1
 [2887000] MEM: READ decode rank=0 bank=0 row=0 col=3
 [2887000] MEM: READ cmd received rank=0 bank=0 row=0 col=3
-[2939000] MEM: READ beat=0 rank=0 idx=3 data=0x0000
-[2941000] MEM: READ beat=1 rank=0 idx=4 data=0x0000
-[2943000] MEM: READ beat=2 rank=0 idx=5 data=0x0000
-[2945000] MEM: READ beat=3 rank=0 idx=6 data=0x0000
-[2947000] MEM: READ beat=4 rank=0 idx=7 data=0x0000
-[2949000] MEM: READ beat=5 rank=0 idx=8 data=0x0000
-[2951000] MEM: READ beat=6 rank=0 idx=9 data=0x0000
-[2953000] MEM: READ beat=7 rank=0 idx=10 data=0x0000
+[2955000] MEM: READ beat=0 rank=0 idx=3 data=0x0000
+[2957000] MEM: READ beat=1 rank=0 idx=4 data=0x0000
+[2959000] MEM: READ beat=2 rank=0 idx=5 data=0x0000
+[2961000] MEM: READ beat=3 rank=0 idx=6 data=0x0000
+[2963000] MEM: READ beat=4 rank=0 idx=7 data=0x0000
+[2965000] MEM: READ beat=5 rank=0 idx=8 data=0x0000
+[2967000] MEM: READ beat=6 rank=0 idx=9 data=0x0000
+[2969000] MEM: READ beat=7 rank=0 idx=10 data=0x0000
 [2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
@@ -227,14 +227,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [3419000] PROT: ISSUE_READ bank=0 row=0 col=32 cs=1 ras=1 cas=1 we=1
 [3421000] MEM: READ decode rank=0 bank=0 row=0 col=65
 [3421000] MEM: READ cmd received rank=0 bank=0 row=0 col=65
-[3473000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
-[3475000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
-[3477000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
-[3479000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
-[3481000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
-[3483000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
-[3485000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
-[3487000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[3489000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
+[3491000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
+[3493000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
+[3495000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
+[3497000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
+[3499000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
+[3501000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
+[3503000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
 [3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
 [3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
 [3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
@@ -304,14 +304,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [3953000] PROT: ISSUE_READ bank=0 row=0 col=128 cs=1 ras=1 cas=1 we=1
 [3955000] MEM: READ decode rank=0 bank=0 row=0 col=257
 [3955000] MEM: READ cmd received rank=0 bank=0 row=0 col=257
-[4007000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
-[4009000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
-[4011000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
-[4013000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
-[4015000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
-[4017000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
-[4019000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
-[4021000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[4023000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
+[4025000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
+[4027000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
+[4029000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
+[4031000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
+[4033000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
+[4035000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
+[4037000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
 [4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
 [4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
 [4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
@@ -393,14 +393,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [5315000] BLW/BLR sequence OK: base_addr=32 SZ=0 (nwords=8)
 [5335000] MEM: READ decode rank=0 bank=0 row=0 col=17
 [5335000] MEM: READ cmd received rank=0 bank=0 row=0 col=17
-[5387000] MEM: READ beat=0 rank=0 idx=17 data=0x0000
-[5389000] MEM: READ beat=1 rank=0 idx=18 data=0x0000
-[5391000] MEM: READ beat=2 rank=0 idx=19 data=0x0000
-[5393000] MEM: READ beat=3 rank=0 idx=20 data=0x0000
-[5395000] MEM: READ beat=4 rank=0 idx=21 data=0x0000
-[5397000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
-[5399000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
-[5401000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
+[5403000] MEM: READ beat=0 rank=0 idx=17 data=0x0000
+[5405000] MEM: READ beat=1 rank=0 idx=18 data=0x0000
+[5407000] MEM: READ beat=2 rank=0 idx=19 data=0x0000
+[5409000] MEM: READ beat=3 rank=0 idx=20 data=0x0000
+[5411000] MEM: READ beat=4 rank=0 idx=21 data=0x0000
+[5413000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
+[5415000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
+[5417000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
 [5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
 [5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
 [5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
@@ -502,14 +502,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [6841000] BLW/BLR sequence OK: base_addr=256 SZ=1 (nwords=16)
 [6845000] MEM: READ decode rank=0 bank=0 row=0 col=128
 [6845000] MEM: READ cmd received rank=0 bank=0 row=0 col=128
-[6897000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
-[6899000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
-[6901000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
-[6903000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
-[6905000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
-[6907000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
-[6909000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
-[6911000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[6913000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
+[6915000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
+[6917000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
+[6919000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
+[6921000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
+[6923000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
+[6925000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
+[6927000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
 [7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
 [7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
 [7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
@@ -632,14 +632,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [8415000] READ observed (server top): RADDR=407 DOUT=0x32a432a432a432a4
 [8415000] BLR beat 23 observed: RADDR=407 DOUT=0x32a432a432a432a4
 [8415000] BLW/BLR sequence OK: base_addr=384 SZ=2 (nwords=24)
-[8457000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
-[8459000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
-[8461000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
-[8463000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
-[8465000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
-[8467000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
-[8469000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
-[8471000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[8473000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
+[8475000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
+[8477000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
+[8479000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
+[8481000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
+[8483000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
+[8485000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
+[8487000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
 [8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
 [8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
 [8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
@@ -781,14 +781,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10037000] READ observed (server top): RADDR=543 DOUT=0xbaa7baa7baa7baa7
 [10037000] BLR beat 31 observed: RADDR=543 DOUT=0xbaa7baa7baa7baa7
 [10037000] BLW/BLR sequence OK: base_addr=512 SZ=3 (nwords=32)
-[10061000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
-[10063000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
-[10065000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
-[10067000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
-[10069000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
-[10071000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
-[10073000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
-[10075000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[10077000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
+[10079000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
+[10081000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
+[10083000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
+[10085000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
+[10087000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
+[10089000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
+[10091000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
 [10237000] (server) Starting FIFO stress / refresh-interleaving test...
 [10239000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
 [10239000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
@@ -859,14 +859,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10687000] PROT: ISSUE_READ bank=3 row=0 col=144 cs=1 ras=1 cas=1 we=1
 [10689000] MEM: READ decode rank=0 bank=3 row=0 col=289
 [10689000] MEM: READ cmd received rank=0 bank=3 row=0 col=289
-[10741000] MEM: READ beat=0 rank=0 idx=97 data=0x0000
-[10743000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
-[10745000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
-[10747000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
-[10749000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
-[10751000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
-[10753000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
-[10755000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
+[10757000] MEM: READ beat=0 rank=0 idx=97 data=0x0000
+[10759000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
+[10761000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
+[10763000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
+[10765000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
+[10767000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
+[10769000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
+[10771000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
 [10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
 [10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
 [10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
@@ -968,14 +968,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12097000] BLW/BLR sequence OK: base_addr=700 SZ=1 (nwords=16)
 [12101000] MEM: READ decode rank=0 bank=3 row=0 col=344
 [12101000] MEM: READ cmd received rank=0 bank=3 row=0 col=344
-[12153000] MEM: READ beat=0 rank=0 idx=120 data=0x0000
-[12155000] MEM: READ beat=1 rank=0 idx=121 data=0x0000
-[12157000] MEM: READ beat=2 rank=0 idx=122 data=0x0000
-[12159000] MEM: READ beat=3 rank=0 idx=123 data=0x0000
-[12161000] MEM: READ beat=4 rank=0 idx=124 data=0x0000
-[12163000] MEM: READ beat=5 rank=0 idx=125 data=0x0000
-[12165000] MEM: READ beat=6 rank=0 idx=126 data=0x0000
-[12167000] MEM: READ beat=7 rank=0 idx=127 data=0x0000
+[12169000] MEM: READ beat=0 rank=0 idx=120 data=0x0000
+[12171000] MEM: READ beat=1 rank=0 idx=121 data=0x0000
+[12173000] MEM: READ beat=2 rank=0 idx=122 data=0x0000
+[12175000] MEM: READ beat=3 rank=0 idx=123 data=0x0000
+[12177000] MEM: READ beat=4 rank=0 idx=124 data=0x0000
+[12179000] MEM: READ beat=5 rank=0 idx=125 data=0x0000
+[12181000] MEM: READ beat=6 rank=0 idx=126 data=0x0000
+[12183000] MEM: READ beat=7 rank=0 idx=127 data=0x0000
 [12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
 [12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
 [12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
@@ -1045,14 +1045,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12747000] PROT: ISSUE_READ bank=3 row=0 col=145 cs=1 ras=1 cas=1 we=1
 [12749000] MEM: READ decode rank=0 bank=3 row=0 col=291
 [12749000] MEM: READ cmd received rank=0 bank=3 row=0 col=291
-[12801000] MEM: READ beat=0 rank=0 idx=99 data=0x0000
-[12803000] MEM: READ beat=1 rank=0 idx=100 data=0x0000
-[12805000] MEM: READ beat=2 rank=0 idx=101 data=0x0000
-[12807000] MEM: READ beat=3 rank=0 idx=102 data=0x0000
-[12809000] MEM: READ beat=4 rank=0 idx=103 data=0x0000
-[12811000] MEM: READ beat=5 rank=0 idx=104 data=0x0000
-[12813000] MEM: READ beat=6 rank=0 idx=105 data=0x0000
-[12815000] MEM: READ beat=7 rank=0 idx=106 data=0x0000
+[12817000] MEM: READ beat=0 rank=0 idx=99 data=0x0000
+[12819000] MEM: READ beat=1 rank=0 idx=100 data=0x0000
+[12821000] MEM: READ beat=2 rank=0 idx=101 data=0x0000
+[12823000] MEM: READ beat=3 rank=0 idx=102 data=0x0000
+[12825000] MEM: READ beat=4 rank=0 idx=103 data=0x0000
+[12827000] MEM: READ beat=5 rank=0 idx=104 data=0x0000
+[12829000] MEM: READ beat=6 rank=0 idx=105 data=0x0000
+[12831000] MEM: READ beat=7 rank=0 idx=106 data=0x0000
 [12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
 [12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
 [12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
@@ -1154,14 +1154,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [14157000] BLW/BLR sequence OK: base_addr=740 SZ=1 (nwords=16)
 [14161000] MEM: READ decode rank=0 bank=0 row=0 col=376
 [14161000] MEM: READ cmd received rank=0 bank=0 row=0 col=376
-[14213000] MEM: READ beat=0 rank=0 idx=24 data=0x0000
-[14215000] MEM: READ beat=1 rank=0 idx=25 data=0x0000
-[14217000] MEM: READ beat=2 rank=0 idx=26 data=0x0000
-[14219000] MEM: READ beat=3 rank=0 idx=27 data=0x0000
-[14221000] MEM: READ beat=4 rank=0 idx=28 data=0x0000
-[14223000] MEM: READ beat=5 rank=0 idx=29 data=0x0000
-[14225000] MEM: READ beat=6 rank=0 idx=30 data=0x0000
-[14227000] MEM: READ beat=7 rank=0 idx=31 data=0x0000
+[14229000] MEM: READ beat=0 rank=0 idx=24 data=0x0000
+[14231000] MEM: READ beat=1 rank=0 idx=25 data=0x0000
+[14233000] MEM: READ beat=2 rank=0 idx=26 data=0x0000
+[14235000] MEM: READ beat=3 rank=0 idx=27 data=0x0000
+[14237000] MEM: READ beat=4 rank=0 idx=28 data=0x0000
+[14239000] MEM: READ beat=5 rank=0 idx=29 data=0x0000
+[14241000] MEM: READ beat=6 rank=0 idx=30 data=0x0000
+[14243000] MEM: READ beat=7 rank=0 idx=31 data=0x0000
 [14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
 [14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
 [14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
@@ -1231,14 +1231,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [14807000] PROT: ISSUE_READ bank=3 row=0 col=146 cs=1 ras=1 cas=1 we=1
 [14809000] MEM: READ decode rank=0 bank=3 row=0 col=293
 [14809000] MEM: READ cmd received rank=0 bank=3 row=0 col=293
-[14861000] MEM: READ beat=0 rank=0 idx=101 data=0x0000
-[14863000] MEM: READ beat=1 rank=0 idx=102 data=0x0000
-[14865000] MEM: READ beat=2 rank=0 idx=103 data=0x0000
-[14867000] MEM: READ beat=3 rank=0 idx=104 data=0x0000
-[14869000] MEM: READ beat=4 rank=0 idx=105 data=0x0000
-[14871000] MEM: READ beat=5 rank=0 idx=106 data=0x0000
-[14873000] MEM: READ beat=6 rank=0 idx=107 data=0x0000
-[14875000] MEM: READ beat=7 rank=0 idx=108 data=0x0000
+[14877000] MEM: READ beat=0 rank=0 idx=101 data=0x0000
+[14879000] MEM: READ beat=1 rank=0 idx=102 data=0x0000
+[14881000] MEM: READ beat=2 rank=0 idx=103 data=0x0000
+[14883000] MEM: READ beat=3 rank=0 idx=104 data=0x0000
+[14885000] MEM: READ beat=4 rank=0 idx=105 data=0x0000
+[14887000] MEM: READ beat=5 rank=0 idx=106 data=0x0000
+[14889000] MEM: READ beat=6 rank=0 idx=107 data=0x0000
+[14891000] MEM: READ beat=7 rank=0 idx=108 data=0x0000
 [14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
 [14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
 [14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
@@ -1341,14 +1341,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16217000] BLW/BLR sequence OK: base_addr=780 SZ=1 (nwords=16)
 [16221000] MEM: READ decode rank=0 bank=1 row=0 col=392
 [16221000] MEM: READ cmd received rank=0 bank=1 row=0 col=392
-[16273000] MEM: READ beat=0 rank=0 idx=40 data=0x0000
-[16275000] MEM: READ beat=1 rank=0 idx=41 data=0x0000
-[16277000] MEM: READ beat=2 rank=0 idx=42 data=0x0000
-[16279000] MEM: READ beat=3 rank=0 idx=43 data=0x0000
-[16281000] MEM: READ beat=4 rank=0 idx=44 data=0x0000
-[16283000] MEM: READ beat=5 rank=0 idx=45 data=0x0000
-[16285000] MEM: READ beat=6 rank=0 idx=46 data=0x0000
-[16287000] MEM: READ beat=7 rank=0 idx=47 data=0x0000
+[16289000] MEM: READ beat=0 rank=0 idx=40 data=0x0000
+[16291000] MEM: READ beat=1 rank=0 idx=41 data=0x0000
+[16293000] MEM: READ beat=2 rank=0 idx=42 data=0x0000
+[16295000] MEM: READ beat=3 rank=0 idx=43 data=0x0000
+[16297000] MEM: READ beat=4 rank=0 idx=44 data=0x0000
+[16299000] MEM: READ beat=5 rank=0 idx=45 data=0x0000
+[16301000] MEM: READ beat=6 rank=0 idx=46 data=0x0000
+[16303000] MEM: READ beat=7 rank=0 idx=47 data=0x0000
 [16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
 [16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
 [16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
@@ -1418,14 +1418,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16867000] PROT: ISSUE_READ bank=3 row=0 col=147 cs=1 ras=1 cas=1 we=1
 [16869000] MEM: READ decode rank=0 bank=3 row=0 col=295
 [16869000] MEM: READ cmd received rank=0 bank=3 row=0 col=295
-[16921000] MEM: READ beat=0 rank=0 idx=103 data=0x0000
-[16923000] MEM: READ beat=1 rank=0 idx=104 data=0x0000
-[16925000] MEM: READ beat=2 rank=0 idx=105 data=0x0000
-[16927000] MEM: READ beat=3 rank=0 idx=106 data=0x0000
-[16929000] MEM: READ beat=4 rank=0 idx=107 data=0x0000
-[16931000] MEM: READ beat=5 rank=0 idx=108 data=0x0000
-[16933000] MEM: READ beat=6 rank=0 idx=109 data=0x0000
-[16935000] MEM: READ beat=7 rank=0 idx=110 data=0x0000
+[16937000] MEM: READ beat=0 rank=0 idx=103 data=0x0000
+[16939000] MEM: READ beat=1 rank=0 idx=104 data=0x0000
+[16941000] MEM: READ beat=2 rank=0 idx=105 data=0x0000
+[16943000] MEM: READ beat=3 rank=0 idx=106 data=0x0000
+[16945000] MEM: READ beat=4 rank=0 idx=107 data=0x0000
+[16947000] MEM: READ beat=5 rank=0 idx=108 data=0x0000
+[16949000] MEM: READ beat=6 rank=0 idx=109 data=0x0000
+[16951000] MEM: READ beat=7 rank=0 idx=110 data=0x0000
 [16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
 [16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
 [16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
@@ -1527,14 +1527,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [18277000] BLW/BLR sequence OK: base_addr=820 SZ=1 (nwords=16)
 [18281000] MEM: READ decode rank=0 bank=2 row=0 col=408
 [18281000] MEM: READ cmd received rank=0 bank=2 row=0 col=408
-[18333000] MEM: READ beat=0 rank=0 idx=88 data=0x0000
-[18335000] MEM: READ beat=1 rank=0 idx=89 data=0x0000
-[18337000] MEM: READ beat=2 rank=0 idx=90 data=0x0000
-[18339000] MEM: READ beat=3 rank=0 idx=91 data=0x0000
-[18341000] MEM: READ beat=4 rank=0 idx=92 data=0x0000
-[18343000] MEM: READ beat=5 rank=0 idx=93 data=0x0000
-[18345000] MEM: READ beat=6 rank=0 idx=94 data=0x0000
-[18347000] MEM: READ beat=7 rank=0 idx=95 data=0x0000
+[18349000] MEM: READ beat=0 rank=0 idx=88 data=0x0000
+[18351000] MEM: READ beat=1 rank=0 idx=89 data=0x0000
+[18353000] MEM: READ beat=2 rank=0 idx=90 data=0x0000
+[18355000] MEM: READ beat=3 rank=0 idx=91 data=0x0000
+[18357000] MEM: READ beat=4 rank=0 idx=92 data=0x0000
+[18359000] MEM: READ beat=5 rank=0 idx=93 data=0x0000
+[18361000] MEM: READ beat=6 rank=0 idx=94 data=0x0000
+[18363000] MEM: READ beat=7 rank=0 idx=95 data=0x0000
 [18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
 [18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
 [18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
@@ -1604,14 +1604,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [18927000] PROT: ISSUE_READ bank=3 row=0 col=148 cs=1 ras=1 cas=1 we=1
 [18929000] MEM: READ decode rank=0 bank=3 row=0 col=297
 [18929000] MEM: READ cmd received rank=0 bank=3 row=0 col=297
-[18981000] MEM: READ beat=0 rank=0 idx=105 data=0x0000
-[18983000] MEM: READ beat=1 rank=0 idx=106 data=0x0000
-[18985000] MEM: READ beat=2 rank=0 idx=107 data=0x0000
-[18987000] MEM: READ beat=3 rank=0 idx=108 data=0x0000
-[18989000] MEM: READ beat=4 rank=0 idx=109 data=0x0000
-[18991000] MEM: READ beat=5 rank=0 idx=110 data=0x0000
-[18993000] MEM: READ beat=6 rank=0 idx=111 data=0x0000
-[18995000] MEM: READ beat=7 rank=0 idx=112 data=0x0000
+[18997000] MEM: READ beat=0 rank=0 idx=105 data=0x0000
+[18999000] MEM: READ beat=1 rank=0 idx=106 data=0x0000
+[19001000] MEM: READ beat=2 rank=0 idx=107 data=0x0000
+[19003000] MEM: READ beat=3 rank=0 idx=108 data=0x0000
+[19005000] MEM: READ beat=4 rank=0 idx=109 data=0x0000
+[19007000] MEM: READ beat=5 rank=0 idx=110 data=0x0000
+[19009000] MEM: READ beat=6 rank=0 idx=111 data=0x0000
+[19011000] MEM: READ beat=7 rank=0 idx=112 data=0x0000
 [19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
 [19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
 [19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
@@ -1713,14 +1713,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [20337000] BLW/BLR sequence OK: base_addr=860 SZ=1 (nwords=16)
 [20341000] MEM: READ decode rank=0 bank=3 row=0 col=424
 [20341000] MEM: READ cmd received rank=0 bank=3 row=0 col=424
-[20393000] MEM: READ beat=0 rank=0 idx=104 data=0x0000
-[20395000] MEM: READ beat=1 rank=0 idx=105 data=0x0000
-[20397000] MEM: READ beat=2 rank=0 idx=106 data=0x0000
-[20399000] MEM: READ beat=3 rank=0 idx=107 data=0x0000
-[20401000] MEM: READ beat=4 rank=0 idx=108 data=0x0000
-[20403000] MEM: READ beat=5 rank=0 idx=109 data=0x0000
-[20405000] MEM: READ beat=6 rank=0 idx=110 data=0x0000
-[20407000] MEM: READ beat=7 rank=0 idx=111 data=0x0000
+[20409000] MEM: READ beat=0 rank=0 idx=104 data=0x0000
+[20411000] MEM: READ beat=1 rank=0 idx=105 data=0x0000
+[20413000] MEM: READ beat=2 rank=0 idx=106 data=0x0000
+[20415000] MEM: READ beat=3 rank=0 idx=107 data=0x0000
+[20417000] MEM: READ beat=4 rank=0 idx=108 data=0x0000
+[20419000] MEM: READ beat=5 rank=0 idx=109 data=0x0000
+[20421000] MEM: READ beat=6 rank=0 idx=110 data=0x0000
+[20423000] MEM: READ beat=7 rank=0 idx=111 data=0x0000
 [20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
 [20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
 [20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
@@ -1790,14 +1790,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [20987000] PROT: ISSUE_READ bank=3 row=0 col=149 cs=1 ras=1 cas=1 we=1
 [20989000] MEM: READ decode rank=0 bank=3 row=0 col=299
 [20989000] MEM: READ cmd received rank=0 bank=3 row=0 col=299
-[21041000] MEM: READ beat=0 rank=0 idx=107 data=0x0000
-[21043000] MEM: READ beat=1 rank=0 idx=108 data=0x0000
-[21045000] MEM: READ beat=2 rank=0 idx=109 data=0x0000
-[21047000] MEM: READ beat=3 rank=0 idx=110 data=0x0000
-[21049000] MEM: READ beat=4 rank=0 idx=111 data=0x0000
-[21051000] MEM: READ beat=5 rank=0 idx=112 data=0x0000
-[21053000] MEM: READ beat=6 rank=0 idx=113 data=0x0000
-[21055000] MEM: READ beat=7 rank=0 idx=114 data=0x0000
+[21057000] MEM: READ beat=0 rank=0 idx=107 data=0x0000
+[21059000] MEM: READ beat=1 rank=0 idx=108 data=0x0000
+[21061000] MEM: READ beat=2 rank=0 idx=109 data=0x0000
+[21063000] MEM: READ beat=3 rank=0 idx=110 data=0x0000
+[21065000] MEM: READ beat=4 rank=0 idx=111 data=0x0000
+[21067000] MEM: READ beat=5 rank=0 idx=112 data=0x0000
+[21069000] MEM: READ beat=6 rank=0 idx=113 data=0x0000
+[21071000] MEM: READ beat=7 rank=0 idx=114 data=0x0000
 [21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
 [21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
 [21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
@@ -1900,14 +1900,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [22397000] BLW/BLR sequence OK: base_addr=900 SZ=1 (nwords=16)
 [22401000] MEM: READ decode rank=0 bank=0 row=0 col=456
 [22401000] MEM: READ cmd received rank=0 bank=0 row=0 col=456
-[22453000] MEM: READ beat=0 rank=0 idx=8 data=0x0000
-[22455000] MEM: READ beat=1 rank=0 idx=9 data=0x0000
-[22457000] MEM: READ beat=2 rank=0 idx=10 data=0x0000
-[22459000] MEM: READ beat=3 rank=0 idx=11 data=0x0000
-[22461000] MEM: READ beat=4 rank=0 idx=12 data=0x0000
-[22463000] MEM: READ beat=5 rank=0 idx=13 data=0x0000
-[22465000] MEM: READ beat=6 rank=0 idx=14 data=0x0000
-[22467000] MEM: READ beat=7 rank=0 idx=15 data=0x0000
+[22469000] MEM: READ beat=0 rank=0 idx=8 data=0x0000
+[22471000] MEM: READ beat=1 rank=0 idx=9 data=0x0000
+[22473000] MEM: READ beat=2 rank=0 idx=10 data=0x0000
+[22475000] MEM: READ beat=3 rank=0 idx=11 data=0x0000
+[22477000] MEM: READ beat=4 rank=0 idx=12 data=0x0000
+[22479000] MEM: READ beat=5 rank=0 idx=13 data=0x0000
+[22481000] MEM: READ beat=6 rank=0 idx=14 data=0x0000
+[22483000] MEM: READ beat=7 rank=0 idx=15 data=0x0000
 [22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
 [22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
 [22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
@@ -1977,14 +1977,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [23047000] PROT: ISSUE_READ bank=3 row=0 col=150 cs=1 ras=1 cas=1 we=1
 [23049000] MEM: READ decode rank=0 bank=3 row=0 col=301
 [23049000] MEM: READ cmd received rank=0 bank=3 row=0 col=301
-[23101000] MEM: READ beat=0 rank=0 idx=109 data=0x0000
-[23103000] MEM: READ beat=1 rank=0 idx=110 data=0x0000
-[23105000] MEM: READ beat=2 rank=0 idx=111 data=0x0000
-[23107000] MEM: READ beat=3 rank=0 idx=112 data=0x0000
-[23109000] MEM: READ beat=4 rank=0 idx=113 data=0x0000
-[23111000] MEM: READ beat=5 rank=0 idx=114 data=0x0000
-[23113000] MEM: READ beat=6 rank=0 idx=115 data=0x0000
-[23115000] MEM: READ beat=7 rank=0 idx=116 data=0x0000
+[23117000] MEM: READ beat=0 rank=0 idx=109 data=0x0000
+[23119000] MEM: READ beat=1 rank=0 idx=110 data=0x0000
+[23121000] MEM: READ beat=2 rank=0 idx=111 data=0x0000
+[23123000] MEM: READ beat=3 rank=0 idx=112 data=0x0000
+[23125000] MEM: READ beat=4 rank=0 idx=113 data=0x0000
+[23127000] MEM: READ beat=5 rank=0 idx=114 data=0x0000
+[23129000] MEM: READ beat=6 rank=0 idx=115 data=0x0000
+[23131000] MEM: READ beat=7 rank=0 idx=116 data=0x0000
 [23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
 [23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
 [23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
@@ -2086,14 +2086,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [24457000] BLW/BLR sequence OK: base_addr=940 SZ=1 (nwords=16)
 [24461000] MEM: READ decode rank=0 bank=1 row=0 col=472
 [24461000] MEM: READ cmd received rank=0 bank=1 row=0 col=472
-[24513000] MEM: READ beat=0 rank=0 idx=56 data=0x0000
-[24515000] MEM: READ beat=1 rank=0 idx=57 data=0x0000
-[24517000] MEM: READ beat=2 rank=0 idx=58 data=0x0000
-[24519000] MEM: READ beat=3 rank=0 idx=59 data=0x0000
-[24521000] MEM: READ beat=4 rank=0 idx=60 data=0x0000
-[24523000] MEM: READ beat=5 rank=0 idx=61 data=0x0000
-[24525000] MEM: READ beat=6 rank=0 idx=62 data=0x0000
-[24527000] MEM: READ beat=7 rank=0 idx=63 data=0x0000
+[24529000] MEM: READ beat=0 rank=0 idx=56 data=0x0000
+[24531000] MEM: READ beat=1 rank=0 idx=57 data=0x0000
+[24533000] MEM: READ beat=2 rank=0 idx=58 data=0x0000
+[24535000] MEM: READ beat=3 rank=0 idx=59 data=0x0000
+[24537000] MEM: READ beat=4 rank=0 idx=60 data=0x0000
+[24539000] MEM: READ beat=5 rank=0 idx=61 data=0x0000
+[24541000] MEM: READ beat=6 rank=0 idx=62 data=0x0000
+[24543000] MEM: READ beat=7 rank=0 idx=63 data=0x0000
 [24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
 [24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
 [24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
@@ -2163,14 +2163,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [25107000] PROT: ISSUE_READ bank=3 row=0 col=151 cs=1 ras=1 cas=1 we=1
 [25109000] MEM: READ decode rank=0 bank=3 row=0 col=303
 [25109000] MEM: READ cmd received rank=0 bank=3 row=0 col=303
-[25161000] MEM: READ beat=0 rank=0 idx=111 data=0x0000
-[25163000] MEM: READ beat=1 rank=0 idx=112 data=0x0000
-[25165000] MEM: READ beat=2 rank=0 idx=113 data=0x0000
-[25167000] MEM: READ beat=3 rank=0 idx=114 data=0x0000
-[25169000] MEM: READ beat=4 rank=0 idx=115 data=0x0000
-[25171000] MEM: READ beat=5 rank=0 idx=116 data=0x0000
-[25173000] MEM: READ beat=6 rank=0 idx=117 data=0x0000
-[25175000] MEM: READ beat=7 rank=0 idx=118 data=0x0000
+[25177000] MEM: READ beat=0 rank=0 idx=111 data=0x0000
+[25179000] MEM: READ beat=1 rank=0 idx=112 data=0x0000
+[25181000] MEM: READ beat=2 rank=0 idx=113 data=0x0000
+[25183000] MEM: READ beat=3 rank=0 idx=114 data=0x0000
+[25185000] MEM: READ beat=4 rank=0 idx=115 data=0x0000
+[25187000] MEM: READ beat=5 rank=0 idx=116 data=0x0000
+[25189000] MEM: READ beat=6 rank=0 idx=117 data=0x0000
+[25191000] MEM: READ beat=7 rank=0 idx=118 data=0x0000
 [25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
 [25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
 [25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
@@ -2272,14 +2272,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [26517000] BLW/BLR sequence OK: base_addr=980 SZ=1 (nwords=16)
 [26521000] MEM: READ decode rank=0 bank=2 row=0 col=488
 [26521000] MEM: READ cmd received rank=0 bank=2 row=0 col=488
-[26573000] MEM: READ beat=0 rank=0 idx=72 data=0x0000
-[26575000] MEM: READ beat=1 rank=0 idx=73 data=0x0000
-[26577000] MEM: READ beat=2 rank=0 idx=74 data=0x0000
-[26579000] MEM: READ beat=3 rank=0 idx=75 data=0x0000
-[26581000] MEM: READ beat=4 rank=0 idx=76 data=0x0000
-[26583000] MEM: READ beat=5 rank=0 idx=77 data=0x0000
-[26585000] MEM: READ beat=6 rank=0 idx=78 data=0x0000
-[26587000] MEM: READ beat=7 rank=0 idx=79 data=0x0000
+[26589000] MEM: READ beat=0 rank=0 idx=72 data=0x0000
+[26591000] MEM: READ beat=1 rank=0 idx=73 data=0x0000
+[26593000] MEM: READ beat=2 rank=0 idx=74 data=0x0000
+[26595000] MEM: READ beat=3 rank=0 idx=75 data=0x0000
+[26597000] MEM: READ beat=4 rank=0 idx=76 data=0x0000
+[26599000] MEM: READ beat=5 rank=0 idx=77 data=0x0000
+[26601000] MEM: READ beat=6 rank=0 idx=78 data=0x0000
+[26603000] MEM: READ beat=7 rank=0 idx=79 data=0x0000
 [26717000] (server) Starting reset-during-traffic robustness test...
 [26719000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
 [26719000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
@@ -2350,14 +2350,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [27167000] PROT: ISSUE_READ bank=0 row=0 col=228 cs=1 ras=1 cas=1 we=1
 [27169000] MEM: READ decode rank=0 bank=0 row=0 col=457
 [27169000] MEM: READ cmd received rank=0 bank=0 row=0 col=457
-[27221000] MEM: READ beat=0 rank=0 idx=9 data=0x0000
-[27223000] MEM: READ beat=1 rank=0 idx=10 data=0x0000
-[27225000] MEM: READ beat=2 rank=0 idx=11 data=0x0000
-[27227000] MEM: READ beat=3 rank=0 idx=12 data=0x0000
-[27229000] MEM: READ beat=4 rank=0 idx=13 data=0x0000
-[27231000] MEM: READ beat=5 rank=0 idx=14 data=0x0000
-[27233000] MEM: READ beat=6 rank=0 idx=15 data=0x0000
-[27235000] MEM: READ beat=7 rank=0 idx=16 data=0x0000
+[27237000] MEM: READ beat=0 rank=0 idx=9 data=0x0000
+[27239000] MEM: READ beat=1 rank=0 idx=10 data=0x0000
+[27241000] MEM: READ beat=2 rank=0 idx=11 data=0x0000
+[27243000] MEM: READ beat=3 rank=0 idx=12 data=0x0000
+[27245000] MEM: READ beat=4 rank=0 idx=13 data=0x0000
+[27247000] MEM: READ beat=5 rank=0 idx=14 data=0x0000
+[27249000] MEM: READ beat=6 rank=0 idx=15 data=0x0000
+[27251000] MEM: READ beat=7 rank=0 idx=16 data=0x0000
 [27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
 [27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
 [27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
@@ -2440,14 +2440,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [28529000] BLW/BLR sequence OK: base_addr=920 SZ=0 (nwords=8)
 [28549000] MEM: READ decode rank=0 bank=3 row=0 col=449
 [28549000] MEM: READ cmd received rank=0 bank=3 row=0 col=449
-[28601000] MEM: READ beat=0 rank=0 idx=97 data=0x0000
-[28603000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
-[28605000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
-[28607000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
-[28609000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
-[28611000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
-[28613000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
-[28615000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
+[28617000] MEM: READ beat=0 rank=0 idx=97 data=0x0000
+[28619000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
+[28621000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
+[28623000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
+[28625000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
+[28627000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
+[28629000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
+[28631000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
 [28729000] (server) Asserting RESET in the middle of activity...
 [28753000] (server) Re-INITDDR asserted after mid-traffic reset, waiting for READY...
 [29395000] Detected AUTO REFRESH command on DDR2 bus (server top).
@@ -2522,14 +2522,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [31079000] PROT: ISSUE_READ bank=0 row=0 col=8 cs=1 ras=1 cas=1 we=1
 [31081000] MEM: READ decode rank=0 bank=0 row=0 col=17
 [31081000] MEM: READ cmd received rank=0 bank=0 row=0 col=17
-[31133000] MEM: READ beat=0 rank=0 idx=17 data=0x0000
-[31135000] MEM: READ beat=1 rank=0 idx=18 data=0x0000
-[31137000] MEM: READ beat=2 rank=0 idx=19 data=0x0000
-[31139000] MEM: READ beat=3 rank=0 idx=20 data=0x0000
-[31141000] MEM: READ beat=4 rank=0 idx=21 data=0x0000
-[31143000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
-[31145000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
-[31147000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
+[31149000] MEM: READ beat=0 rank=0 idx=17 data=0x0000
+[31151000] MEM: READ beat=1 rank=0 idx=18 data=0x0000
+[31153000] MEM: READ beat=2 rank=0 idx=19 data=0x0000
+[31155000] MEM: READ beat=3 rank=0 idx=20 data=0x0000
+[31157000] MEM: READ beat=4 rank=0 idx=21 data=0x0000
+[31159000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
+[31161000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
+[31163000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
 [31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
 [31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
 [31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
@@ -2631,14 +2631,14 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [32489000] BLW/BLR sequence OK: base_addr=64 SZ=1 (nwords=16)
 [32493000] MEM: READ decode rank=0 bank=0 row=0 col=32
 [32493000] MEM: READ cmd received rank=0 bank=0 row=0 col=32
-[32545000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
-[32547000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
-[32549000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
-[32551000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
-[32553000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
-[32555000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
-[32557000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
-[32559000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[32561000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
+[32563000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
+[32565000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
+[32567000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
+[32569000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
+[32571000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
+[32573000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
+[32575000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
 [32689000] (server) Starting manual self-refresh / power-down tests...
 [32691000] (server) Asserting SELFREF_REQ...
 [36693000] (server) Asserting SELFREF_EXIT...

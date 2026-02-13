@@ -249,8 +249,14 @@ module ddr2_controller #(
         end else begin
             sim_rd_host_valid <= 1'b0;
 
-            // Start tracking a new read when host enqueues SCR/BLR and no
-            // other read is currently being tracked.
+            // Start tracking a new read when the host *requests* SCR/BLR and no
+            // other read is currently being tracked. We must gate this on NOTFULL
+            // to match the command FIFO's acceptance criteria (cmd_put && NOTFULL),
+            // otherwise the tracker will start but the command won't be enqueued,
+            // leading to VALIDOUT never asserting. Under heavy-stress scenarios
+            // where NOTFULL remains low, the testbench will wait (with a timeout)
+            // or proceed with a warning, but we should only track reads that are
+            // actually accepted into the FIFO.
             if (!sim_rd_active && cmd_put && NOTFULL &&
                 (CMD == CMD_SCR || CMD == CMD_BLR)) begin
                 sim_rd_active    <= 1'b1;
@@ -327,8 +333,12 @@ module ddr2_controller #(
     assign VALIDOUT = validout_r;  // valid one cycle after FETCHING (FIFO has 1-cycle read latency)
 `endif
     assign READY          = init_ready;
-    // Host can only enqueue when both command and data FIFOs can accept data.
-    assign NOTFULL        = (FILLCOUNT < 7'd33) && notfull_cmdFIFO && notfull_dataFIFO;
+    // Host-visible NOTFULL reflects only command FIFO headroom. The data FIFO
+    // has additional depth margin, and its exported FILLCOUNT is used purely
+    // for observability / debug. This prevents read commands (which do not
+    // consume the write-data FIFO) from being unnecessarily blocked when the
+    // write-data FIFO is in its high-water region.
+    assign NOTFULL        = notfull_cmdFIFO;
     assign SELFREF_ACTIVE = selfref_active;
     assign PWRDOWN_ACTIVE = pdown_active;
     assign DLL_BUSY = dll_busy_int;

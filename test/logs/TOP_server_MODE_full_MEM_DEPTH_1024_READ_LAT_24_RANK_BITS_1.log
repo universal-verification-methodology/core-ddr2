@@ -1,0 +1,3131 @@
+VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
+[23000] (server) INITDDR asserted, waiting for READY...
+[665000] Detected AUTO REFRESH command on DDR2 bus (server top).
+[867000] Detected AUTO REFRESH command on DDR2 bus (server top).
+[1899000] (server) READY asserted at cycle 938
+[1901000] (server) NOTFULL=1 (FIFOs can accept commands)
+[1903000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
+[1903000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
+[1903000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
+[1903000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
+[1905000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
+[1905000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
+[1905000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
+[1905000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
+[1905000] SCW issued (server): addr=0 data16=0xa5a5
+[1907000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[1907000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[1907000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[1907000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[1909000] PROT: GETCMD state cnt=2
+[1909000] PROT: GETCMD state cnt=2
+[1909000] PROT: GETCMD state cnt=2
+[1909000] PROT: GETCMD state cnt=2
+[1911000] PROT: GETCMD state cnt=1
+[1911000] PROT: GETCMD state cnt=1
+[1911000] PROT: GETCMD state cnt=1
+[1911000] PROT: GETCMD state cnt=1
+[1913000] PROT: GETCMD state cnt=0
+[1913000] PROT: GETCMD addr=0 cmd=10 sz=0 rank_sel=0
+[1913000] PROT: GETCMD state cnt=0
+[1913000] PROT: GETCMD addr=0 cmd=10 sz=0 rank_sel=0
+[1913000] PROT: GETCMD state cnt=0
+[1913000] PROT: GETCMD addr=0 cmd=10 sz=0 rank_sel=0
+[1913000] PROT: GETCMD state cnt=0
+[1913000] PROT: GETCMD addr=0 cmd=10 sz=0 rank_sel=0
+[1929000] DQS_MON: WRITE detected, starting DQS observation window.
+[1929000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=1
+[1945000] MEM: WRITE burst committed base_idx=1 data=0x0000
+[1995000] DQS_MON: window complete, edge_cnt=7.
+[2327000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
+[2327000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
+[2327000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
+[2327000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
+[2329000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
+[2329000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
+[2329000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
+[2329000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
+[2329000] SCR issued: addr=0
+[2331000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2331000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2331000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2331000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2333000] PROT: GETCMD state cnt=2
+[2333000] PROT: GETCMD state cnt=2
+[2333000] PROT: GETCMD state cnt=2
+[2333000] PROT: GETCMD state cnt=2
+[2335000] PROT: GETCMD state cnt=1
+[2335000] PROT: GETCMD state cnt=1
+[2335000] PROT: GETCMD state cnt=1
+[2335000] PROT: GETCMD state cnt=1
+[2337000] PROT: GETCMD state cnt=0
+[2337000] PROT: GETCMD addr=0 cmd=1 sz=0 rank_sel=0
+[2337000] PROT: GETCMD state cnt=0
+[2337000] PROT: GETCMD addr=0 cmd=1 sz=0 rank_sel=0
+[2337000] PROT: GETCMD state cnt=0
+[2337000] PROT: GETCMD addr=0 cmd=1 sz=0 rank_sel=0
+[2337000] PROT: GETCMD state cnt=0
+[2337000] PROT: GETCMD addr=0 cmd=1 sz=0 rank_sel=0
+[2351000] PROT: ISSUE_READ bank=0 row=0 col=0 cs=1 ras=1 cas=1 we=1
+[2351000] PROT: ISSUE_READ bank=0 row=0 col=0 cs=1 ras=1 cas=1 we=1
+[2351000] PROT: ISSUE_READ bank=0 row=0 col=0 cs=1 ras=1 cas=1 we=1
+[2351000] PROT: ISSUE_READ bank=0 row=0 col=0 cs=1 ras=1 cas=1 we=1
+[2353000] MEM: READ decode rank=0 bank=0 row=0 col=1
+[2353000] MEM: READ cmd received rank=0 bank=0 row=0 col=1
+[2405000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
+[2407000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
+[2409000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
+[2411000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
+[2413000] READ observed (server top): RADDR=0 DOUT=0xzzzzzzzzzzzz0000
+[2413000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
+[2415000] READ observed (server top): RADDR=1 DOUT=0xzzzzzzzzzzzz0000
+[2415000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
+[2417000] READ observed (server top): RADDR=2 DOUT=0xzzzzzzzzzzzz0000
+[2417000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
+[2419000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[2517000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
+[2517000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
+[2517000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
+[2517000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
+[2519000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
+[2519000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
+[2519000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
+[2519000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
+[2519000] SCW issued (server): addr=1 data16=0xa4a5
+[2521000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2521000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2521000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2521000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2523000] PROT: GETCMD state cnt=2
+[2523000] PROT: GETCMD state cnt=2
+[2523000] PROT: GETCMD state cnt=2
+[2523000] PROT: GETCMD state cnt=2
+[2525000] PROT: GETCMD state cnt=1
+[2525000] PROT: GETCMD state cnt=1
+[2525000] PROT: GETCMD state cnt=1
+[2525000] PROT: GETCMD state cnt=1
+[2527000] PROT: GETCMD state cnt=0
+[2527000] PROT: GETCMD addr=1 cmd=10 sz=0 rank_sel=0
+[2527000] PROT: GETCMD state cnt=0
+[2527000] PROT: GETCMD addr=1 cmd=10 sz=0 rank_sel=0
+[2527000] PROT: GETCMD state cnt=0
+[2527000] PROT: GETCMD addr=1 cmd=10 sz=0 rank_sel=0
+[2527000] PROT: GETCMD state cnt=0
+[2527000] PROT: GETCMD addr=1 cmd=10 sz=0 rank_sel=0
+[2543000] DQS_MON: WRITE detected, starting DQS observation window.
+[2543000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=3
+[2559000] MEM: WRITE burst committed base_idx=3 data=0x0000
+[2609000] DQS_MON: window complete, edge_cnt=7.
+[2941000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
+[2941000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
+[2941000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
+[2941000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
+[2943000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
+[2943000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
+[2943000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
+[2943000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
+[2943000] SCR issued: addr=1
+[2945000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2945000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2945000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2945000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[2947000] PROT: GETCMD state cnt=2
+[2947000] PROT: GETCMD state cnt=2
+[2947000] PROT: GETCMD state cnt=2
+[2947000] PROT: GETCMD state cnt=2
+[2949000] READ observed (server top): RADDR=4 DOUT=0xzzzzzzzzzzzz0000
+[2949000] PROT: GETCMD state cnt=1
+[2949000] PROT: GETCMD state cnt=1
+[2949000] PROT: GETCMD state cnt=1
+[2949000] PROT: GETCMD state cnt=1
+[2951000] PROT: GETCMD state cnt=0
+[2951000] PROT: GETCMD addr=1 cmd=1 sz=0 rank_sel=0
+[2951000] PROT: GETCMD state cnt=0
+[2951000] PROT: GETCMD addr=1 cmd=1 sz=0 rank_sel=0
+[2951000] PROT: GETCMD state cnt=0
+[2951000] PROT: GETCMD addr=1 cmd=1 sz=0 rank_sel=0
+[2951000] PROT: GETCMD state cnt=0
+[2951000] PROT: GETCMD addr=1 cmd=1 sz=0 rank_sel=0
+[2951000] READ observed (server top): RADDR=5 DOUT=0xzzzzzzzzzzzz0000
+[2953000] READ observed (server top): RADDR=6 DOUT=0xzzzzzzzzzzzzzzzz
+[2955000] READ observed (server top): RADDR=6 DOUT=0xzzzzzzzzzzzzzzzz
+[2965000] PROT: ISSUE_READ bank=0 row=0 col=1 cs=1 ras=1 cas=1 we=1
+[2965000] PROT: ISSUE_READ bank=0 row=0 col=1 cs=1 ras=1 cas=1 we=1
+[2965000] PROT: ISSUE_READ bank=0 row=0 col=1 cs=1 ras=1 cas=1 we=1
+[2965000] PROT: ISSUE_READ bank=0 row=0 col=1 cs=1 ras=1 cas=1 we=1
+[2967000] MEM: READ decode rank=0 bank=0 row=0 col=3
+[2967000] MEM: READ cmd received rank=0 bank=0 row=0 col=3
+[3019000] MEM: READ beat=0 rank=0 idx=3 data=0x0000
+[3021000] MEM: READ beat=1 rank=0 idx=4 data=0x0000
+[3023000] MEM: READ beat=2 rank=0 idx=5 data=0x0000
+[3025000] MEM: READ beat=3 rank=0 idx=6 data=0x0000
+[3027000] MEM: READ beat=4 rank=0 idx=7 data=0x0000
+[3029000] MEM: READ beat=5 rank=0 idx=8 data=0x0000
+[3031000] MEM: READ beat=6 rank=0 idx=9 data=0x0000
+[3033000] MEM: READ beat=7 rank=0 idx=10 data=0x0000
+[3053000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[3053000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[3053000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[3053000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[3055000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[3055000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[3055000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[3055000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[3055000] SCW issued (server): addr=128 data16=0x25a5
+[3057000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3057000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3057000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3057000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3059000] PROT: GETCMD state cnt=2
+[3059000] PROT: GETCMD state cnt=2
+[3059000] PROT: GETCMD state cnt=2
+[3059000] PROT: GETCMD state cnt=2
+[3061000] PROT: GETCMD state cnt=1
+[3061000] PROT: GETCMD state cnt=1
+[3061000] PROT: GETCMD state cnt=1
+[3061000] PROT: GETCMD state cnt=1
+[3063000] PROT: GETCMD state cnt=0
+[3063000] PROT: GETCMD addr=128 cmd=10 sz=0 rank_sel=0
+[3063000] PROT: GETCMD state cnt=0
+[3063000] PROT: GETCMD addr=128 cmd=10 sz=0 rank_sel=0
+[3063000] PROT: GETCMD state cnt=0
+[3063000] PROT: GETCMD addr=128 cmd=10 sz=0 rank_sel=0
+[3063000] PROT: GETCMD state cnt=0
+[3063000] PROT: GETCMD addr=128 cmd=10 sz=0 rank_sel=0
+[3079000] DQS_MON: WRITE detected, starting DQS observation window.
+[3079000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=65
+[3095000] MEM: WRITE burst committed base_idx=1 data=0x0000
+[3145000] DQS_MON: window complete, edge_cnt=7.
+[3477000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[3477000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[3477000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[3477000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[3479000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[3479000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[3479000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[3479000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[3479000] SCR issued: addr=128
+[3481000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3481000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3481000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3481000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3483000] PROT: GETCMD state cnt=2
+[3483000] PROT: GETCMD state cnt=2
+[3483000] PROT: GETCMD state cnt=2
+[3483000] PROT: GETCMD state cnt=2
+[3485000] READ observed (server top): RADDR=1 DOUT=0xzzzzzzzzzzzz0000
+[3485000] PROT: GETCMD state cnt=1
+[3485000] PROT: GETCMD state cnt=1
+[3485000] PROT: GETCMD state cnt=1
+[3485000] PROT: GETCMD state cnt=1
+[3487000] PROT: GETCMD state cnt=0
+[3487000] PROT: GETCMD addr=128 cmd=1 sz=0 rank_sel=0
+[3487000] PROT: GETCMD state cnt=0
+[3487000] PROT: GETCMD addr=128 cmd=1 sz=0 rank_sel=0
+[3487000] PROT: GETCMD state cnt=0
+[3487000] PROT: GETCMD addr=128 cmd=1 sz=0 rank_sel=0
+[3487000] PROT: GETCMD state cnt=0
+[3487000] PROT: GETCMD addr=128 cmd=1 sz=0 rank_sel=0
+[3487000] READ observed (server top): RADDR=1 DOUT=0xzzzzzzzzzzzz0000
+[3489000] READ observed (server top): RADDR=2 DOUT=0xzzzzzzzzzzzz0000
+[3491000] READ observed (server top): RADDR=2 DOUT=0xzzzzzzzzzzzz0000
+[3501000] PROT: ISSUE_READ bank=0 row=0 col=32 cs=1 ras=1 cas=1 we=1
+[3501000] PROT: ISSUE_READ bank=0 row=0 col=32 cs=1 ras=1 cas=1 we=1
+[3501000] PROT: ISSUE_READ bank=0 row=0 col=32 cs=1 ras=1 cas=1 we=1
+[3501000] PROT: ISSUE_READ bank=0 row=0 col=32 cs=1 ras=1 cas=1 we=1
+[3503000] MEM: READ decode rank=0 bank=0 row=0 col=65
+[3503000] MEM: READ cmd received rank=0 bank=0 row=0 col=65
+[3555000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
+[3557000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
+[3559000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
+[3561000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
+[3563000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
+[3565000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
+[3567000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
+[3569000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[3589000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
+[3589000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
+[3589000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
+[3589000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
+[3591000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
+[3591000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
+[3591000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
+[3591000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
+[3591000] SCW issued (server): addr=512 data16=0xa5a7
+[3593000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3593000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3593000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3593000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[3595000] PROT: GETCMD state cnt=2
+[3595000] PROT: GETCMD state cnt=2
+[3595000] PROT: GETCMD state cnt=2
+[3595000] PROT: GETCMD state cnt=2
+[3597000] PROT: GETCMD state cnt=1
+[3597000] PROT: GETCMD state cnt=1
+[3597000] PROT: GETCMD state cnt=1
+[3597000] PROT: GETCMD state cnt=1
+[3599000] PROT: GETCMD state cnt=0
+[3599000] PROT: GETCMD addr=512 cmd=10 sz=0 rank_sel=0
+[3599000] PROT: GETCMD state cnt=0
+[3599000] PROT: GETCMD addr=512 cmd=10 sz=0 rank_sel=0
+[3599000] PROT: GETCMD state cnt=0
+[3599000] PROT: GETCMD addr=512 cmd=10 sz=0 rank_sel=0
+[3599000] PROT: GETCMD state cnt=0
+[3599000] PROT: GETCMD addr=512 cmd=10 sz=0 rank_sel=0
+[3615000] DQS_MON: WRITE detected, starting DQS observation window.
+[3615000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=257
+[3631000] MEM: WRITE burst committed base_idx=1 data=0x0000
+[3681000] DQS_MON: window complete, edge_cnt=7.
+[4013000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
+[4013000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
+[4013000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
+[4013000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
+[4015000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
+[4015000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
+[4015000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
+[4015000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
+[4015000] SCR issued: addr=512
+[4017000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[4017000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[4017000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[4017000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[4019000] PROT: GETCMD state cnt=2
+[4019000] PROT: GETCMD state cnt=2
+[4019000] PROT: GETCMD state cnt=2
+[4019000] PROT: GETCMD state cnt=2
+[4021000] READ observed (server top): RADDR=4 DOUT=0xzzzzzzzzzzzz0000
+[4021000] PROT: GETCMD state cnt=1
+[4021000] PROT: GETCMD state cnt=1
+[4021000] PROT: GETCMD state cnt=1
+[4021000] PROT: GETCMD state cnt=1
+[4023000] PROT: GETCMD state cnt=0
+[4023000] PROT: GETCMD addr=512 cmd=1 sz=0 rank_sel=0
+[4023000] PROT: GETCMD state cnt=0
+[4023000] PROT: GETCMD addr=512 cmd=1 sz=0 rank_sel=0
+[4023000] PROT: GETCMD state cnt=0
+[4023000] PROT: GETCMD addr=512 cmd=1 sz=0 rank_sel=0
+[4023000] PROT: GETCMD state cnt=0
+[4023000] PROT: GETCMD addr=512 cmd=1 sz=0 rank_sel=0
+[4023000] READ observed (server top): RADDR=5 DOUT=0xzzzzzzzzzzzz0000
+[4025000] READ observed (server top): RADDR=6 DOUT=0xzzzzzzzzzzzz0000
+[4027000] READ observed (server top): RADDR=6 DOUT=0xzzzzzzzzzzzz0000
+[4037000] PROT: ISSUE_READ bank=0 row=0 col=128 cs=1 ras=1 cas=1 we=1
+[4037000] PROT: ISSUE_READ bank=0 row=0 col=128 cs=1 ras=1 cas=1 we=1
+[4037000] PROT: ISSUE_READ bank=0 row=0 col=128 cs=1 ras=1 cas=1 we=1
+[4037000] PROT: ISSUE_READ bank=0 row=0 col=128 cs=1 ras=1 cas=1 we=1
+[4039000] MEM: READ decode rank=0 bank=0 row=0 col=257
+[4039000] MEM: READ cmd received rank=0 bank=0 row=0 col=257
+[4091000] MEM: READ beat=0 rank=0 idx=1 data=0x0000
+[4093000] MEM: READ beat=1 rank=0 idx=2 data=0x0000
+[4095000] MEM: READ beat=2 rank=0 idx=3 data=0x0000
+[4097000] MEM: READ beat=3 rank=0 idx=4 data=0x0000
+[4099000] MEM: READ beat=4 rank=0 idx=5 data=0x0000
+[4101000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
+[4103000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
+[4105000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
+[4125000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
+[4125000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
+[4125000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
+[4125000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
+[4127000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
+[4127000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
+[4127000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
+[4127000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
+[4127000] BLW issued: base_addr=32 SZ=0 (nwords=8)
+[4129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[4129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[4129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[4129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[4131000] PROT: GETCMD state cnt=2
+[4131000] PROT: GETCMD state cnt=2
+[4131000] PROT: GETCMD state cnt=2
+[4131000] PROT: GETCMD state cnt=2
+[4133000] PROT: GETCMD state cnt=1
+[4133000] PROT: GETCMD state cnt=1
+[4133000] PROT: GETCMD state cnt=1
+[4133000] PROT: GETCMD state cnt=1
+[4135000] PROT: GETCMD state cnt=0
+[4135000] PROT: GETCMD addr=32 cmd=100 sz=0 rank_sel=0
+[4135000] PROT: GETCMD state cnt=0
+[4135000] PROT: GETCMD addr=32 cmd=100 sz=0 rank_sel=0
+[4135000] PROT: GETCMD state cnt=0
+[4135000] PROT: GETCMD addr=32 cmd=100 sz=0 rank_sel=0
+[4135000] PROT: GETCMD state cnt=0
+[4135000] PROT: GETCMD addr=32 cmd=100 sz=0 rank_sel=0
+[4165000] DQS_MON: WRITE detected, starting DQS observation window.
+[4165000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=17
+[4181000] MEM: WRITE burst committed base_idx=17 data=0x0000
+[4231000] DQS_MON: window complete, edge_cnt=7.
+[5381000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
+[5381000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
+[5381000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
+[5381000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
+[5383000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
+[5383000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
+[5383000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
+[5383000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
+[5383000] BLR issued: base_addr=32 SZ=0 (expect 8 beats)
+[5385000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[5385000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[5385000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[5385000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[5387000] PROT: GETCMD state cnt=2
+[5387000] PROT: GETCMD state cnt=2
+[5387000] PROT: GETCMD state cnt=2
+[5387000] PROT: GETCMD state cnt=2
+[5389000] BLR beat (bus mode) observed: RADDR=8 DOUT=0xzzzzzzzzzzzzzzzz
+[5389000] READ observed (server top): RADDR=8 DOUT=0xzzzzzzzzzzzzzzzz
+[5389000] PROT: GETCMD state cnt=1
+[5389000] PROT: GETCMD state cnt=1
+[5389000] PROT: GETCMD state cnt=1
+[5389000] PROT: GETCMD state cnt=1
+[5391000] PROT: GETCMD state cnt=0
+[5391000] PROT: GETCMD addr=32 cmd=11 sz=0 rank_sel=0
+[5391000] PROT: GETCMD state cnt=0
+[5391000] PROT: GETCMD addr=32 cmd=11 sz=0 rank_sel=0
+[5391000] PROT: GETCMD state cnt=0
+[5391000] PROT: GETCMD addr=32 cmd=11 sz=0 rank_sel=0
+[5391000] PROT: GETCMD state cnt=0
+[5391000] PROT: GETCMD addr=32 cmd=11 sz=0 rank_sel=0
+[5391000] READ observed (server top): RADDR=128 DOUT=0xzzzzzzzzzzzz0000
+[5391000] BLR beat (bus mode) observed: RADDR=128 DOUT=0xzzzzzzzzzzzz0000
+[5393000] BLR beat (bus mode) observed: RADDR=128 DOUT=0xzzzzzzzzzzzz0000
+[5393000] READ observed (server top): RADDR=128 DOUT=0xzzzzzzzzzzzz0000
+[5395000] READ observed (server top): RADDR=129 DOUT=0xzzzzzzzzzzzz0000
+[5395000] BLR beat (bus mode) observed: RADDR=129 DOUT=0xzzzzzzzzzzzz0000
+[5397000] BLR beat (bus mode) observed: RADDR=130 DOUT=0xzzzzzzzzzzzz0000
+[5397000] READ observed (server top): RADDR=130 DOUT=0xzzzzzzzzzzzz0000
+[5399000] READ observed (server top): RADDR=131 DOUT=0xzzzzzzzzzzzz0000
+[5399000] BLR beat (bus mode) observed: RADDR=131 DOUT=0xzzzzzzzzzzzz0000
+[5401000] BLR beat (bus mode) observed: RADDR=132 DOUT=0xzzzzzzzzzzzz0000
+[5401000] READ observed (server top): RADDR=132 DOUT=0xzzzzzzzzzzzz0000
+[5403000] READ observed (server top): RADDR=133 DOUT=0xzzzzzzzzzzzz0000
+[5403000] BLR beat (bus mode) observed: RADDR=133 DOUT=0xzzzzzzzzzzzz0000
+[5405000] BLR beat (bus mode) observed: RADDR=134 DOUT=0xzzzzzzzzzzzzzzzz
+[5405000] READ observed (server top): RADDR=134 DOUT=0xzzzzzzzzzzzzzzzz
+[5407000] READ observed (server top): RADDR=135 DOUT=0xzzzzzzzzzzzzzzzz
+[5407000] BLR beat (bus mode) observed: RADDR=135 DOUT=0xzzzzzzzzzzzzzzzz
+[5409000] BLR beat (bus mode) observed: RADDR=512 DOUT=0xzzzzzzzzzzzz0000
+[5409000] READ observed (server top): RADDR=512 DOUT=0xzzzzzzzzzzzz0000
+[5411000] READ observed (server top): RADDR=512 DOUT=0xzzzzzzzzzzzz0000
+[5411000] BLR beat (bus mode) observed: RADDR=512 DOUT=0xzzzzzzzzzzzz0000
+[5413000] BLR beat (bus mode) observed: RADDR=513 DOUT=0xzzzzzzzzzzzz0000
+[5413000] READ observed (server top): RADDR=513 DOUT=0xzzzzzzzzzzzz0000
+[5415000] READ observed (server top): RADDR=514 DOUT=0xzzzzzzzzzzzz0000
+[5415000] BLR beat (bus mode) observed: RADDR=514 DOUT=0xzzzzzzzzzzzz0000
+[5417000] BLR beat (bus mode) observed: RADDR=515 DOUT=0xzzzzzzzzzzzz0000
+[5417000] READ observed (server top): RADDR=515 DOUT=0xzzzzzzzzzzzz0000
+[5419000] READ observed (server top): RADDR=516 DOUT=0xzzzzzzzzzzzz0000
+[5419000] BLR beat (bus mode) observed: RADDR=516 DOUT=0xzzzzzzzzzzzz0000
+[5421000] BLR beat (bus mode) observed: RADDR=517 DOUT=0xzzzzzzzzzzzz0000
+[5421000] READ observed (server top): RADDR=517 DOUT=0xzzzzzzzzzzzz0000
+[5421000] MEM: READ decode rank=0 bank=0 row=0 col=17
+[5421000] MEM: READ cmd received rank=0 bank=0 row=0 col=17
+[5423000] READ observed (server top): RADDR=518 DOUT=0xzzzzzzzzzzzzzzzz
+[5423000] BLR beat (bus mode) observed: RADDR=518 DOUT=0xzzzzzzzzzzzzzzzz
+[5425000] BLR beat (bus mode) observed: RADDR=519 DOUT=0xzzzzzzzzzzzzzzzz
+[5425000] READ observed (server top): RADDR=519 DOUT=0xzzzzzzzzzzzzzzzz
+[5427000] READ observed (server top): RADDR=519 DOUT=0xzzzzzzzzzzzzzzzz
+[5427000] BLR beat (bus mode) observed: RADDR=519 DOUT=0xzzzzzzzzzzzzzzzz
+[5473000] MEM: READ beat=0 rank=0 idx=17 data=0x0000
+[5475000] MEM: READ beat=1 rank=0 idx=18 data=0x0000
+[5477000] MEM: READ beat=2 rank=0 idx=19 data=0x0000
+[5479000] MEM: READ beat=3 rank=0 idx=20 data=0x0000
+[5481000] MEM: READ beat=4 rank=0 idx=21 data=0x0000
+[5483000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
+[5485000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
+[5487000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
+[7487000] REF_MON: First AUTO REFRESH observed.
+[12313000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[17139000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[21965000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[26791000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[31617000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[36443000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[41269000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[45429000] BLW/BLR sequence OK: base_addr=32 SZ=0 (nwords=8)
+[45631000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
+[45631000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
+[45631000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
+[45631000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
+[45633000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
+[45633000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
+[45633000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
+[45633000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
+[45633000] BLW issued: base_addr=256 SZ=1 (nwords=16)
+[45635000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[45635000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[45635000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[45635000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[45637000] PROT: GETCMD state cnt=2
+[45637000] PROT: GETCMD state cnt=2
+[45637000] PROT: GETCMD state cnt=2
+[45637000] PROT: GETCMD state cnt=2
+[45639000] PROT: GETCMD state cnt=1
+[45639000] PROT: GETCMD state cnt=1
+[45639000] PROT: GETCMD state cnt=1
+[45639000] PROT: GETCMD state cnt=1
+[45641000] PROT: GETCMD state cnt=0
+[45641000] PROT: GETCMD addr=256 cmd=100 sz=1 rank_sel=0
+[45641000] PROT: GETCMD state cnt=0
+[45641000] PROT: GETCMD addr=256 cmd=100 sz=1 rank_sel=0
+[45641000] PROT: GETCMD state cnt=0
+[45641000] PROT: GETCMD addr=256 cmd=100 sz=1 rank_sel=0
+[45641000] PROT: GETCMD state cnt=0
+[45641000] PROT: GETCMD addr=256 cmd=100 sz=1 rank_sel=0
+[45671000] DQS_MON: WRITE detected, starting DQS observation window.
+[45671000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=128
+[45687000] MEM: WRITE burst committed base_idx=0 data=0x0000
+[45737000] DQS_MON: window complete, edge_cnt=7.
+[45767000] DQS_MON: WRITE detected, starting DQS observation window.
+[45767000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=145
+[45783000] MEM: WRITE burst committed base_idx=17 data=0x0000
+[45833000] DQS_MON: window complete, edge_cnt=7.
+[46319000] REF_MON: AUTO REFRESH interval = 2525 cycles.
+[46919000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
+[46919000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
+[46919000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
+[46919000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
+[46921000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
+[46921000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
+[46921000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
+[46921000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
+[46921000] BLR issued: base_addr=256 SZ=1 (expect 16 beats)
+[46923000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[46923000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[46923000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[46923000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[46925000] PROT: GETCMD state cnt=2
+[46925000] PROT: GETCMD state cnt=2
+[46925000] PROT: GETCMD state cnt=2
+[46925000] PROT: GETCMD state cnt=2
+[46927000] PROT: GETCMD state cnt=1
+[46927000] PROT: GETCMD state cnt=1
+[46927000] PROT: GETCMD state cnt=1
+[46927000] PROT: GETCMD state cnt=1
+[46929000] PROT: GETCMD state cnt=0
+[46929000] PROT: GETCMD addr=256 cmd=11 sz=1 rank_sel=0
+[46929000] PROT: GETCMD state cnt=0
+[46929000] PROT: GETCMD addr=256 cmd=11 sz=1 rank_sel=0
+[46929000] PROT: GETCMD state cnt=0
+[46929000] PROT: GETCMD addr=256 cmd=11 sz=1 rank_sel=0
+[46929000] PROT: GETCMD state cnt=0
+[46929000] PROT: GETCMD addr=256 cmd=11 sz=1 rank_sel=0
+[46959000] MEM: READ decode rank=0 bank=0 row=0 col=128
+[46959000] MEM: READ cmd received rank=0 bank=0 row=0 col=128
+[47011000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
+[47013000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
+[47015000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
+[47017000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
+[47019000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
+[47021000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
+[47023000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
+[47025000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[51235000] REF_MON: AUTO REFRESH interval = 2458 cycles.
+[56061000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[60887000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[65713000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[70539000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[75365000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[80191000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[85017000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[86923000] BLW/BLR sequence OK: base_addr=256 SZ=1 (nwords=16)
+[87125000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
+[87125000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
+[87125000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
+[87125000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
+[87127000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
+[87127000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
+[87127000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
+[87127000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
+[87127000] BLW issued: base_addr=384 SZ=2 (nwords=24)
+[87129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[87129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[87129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[87129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[87131000] PROT: GETCMD state cnt=2
+[87131000] PROT: GETCMD state cnt=2
+[87131000] PROT: GETCMD state cnt=2
+[87131000] PROT: GETCMD state cnt=2
+[87133000] PROT: GETCMD state cnt=1
+[87133000] PROT: GETCMD state cnt=1
+[87133000] PROT: GETCMD state cnt=1
+[87133000] PROT: GETCMD state cnt=1
+[87135000] PROT: GETCMD state cnt=0
+[87135000] PROT: GETCMD addr=384 cmd=100 sz=10 rank_sel=0
+[87135000] PROT: GETCMD state cnt=0
+[87135000] PROT: GETCMD addr=384 cmd=100 sz=10 rank_sel=0
+[87135000] PROT: GETCMD state cnt=0
+[87135000] PROT: GETCMD addr=384 cmd=100 sz=10 rank_sel=0
+[87135000] PROT: GETCMD state cnt=0
+[87135000] PROT: GETCMD addr=384 cmd=100 sz=10 rank_sel=0
+[87165000] DQS_MON: WRITE detected, starting DQS observation window.
+[87165000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=192
+[87181000] MEM: WRITE burst committed base_idx=0 data=0x0000
+[87231000] DQS_MON: window complete, edge_cnt=7.
+[87277000] DQS_MON: WRITE detected, starting DQS observation window.
+[87277000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=208
+[87293000] MEM: WRITE burst committed base_idx=16 data=0x0000
+[87343000] DQS_MON: window complete, edge_cnt=7.
+[87389000] DQS_MON: WRITE detected, starting DQS observation window.
+[87389000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=225
+[87405000] MEM: WRITE burst committed base_idx=1 data=0x0000
+[87455000] DQS_MON: window complete, edge_cnt=7.
+[88445000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
+[88445000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
+[88445000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
+[88445000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
+[88447000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
+[88447000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
+[88447000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
+[88447000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
+[88447000] BLR issued: base_addr=384 SZ=2 (expect 24 beats)
+[88449000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[88449000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[88449000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[88449000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[88451000] PROT: GETCMD state cnt=2
+[88451000] PROT: GETCMD state cnt=2
+[88451000] PROT: GETCMD state cnt=2
+[88451000] PROT: GETCMD state cnt=2
+[88453000] PROT: GETCMD state cnt=1
+[88453000] PROT: GETCMD state cnt=1
+[88453000] PROT: GETCMD state cnt=1
+[88453000] PROT: GETCMD state cnt=1
+[88455000] PROT: GETCMD state cnt=0
+[88455000] PROT: GETCMD addr=384 cmd=11 sz=10 rank_sel=0
+[88455000] PROT: GETCMD state cnt=0
+[88455000] PROT: GETCMD addr=384 cmd=11 sz=10 rank_sel=0
+[88455000] PROT: GETCMD state cnt=0
+[88455000] PROT: GETCMD addr=384 cmd=11 sz=10 rank_sel=0
+[88455000] PROT: GETCMD state cnt=0
+[88455000] PROT: GETCMD addr=384 cmd=11 sz=10 rank_sel=0
+[88485000] MEM: READ decode rank=0 bank=0 row=0 col=192
+[88485000] MEM: READ cmd received rank=0 bank=0 row=0 col=192
+[88537000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
+[88539000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
+[88541000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
+[88543000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
+[88545000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
+[88547000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
+[88549000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
+[88551000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[90301000] REF_MON: AUTO REFRESH interval = 2642 cycles.
+[95127000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[99953000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[104779000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[109605000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[114431000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[119257000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[124083000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[128449000] BLW/BLR sequence OK: base_addr=384 SZ=2 (nwords=24)
+[128651000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
+[128651000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
+[128651000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
+[128651000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
+[128653000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
+[128653000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
+[128653000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
+[128653000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
+[128653000] BLW issued: base_addr=512 SZ=3 (nwords=32)
+[128655000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[128655000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[128655000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[128655000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[128657000] PROT: GETCMD state cnt=2
+[128657000] PROT: GETCMD state cnt=2
+[128657000] PROT: GETCMD state cnt=2
+[128657000] PROT: GETCMD state cnt=2
+[128659000] PROT: GETCMD state cnt=1
+[128659000] PROT: GETCMD state cnt=1
+[128659000] PROT: GETCMD state cnt=1
+[128659000] PROT: GETCMD state cnt=1
+[128661000] PROT: GETCMD state cnt=0
+[128661000] PROT: GETCMD addr=512 cmd=100 sz=11 rank_sel=0
+[128661000] PROT: GETCMD state cnt=0
+[128661000] PROT: GETCMD addr=512 cmd=100 sz=11 rank_sel=0
+[128661000] PROT: GETCMD state cnt=0
+[128661000] PROT: GETCMD addr=512 cmd=100 sz=11 rank_sel=0
+[128661000] PROT: GETCMD state cnt=0
+[128661000] PROT: GETCMD addr=512 cmd=100 sz=11 rank_sel=0
+[128691000] DQS_MON: WRITE detected, starting DQS observation window.
+[128691000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=256
+[128707000] MEM: WRITE burst committed base_idx=0 data=0x0000
+[128757000] DQS_MON: window complete, edge_cnt=7.
+[128819000] DQS_MON: WRITE detected, starting DQS observation window.
+[128819000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=272
+[128835000] MEM: WRITE burst committed base_idx=16 data=0x0000
+[128885000] DQS_MON: window complete, edge_cnt=7.
+[128947000] DQS_MON: WRITE detected, starting DQS observation window.
+[128947000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=288
+[128963000] MEM: WRITE burst committed base_idx=0 data=0x0000
+[129013000] DQS_MON: window complete, edge_cnt=7.
+[129075000] DQS_MON: WRITE detected, starting DQS observation window.
+[129075000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=305
+[129091000] MEM: WRITE burst committed base_idx=17 data=0x0000
+[129141000] DQS_MON: window complete, edge_cnt=7.
+[129453000] REF_MON: AUTO REFRESH interval = 2685 cycles.
+[130003000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
+[130003000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
+[130003000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
+[130003000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
+[130005000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
+[130005000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
+[130005000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
+[130005000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
+[130005000] BLR issued: base_addr=512 SZ=3 (expect 32 beats)
+[130007000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[130007000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[130007000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[130007000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[130009000] PROT: GETCMD state cnt=2
+[130009000] PROT: GETCMD state cnt=2
+[130009000] PROT: GETCMD state cnt=2
+[130009000] PROT: GETCMD state cnt=2
+[130011000] PROT: GETCMD state cnt=1
+[130011000] PROT: GETCMD state cnt=1
+[130011000] PROT: GETCMD state cnt=1
+[130011000] PROT: GETCMD state cnt=1
+[130013000] PROT: GETCMD state cnt=0
+[130013000] PROT: GETCMD addr=512 cmd=11 sz=11 rank_sel=0
+[130013000] PROT: GETCMD state cnt=0
+[130013000] PROT: GETCMD addr=512 cmd=11 sz=11 rank_sel=0
+[130013000] PROT: GETCMD state cnt=0
+[130013000] PROT: GETCMD addr=512 cmd=11 sz=11 rank_sel=0
+[130013000] PROT: GETCMD state cnt=0
+[130013000] PROT: GETCMD addr=512 cmd=11 sz=11 rank_sel=0
+[130043000] MEM: READ decode rank=0 bank=0 row=0 col=256
+[130043000] MEM: READ cmd received rank=0 bank=0 row=0 col=256
+[130095000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
+[130097000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
+[130099000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
+[130101000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
+[130103000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
+[130105000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
+[130107000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
+[130109000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[134369000] REF_MON: AUTO REFRESH interval = 2458 cycles.
+[139195000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[144021000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[148847000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[153673000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[158499000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[163325000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[168151000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[170007000] BLW/BLR sequence OK: base_addr=512 SZ=3 (nwords=32)
+[170207000] (server) Starting FIFO stress / refresh-interleaving test...
+[170209000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
+[170209000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
+[170209000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
+[170209000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
+[170211000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
+[170211000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
+[170211000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
+[170211000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
+[170211000] SCW issued (server): addr=600 data16=0xfda7
+[170213000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170213000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170213000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170213000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170215000] PROT: GETCMD state cnt=2
+[170215000] PROT: GETCMD state cnt=2
+[170215000] PROT: GETCMD state cnt=2
+[170215000] PROT: GETCMD state cnt=2
+[170217000] PROT: GETCMD state cnt=1
+[170217000] PROT: GETCMD state cnt=1
+[170217000] PROT: GETCMD state cnt=1
+[170217000] PROT: GETCMD state cnt=1
+[170219000] PROT: GETCMD state cnt=0
+[170219000] PROT: GETCMD addr=600 cmd=10 sz=0 rank_sel=0
+[170219000] PROT: GETCMD state cnt=0
+[170219000] PROT: GETCMD addr=600 cmd=10 sz=0 rank_sel=0
+[170219000] PROT: GETCMD state cnt=0
+[170219000] PROT: GETCMD addr=600 cmd=10 sz=0 rank_sel=0
+[170219000] PROT: GETCMD state cnt=0
+[170219000] PROT: GETCMD addr=600 cmd=10 sz=0 rank_sel=0
+[170235000] DQS_MON: WRITE detected, starting DQS observation window.
+[170235000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=289
+[170251000] MEM: WRITE burst committed base_idx=97 data=0x0000
+[170301000] DQS_MON: window complete, edge_cnt=7.
+[170633000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
+[170633000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
+[170633000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
+[170633000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
+[170635000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
+[170635000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
+[170635000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
+[170635000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
+[170635000] SCR issued: addr=600
+[170637000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170637000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170637000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170637000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170639000] PROT: GETCMD state cnt=2
+[170639000] PROT: GETCMD state cnt=2
+[170639000] PROT: GETCMD state cnt=2
+[170639000] PROT: GETCMD state cnt=2
+[170641000] PROT: GETCMD state cnt=1
+[170641000] PROT: GETCMD state cnt=1
+[170641000] PROT: GETCMD state cnt=1
+[170641000] PROT: GETCMD state cnt=1
+[170643000] PROT: GETCMD state cnt=0
+[170643000] PROT: GETCMD addr=600 cmd=1 sz=0 rank_sel=0
+[170643000] PROT: GETCMD state cnt=0
+[170643000] PROT: GETCMD addr=600 cmd=1 sz=0 rank_sel=0
+[170643000] PROT: GETCMD state cnt=0
+[170643000] PROT: GETCMD addr=600 cmd=1 sz=0 rank_sel=0
+[170643000] PROT: GETCMD state cnt=0
+[170643000] PROT: GETCMD addr=600 cmd=1 sz=0 rank_sel=0
+[170657000] PROT: ISSUE_READ bank=3 row=0 col=144 cs=1 ras=1 cas=1 we=1
+[170657000] PROT: ISSUE_READ bank=3 row=0 col=144 cs=1 ras=1 cas=1 we=1
+[170657000] PROT: ISSUE_READ bank=3 row=0 col=144 cs=1 ras=1 cas=1 we=1
+[170657000] PROT: ISSUE_READ bank=3 row=0 col=144 cs=1 ras=1 cas=1 we=1
+[170659000] MEM: READ decode rank=0 bank=3 row=0 col=289
+[170659000] MEM: READ cmd received rank=0 bank=3 row=0 col=289
+[170711000] MEM: READ beat=0 rank=0 idx=97 data=0x0000
+[170713000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
+[170715000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
+[170717000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
+[170719000] READ observed (server top): RADDR=600 DOUT=0xzzzzzzzzzzzz0000
+[170719000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
+[170721000] READ observed (server top): RADDR=601 DOUT=0xzzzzzzzzzzzz0000
+[170721000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
+[170723000] READ observed (server top): RADDR=602 DOUT=0xzzzzzzzzzzzz0000
+[170723000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
+[170725000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
+[170823000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
+[170823000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
+[170823000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
+[170823000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
+[170825000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
+[170825000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
+[170825000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
+[170825000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
+[170825000] BLW issued: base_addr=700 SZ=1 (nwords=16)
+[170827000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170827000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170827000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170827000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[170829000] PROT: GETCMD state cnt=2
+[170829000] PROT: GETCMD state cnt=2
+[170829000] PROT: GETCMD state cnt=2
+[170829000] PROT: GETCMD state cnt=2
+[170831000] PROT: GETCMD state cnt=1
+[170831000] PROT: GETCMD state cnt=1
+[170831000] PROT: GETCMD state cnt=1
+[170831000] PROT: GETCMD state cnt=1
+[170833000] PROT: GETCMD state cnt=0
+[170833000] PROT: GETCMD addr=700 cmd=100 sz=1 rank_sel=0
+[170833000] PROT: GETCMD state cnt=0
+[170833000] PROT: GETCMD addr=700 cmd=100 sz=1 rank_sel=0
+[170833000] PROT: GETCMD state cnt=0
+[170833000] PROT: GETCMD addr=700 cmd=100 sz=1 rank_sel=0
+[170833000] PROT: GETCMD state cnt=0
+[170833000] PROT: GETCMD addr=700 cmd=100 sz=1 rank_sel=0
+[170863000] DQS_MON: WRITE detected, starting DQS observation window.
+[170863000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=344
+[170879000] MEM: WRITE burst committed base_idx=120 data=0x0000
+[170929000] DQS_MON: window complete, edge_cnt=7.
+[170959000] DQS_MON: WRITE detected, starting DQS observation window.
+[170959000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=361
+[170975000] MEM: WRITE burst committed base_idx=105 data=0x0000
+[171025000] DQS_MON: window complete, edge_cnt=7.
+[172111000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
+[172111000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
+[172111000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
+[172111000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
+[172113000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
+[172113000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
+[172113000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
+[172113000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
+[172113000] BLR issued: base_addr=700 SZ=1 (expect 16 beats)
+[172115000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[172115000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[172115000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[172115000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[172117000] PROT: GETCMD state cnt=2
+[172117000] PROT: GETCMD state cnt=2
+[172117000] PROT: GETCMD state cnt=2
+[172117000] PROT: GETCMD state cnt=2
+[172119000] BLR beat (bus mode) observed: RADDR=604 DOUT=0xzzzzzzzzzzzz0000
+[172119000] PROT: GETCMD state cnt=1
+[172119000] PROT: GETCMD state cnt=1
+[172119000] PROT: GETCMD state cnt=1
+[172119000] PROT: GETCMD state cnt=1
+[172119000] READ observed (server top): RADDR=604 DOUT=0xzzzzzzzzzzzz0000
+[172121000] READ observed (server top): RADDR=605 DOUT=0xzzzzzzzzzzzz0000
+[172121000] PROT: GETCMD state cnt=0
+[172121000] PROT: GETCMD addr=700 cmd=11 sz=1 rank_sel=0
+[172121000] PROT: GETCMD state cnt=0
+[172121000] PROT: GETCMD addr=700 cmd=11 sz=1 rank_sel=0
+[172121000] PROT: GETCMD state cnt=0
+[172121000] PROT: GETCMD addr=700 cmd=11 sz=1 rank_sel=0
+[172121000] PROT: GETCMD state cnt=0
+[172121000] PROT: GETCMD addr=700 cmd=11 sz=1 rank_sel=0
+[172121000] BLR beat (bus mode) observed: RADDR=605 DOUT=0xzzzzzzzzzzzz0000
+[172123000] BLR beat (bus mode) observed: RADDR=606 DOUT=0xzzzzzzzzzzzzzzzz
+[172123000] READ observed (server top): RADDR=606 DOUT=0xzzzzzzzzzzzzzzzz
+[172125000] READ observed (server top): RADDR=607 DOUT=0xzzzzzzzzzzzzzzzz
+[172125000] BLR beat (bus mode) observed: RADDR=607 DOUT=0xzzzzzzzzzzzzzzzz
+[172127000] BLR beat (bus mode) observed: RADDR=607 DOUT=0xzzzzzzzzzzzzzzzz
+[172127000] READ observed (server top): RADDR=607 DOUT=0xzzzzzzzzzzzzzzzz
+[172151000] MEM: READ decode rank=0 bank=3 row=0 col=344
+[172151000] MEM: READ cmd received rank=0 bank=3 row=0 col=344
+[172203000] MEM: READ beat=0 rank=0 idx=120 data=0x0000
+[172205000] MEM: READ beat=1 rank=0 idx=121 data=0x0000
+[172207000] MEM: READ beat=2 rank=0 idx=122 data=0x0000
+[172209000] MEM: READ beat=3 rank=0 idx=123 data=0x0000
+[172211000] MEM: READ beat=4 rank=0 idx=124 data=0x0000
+[172213000] MEM: READ beat=5 rank=0 idx=125 data=0x0000
+[172215000] MEM: READ beat=6 rank=0 idx=126 data=0x0000
+[172217000] MEM: READ beat=7 rank=0 idx=127 data=0x0000
+[173481000] REF_MON: AUTO REFRESH interval = 2665 cycles.
+[178307000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[183133000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[187959000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[192785000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[197611000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[202437000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[207263000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[212089000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[212129000] BLW/BLR sequence OK: base_addr=700 SZ=1 (nwords=16)
+[212331000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
+[212331000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
+[212331000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
+[212331000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
+[212333000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
+[212333000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
+[212333000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
+[212333000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
+[212333000] SCW issued (server): addr=601 data16=0xfca7
+[212335000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212335000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212335000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212335000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212337000] PROT: GETCMD state cnt=2
+[212337000] PROT: GETCMD state cnt=2
+[212337000] PROT: GETCMD state cnt=2
+[212337000] PROT: GETCMD state cnt=2
+[212339000] PROT: GETCMD state cnt=1
+[212339000] PROT: GETCMD state cnt=1
+[212339000] PROT: GETCMD state cnt=1
+[212339000] PROT: GETCMD state cnt=1
+[212341000] PROT: GETCMD state cnt=0
+[212341000] PROT: GETCMD addr=601 cmd=10 sz=0 rank_sel=0
+[212341000] PROT: GETCMD state cnt=0
+[212341000] PROT: GETCMD addr=601 cmd=10 sz=0 rank_sel=0
+[212341000] PROT: GETCMD state cnt=0
+[212341000] PROT: GETCMD addr=601 cmd=10 sz=0 rank_sel=0
+[212341000] PROT: GETCMD state cnt=0
+[212341000] PROT: GETCMD addr=601 cmd=10 sz=0 rank_sel=0
+[212357000] DQS_MON: WRITE detected, starting DQS observation window.
+[212357000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=291
+[212373000] MEM: WRITE burst committed base_idx=99 data=0x0000
+[212423000] DQS_MON: window complete, edge_cnt=7.
+[212755000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
+[212755000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
+[212755000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
+[212755000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
+[212757000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
+[212757000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
+[212757000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
+[212757000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
+[212757000] SCR issued: addr=601
+[212759000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212759000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212759000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212759000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212761000] PROT: GETCMD state cnt=2
+[212761000] PROT: GETCMD state cnt=2
+[212761000] PROT: GETCMD state cnt=2
+[212761000] PROT: GETCMD state cnt=2
+[212763000] PROT: GETCMD state cnt=1
+[212763000] PROT: GETCMD state cnt=1
+[212763000] PROT: GETCMD state cnt=1
+[212763000] PROT: GETCMD state cnt=1
+[212765000] PROT: GETCMD state cnt=0
+[212765000] PROT: GETCMD addr=601 cmd=1 sz=0 rank_sel=0
+[212765000] PROT: GETCMD state cnt=0
+[212765000] PROT: GETCMD addr=601 cmd=1 sz=0 rank_sel=0
+[212765000] PROT: GETCMD state cnt=0
+[212765000] PROT: GETCMD addr=601 cmd=1 sz=0 rank_sel=0
+[212765000] PROT: GETCMD state cnt=0
+[212765000] PROT: GETCMD addr=601 cmd=1 sz=0 rank_sel=0
+[212779000] PROT: ISSUE_READ bank=3 row=0 col=145 cs=1 ras=1 cas=1 we=1
+[212779000] PROT: ISSUE_READ bank=3 row=0 col=145 cs=1 ras=1 cas=1 we=1
+[212779000] PROT: ISSUE_READ bank=3 row=0 col=145 cs=1 ras=1 cas=1 we=1
+[212779000] PROT: ISSUE_READ bank=3 row=0 col=145 cs=1 ras=1 cas=1 we=1
+[212781000] MEM: READ decode rank=0 bank=3 row=0 col=291
+[212781000] MEM: READ cmd received rank=0 bank=3 row=0 col=291
+[212833000] MEM: READ beat=0 rank=0 idx=99 data=0x0000
+[212835000] MEM: READ beat=1 rank=0 idx=100 data=0x0000
+[212837000] MEM: READ beat=2 rank=0 idx=101 data=0x0000
+[212839000] MEM: READ beat=3 rank=0 idx=102 data=0x0000
+[212841000] READ observed (server top): RADDR=601 DOUT=0xzzzzzzzzzzzz0000
+[212841000] MEM: READ beat=4 rank=0 idx=103 data=0x0000
+[212843000] READ observed (server top): RADDR=602 DOUT=0xzzzzzzzzzzzz0000
+[212843000] MEM: READ beat=5 rank=0 idx=104 data=0x0000
+[212845000] READ observed (server top): RADDR=603 DOUT=0xzzzzzzzzzzzz0000
+[212845000] MEM: READ beat=6 rank=0 idx=105 data=0x0000
+[212847000] MEM: READ beat=7 rank=0 idx=106 data=0x0000
+[212945000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
+[212945000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
+[212945000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
+[212945000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
+[212947000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
+[212947000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
+[212947000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
+[212947000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
+[212947000] BLW issued: base_addr=740 SZ=1 (nwords=16)
+[212949000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212949000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212949000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212949000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[212951000] PROT: GETCMD state cnt=2
+[212951000] PROT: GETCMD state cnt=2
+[212951000] PROT: GETCMD state cnt=2
+[212951000] PROT: GETCMD state cnt=2
+[212953000] PROT: GETCMD state cnt=1
+[212953000] PROT: GETCMD state cnt=1
+[212953000] PROT: GETCMD state cnt=1
+[212953000] PROT: GETCMD state cnt=1
+[212955000] PROT: GETCMD state cnt=0
+[212955000] PROT: GETCMD addr=740 cmd=100 sz=1 rank_sel=0
+[212955000] PROT: GETCMD state cnt=0
+[212955000] PROT: GETCMD addr=740 cmd=100 sz=1 rank_sel=0
+[212955000] PROT: GETCMD state cnt=0
+[212955000] PROT: GETCMD addr=740 cmd=100 sz=1 rank_sel=0
+[212955000] PROT: GETCMD state cnt=0
+[212955000] PROT: GETCMD addr=740 cmd=100 sz=1 rank_sel=0
+[212985000] DQS_MON: WRITE detected, starting DQS observation window.
+[212985000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=376
+[213001000] MEM: WRITE burst committed base_idx=24 data=0x0000
+[213051000] DQS_MON: window complete, edge_cnt=7.
+[213081000] DQS_MON: WRITE detected, starting DQS observation window.
+[213081000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=393
+[213097000] MEM: WRITE burst committed base_idx=9 data=0x0000
+[213147000] DQS_MON: window complete, edge_cnt=7.
+[214233000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
+[214233000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
+[214233000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
+[214233000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
+[214235000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
+[214235000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
+[214235000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
+[214235000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
+[214235000] BLR issued: base_addr=740 SZ=1 (expect 16 beats)
+[214237000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[214237000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[214237000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[214237000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[214239000] PROT: GETCMD state cnt=2
+[214239000] PROT: GETCMD state cnt=2
+[214239000] PROT: GETCMD state cnt=2
+[214239000] PROT: GETCMD state cnt=2
+[214241000] BLR beat (bus mode) observed: RADDR=605 DOUT=0xzzzzzzzzzzzz0000
+[214241000] READ observed (server top): RADDR=605 DOUT=0xzzzzzzzzzzzz0000
+[214241000] PROT: GETCMD state cnt=1
+[214241000] PROT: GETCMD state cnt=1
+[214241000] PROT: GETCMD state cnt=1
+[214241000] PROT: GETCMD state cnt=1
+[214243000] PROT: GETCMD state cnt=0
+[214243000] PROT: GETCMD addr=740 cmd=11 sz=1 rank_sel=0
+[214243000] PROT: GETCMD state cnt=0
+[214243000] PROT: GETCMD addr=740 cmd=11 sz=1 rank_sel=0
+[214243000] PROT: GETCMD state cnt=0
+[214243000] PROT: GETCMD addr=740 cmd=11 sz=1 rank_sel=0
+[214243000] PROT: GETCMD state cnt=0
+[214243000] PROT: GETCMD addr=740 cmd=11 sz=1 rank_sel=0
+[214243000] READ observed (server top): RADDR=606 DOUT=0xzzzzzzzzzzzz0000
+[214243000] BLR beat (bus mode) observed: RADDR=606 DOUT=0xzzzzzzzzzzzz0000
+[214245000] BLR beat (bus mode) observed: RADDR=607 DOUT=0xzzzzzzzzzzzzzzzz
+[214245000] READ observed (server top): RADDR=607 DOUT=0xzzzzzzzzzzzzzzzz
+[214247000] READ observed (server top): RADDR=608 DOUT=0xzzzzzzzzzzzzzzzz
+[214247000] BLR beat (bus mode) observed: RADDR=608 DOUT=0xzzzzzzzzzzzzzzzz
+[214249000] BLR beat (bus mode) observed: RADDR=608 DOUT=0xzzzzzzzzzzzzzzzz
+[214249000] READ observed (server top): RADDR=608 DOUT=0xzzzzzzzzzzzzzzzz
+[214273000] MEM: READ decode rank=0 bank=0 row=0 col=376
+[214273000] MEM: READ cmd received rank=0 bank=0 row=0 col=376
+[214325000] MEM: READ beat=0 rank=0 idx=24 data=0x0000
+[214327000] MEM: READ beat=1 rank=0 idx=25 data=0x0000
+[214329000] MEM: READ beat=2 rank=0 idx=26 data=0x0000
+[214331000] MEM: READ beat=3 rank=0 idx=27 data=0x0000
+[214333000] MEM: READ beat=4 rank=0 idx=28 data=0x0000
+[214335000] MEM: READ beat=5 rank=0 idx=29 data=0x0000
+[214337000] MEM: READ beat=6 rank=0 idx=30 data=0x0000
+[214339000] MEM: READ beat=7 rank=0 idx=31 data=0x0000
+[217419000] REF_MON: AUTO REFRESH interval = 2665 cycles.
+[222245000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[227071000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[231897000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[236723000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[241549000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[246375000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[251201000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[254251000] BLW/BLR sequence OK: base_addr=740 SZ=1 (nwords=16)
+[254453000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
+[254453000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
+[254453000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
+[254453000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
+[254455000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
+[254455000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
+[254455000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
+[254455000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
+[254455000] SCW issued (server): addr=602 data16=0xffa7
+[254457000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[254457000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[254457000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[254457000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[254459000] PROT: GETCMD state cnt=2
+[254459000] PROT: GETCMD state cnt=2
+[254459000] PROT: GETCMD state cnt=2
+[254459000] PROT: GETCMD state cnt=2
+[254461000] PROT: GETCMD state cnt=1
+[254461000] PROT: GETCMD state cnt=1
+[254461000] PROT: GETCMD state cnt=1
+[254461000] PROT: GETCMD state cnt=1
+[254463000] PROT: GETCMD state cnt=0
+[254463000] PROT: GETCMD addr=602 cmd=10 sz=0 rank_sel=0
+[254463000] PROT: GETCMD state cnt=0
+[254463000] PROT: GETCMD addr=602 cmd=10 sz=0 rank_sel=0
+[254463000] PROT: GETCMD state cnt=0
+[254463000] PROT: GETCMD addr=602 cmd=10 sz=0 rank_sel=0
+[254463000] PROT: GETCMD state cnt=0
+[254463000] PROT: GETCMD addr=602 cmd=10 sz=0 rank_sel=0
+[254479000] DQS_MON: WRITE detected, starting DQS observation window.
+[254479000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=293
+[254495000] MEM: WRITE burst committed base_idx=101 data=0x0000
+[254545000] DQS_MON: window complete, edge_cnt=7.
+[254877000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
+[254877000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
+[254877000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
+[254877000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
+[254879000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
+[254879000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
+[254879000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
+[254879000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
+[254879000] SCR issued: addr=602
+[254881000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[254881000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[254881000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[254881000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[254883000] PROT: GETCMD state cnt=2
+[254883000] PROT: GETCMD state cnt=2
+[254883000] PROT: GETCMD state cnt=2
+[254883000] PROT: GETCMD state cnt=2
+[254885000] PROT: GETCMD state cnt=1
+[254885000] PROT: GETCMD state cnt=1
+[254885000] PROT: GETCMD state cnt=1
+[254885000] PROT: GETCMD state cnt=1
+[254887000] PROT: GETCMD state cnt=0
+[254887000] PROT: GETCMD addr=602 cmd=1 sz=0 rank_sel=0
+[254887000] PROT: GETCMD state cnt=0
+[254887000] PROT: GETCMD addr=602 cmd=1 sz=0 rank_sel=0
+[254887000] PROT: GETCMD state cnt=0
+[254887000] PROT: GETCMD addr=602 cmd=1 sz=0 rank_sel=0
+[254887000] PROT: GETCMD state cnt=0
+[254887000] PROT: GETCMD addr=602 cmd=1 sz=0 rank_sel=0
+[254901000] PROT: ISSUE_READ bank=3 row=0 col=146 cs=1 ras=1 cas=1 we=1
+[254901000] PROT: ISSUE_READ bank=3 row=0 col=146 cs=1 ras=1 cas=1 we=1
+[254901000] PROT: ISSUE_READ bank=3 row=0 col=146 cs=1 ras=1 cas=1 we=1
+[254901000] PROT: ISSUE_READ bank=3 row=0 col=146 cs=1 ras=1 cas=1 we=1
+[254903000] MEM: READ decode rank=0 bank=3 row=0 col=293
+[254903000] MEM: READ cmd received rank=0 bank=3 row=0 col=293
+[254955000] MEM: READ beat=0 rank=0 idx=101 data=0x0000
+[254957000] MEM: READ beat=1 rank=0 idx=102 data=0x0000
+[254959000] MEM: READ beat=2 rank=0 idx=103 data=0x0000
+[254961000] MEM: READ beat=3 rank=0 idx=104 data=0x0000
+[254963000] READ observed (server top): RADDR=602 DOUT=0xzzzzzzzzzzzz0000
+[254963000] MEM: READ beat=4 rank=0 idx=105 data=0x0000
+[254965000] READ observed (server top): RADDR=603 DOUT=0xzzzzzzzzzzzz0000
+[254965000] MEM: READ beat=5 rank=0 idx=106 data=0x0000
+[254967000] READ observed (server top): RADDR=604 DOUT=0xzzzzzzzzzzzz0000
+[254967000] MEM: READ beat=6 rank=0 idx=107 data=0x0000
+[254969000] MEM: READ beat=7 rank=0 idx=108 data=0x0000
+[255067000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
+[255067000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
+[255067000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
+[255067000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
+[255069000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
+[255069000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
+[255069000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
+[255069000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
+[255069000] BLW issued: base_addr=780 SZ=1 (nwords=16)
+[255071000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[255071000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[255071000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[255071000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[255073000] PROT: GETCMD state cnt=2
+[255073000] PROT: GETCMD state cnt=2
+[255073000] PROT: GETCMD state cnt=2
+[255073000] PROT: GETCMD state cnt=2
+[255075000] PROT: GETCMD state cnt=1
+[255075000] PROT: GETCMD state cnt=1
+[255075000] PROT: GETCMD state cnt=1
+[255075000] PROT: GETCMD state cnt=1
+[255077000] PROT: GETCMD state cnt=0
+[255077000] PROT: GETCMD addr=780 cmd=100 sz=1 rank_sel=0
+[255077000] PROT: GETCMD state cnt=0
+[255077000] PROT: GETCMD addr=780 cmd=100 sz=1 rank_sel=0
+[255077000] PROT: GETCMD state cnt=0
+[255077000] PROT: GETCMD addr=780 cmd=100 sz=1 rank_sel=0
+[255077000] PROT: GETCMD state cnt=0
+[255077000] PROT: GETCMD addr=780 cmd=100 sz=1 rank_sel=0
+[255107000] DQS_MON: WRITE detected, starting DQS observation window.
+[255107000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=392
+[255123000] MEM: WRITE burst committed base_idx=40 data=0x0000
+[255173000] DQS_MON: window complete, edge_cnt=7.
+[255203000] DQS_MON: WRITE detected, starting DQS observation window.
+[255203000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=409
+[255219000] MEM: WRITE burst committed base_idx=57 data=0x0000
+[255269000] DQS_MON: window complete, edge_cnt=7.
+[256355000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
+[256355000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
+[256355000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
+[256355000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
+[256357000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
+[256357000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
+[256357000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
+[256357000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
+[256357000] BLR issued: base_addr=780 SZ=1 (expect 16 beats)
+[256359000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[256359000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[256359000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[256359000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[256361000] PROT: GETCMD state cnt=2
+[256361000] PROT: GETCMD state cnt=2
+[256361000] PROT: GETCMD state cnt=2
+[256361000] PROT: GETCMD state cnt=2
+[256363000] BLR beat (bus mode) observed: RADDR=606 DOUT=0xzzzzzzzzzzzz0000
+[256363000] PROT: GETCMD state cnt=1
+[256363000] PROT: GETCMD state cnt=1
+[256363000] PROT: GETCMD state cnt=1
+[256363000] PROT: GETCMD state cnt=1
+[256363000] READ observed (server top): RADDR=606 DOUT=0xzzzzzzzzzzzz0000
+[256365000] READ observed (server top): RADDR=607 DOUT=0xzzzzzzzzzzzz0000
+[256365000] PROT: GETCMD state cnt=0
+[256365000] PROT: GETCMD addr=780 cmd=11 sz=1 rank_sel=0
+[256365000] PROT: GETCMD state cnt=0
+[256365000] PROT: GETCMD addr=780 cmd=11 sz=1 rank_sel=0
+[256365000] PROT: GETCMD state cnt=0
+[256365000] PROT: GETCMD addr=780 cmd=11 sz=1 rank_sel=0
+[256365000] PROT: GETCMD state cnt=0
+[256365000] PROT: GETCMD addr=780 cmd=11 sz=1 rank_sel=0
+[256365000] BLR beat (bus mode) observed: RADDR=607 DOUT=0xzzzzzzzzzzzz0000
+[256367000] BLR beat (bus mode) observed: RADDR=608 DOUT=0xzzzzzzzzzzzzzzzz
+[256367000] READ observed (server top): RADDR=608 DOUT=0xzzzzzzzzzzzzzzzz
+[256369000] READ observed (server top): RADDR=609 DOUT=0xzzzzzzzzzzzzzzzz
+[256369000] BLR beat (bus mode) observed: RADDR=609 DOUT=0xzzzzzzzzzzzzzzzz
+[256371000] BLR beat (bus mode) observed: RADDR=609 DOUT=0xzzzzzzzzzzzzzzzz
+[256371000] READ observed (server top): RADDR=609 DOUT=0xzzzzzzzzzzzzzzzz
+[256395000] MEM: READ decode rank=0 bank=1 row=0 col=392
+[256395000] MEM: READ cmd received rank=0 bank=1 row=0 col=392
+[256447000] MEM: READ beat=0 rank=0 idx=40 data=0x0000
+[256449000] MEM: READ beat=1 rank=0 idx=41 data=0x0000
+[256451000] MEM: READ beat=2 rank=0 idx=42 data=0x0000
+[256453000] MEM: READ beat=3 rank=0 idx=43 data=0x0000
+[256455000] MEM: READ beat=4 rank=0 idx=44 data=0x0000
+[256457000] MEM: READ beat=5 rank=0 idx=45 data=0x0000
+[256459000] MEM: READ beat=6 rank=0 idx=46 data=0x0000
+[256461000] MEM: READ beat=7 rank=0 idx=47 data=0x0000
+[256531000] REF_MON: AUTO REFRESH interval = 2665 cycles.
+[261357000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[266183000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[271009000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[275835000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[280661000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[285487000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[290313000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[295139000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[296373000] BLW/BLR sequence OK: base_addr=780 SZ=1 (nwords=16)
+[296575000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
+[296575000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
+[296575000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
+[296575000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
+[296577000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
+[296577000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
+[296577000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
+[296577000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
+[296577000] SCW issued (server): addr=603 data16=0xfea7
+[296579000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[296579000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[296579000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[296579000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[296581000] PROT: GETCMD state cnt=2
+[296581000] PROT: GETCMD state cnt=2
+[296581000] PROT: GETCMD state cnt=2
+[296581000] PROT: GETCMD state cnt=2
+[296583000] PROT: GETCMD state cnt=1
+[296583000] PROT: GETCMD state cnt=1
+[296583000] PROT: GETCMD state cnt=1
+[296583000] PROT: GETCMD state cnt=1
+[296585000] PROT: GETCMD state cnt=0
+[296585000] PROT: GETCMD addr=603 cmd=10 sz=0 rank_sel=0
+[296585000] PROT: GETCMD state cnt=0
+[296585000] PROT: GETCMD addr=603 cmd=10 sz=0 rank_sel=0
+[296585000] PROT: GETCMD state cnt=0
+[296585000] PROT: GETCMD addr=603 cmd=10 sz=0 rank_sel=0
+[296585000] PROT: GETCMD state cnt=0
+[296585000] PROT: GETCMD addr=603 cmd=10 sz=0 rank_sel=0
+[296601000] DQS_MON: WRITE detected, starting DQS observation window.
+[296601000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=295
+[296617000] MEM: WRITE burst committed base_idx=103 data=0x0000
+[296667000] DQS_MON: window complete, edge_cnt=7.
+[296999000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
+[296999000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
+[296999000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
+[296999000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
+[297001000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
+[297001000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
+[297001000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
+[297001000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
+[297001000] SCR issued: addr=603
+[297003000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[297003000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[297003000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[297003000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[297005000] PROT: GETCMD state cnt=2
+[297005000] PROT: GETCMD state cnt=2
+[297005000] PROT: GETCMD state cnt=2
+[297005000] PROT: GETCMD state cnt=2
+[297007000] PROT: GETCMD state cnt=1
+[297007000] PROT: GETCMD state cnt=1
+[297007000] PROT: GETCMD state cnt=1
+[297007000] PROT: GETCMD state cnt=1
+[297009000] PROT: GETCMD state cnt=0
+[297009000] PROT: GETCMD addr=603 cmd=1 sz=0 rank_sel=0
+[297009000] PROT: GETCMD state cnt=0
+[297009000] PROT: GETCMD addr=603 cmd=1 sz=0 rank_sel=0
+[297009000] PROT: GETCMD state cnt=0
+[297009000] PROT: GETCMD addr=603 cmd=1 sz=0 rank_sel=0
+[297009000] PROT: GETCMD state cnt=0
+[297009000] PROT: GETCMD addr=603 cmd=1 sz=0 rank_sel=0
+[297023000] PROT: ISSUE_READ bank=3 row=0 col=147 cs=1 ras=1 cas=1 we=1
+[297023000] PROT: ISSUE_READ bank=3 row=0 col=147 cs=1 ras=1 cas=1 we=1
+[297023000] PROT: ISSUE_READ bank=3 row=0 col=147 cs=1 ras=1 cas=1 we=1
+[297023000] PROT: ISSUE_READ bank=3 row=0 col=147 cs=1 ras=1 cas=1 we=1
+[297025000] MEM: READ decode rank=0 bank=3 row=0 col=295
+[297025000] MEM: READ cmd received rank=0 bank=3 row=0 col=295
+[297077000] MEM: READ beat=0 rank=0 idx=103 data=0x0000
+[297079000] MEM: READ beat=1 rank=0 idx=104 data=0x0000
+[297081000] MEM: READ beat=2 rank=0 idx=105 data=0x0000
+[297083000] MEM: READ beat=3 rank=0 idx=106 data=0x0000
+[297085000] READ observed (server top): RADDR=603 DOUT=0xzzzzzzzzzzzz0000
+[297085000] MEM: READ beat=4 rank=0 idx=107 data=0x0000
+[297087000] READ observed (server top): RADDR=604 DOUT=0xzzzzzzzzzzzz0000
+[297087000] MEM: READ beat=5 rank=0 idx=108 data=0x0000
+[297089000] READ observed (server top): RADDR=605 DOUT=0xzzzzzzzzzzzz0000
+[297089000] MEM: READ beat=6 rank=0 idx=109 data=0x0000
+[297091000] MEM: READ beat=7 rank=0 idx=110 data=0x0000
+[297189000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
+[297189000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
+[297189000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
+[297189000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
+[297191000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
+[297191000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
+[297191000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
+[297191000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
+[297191000] BLW issued: base_addr=820 SZ=1 (nwords=16)
+[297193000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[297193000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[297193000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[297193000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[297195000] PROT: GETCMD state cnt=2
+[297195000] PROT: GETCMD state cnt=2
+[297195000] PROT: GETCMD state cnt=2
+[297195000] PROT: GETCMD state cnt=2
+[297197000] PROT: GETCMD state cnt=1
+[297197000] PROT: GETCMD state cnt=1
+[297197000] PROT: GETCMD state cnt=1
+[297197000] PROT: GETCMD state cnt=1
+[297199000] PROT: GETCMD state cnt=0
+[297199000] PROT: GETCMD addr=820 cmd=100 sz=1 rank_sel=0
+[297199000] PROT: GETCMD state cnt=0
+[297199000] PROT: GETCMD addr=820 cmd=100 sz=1 rank_sel=0
+[297199000] PROT: GETCMD state cnt=0
+[297199000] PROT: GETCMD addr=820 cmd=100 sz=1 rank_sel=0
+[297199000] PROT: GETCMD state cnt=0
+[297199000] PROT: GETCMD addr=820 cmd=100 sz=1 rank_sel=0
+[297229000] DQS_MON: WRITE detected, starting DQS observation window.
+[297229000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=408
+[297245000] MEM: WRITE burst committed base_idx=88 data=0x0000
+[297295000] DQS_MON: window complete, edge_cnt=7.
+[297325000] DQS_MON: WRITE detected, starting DQS observation window.
+[297325000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=425
+[297341000] MEM: WRITE burst committed base_idx=73 data=0x0000
+[297391000] DQS_MON: window complete, edge_cnt=7.
+[298477000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
+[298477000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
+[298477000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
+[298477000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
+[298479000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
+[298479000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
+[298479000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
+[298479000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
+[298479000] BLR issued: base_addr=820 SZ=1 (expect 16 beats)
+[298481000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[298481000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[298481000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[298481000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[298483000] PROT: GETCMD state cnt=2
+[298483000] PROT: GETCMD state cnt=2
+[298483000] PROT: GETCMD state cnt=2
+[298483000] PROT: GETCMD state cnt=2
+[298485000] BLR beat (bus mode) observed: RADDR=607 DOUT=0xzzzzzzzzzzzz0000
+[298485000] READ observed (server top): RADDR=607 DOUT=0xzzzzzzzzzzzz0000
+[298485000] PROT: GETCMD state cnt=1
+[298485000] PROT: GETCMD state cnt=1
+[298485000] PROT: GETCMD state cnt=1
+[298485000] PROT: GETCMD state cnt=1
+[298487000] PROT: GETCMD state cnt=0
+[298487000] PROT: GETCMD addr=820 cmd=11 sz=1 rank_sel=0
+[298487000] PROT: GETCMD state cnt=0
+[298487000] PROT: GETCMD addr=820 cmd=11 sz=1 rank_sel=0
+[298487000] PROT: GETCMD state cnt=0
+[298487000] PROT: GETCMD addr=820 cmd=11 sz=1 rank_sel=0
+[298487000] PROT: GETCMD state cnt=0
+[298487000] PROT: GETCMD addr=820 cmd=11 sz=1 rank_sel=0
+[298487000] READ observed (server top): RADDR=608 DOUT=0xzzzzzzzzzzzz0000
+[298487000] BLR beat (bus mode) observed: RADDR=608 DOUT=0xzzzzzzzzzzzz0000
+[298489000] BLR beat (bus mode) observed: RADDR=609 DOUT=0xzzzzzzzzzzzzzzzz
+[298489000] READ observed (server top): RADDR=609 DOUT=0xzzzzzzzzzzzzzzzz
+[298491000] READ observed (server top): RADDR=610 DOUT=0xzzzzzzzzzzzzzzzz
+[298491000] BLR beat (bus mode) observed: RADDR=610 DOUT=0xzzzzzzzzzzzzzzzz
+[298493000] BLR beat (bus mode) observed: RADDR=610 DOUT=0xzzzzzzzzzzzzzzzz
+[298493000] READ observed (server top): RADDR=610 DOUT=0xzzzzzzzzzzzzzzzz
+[298517000] MEM: READ decode rank=0 bank=2 row=0 col=408
+[298517000] MEM: READ cmd received rank=0 bank=2 row=0 col=408
+[298569000] MEM: READ beat=0 rank=0 idx=88 data=0x0000
+[298571000] MEM: READ beat=1 rank=0 idx=89 data=0x0000
+[298573000] MEM: READ beat=2 rank=0 idx=90 data=0x0000
+[298575000] MEM: READ beat=3 rank=0 idx=91 data=0x0000
+[298577000] MEM: READ beat=4 rank=0 idx=92 data=0x0000
+[298579000] MEM: READ beat=5 rank=0 idx=93 data=0x0000
+[298581000] MEM: READ beat=6 rank=0 idx=94 data=0x0000
+[298583000] MEM: READ beat=7 rank=0 idx=95 data=0x0000
+[300469000] REF_MON: AUTO REFRESH interval = 2665 cycles.
+[305295000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[310121000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[314947000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[319773000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[324599000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[329425000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[334251000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[338495000] BLW/BLR sequence OK: base_addr=820 SZ=1 (nwords=16)
+[338697000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
+[338697000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
+[338697000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
+[338697000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
+[338699000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
+[338699000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
+[338699000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
+[338699000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
+[338699000] SCW issued (server): addr=604 data16=0xf9a7
+[338701000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[338701000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[338701000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[338701000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[338703000] PROT: GETCMD state cnt=2
+[338703000] PROT: GETCMD state cnt=2
+[338703000] PROT: GETCMD state cnt=2
+[338703000] PROT: GETCMD state cnt=2
+[338705000] PROT: GETCMD state cnt=1
+[338705000] PROT: GETCMD state cnt=1
+[338705000] PROT: GETCMD state cnt=1
+[338705000] PROT: GETCMD state cnt=1
+[338707000] PROT: GETCMD state cnt=0
+[338707000] PROT: GETCMD addr=604 cmd=10 sz=0 rank_sel=0
+[338707000] PROT: GETCMD state cnt=0
+[338707000] PROT: GETCMD addr=604 cmd=10 sz=0 rank_sel=0
+[338707000] PROT: GETCMD state cnt=0
+[338707000] PROT: GETCMD addr=604 cmd=10 sz=0 rank_sel=0
+[338707000] PROT: GETCMD state cnt=0
+[338707000] PROT: GETCMD addr=604 cmd=10 sz=0 rank_sel=0
+[338723000] DQS_MON: WRITE detected, starting DQS observation window.
+[338723000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=297
+[338739000] MEM: WRITE burst committed base_idx=105 data=0x0000
+[338789000] DQS_MON: window complete, edge_cnt=7.
+[339121000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
+[339121000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
+[339121000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
+[339121000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
+[339123000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
+[339123000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
+[339123000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
+[339123000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
+[339123000] SCR issued: addr=604
+[339125000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[339125000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[339125000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[339125000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[339127000] PROT: GETCMD state cnt=2
+[339127000] PROT: GETCMD state cnt=2
+[339127000] PROT: GETCMD state cnt=2
+[339127000] PROT: GETCMD state cnt=2
+[339129000] PROT: GETCMD state cnt=1
+[339129000] PROT: GETCMD state cnt=1
+[339129000] PROT: GETCMD state cnt=1
+[339129000] PROT: GETCMD state cnt=1
+[339131000] PROT: GETCMD state cnt=0
+[339131000] PROT: GETCMD addr=604 cmd=1 sz=0 rank_sel=0
+[339131000] PROT: GETCMD state cnt=0
+[339131000] PROT: GETCMD addr=604 cmd=1 sz=0 rank_sel=0
+[339131000] PROT: GETCMD state cnt=0
+[339131000] PROT: GETCMD addr=604 cmd=1 sz=0 rank_sel=0
+[339131000] PROT: GETCMD state cnt=0
+[339131000] PROT: GETCMD addr=604 cmd=1 sz=0 rank_sel=0
+[339145000] PROT: ISSUE_READ bank=3 row=0 col=148 cs=1 ras=1 cas=1 we=1
+[339145000] PROT: ISSUE_READ bank=3 row=0 col=148 cs=1 ras=1 cas=1 we=1
+[339145000] PROT: ISSUE_READ bank=3 row=0 col=148 cs=1 ras=1 cas=1 we=1
+[339145000] PROT: ISSUE_READ bank=3 row=0 col=148 cs=1 ras=1 cas=1 we=1
+[339147000] MEM: READ decode rank=0 bank=3 row=0 col=297
+[339147000] MEM: READ cmd received rank=0 bank=3 row=0 col=297
+[339199000] MEM: READ beat=0 rank=0 idx=105 data=0x0000
+[339201000] MEM: READ beat=1 rank=0 idx=106 data=0x0000
+[339203000] MEM: READ beat=2 rank=0 idx=107 data=0x0000
+[339205000] MEM: READ beat=3 rank=0 idx=108 data=0x0000
+[339207000] READ observed (server top): RADDR=604 DOUT=0xzzzzzzzzzzzz0000
+[339207000] MEM: READ beat=4 rank=0 idx=109 data=0x0000
+[339209000] READ observed (server top): RADDR=605 DOUT=0xzzzzzzzzzzzz0000
+[339209000] MEM: READ beat=5 rank=0 idx=110 data=0x0000
+[339211000] READ observed (server top): RADDR=606 DOUT=0xzzzzzzzzzzzz0000
+[339211000] MEM: READ beat=6 rank=0 idx=111 data=0x0000
+[339213000] MEM: READ beat=7 rank=0 idx=112 data=0x0000
+[339267000] REF_MON: AUTO REFRESH interval = 2508 cycles.
+[339311000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
+[339311000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
+[339311000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
+[339311000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
+[339313000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
+[339313000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
+[339313000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
+[339313000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
+[339313000] BLW issued: base_addr=860 SZ=1 (nwords=16)
+[339467000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[339467000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[339467000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[339467000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[339469000] PROT: GETCMD state cnt=2
+[339469000] PROT: GETCMD state cnt=2
+[339469000] PROT: GETCMD state cnt=2
+[339469000] PROT: GETCMD state cnt=2
+[339471000] PROT: GETCMD state cnt=1
+[339471000] PROT: GETCMD state cnt=1
+[339471000] PROT: GETCMD state cnt=1
+[339471000] PROT: GETCMD state cnt=1
+[339473000] PROT: GETCMD state cnt=0
+[339473000] PROT: GETCMD addr=860 cmd=100 sz=1 rank_sel=0
+[339473000] PROT: GETCMD state cnt=0
+[339473000] PROT: GETCMD addr=860 cmd=100 sz=1 rank_sel=0
+[339473000] PROT: GETCMD state cnt=0
+[339473000] PROT: GETCMD addr=860 cmd=100 sz=1 rank_sel=0
+[339473000] PROT: GETCMD state cnt=0
+[339473000] PROT: GETCMD addr=860 cmd=100 sz=1 rank_sel=0
+[339503000] DQS_MON: WRITE detected, starting DQS observation window.
+[339503000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=424
+[339519000] MEM: WRITE burst committed base_idx=104 data=0x0000
+[339569000] DQS_MON: window complete, edge_cnt=7.
+[339599000] DQS_MON: WRITE detected, starting DQS observation window.
+[339599000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=441
+[339615000] MEM: WRITE burst committed base_idx=121 data=0x0000
+[339665000] DQS_MON: window complete, edge_cnt=7.
+[340599000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
+[340599000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
+[340599000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
+[340599000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
+[340601000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
+[340601000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
+[340601000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
+[340601000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
+[340601000] BLR issued: base_addr=860 SZ=1 (expect 16 beats)
+[340603000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[340603000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[340603000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[340603000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[340605000] PROT: GETCMD state cnt=2
+[340605000] PROT: GETCMD state cnt=2
+[340605000] PROT: GETCMD state cnt=2
+[340605000] PROT: GETCMD state cnt=2
+[340607000] BLR beat (bus mode) observed: RADDR=608 DOUT=0xzzzzzzzzzzzz0000
+[340607000] PROT: GETCMD state cnt=1
+[340607000] PROT: GETCMD state cnt=1
+[340607000] PROT: GETCMD state cnt=1
+[340607000] PROT: GETCMD state cnt=1
+[340607000] READ observed (server top): RADDR=608 DOUT=0xzzzzzzzzzzzz0000
+[340609000] READ observed (server top): RADDR=609 DOUT=0xzzzzzzzzzzzz0000
+[340609000] PROT: GETCMD state cnt=0
+[340609000] PROT: GETCMD addr=860 cmd=11 sz=1 rank_sel=0
+[340609000] PROT: GETCMD state cnt=0
+[340609000] PROT: GETCMD addr=860 cmd=11 sz=1 rank_sel=0
+[340609000] PROT: GETCMD state cnt=0
+[340609000] PROT: GETCMD addr=860 cmd=11 sz=1 rank_sel=0
+[340609000] PROT: GETCMD state cnt=0
+[340609000] PROT: GETCMD addr=860 cmd=11 sz=1 rank_sel=0
+[340609000] BLR beat (bus mode) observed: RADDR=609 DOUT=0xzzzzzzzzzzzz0000
+[340611000] BLR beat (bus mode) observed: RADDR=610 DOUT=0xzzzzzzzzzzzzzzzz
+[340611000] READ observed (server top): RADDR=610 DOUT=0xzzzzzzzzzzzzzzzz
+[340613000] READ observed (server top): RADDR=611 DOUT=0xzzzzzzzzzzzzzzzz
+[340613000] BLR beat (bus mode) observed: RADDR=611 DOUT=0xzzzzzzzzzzzzzzzz
+[340615000] BLR beat (bus mode) observed: RADDR=611 DOUT=0xzzzzzzzzzzzzzzzz
+[340615000] READ observed (server top): RADDR=611 DOUT=0xzzzzzzzzzzzzzzzz
+[340639000] MEM: READ decode rank=0 bank=3 row=0 col=424
+[340639000] MEM: READ cmd received rank=0 bank=3 row=0 col=424
+[340691000] MEM: READ beat=0 rank=0 idx=104 data=0x0000
+[340693000] MEM: READ beat=1 rank=0 idx=105 data=0x0000
+[340695000] MEM: READ beat=2 rank=0 idx=106 data=0x0000
+[340697000] MEM: READ beat=3 rank=0 idx=107 data=0x0000
+[340699000] MEM: READ beat=4 rank=0 idx=108 data=0x0000
+[340701000] MEM: READ beat=5 rank=0 idx=109 data=0x0000
+[340703000] MEM: READ beat=6 rank=0 idx=110 data=0x0000
+[340705000] MEM: READ beat=7 rank=0 idx=111 data=0x0000
+[344407000] REF_MON: AUTO REFRESH interval = 2570 cycles.
+[349233000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[354059000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[358885000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[363711000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[368537000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[373363000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[378189000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[380617000] BLW/BLR sequence OK: base_addr=860 SZ=1 (nwords=16)
+[380819000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
+[380819000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
+[380819000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
+[380819000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
+[380821000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
+[380821000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
+[380821000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
+[380821000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
+[380821000] SCW issued (server): addr=605 data16=0xf8a7
+[380823000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[380823000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[380823000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[380823000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[380825000] PROT: GETCMD state cnt=2
+[380825000] PROT: GETCMD state cnt=2
+[380825000] PROT: GETCMD state cnt=2
+[380825000] PROT: GETCMD state cnt=2
+[380827000] PROT: GETCMD state cnt=1
+[380827000] PROT: GETCMD state cnt=1
+[380827000] PROT: GETCMD state cnt=1
+[380827000] PROT: GETCMD state cnt=1
+[380829000] PROT: GETCMD state cnt=0
+[380829000] PROT: GETCMD addr=605 cmd=10 sz=0 rank_sel=0
+[380829000] PROT: GETCMD state cnt=0
+[380829000] PROT: GETCMD addr=605 cmd=10 sz=0 rank_sel=0
+[380829000] PROT: GETCMD state cnt=0
+[380829000] PROT: GETCMD addr=605 cmd=10 sz=0 rank_sel=0
+[380829000] PROT: GETCMD state cnt=0
+[380829000] PROT: GETCMD addr=605 cmd=10 sz=0 rank_sel=0
+[380845000] DQS_MON: WRITE detected, starting DQS observation window.
+[380845000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=299
+[380861000] MEM: WRITE burst committed base_idx=107 data=0x0000
+[380911000] DQS_MON: window complete, edge_cnt=7.
+[381243000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
+[381243000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
+[381243000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
+[381243000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
+[381245000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
+[381245000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
+[381245000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
+[381245000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
+[381245000] SCR issued: addr=605
+[381247000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[381247000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[381247000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[381247000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[381249000] PROT: GETCMD state cnt=2
+[381249000] PROT: GETCMD state cnt=2
+[381249000] PROT: GETCMD state cnt=2
+[381249000] PROT: GETCMD state cnt=2
+[381251000] PROT: GETCMD state cnt=1
+[381251000] PROT: GETCMD state cnt=1
+[381251000] PROT: GETCMD state cnt=1
+[381251000] PROT: GETCMD state cnt=1
+[381253000] PROT: GETCMD state cnt=0
+[381253000] PROT: GETCMD addr=605 cmd=1 sz=0 rank_sel=0
+[381253000] PROT: GETCMD state cnt=0
+[381253000] PROT: GETCMD addr=605 cmd=1 sz=0 rank_sel=0
+[381253000] PROT: GETCMD state cnt=0
+[381253000] PROT: GETCMD addr=605 cmd=1 sz=0 rank_sel=0
+[381253000] PROT: GETCMD state cnt=0
+[381253000] PROT: GETCMD addr=605 cmd=1 sz=0 rank_sel=0
+[381267000] PROT: ISSUE_READ bank=3 row=0 col=149 cs=1 ras=1 cas=1 we=1
+[381267000] PROT: ISSUE_READ bank=3 row=0 col=149 cs=1 ras=1 cas=1 we=1
+[381267000] PROT: ISSUE_READ bank=3 row=0 col=149 cs=1 ras=1 cas=1 we=1
+[381267000] PROT: ISSUE_READ bank=3 row=0 col=149 cs=1 ras=1 cas=1 we=1
+[381269000] MEM: READ decode rank=0 bank=3 row=0 col=299
+[381269000] MEM: READ cmd received rank=0 bank=3 row=0 col=299
+[381321000] MEM: READ beat=0 rank=0 idx=107 data=0x0000
+[381323000] MEM: READ beat=1 rank=0 idx=108 data=0x0000
+[381325000] MEM: READ beat=2 rank=0 idx=109 data=0x0000
+[381327000] MEM: READ beat=3 rank=0 idx=110 data=0x0000
+[381329000] READ observed (server top): RADDR=605 DOUT=0xzzzzzzzzzzzz0000
+[381329000] MEM: READ beat=4 rank=0 idx=111 data=0x0000
+[381331000] READ observed (server top): RADDR=606 DOUT=0xzzzzzzzzzzzz0000
+[381331000] MEM: READ beat=5 rank=0 idx=112 data=0x0000
+[381333000] READ observed (server top): RADDR=607 DOUT=0xzzzzzzzzzzzz0000
+[381333000] MEM: READ beat=6 rank=0 idx=113 data=0x0000
+[381335000] MEM: READ beat=7 rank=0 idx=114 data=0x0000
+[381433000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
+[381433000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
+[381433000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
+[381433000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
+[381435000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
+[381435000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
+[381435000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
+[381435000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
+[381435000] BLW issued: base_addr=900 SZ=1 (nwords=16)
+[381437000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[381437000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[381437000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[381437000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[381439000] PROT: GETCMD state cnt=2
+[381439000] PROT: GETCMD state cnt=2
+[381439000] PROT: GETCMD state cnt=2
+[381439000] PROT: GETCMD state cnt=2
+[381441000] PROT: GETCMD state cnt=1
+[381441000] PROT: GETCMD state cnt=1
+[381441000] PROT: GETCMD state cnt=1
+[381441000] PROT: GETCMD state cnt=1
+[381443000] PROT: GETCMD state cnt=0
+[381443000] PROT: GETCMD addr=900 cmd=100 sz=1 rank_sel=0
+[381443000] PROT: GETCMD state cnt=0
+[381443000] PROT: GETCMD addr=900 cmd=100 sz=1 rank_sel=0
+[381443000] PROT: GETCMD state cnt=0
+[381443000] PROT: GETCMD addr=900 cmd=100 sz=1 rank_sel=0
+[381443000] PROT: GETCMD state cnt=0
+[381443000] PROT: GETCMD addr=900 cmd=100 sz=1 rank_sel=0
+[381473000] DQS_MON: WRITE detected, starting DQS observation window.
+[381473000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=456
+[381489000] MEM: WRITE burst committed base_idx=8 data=0x0000
+[381539000] DQS_MON: window complete, edge_cnt=7.
+[381569000] DQS_MON: WRITE detected, starting DQS observation window.
+[381569000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=473
+[381585000] MEM: WRITE burst committed base_idx=25 data=0x0000
+[381635000] DQS_MON: window complete, edge_cnt=7.
+[382721000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
+[382721000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
+[382721000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
+[382721000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
+[382723000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
+[382723000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
+[382723000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
+[382723000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
+[382723000] BLR issued: base_addr=900 SZ=1 (expect 16 beats)
+[382725000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[382725000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[382725000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[382725000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[382727000] PROT: GETCMD state cnt=2
+[382727000] PROT: GETCMD state cnt=2
+[382727000] PROT: GETCMD state cnt=2
+[382727000] PROT: GETCMD state cnt=2
+[382729000] BLR beat (bus mode) observed: RADDR=609 DOUT=0xzzzzzzzzzzzz0000
+[382729000] READ observed (server top): RADDR=609 DOUT=0xzzzzzzzzzzzz0000
+[382729000] PROT: GETCMD state cnt=1
+[382729000] PROT: GETCMD state cnt=1
+[382729000] PROT: GETCMD state cnt=1
+[382729000] PROT: GETCMD state cnt=1
+[382731000] PROT: GETCMD state cnt=0
+[382731000] PROT: GETCMD addr=900 cmd=11 sz=1 rank_sel=0
+[382731000] PROT: GETCMD state cnt=0
+[382731000] PROT: GETCMD addr=900 cmd=11 sz=1 rank_sel=0
+[382731000] PROT: GETCMD state cnt=0
+[382731000] PROT: GETCMD addr=900 cmd=11 sz=1 rank_sel=0
+[382731000] PROT: GETCMD state cnt=0
+[382731000] PROT: GETCMD addr=900 cmd=11 sz=1 rank_sel=0
+[382731000] READ observed (server top): RADDR=610 DOUT=0xzzzzzzzzzzzz0000
+[382731000] BLR beat (bus mode) observed: RADDR=610 DOUT=0xzzzzzzzzzzzz0000
+[382733000] BLR beat (bus mode) observed: RADDR=611 DOUT=0xzzzzzzzzzzzzzzzz
+[382733000] READ observed (server top): RADDR=611 DOUT=0xzzzzzzzzzzzzzzzz
+[382735000] READ observed (server top): RADDR=612 DOUT=0xzzzzzzzzzzzzzzzz
+[382735000] BLR beat (bus mode) observed: RADDR=612 DOUT=0xzzzzzzzzzzzzzzzz
+[382737000] BLR beat (bus mode) observed: RADDR=612 DOUT=0xzzzzzzzzzzzzzzzz
+[382737000] READ observed (server top): RADDR=612 DOUT=0xzzzzzzzzzzzzzzzz
+[382761000] MEM: READ decode rank=0 bank=0 row=0 col=456
+[382761000] MEM: READ cmd received rank=0 bank=0 row=0 col=456
+[382813000] MEM: READ beat=0 rank=0 idx=8 data=0x0000
+[382815000] MEM: READ beat=1 rank=0 idx=9 data=0x0000
+[382817000] MEM: READ beat=2 rank=0 idx=10 data=0x0000
+[382819000] MEM: READ beat=3 rank=0 idx=11 data=0x0000
+[382821000] MEM: READ beat=4 rank=0 idx=12 data=0x0000
+[382823000] MEM: READ beat=5 rank=0 idx=13 data=0x0000
+[382825000] MEM: READ beat=6 rank=0 idx=14 data=0x0000
+[382827000] MEM: READ beat=7 rank=0 idx=15 data=0x0000
+[383519000] REF_MON: AUTO REFRESH interval = 2665 cycles.
+[388345000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[393171000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[397997000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[402823000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[407649000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[412475000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[417301000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[422127000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[422739000] BLW/BLR sequence OK: base_addr=900 SZ=1 (nwords=16)
+[422941000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
+[422941000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
+[422941000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
+[422941000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
+[422943000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
+[422943000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
+[422943000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
+[422943000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
+[422943000] SCW issued (server): addr=606 data16=0xfba7
+[422945000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[422945000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[422945000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[422945000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[422947000] PROT: GETCMD state cnt=2
+[422947000] PROT: GETCMD state cnt=2
+[422947000] PROT: GETCMD state cnt=2
+[422947000] PROT: GETCMD state cnt=2
+[422949000] PROT: GETCMD state cnt=1
+[422949000] PROT: GETCMD state cnt=1
+[422949000] PROT: GETCMD state cnt=1
+[422949000] PROT: GETCMD state cnt=1
+[422951000] PROT: GETCMD state cnt=0
+[422951000] PROT: GETCMD addr=606 cmd=10 sz=0 rank_sel=0
+[422951000] PROT: GETCMD state cnt=0
+[422951000] PROT: GETCMD addr=606 cmd=10 sz=0 rank_sel=0
+[422951000] PROT: GETCMD state cnt=0
+[422951000] PROT: GETCMD addr=606 cmd=10 sz=0 rank_sel=0
+[422951000] PROT: GETCMD state cnt=0
+[422951000] PROT: GETCMD addr=606 cmd=10 sz=0 rank_sel=0
+[422967000] DQS_MON: WRITE detected, starting DQS observation window.
+[422967000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=301
+[422983000] MEM: WRITE burst committed base_idx=109 data=0x0000
+[423033000] DQS_MON: window complete, edge_cnt=7.
+[423365000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
+[423365000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
+[423365000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
+[423365000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
+[423367000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
+[423367000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
+[423367000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
+[423367000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
+[423367000] SCR issued: addr=606
+[423369000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[423369000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[423369000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[423369000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[423371000] PROT: GETCMD state cnt=2
+[423371000] PROT: GETCMD state cnt=2
+[423371000] PROT: GETCMD state cnt=2
+[423371000] PROT: GETCMD state cnt=2
+[423373000] PROT: GETCMD state cnt=1
+[423373000] PROT: GETCMD state cnt=1
+[423373000] PROT: GETCMD state cnt=1
+[423373000] PROT: GETCMD state cnt=1
+[423375000] PROT: GETCMD state cnt=0
+[423375000] PROT: GETCMD addr=606 cmd=1 sz=0 rank_sel=0
+[423375000] PROT: GETCMD state cnt=0
+[423375000] PROT: GETCMD addr=606 cmd=1 sz=0 rank_sel=0
+[423375000] PROT: GETCMD state cnt=0
+[423375000] PROT: GETCMD addr=606 cmd=1 sz=0 rank_sel=0
+[423375000] PROT: GETCMD state cnt=0
+[423375000] PROT: GETCMD addr=606 cmd=1 sz=0 rank_sel=0
+[423389000] PROT: ISSUE_READ bank=3 row=0 col=150 cs=1 ras=1 cas=1 we=1
+[423389000] PROT: ISSUE_READ bank=3 row=0 col=150 cs=1 ras=1 cas=1 we=1
+[423389000] PROT: ISSUE_READ bank=3 row=0 col=150 cs=1 ras=1 cas=1 we=1
+[423389000] PROT: ISSUE_READ bank=3 row=0 col=150 cs=1 ras=1 cas=1 we=1
+[423391000] MEM: READ decode rank=0 bank=3 row=0 col=301
+[423391000] MEM: READ cmd received rank=0 bank=3 row=0 col=301
+[423443000] MEM: READ beat=0 rank=0 idx=109 data=0x0000
+[423445000] MEM: READ beat=1 rank=0 idx=110 data=0x0000
+[423447000] MEM: READ beat=2 rank=0 idx=111 data=0x0000
+[423449000] MEM: READ beat=3 rank=0 idx=112 data=0x0000
+[423451000] READ observed (server top): RADDR=606 DOUT=0xzzzzzzzzzzzz0000
+[423451000] MEM: READ beat=4 rank=0 idx=113 data=0x0000
+[423453000] READ observed (server top): RADDR=607 DOUT=0xzzzzzzzzzzzz0000
+[423453000] MEM: READ beat=5 rank=0 idx=114 data=0x0000
+[423455000] READ observed (server top): RADDR=608 DOUT=0xzzzzzzzzzzzz0000
+[423455000] MEM: READ beat=6 rank=0 idx=115 data=0x0000
+[423457000] MEM: READ beat=7 rank=0 idx=116 data=0x0000
+[423555000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
+[423555000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
+[423555000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
+[423555000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
+[423557000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
+[423557000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
+[423557000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
+[423557000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
+[423557000] BLW issued: base_addr=940 SZ=1 (nwords=16)
+[423559000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[423559000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[423559000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[423559000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[423561000] PROT: GETCMD state cnt=2
+[423561000] PROT: GETCMD state cnt=2
+[423561000] PROT: GETCMD state cnt=2
+[423561000] PROT: GETCMD state cnt=2
+[423563000] PROT: GETCMD state cnt=1
+[423563000] PROT: GETCMD state cnt=1
+[423563000] PROT: GETCMD state cnt=1
+[423563000] PROT: GETCMD state cnt=1
+[423565000] PROT: GETCMD state cnt=0
+[423565000] PROT: GETCMD addr=940 cmd=100 sz=1 rank_sel=0
+[423565000] PROT: GETCMD state cnt=0
+[423565000] PROT: GETCMD addr=940 cmd=100 sz=1 rank_sel=0
+[423565000] PROT: GETCMD state cnt=0
+[423565000] PROT: GETCMD addr=940 cmd=100 sz=1 rank_sel=0
+[423565000] PROT: GETCMD state cnt=0
+[423565000] PROT: GETCMD addr=940 cmd=100 sz=1 rank_sel=0
+[423595000] DQS_MON: WRITE detected, starting DQS observation window.
+[423595000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=472
+[423611000] MEM: WRITE burst committed base_idx=56 data=0x0000
+[423661000] DQS_MON: window complete, edge_cnt=7.
+[423691000] DQS_MON: WRITE detected, starting DQS observation window.
+[423691000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=489
+[423707000] MEM: WRITE burst committed base_idx=41 data=0x0000
+[423757000] DQS_MON: window complete, edge_cnt=7.
+[424843000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
+[424843000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
+[424843000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
+[424843000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
+[424845000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
+[424845000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
+[424845000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
+[424845000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
+[424845000] BLR issued: base_addr=940 SZ=1 (expect 16 beats)
+[424847000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[424847000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[424847000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[424847000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[424849000] PROT: GETCMD state cnt=2
+[424849000] PROT: GETCMD state cnt=2
+[424849000] PROT: GETCMD state cnt=2
+[424849000] PROT: GETCMD state cnt=2
+[424851000] BLR beat (bus mode) observed: RADDR=610 DOUT=0xzzzzzzzzzzzz0000
+[424851000] PROT: GETCMD state cnt=1
+[424851000] PROT: GETCMD state cnt=1
+[424851000] PROT: GETCMD state cnt=1
+[424851000] PROT: GETCMD state cnt=1
+[424851000] READ observed (server top): RADDR=610 DOUT=0xzzzzzzzzzzzz0000
+[424853000] READ observed (server top): RADDR=611 DOUT=0xzzzzzzzzzzzz0000
+[424853000] PROT: GETCMD state cnt=0
+[424853000] PROT: GETCMD addr=940 cmd=11 sz=1 rank_sel=0
+[424853000] PROT: GETCMD state cnt=0
+[424853000] PROT: GETCMD addr=940 cmd=11 sz=1 rank_sel=0
+[424853000] PROT: GETCMD state cnt=0
+[424853000] PROT: GETCMD addr=940 cmd=11 sz=1 rank_sel=0
+[424853000] PROT: GETCMD state cnt=0
+[424853000] PROT: GETCMD addr=940 cmd=11 sz=1 rank_sel=0
+[424853000] BLR beat (bus mode) observed: RADDR=611 DOUT=0xzzzzzzzzzzzz0000
+[424855000] BLR beat (bus mode) observed: RADDR=612 DOUT=0xzzzzzzzzzzzzzzzz
+[424855000] READ observed (server top): RADDR=612 DOUT=0xzzzzzzzzzzzzzzzz
+[424857000] READ observed (server top): RADDR=613 DOUT=0xzzzzzzzzzzzzzzzz
+[424857000] BLR beat (bus mode) observed: RADDR=613 DOUT=0xzzzzzzzzzzzzzzzz
+[424859000] BLR beat (bus mode) observed: RADDR=613 DOUT=0xzzzzzzzzzzzzzzzz
+[424859000] READ observed (server top): RADDR=613 DOUT=0xzzzzzzzzzzzzzzzz
+[424883000] MEM: READ decode rank=0 bank=1 row=0 col=472
+[424883000] MEM: READ cmd received rank=0 bank=1 row=0 col=472
+[424935000] MEM: READ beat=0 rank=0 idx=56 data=0x0000
+[424937000] MEM: READ beat=1 rank=0 idx=57 data=0x0000
+[424939000] MEM: READ beat=2 rank=0 idx=58 data=0x0000
+[424941000] MEM: READ beat=3 rank=0 idx=59 data=0x0000
+[424943000] MEM: READ beat=4 rank=0 idx=60 data=0x0000
+[424945000] MEM: READ beat=5 rank=0 idx=61 data=0x0000
+[424947000] MEM: READ beat=6 rank=0 idx=62 data=0x0000
+[424949000] MEM: READ beat=7 rank=0 idx=63 data=0x0000
+[427457000] REF_MON: AUTO REFRESH interval = 2665 cycles.
+[432283000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[437109000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[441935000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[446761000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[451587000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[456413000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[461239000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[464861000] BLW/BLR sequence OK: base_addr=940 SZ=1 (nwords=16)
+[465063000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
+[465063000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
+[465063000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
+[465063000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
+[465065000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
+[465065000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
+[465065000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
+[465065000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
+[465065000] SCW issued (server): addr=607 data16=0xfaa7
+[465067000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465067000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465067000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465067000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465069000] PROT: GETCMD state cnt=2
+[465069000] PROT: GETCMD state cnt=2
+[465069000] PROT: GETCMD state cnt=2
+[465069000] PROT: GETCMD state cnt=2
+[465071000] PROT: GETCMD state cnt=1
+[465071000] PROT: GETCMD state cnt=1
+[465071000] PROT: GETCMD state cnt=1
+[465071000] PROT: GETCMD state cnt=1
+[465073000] PROT: GETCMD state cnt=0
+[465073000] PROT: GETCMD addr=607 cmd=10 sz=0 rank_sel=0
+[465073000] PROT: GETCMD state cnt=0
+[465073000] PROT: GETCMD addr=607 cmd=10 sz=0 rank_sel=0
+[465073000] PROT: GETCMD state cnt=0
+[465073000] PROT: GETCMD addr=607 cmd=10 sz=0 rank_sel=0
+[465073000] PROT: GETCMD state cnt=0
+[465073000] PROT: GETCMD addr=607 cmd=10 sz=0 rank_sel=0
+[465089000] DQS_MON: WRITE detected, starting DQS observation window.
+[465089000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=303
+[465105000] MEM: WRITE burst committed base_idx=111 data=0x0000
+[465155000] DQS_MON: window complete, edge_cnt=7.
+[465487000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
+[465487000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
+[465487000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
+[465487000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
+[465489000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
+[465489000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
+[465489000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
+[465489000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
+[465489000] SCR issued: addr=607
+[465491000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465491000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465491000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465491000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465493000] PROT: GETCMD state cnt=2
+[465493000] PROT: GETCMD state cnt=2
+[465493000] PROT: GETCMD state cnt=2
+[465493000] PROT: GETCMD state cnt=2
+[465495000] PROT: GETCMD state cnt=1
+[465495000] PROT: GETCMD state cnt=1
+[465495000] PROT: GETCMD state cnt=1
+[465495000] PROT: GETCMD state cnt=1
+[465497000] PROT: GETCMD state cnt=0
+[465497000] PROT: GETCMD addr=607 cmd=1 sz=0 rank_sel=0
+[465497000] PROT: GETCMD state cnt=0
+[465497000] PROT: GETCMD addr=607 cmd=1 sz=0 rank_sel=0
+[465497000] PROT: GETCMD state cnt=0
+[465497000] PROT: GETCMD addr=607 cmd=1 sz=0 rank_sel=0
+[465497000] PROT: GETCMD state cnt=0
+[465497000] PROT: GETCMD addr=607 cmd=1 sz=0 rank_sel=0
+[465511000] PROT: ISSUE_READ bank=3 row=0 col=151 cs=1 ras=1 cas=1 we=1
+[465511000] PROT: ISSUE_READ bank=3 row=0 col=151 cs=1 ras=1 cas=1 we=1
+[465511000] PROT: ISSUE_READ bank=3 row=0 col=151 cs=1 ras=1 cas=1 we=1
+[465511000] PROT: ISSUE_READ bank=3 row=0 col=151 cs=1 ras=1 cas=1 we=1
+[465513000] MEM: READ decode rank=0 bank=3 row=0 col=303
+[465513000] MEM: READ cmd received rank=0 bank=3 row=0 col=303
+[465565000] MEM: READ beat=0 rank=0 idx=111 data=0x0000
+[465567000] MEM: READ beat=1 rank=0 idx=112 data=0x0000
+[465569000] MEM: READ beat=2 rank=0 idx=113 data=0x0000
+[465571000] MEM: READ beat=3 rank=0 idx=114 data=0x0000
+[465573000] READ observed (server top): RADDR=607 DOUT=0xzzzzzzzzzzzz0000
+[465573000] MEM: READ beat=4 rank=0 idx=115 data=0x0000
+[465575000] READ observed (server top): RADDR=608 DOUT=0xzzzzzzzzzzzz0000
+[465575000] MEM: READ beat=5 rank=0 idx=116 data=0x0000
+[465577000] READ observed (server top): RADDR=609 DOUT=0xzzzzzzzzzzzz0000
+[465577000] MEM: READ beat=6 rank=0 idx=117 data=0x0000
+[465579000] MEM: READ beat=7 rank=0 idx=118 data=0x0000
+[465677000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
+[465677000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
+[465677000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
+[465677000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
+[465679000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
+[465679000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
+[465679000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
+[465679000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
+[465679000] BLW issued: base_addr=980 SZ=1 (nwords=16)
+[465681000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465681000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465681000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465681000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[465683000] PROT: GETCMD state cnt=2
+[465683000] PROT: GETCMD state cnt=2
+[465683000] PROT: GETCMD state cnt=2
+[465683000] PROT: GETCMD state cnt=2
+[465685000] PROT: GETCMD state cnt=1
+[465685000] PROT: GETCMD state cnt=1
+[465685000] PROT: GETCMD state cnt=1
+[465685000] PROT: GETCMD state cnt=1
+[465687000] PROT: GETCMD state cnt=0
+[465687000] PROT: GETCMD addr=980 cmd=100 sz=1 rank_sel=0
+[465687000] PROT: GETCMD state cnt=0
+[465687000] PROT: GETCMD addr=980 cmd=100 sz=1 rank_sel=0
+[465687000] PROT: GETCMD state cnt=0
+[465687000] PROT: GETCMD addr=980 cmd=100 sz=1 rank_sel=0
+[465687000] PROT: GETCMD state cnt=0
+[465687000] PROT: GETCMD addr=980 cmd=100 sz=1 rank_sel=0
+[465717000] DQS_MON: WRITE detected, starting DQS observation window.
+[465717000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=488
+[465733000] MEM: WRITE burst committed base_idx=72 data=0x0000
+[465783000] DQS_MON: window complete, edge_cnt=7.
+[465813000] DQS_MON: WRITE detected, starting DQS observation window.
+[465813000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=505
+[465829000] MEM: WRITE burst committed base_idx=89 data=0x0000
+[465879000] DQS_MON: window complete, edge_cnt=7.
+[466479000] REF_MON: AUTO REFRESH interval = 2620 cycles.
+[466965000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
+[466965000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
+[466965000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
+[466965000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
+[466967000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
+[466967000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
+[466967000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
+[466967000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
+[466967000] BLR issued: base_addr=980 SZ=1 (expect 16 beats)
+[466969000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[466969000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[466969000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[466969000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[466971000] PROT: GETCMD state cnt=2
+[466971000] PROT: GETCMD state cnt=2
+[466971000] PROT: GETCMD state cnt=2
+[466971000] PROT: GETCMD state cnt=2
+[466973000] BLR beat (bus mode) observed: RADDR=611 DOUT=0xzzzzzzzzzzzz0000
+[466973000] READ observed (server top): RADDR=611 DOUT=0xzzzzzzzzzzzz0000
+[466973000] PROT: GETCMD state cnt=1
+[466973000] PROT: GETCMD state cnt=1
+[466973000] PROT: GETCMD state cnt=1
+[466973000] PROT: GETCMD state cnt=1
+[466975000] PROT: GETCMD state cnt=0
+[466975000] PROT: GETCMD addr=980 cmd=11 sz=1 rank_sel=0
+[466975000] PROT: GETCMD state cnt=0
+[466975000] PROT: GETCMD addr=980 cmd=11 sz=1 rank_sel=0
+[466975000] PROT: GETCMD state cnt=0
+[466975000] PROT: GETCMD addr=980 cmd=11 sz=1 rank_sel=0
+[466975000] PROT: GETCMD state cnt=0
+[466975000] PROT: GETCMD addr=980 cmd=11 sz=1 rank_sel=0
+[466975000] READ observed (server top): RADDR=612 DOUT=0xzzzzzzzzzzzz0000
+[466975000] BLR beat (bus mode) observed: RADDR=612 DOUT=0xzzzzzzzzzzzz0000
+[466977000] BLR beat (bus mode) observed: RADDR=613 DOUT=0xzzzzzzzzzzzzzzzz
+[466977000] READ observed (server top): RADDR=613 DOUT=0xzzzzzzzzzzzzzzzz
+[466979000] READ observed (server top): RADDR=614 DOUT=0xzzzzzzzzzzzzzzzz
+[466979000] BLR beat (bus mode) observed: RADDR=614 DOUT=0xzzzzzzzzzzzzzzzz
+[466981000] BLR beat (bus mode) observed: RADDR=614 DOUT=0xzzzzzzzzzzzzzzzz
+[466981000] READ observed (server top): RADDR=614 DOUT=0xzzzzzzzzzzzzzzzz
+[467005000] MEM: READ decode rank=0 bank=2 row=0 col=488
+[467005000] MEM: READ cmd received rank=0 bank=2 row=0 col=488
+[467057000] MEM: READ beat=0 rank=0 idx=72 data=0x0000
+[467059000] MEM: READ beat=1 rank=0 idx=73 data=0x0000
+[467061000] MEM: READ beat=2 rank=0 idx=74 data=0x0000
+[467063000] MEM: READ beat=3 rank=0 idx=75 data=0x0000
+[467065000] MEM: READ beat=4 rank=0 idx=76 data=0x0000
+[467067000] MEM: READ beat=5 rank=0 idx=77 data=0x0000
+[467069000] MEM: READ beat=6 rank=0 idx=78 data=0x0000
+[467071000] MEM: READ beat=7 rank=0 idx=79 data=0x0000
+[471395000] REF_MON: AUTO REFRESH interval = 2458 cycles.
+[476221000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[481047000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[485873000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[490699000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[495525000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[500351000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[505177000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[506983000] BLW/BLR sequence OK: base_addr=980 SZ=1 (nwords=16)
+[507183000] (server) Starting reset-during-traffic robustness test...
+[507185000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
+[507185000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
+[507185000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
+[507185000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
+[507187000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
+[507187000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
+[507187000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
+[507187000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
+[507187000] SCW issued (server): addr=900 data16=0x21a6
+[507189000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507189000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507189000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507189000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507191000] PROT: GETCMD state cnt=2
+[507191000] PROT: GETCMD state cnt=2
+[507191000] PROT: GETCMD state cnt=2
+[507191000] PROT: GETCMD state cnt=2
+[507193000] PROT: GETCMD state cnt=1
+[507193000] PROT: GETCMD state cnt=1
+[507193000] PROT: GETCMD state cnt=1
+[507193000] PROT: GETCMD state cnt=1
+[507195000] PROT: GETCMD state cnt=0
+[507195000] PROT: GETCMD addr=900 cmd=10 sz=0 rank_sel=0
+[507195000] PROT: GETCMD state cnt=0
+[507195000] PROT: GETCMD addr=900 cmd=10 sz=0 rank_sel=0
+[507195000] PROT: GETCMD state cnt=0
+[507195000] PROT: GETCMD addr=900 cmd=10 sz=0 rank_sel=0
+[507195000] PROT: GETCMD state cnt=0
+[507195000] PROT: GETCMD addr=900 cmd=10 sz=0 rank_sel=0
+[507211000] DQS_MON: WRITE detected, starting DQS observation window.
+[507211000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=457
+[507227000] MEM: WRITE burst committed base_idx=9 data=0x0000
+[507277000] DQS_MON: window complete, edge_cnt=7.
+[507609000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
+[507609000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
+[507609000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
+[507609000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
+[507611000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
+[507611000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
+[507611000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
+[507611000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
+[507611000] SCR issued: addr=900
+[507613000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507613000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507613000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507613000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507615000] PROT: GETCMD state cnt=2
+[507615000] PROT: GETCMD state cnt=2
+[507615000] PROT: GETCMD state cnt=2
+[507615000] PROT: GETCMD state cnt=2
+[507617000] PROT: GETCMD state cnt=1
+[507617000] PROT: GETCMD state cnt=1
+[507617000] PROT: GETCMD state cnt=1
+[507617000] PROT: GETCMD state cnt=1
+[507619000] PROT: GETCMD state cnt=0
+[507619000] PROT: GETCMD addr=900 cmd=1 sz=0 rank_sel=0
+[507619000] PROT: GETCMD state cnt=0
+[507619000] PROT: GETCMD addr=900 cmd=1 sz=0 rank_sel=0
+[507619000] PROT: GETCMD state cnt=0
+[507619000] PROT: GETCMD addr=900 cmd=1 sz=0 rank_sel=0
+[507619000] PROT: GETCMD state cnt=0
+[507619000] PROT: GETCMD addr=900 cmd=1 sz=0 rank_sel=0
+[507633000] PROT: ISSUE_READ bank=0 row=0 col=228 cs=1 ras=1 cas=1 we=1
+[507633000] PROT: ISSUE_READ bank=0 row=0 col=228 cs=1 ras=1 cas=1 we=1
+[507633000] PROT: ISSUE_READ bank=0 row=0 col=228 cs=1 ras=1 cas=1 we=1
+[507633000] PROT: ISSUE_READ bank=0 row=0 col=228 cs=1 ras=1 cas=1 we=1
+[507635000] MEM: READ decode rank=0 bank=0 row=0 col=457
+[507635000] MEM: READ cmd received rank=0 bank=0 row=0 col=457
+[507687000] MEM: READ beat=0 rank=0 idx=9 data=0x0000
+[507689000] MEM: READ beat=1 rank=0 idx=10 data=0x0000
+[507691000] MEM: READ beat=2 rank=0 idx=11 data=0x0000
+[507693000] MEM: READ beat=3 rank=0 idx=12 data=0x0000
+[507695000] READ observed (server top): RADDR=900 DOUT=0xzzzzzzzzzzzz0000
+[507695000] MEM: READ beat=4 rank=0 idx=13 data=0x0000
+[507697000] READ observed (server top): RADDR=901 DOUT=0xzzzzzzzzzzzz0000
+[507697000] MEM: READ beat=5 rank=0 idx=14 data=0x0000
+[507699000] READ observed (server top): RADDR=902 DOUT=0xzzzzzzzzzzzz0000
+[507699000] MEM: READ beat=6 rank=0 idx=15 data=0x0000
+[507701000] MEM: READ beat=7 rank=0 idx=16 data=0x0000
+[507799000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
+[507799000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
+[507799000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
+[507799000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
+[507801000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
+[507801000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
+[507801000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
+[507801000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
+[507801000] BLW issued: base_addr=920 SZ=0 (nwords=8)
+[507803000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507803000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507803000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507803000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[507805000] PROT: GETCMD state cnt=2
+[507805000] PROT: GETCMD state cnt=2
+[507805000] PROT: GETCMD state cnt=2
+[507805000] PROT: GETCMD state cnt=2
+[507807000] PROT: GETCMD state cnt=1
+[507807000] PROT: GETCMD state cnt=1
+[507807000] PROT: GETCMD state cnt=1
+[507807000] PROT: GETCMD state cnt=1
+[507809000] PROT: GETCMD state cnt=0
+[507809000] PROT: GETCMD addr=920 cmd=100 sz=0 rank_sel=0
+[507809000] PROT: GETCMD state cnt=0
+[507809000] PROT: GETCMD addr=920 cmd=100 sz=0 rank_sel=0
+[507809000] PROT: GETCMD state cnt=0
+[507809000] PROT: GETCMD addr=920 cmd=100 sz=0 rank_sel=0
+[507809000] PROT: GETCMD state cnt=0
+[507809000] PROT: GETCMD addr=920 cmd=100 sz=0 rank_sel=0
+[507839000] DQS_MON: WRITE detected, starting DQS observation window.
+[507839000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=449
+[507855000] MEM: WRITE burst committed base_idx=97 data=0x0000
+[507905000] DQS_MON: window complete, edge_cnt=7.
+[509055000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
+[509055000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
+[509055000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
+[509055000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
+[509057000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
+[509057000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
+[509057000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
+[509057000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
+[509057000] BLR issued: base_addr=920 SZ=0 (expect 8 beats)
+[509059000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[509059000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[509059000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[509059000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[509061000] PROT: GETCMD state cnt=2
+[509061000] PROT: GETCMD state cnt=2
+[509061000] PROT: GETCMD state cnt=2
+[509061000] PROT: GETCMD state cnt=2
+[509063000] BLR beat (bus mode) observed: RADDR=904 DOUT=0xzzzzzzzzzzzz0000
+[509063000] PROT: GETCMD state cnt=1
+[509063000] PROT: GETCMD state cnt=1
+[509063000] PROT: GETCMD state cnt=1
+[509063000] PROT: GETCMD state cnt=1
+[509063000] READ observed (server top): RADDR=904 DOUT=0xzzzzzzzzzzzz0000
+[509065000] READ observed (server top): RADDR=905 DOUT=0xzzzzzzzzzzzz0000
+[509065000] PROT: GETCMD state cnt=0
+[509065000] PROT: GETCMD addr=920 cmd=11 sz=0 rank_sel=0
+[509065000] PROT: GETCMD state cnt=0
+[509065000] PROT: GETCMD addr=920 cmd=11 sz=0 rank_sel=0
+[509065000] PROT: GETCMD state cnt=0
+[509065000] PROT: GETCMD addr=920 cmd=11 sz=0 rank_sel=0
+[509065000] PROT: GETCMD state cnt=0
+[509065000] PROT: GETCMD addr=920 cmd=11 sz=0 rank_sel=0
+[509065000] BLR beat (bus mode) observed: RADDR=905 DOUT=0xzzzzzzzzzzzz0000
+[509067000] BLR beat (bus mode) observed: RADDR=906 DOUT=0xzzzzzzzzzzzzzzzz
+[509067000] READ observed (server top): RADDR=906 DOUT=0xzzzzzzzzzzzzzzzz
+[509069000] READ observed (server top): RADDR=907 DOUT=0xzzzzzzzzzzzzzzzz
+[509069000] BLR beat (bus mode) observed: RADDR=907 DOUT=0xzzzzzzzzzzzzzzzz
+[509071000] BLR beat (bus mode) observed: RADDR=907 DOUT=0xzzzzzzzzzzzzzzzz
+[509071000] READ observed (server top): RADDR=907 DOUT=0xzzzzzzzzzzzzzzzz
+[509095000] MEM: READ decode rank=0 bank=3 row=0 col=449
+[509095000] MEM: READ cmd received rank=0 bank=3 row=0 col=449
+[509147000] MEM: READ beat=0 rank=0 idx=97 data=0x0000
+[509149000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
+[509151000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
+[509153000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
+[509155000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
+[509157000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
+[509159000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
+[509161000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
+[510395000] REF_MON: AUTO REFRESH interval = 2609 cycles.
+[515221000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[520047000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[524873000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[529699000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[534525000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[539351000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[544177000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[549003000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[549073000] BLW/BLR sequence OK: base_addr=920 SZ=0 (nwords=8)
+[549273000] (server) Asserting RESET in the middle of activity...
+[549297000] (server) Re-INITDDR asserted after mid-traffic reset, waiting for READY...
+[549939000] Detected AUTO REFRESH command on DDR2 bus (server top).
+[550141000] Detected AUTO REFRESH command on DDR2 bus (server top).
+[551173000] (server) READY re-asserted after reset at cycle 938
+[551175000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[551175000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[551175000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[551175000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[551177000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[551177000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[551177000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[551177000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[551177000] SCW issued (server): addr=32 data16=0x85a5
+[551179000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551179000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551179000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551179000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551181000] PROT: GETCMD state cnt=2
+[551181000] PROT: GETCMD state cnt=2
+[551181000] PROT: GETCMD state cnt=2
+[551181000] PROT: GETCMD state cnt=2
+[551183000] PROT: GETCMD state cnt=1
+[551183000] PROT: GETCMD state cnt=1
+[551183000] PROT: GETCMD state cnt=1
+[551183000] PROT: GETCMD state cnt=1
+[551185000] PROT: GETCMD state cnt=0
+[551185000] PROT: GETCMD addr=32 cmd=10 sz=0 rank_sel=0
+[551185000] PROT: GETCMD state cnt=0
+[551185000] PROT: GETCMD addr=32 cmd=10 sz=0 rank_sel=0
+[551185000] PROT: GETCMD state cnt=0
+[551185000] PROT: GETCMD addr=32 cmd=10 sz=0 rank_sel=0
+[551185000] PROT: GETCMD state cnt=0
+[551185000] PROT: GETCMD addr=32 cmd=10 sz=0 rank_sel=0
+[551201000] DQS_MON: WRITE detected, starting DQS observation window.
+[551201000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=17
+[551217000] MEM: WRITE burst committed base_idx=17 data=0x0000
+[551267000] DQS_MON: window complete, edge_cnt=7.
+[551599000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[551599000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[551599000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[551599000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[551601000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[551601000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[551601000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[551601000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[551601000] SCR issued: addr=32
+[551603000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551603000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551603000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551603000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551605000] PROT: GETCMD state cnt=2
+[551605000] PROT: GETCMD state cnt=2
+[551605000] PROT: GETCMD state cnt=2
+[551605000] PROT: GETCMD state cnt=2
+[551607000] PROT: GETCMD state cnt=1
+[551607000] PROT: GETCMD state cnt=1
+[551607000] PROT: GETCMD state cnt=1
+[551607000] PROT: GETCMD state cnt=1
+[551609000] PROT: GETCMD state cnt=0
+[551609000] PROT: GETCMD addr=32 cmd=1 sz=0 rank_sel=0
+[551609000] PROT: GETCMD state cnt=0
+[551609000] PROT: GETCMD addr=32 cmd=1 sz=0 rank_sel=0
+[551609000] PROT: GETCMD state cnt=0
+[551609000] PROT: GETCMD addr=32 cmd=1 sz=0 rank_sel=0
+[551609000] PROT: GETCMD state cnt=0
+[551609000] PROT: GETCMD addr=32 cmd=1 sz=0 rank_sel=0
+[551623000] PROT: ISSUE_READ bank=0 row=0 col=8 cs=1 ras=1 cas=1 we=1
+[551623000] PROT: ISSUE_READ bank=0 row=0 col=8 cs=1 ras=1 cas=1 we=1
+[551623000] PROT: ISSUE_READ bank=0 row=0 col=8 cs=1 ras=1 cas=1 we=1
+[551623000] PROT: ISSUE_READ bank=0 row=0 col=8 cs=1 ras=1 cas=1 we=1
+[551625000] MEM: READ decode rank=0 bank=0 row=0 col=17
+[551625000] MEM: READ cmd received rank=0 bank=0 row=0 col=17
+[551677000] MEM: READ beat=0 rank=0 idx=17 data=0x0000
+[551679000] MEM: READ beat=1 rank=0 idx=18 data=0x0000
+[551681000] MEM: READ beat=2 rank=0 idx=19 data=0x0000
+[551683000] MEM: READ beat=3 rank=0 idx=20 data=0x0000
+[551685000] READ observed (server top): RADDR=32 DOUT=0xzzzzzzzzzzzz0000
+[551685000] MEM: READ beat=4 rank=0 idx=21 data=0x0000
+[551687000] READ observed (server top): RADDR=33 DOUT=0xzzzzzzzzzzzz0000
+[551687000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
+[551689000] READ observed (server top): RADDR=34 DOUT=0xzzzzzzzzzzzz0000
+[551689000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
+[551691000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
+[551789000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
+[551789000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
+[551789000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
+[551789000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
+[551791000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
+[551791000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
+[551791000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
+[551791000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
+[551791000] BLW issued: base_addr=64 SZ=1 (nwords=16)
+[551793000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551793000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551793000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551793000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[551795000] PROT: GETCMD state cnt=2
+[551795000] PROT: GETCMD state cnt=2
+[551795000] PROT: GETCMD state cnt=2
+[551795000] PROT: GETCMD state cnt=2
+[551797000] PROT: GETCMD state cnt=1
+[551797000] PROT: GETCMD state cnt=1
+[551797000] PROT: GETCMD state cnt=1
+[551797000] PROT: GETCMD state cnt=1
+[551799000] PROT: GETCMD state cnt=0
+[551799000] PROT: GETCMD addr=64 cmd=100 sz=1 rank_sel=0
+[551799000] PROT: GETCMD state cnt=0
+[551799000] PROT: GETCMD addr=64 cmd=100 sz=1 rank_sel=0
+[551799000] PROT: GETCMD state cnt=0
+[551799000] PROT: GETCMD addr=64 cmd=100 sz=1 rank_sel=0
+[551799000] PROT: GETCMD state cnt=0
+[551799000] PROT: GETCMD addr=64 cmd=100 sz=1 rank_sel=0
+[551829000] DQS_MON: WRITE detected, starting DQS observation window.
+[551829000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=32
+[551845000] MEM: WRITE burst committed base_idx=0 data=0x0000
+[551895000] DQS_MON: window complete, edge_cnt=7.
+[551925000] DQS_MON: WRITE detected, starting DQS observation window.
+[551925000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=49
+[551941000] MEM: WRITE burst committed base_idx=17 data=0x0000
+[551991000] DQS_MON: window complete, edge_cnt=7.
+[553077000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
+[553077000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
+[553077000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
+[553077000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
+[553079000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
+[553079000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
+[553079000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
+[553079000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
+[553079000] BLR issued: base_addr=64 SZ=1 (expect 16 beats)
+[553081000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[553081000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[553081000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[553081000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[553083000] PROT: GETCMD state cnt=2
+[553083000] PROT: GETCMD state cnt=2
+[553083000] PROT: GETCMD state cnt=2
+[553083000] PROT: GETCMD state cnt=2
+[553085000] BLR beat (bus mode) observed: RADDR=36 DOUT=0xzzzzzzzzzzzz0000
+[553085000] READ observed (server top): RADDR=36 DOUT=0xzzzzzzzzzzzz0000
+[553085000] PROT: GETCMD state cnt=1
+[553085000] PROT: GETCMD state cnt=1
+[553085000] PROT: GETCMD state cnt=1
+[553085000] PROT: GETCMD state cnt=1
+[553087000] PROT: GETCMD state cnt=0
+[553087000] PROT: GETCMD addr=64 cmd=11 sz=1 rank_sel=0
+[553087000] PROT: GETCMD state cnt=0
+[553087000] PROT: GETCMD addr=64 cmd=11 sz=1 rank_sel=0
+[553087000] PROT: GETCMD state cnt=0
+[553087000] PROT: GETCMD addr=64 cmd=11 sz=1 rank_sel=0
+[553087000] PROT: GETCMD state cnt=0
+[553087000] PROT: GETCMD addr=64 cmd=11 sz=1 rank_sel=0
+[553087000] READ observed (server top): RADDR=37 DOUT=0xzzzzzzzzzzzz0000
+[553087000] BLR beat (bus mode) observed: RADDR=37 DOUT=0xzzzzzzzzzzzz0000
+[553089000] BLR beat (bus mode) observed: RADDR=38 DOUT=0xzzzzzzzzzzzzzzzz
+[553089000] READ observed (server top): RADDR=38 DOUT=0xzzzzzzzzzzzzzzzz
+[553091000] READ observed (server top): RADDR=39 DOUT=0xzzzzzzzzzzzzzzzz
+[553091000] BLR beat (bus mode) observed: RADDR=39 DOUT=0xzzzzzzzzzzzzzzzz
+[553093000] BLR beat (bus mode) observed: RADDR=39 DOUT=0xzzzzzzzzzzzzzzzz
+[553093000] READ observed (server top): RADDR=39 DOUT=0xzzzzzzzzzzzzzzzz
+[553117000] MEM: READ decode rank=0 bank=0 row=0 col=32
+[553117000] MEM: READ cmd received rank=0 bank=0 row=0 col=32
+[553169000] MEM: READ beat=0 rank=0 idx=0 data=0x0000
+[553171000] MEM: READ beat=1 rank=0 idx=1 data=0x0000
+[553173000] MEM: READ beat=2 rank=0 idx=2 data=0x0000
+[553175000] MEM: READ beat=3 rank=0 idx=3 data=0x0000
+[553177000] MEM: READ beat=4 rank=0 idx=4 data=0x0000
+[553179000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
+[553181000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
+[553183000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
+[556303000] REF_MON: First AUTO REFRESH observed.
+[561129000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[565955000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[570781000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[575607000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[580433000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[585259000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[590085000] REF_MON: AUTO REFRESH interval = 2413 cycles.
+[593095000] BLW/BLR sequence OK: base_addr=64 SZ=1 (nwords=16)
+[593295000] (server) Starting manual self-refresh / power-down tests...
+[593297000] (server) Asserting SELFREF_REQ...
+[597299000] (server) Asserting SELFREF_EXIT...
+[601303000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
+[601303000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
+[601303000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
+[601303000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
+[601305000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
+[601305000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
+[601305000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
+[601305000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
+[601305000] SCW issued (server): addr=40 data16=0x8da5
+[601727000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
+[601727000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
+[601727000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
+[601727000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
+[601729000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
+[601729000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
+[601729000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
+[601729000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
+[601729000] SCR issued: addr=40
+[605731000] ERROR: (server) scalar read timeout at addr=40 (VALIDOUT stuck low, continuing to next scenario).
+[605835000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
+[605835000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
+[605835000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
+[605835000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
+[605837000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
+[605837000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
+[605837000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
+[605837000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
+[605837000] BLW issued: base_addr=72 SZ=0 (nwords=8)
+[607091000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
+[607091000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
+[607091000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
+[607091000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
+[607093000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
+[607093000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
+[607093000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
+[607093000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
+[607093000] BLR issued: base_addr=72 SZ=0 (expect 8 beats)
+[647095000] BLW/BLR sequence OK: base_addr=72 SZ=0 (nwords=8)
+[647297000] (server) Asserting PWRDOWN_REQ...
+[651299000] (server) Asserting PWRDOWN_EXIT...
+[653303000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
+[653303000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
+[653303000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
+[653303000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
+[653305000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
+[653305000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
+[653305000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
+[653305000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
+[653305000] SCW issued (server): addr=96 data16=0xc5a5
+[653727000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
+[653727000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
+[653727000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
+[653727000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
+[653729000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
+[653729000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
+[653729000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
+[653729000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
+[653729000] SCR issued: addr=96
+[657731000] ERROR: (server) scalar read timeout at addr=96 (VALIDOUT stuck low, continuing to next scenario).
+[657835000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
+[657835000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
+[657835000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
+[657835000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
+[657837000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
+[657837000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
+[657837000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
+[657837000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
+[657837000] BLW issued: base_addr=128 SZ=1 (nwords=16)
+[659123000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
+[659123000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
+[659123000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
+[659123000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
+[659125000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
+[659125000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
+[659125000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
+[659125000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
+[659125000] BLR issued: base_addr=128 SZ=1 (expect 16 beats)
+[699127000] BLW/BLR sequence OK: base_addr=128 SZ=1 (nwords=16)
+[699327000] (server) Starting multi-rank bus-level exercise (rank 0 vs rank 1)...
+[699329000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[699329000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[699329000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[699329000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[699331000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[699331000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[699331000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[699331000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
+[699331000] SCW issued (server): addr=32 data16=0x85a5
+[699753000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[699753000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[699753000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[699753000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[699755000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[699755000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[699755000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[699755000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
+[699755000] SCR issued: addr=32
+[703757000] ERROR: (server) scalar read timeout at addr=32 (VALIDOUT stuck low, continuing to next scenario).
+[703861000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
+[703861000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
+[703861000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
+[703861000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
+[703863000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
+[703863000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
+[703863000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
+[703863000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
+[703863000] SCW issued (server): addr=16777248 data16=0x85a5
+[704285000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
+[704285000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
+[704285000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
+[704285000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
+[704287000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
+[704287000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
+[704287000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
+[704287000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
+[704287000] SCR issued: addr=16777248
+[708289000] ERROR: (server) scalar read timeout at addr=16777248 (VALIDOUT stuck low, continuing to next scenario).
+[708393000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[708393000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[708393000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[708393000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[708395000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[708395000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[708395000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[708395000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
+[708395000] SCW issued (server): addr=128 data16=0x25a5
+[708817000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[708817000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[708817000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[708817000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[708819000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[708819000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[708819000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[708819000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
+[708819000] SCR issued: addr=128
+[712821000] ERROR: (server) scalar read timeout at addr=128 (VALIDOUT stuck low, continuing to next scenario).
+[712925000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
+[712925000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
+[712925000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
+[712925000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
+[712927000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
+[712927000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
+[712927000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
+[712927000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
+[712927000] SCW issued (server): addr=16777344 data16=0x25a5
+[713349000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
+[713349000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
+[713349000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
+[713349000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
+[713351000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
+[713351000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
+[713351000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
+[713351000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
+[713351000] SCR issued: addr=16777344
+[717353000] ERROR: (server) scalar read timeout at addr=16777344 (VALIDOUT stuck low, continuing to next scenario).
+[717457000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
+[717457000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
+[717457000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
+[717457000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
+[717459000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
+[717459000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
+[717459000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
+[717459000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
+[717459000] BLW issued: base_addr=256 SZ=0 (nwords=8)
+[718713000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
+[718713000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
+[718713000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
+[718713000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
+[718715000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
+[718715000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
+[718715000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
+[718715000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
+[718715000] BLR issued: base_addr=256 SZ=0 (expect 8 beats)
+[758717000] BLW/BLR sequence OK: base_addr=256 SZ=0 (nwords=8)
+[758919000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
+[758919000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
+[758919000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
+[758919000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
+[758921000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
+[758921000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
+[758921000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
+[758921000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
+[758921000] BLW issued: base_addr=16777472 SZ=0 (nwords=8)
+[760175000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
+[760175000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
+[760175000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
+[760175000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
+[760177000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
+[760177000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
+[760177000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
+[760177000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
+[760177000] BLR issued: base_addr=16777472 SZ=0 (expect 8 beats)
+[800179000] BLW/BLR sequence OK: base_addr=16777472 SZ=0 (nwords=8)
+[800379000] Starting randomized traffic phase (server top)...
+[800381000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[800381000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[800381000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[800381000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[800383000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[800383000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[800383000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[800383000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[800383000] BLW issued: base_addr=288 SZ=0 (nwords=8)
+[801637000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[801637000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[801637000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[801637000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[801639000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[801639000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[801639000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[801639000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[801639000] BLR issued: base_addr=288 SZ=0 (expect 8 beats)
+[841641000] BLW/BLR sequence OK: base_addr=288 SZ=0 (nwords=8)
+[841843000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
+[841843000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
+[841843000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
+[841843000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
+[841845000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
+[841845000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
+[841845000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
+[841845000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
+[841845000] BLW issued: base_addr=608 SZ=0 (nwords=8)
+[843099000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
+[843099000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
+[843099000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
+[843099000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
+[843101000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
+[843101000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
+[843101000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
+[843101000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
+[843101000] BLR issued: base_addr=608 SZ=0 (expect 8 beats)
+[883103000] BLW/BLR sequence OK: base_addr=608 SZ=0 (nwords=8)
+[883305000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
+[883305000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
+[883305000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
+[883305000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
+[883307000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
+[883307000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
+[883307000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
+[883307000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
+[883307000] BLW issued: base_addr=96 SZ=0 (nwords=8)
+[884561000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
+[884561000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
+[884561000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
+[884561000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
+[884563000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
+[884563000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
+[884563000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
+[884563000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
+[884563000] BLR issued: base_addr=96 SZ=0 (expect 8 beats)
+[924565000] BLW/BLR sequence OK: base_addr=96 SZ=0 (nwords=8)
+[924767000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
+[924767000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
+[924767000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
+[924767000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
+[924769000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
+[924769000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
+[924769000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
+[924769000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
+[924769000] BLW issued: base_addr=264 SZ=0 (nwords=8)
+[926023000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
+[926023000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
+[926023000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
+[926023000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
+[926025000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
+[926025000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
+[926025000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
+[926025000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
+[926025000] BLR issued: base_addr=264 SZ=0 (expect 8 beats)
+[966027000] BLW/BLR sequence OK: base_addr=264 SZ=0 (nwords=8)
+[966229000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
+[966229000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
+[966229000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
+[966229000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
+[966231000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
+[966231000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
+[966231000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
+[966231000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
+[966231000] BLW issued: base_addr=1000 SZ=0 (nwords=8)
+[967485000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
+[967485000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
+[967485000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
+[967485000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
+[967487000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
+[967487000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
+[967487000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
+[967487000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
+[967487000] BLR issued: base_addr=1000 SZ=0 (expect 8 beats)
+[1007489000] BLW/BLR sequence OK: base_addr=1000 SZ=0 (nwords=8)
+[1007691000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
+[1007691000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
+[1007691000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
+[1007691000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
+[1007693000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
+[1007693000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
+[1007693000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
+[1007693000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
+[1007693000] BLW issued: base_addr=192 SZ=1 (nwords=16)
+[1008979000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
+[1008979000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
+[1008979000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
+[1008979000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
+[1008981000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
+[1008981000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
+[1008981000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
+[1008981000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
+[1008981000] BLR issued: base_addr=192 SZ=1 (expect 16 beats)
+[1048983000] BLW/BLR sequence OK: base_addr=192 SZ=1 (nwords=16)
+[1049185000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
+[1049185000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
+[1049185000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
+[1049185000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
+[1049187000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
+[1049187000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
+[1049187000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
+[1049187000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
+[1049187000] BLW issued: base_addr=992 SZ=3 (nwords=32)
+[1050537000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
+[1050537000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
+[1050537000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
+[1050537000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
+[1050539000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
+[1050539000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
+[1050539000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
+[1050539000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
+[1050539000] BLR issued: base_addr=992 SZ=3 (expect 32 beats)
+[1090541000] BLW/BLR sequence OK: base_addr=992 SZ=3 (nwords=32)
+[1090743000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
+[1090743000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
+[1090743000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
+[1090743000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
+[1090745000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
+[1090745000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
+[1090745000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
+[1090745000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
+[1090745000] BLW issued: base_addr=904 SZ=2 (nwords=24)
+[1092063000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
+[1092063000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
+[1092063000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
+[1092063000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
+[1092065000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
+[1092065000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
+[1092065000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
+[1092065000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
+[1092065000] BLR issued: base_addr=904 SZ=2 (expect 24 beats)
+[1132067000] BLW/BLR sequence OK: base_addr=904 SZ=2 (nwords=24)
+[1132269000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
+[1132269000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
+[1132269000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
+[1132269000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
+[1132271000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
+[1132271000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
+[1132271000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
+[1132271000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
+[1132271000] SCW issued (server): addr=744 data16=0x4da7
+[1132693000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
+[1132693000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
+[1132693000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
+[1132693000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
+[1132695000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
+[1132695000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
+[1132695000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
+[1132695000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
+[1132695000] SCR issued: addr=744
+[1136697000] ERROR: (server) scalar read timeout at addr=744 (VALIDOUT stuck low, continuing to next scenario).
+[1136801000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
+[1136801000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
+[1136801000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
+[1136801000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
+[1136803000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
+[1136803000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
+[1136803000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
+[1136803000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
+[1136803000] BLW issued: base_addr=184 SZ=0 (nwords=8)
+[1138057000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
+[1138057000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
+[1138057000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
+[1138057000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
+[1138059000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
+[1138059000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
+[1138059000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
+[1138059000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
+[1138059000] BLR issued: base_addr=184 SZ=0 (expect 8 beats)
+[1178061000] BLW/BLR sequence OK: base_addr=184 SZ=0 (nwords=8)
+[1178263000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
+[1178263000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
+[1178263000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
+[1178263000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
+[1178265000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
+[1178265000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
+[1178265000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
+[1178265000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
+[1178265000] SCW issued (server): addr=611 data16=0xc6a7
+[1178687000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
+[1178687000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
+[1178687000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
+[1178687000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
+[1178689000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
+[1178689000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
+[1178689000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
+[1178689000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
+[1178689000] SCR issued: addr=611
+[1182691000] ERROR: (server) scalar read timeout at addr=611 (VALIDOUT stuck low, continuing to next scenario).
+[1182795000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[1182795000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[1182795000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[1182795000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[1182797000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[1182797000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[1182797000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[1182797000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
+[1182797000] BLW issued: base_addr=288 SZ=0 (nwords=8)
+[1184051000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[1184051000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[1184051000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[1184051000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[1184053000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[1184053000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[1184053000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[1184053000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
+[1184053000] BLR issued: base_addr=288 SZ=0 (expect 8 beats)
+[1224055000] BLW/BLR sequence OK: base_addr=288 SZ=0 (nwords=8)
+[1224257000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
+[1224257000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
+[1224257000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
+[1224257000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
+[1224259000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
+[1224259000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
+[1224259000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
+[1224259000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
+[1224259000] BLW issued: base_addr=656 SZ=0 (nwords=8)
+[1225513000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
+[1225513000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
+[1225513000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
+[1225513000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
+[1225515000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
+[1225515000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
+[1225515000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
+[1225515000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
+[1225515000] BLR issued: base_addr=656 SZ=0 (expect 8 beats)
+[1265517000] BLW/BLR sequence OK: base_addr=656 SZ=0 (nwords=8)
+[1265719000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
+[1265719000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
+[1265719000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
+[1265719000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
+[1265721000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
+[1265721000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
+[1265721000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
+[1265721000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
+[1265721000] BLW issued: base_addr=592 SZ=0 (nwords=8)
+[1266975000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
+[1266975000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
+[1266975000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
+[1266975000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
+[1266977000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
+[1266977000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
+[1266977000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
+[1266977000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
+[1266977000] BLR issued: base_addr=592 SZ=0 (expect 8 beats)
+[1306979000] BLW/BLR sequence OK: base_addr=592 SZ=0 (nwords=8)
+[1307181000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
+[1307181000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
+[1307181000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
+[1307181000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
+[1307183000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
+[1307183000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
+[1307183000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
+[1307183000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
+[1307183000] BLW issued: base_addr=512 SZ=0 (nwords=8)
+[1308437000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
+[1308437000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
+[1308437000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
+[1308437000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
+[1308439000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
+[1308439000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
+[1308439000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
+[1308439000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
+[1308439000] BLR issued: base_addr=512 SZ=0 (expect 8 beats)
+[1348441000] BLW/BLR sequence OK: base_addr=512 SZ=0 (nwords=8)
+[1348643000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
+[1348643000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
+[1348643000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
+[1348643000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
+[1348645000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
+[1348645000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
+[1348645000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
+[1348645000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
+[1348645000] BLW issued: base_addr=712 SZ=3 (nwords=32)
+[1349995000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
+[1349995000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
+[1349995000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
+[1349995000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
+[1349997000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
+[1349997000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
+[1349997000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
+[1349997000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
+[1349997000] BLR issued: base_addr=712 SZ=3 (expect 32 beats)
+[1389999000] BLW/BLR sequence OK: base_addr=712 SZ=3 (nwords=32)
+[1390201000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
+[1390201000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
+[1390201000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
+[1390201000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
+[1390203000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
+[1390203000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
+[1390203000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
+[1390203000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
+[1390203000] BLW issued: base_addr=712 SZ=0 (nwords=8)
+[1391457000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
+[1391457000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
+[1391457000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
+[1391457000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
+[1391459000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
+[1391459000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
+[1391459000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
+[1391459000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
+[1391459000] BLR issued: base_addr=712 SZ=0 (expect 8 beats)
+[1431461000] BLW/BLR sequence OK: base_addr=712 SZ=0 (nwords=8)
+[1431663000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
+[1431663000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
+[1431663000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
+[1431663000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
+[1431665000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
+[1431665000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
+[1431665000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
+[1431665000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
+[1431665000] SCW issued (server): addr=394 data16=0x2fa4
+[1432087000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
+[1432087000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
+[1432087000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
+[1432087000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
+[1432089000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
+[1432089000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
+[1432089000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
+[1432089000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
+[1432089000] SCR issued: addr=394
+[1436091000] ERROR: (server) scalar read timeout at addr=394 (VALIDOUT stuck low, continuing to next scenario).
+[1436195000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
+[1436195000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
+[1436195000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
+[1436195000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
+[1436197000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
+[1436197000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
+[1436197000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
+[1436197000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
+[1436197000] BLW issued: base_addr=888 SZ=1 (nwords=16)
+[1437483000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
+[1437483000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
+[1437483000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
+[1437483000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
+[1437485000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
+[1437485000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
+[1437485000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
+[1437485000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
+[1437485000] BLR issued: base_addr=888 SZ=1 (expect 16 beats)
+[1477487000] BLW/BLR sequence OK: base_addr=888 SZ=1 (nwords=16)
+[1477689000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
+[1477689000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
+[1477689000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
+[1477689000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
+[1477691000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
+[1477691000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
+[1477691000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
+[1477691000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
+[1477691000] BLW issued: base_addr=432 SZ=2 (nwords=24)
+[1479009000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
+[1479009000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
+[1479009000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
+[1479009000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
+[1479011000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
+[1479011000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
+[1479011000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
+[1479011000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
+[1479011000] BLR issued: base_addr=432 SZ=2 (expect 24 beats)
+[1519013000] BLW/BLR sequence OK: base_addr=432 SZ=2 (nwords=24)
+[1519215000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
+[1519215000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
+[1519215000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
+[1519215000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
+[1519217000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
+[1519217000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
+[1519217000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
+[1519217000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
+[1519217000] BLW issued: base_addr=696 SZ=2 (nwords=24)
+[1520535000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
+[1520535000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
+[1520535000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
+[1520535000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
+[1520537000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
+[1520537000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
+[1520537000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
+[1520537000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
+[1520537000] BLR issued: base_addr=696 SZ=2 (expect 24 beats)
+[1560539000] BLW/BLR sequence OK: base_addr=696 SZ=2 (nwords=24)
+[1560741000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
+[1560741000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
+[1560741000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
+[1560741000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
+[1560743000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
+[1560743000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
+[1560743000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
+[1560743000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
+[1560743000] BLW issued: base_addr=624 SZ=1 (nwords=16)
+[1562029000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
+[1562029000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
+[1562029000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
+[1562029000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
+[1562031000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
+[1562031000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
+[1562031000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
+[1562031000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
+[1562031000] BLR issued: base_addr=624 SZ=1 (expect 16 beats)
+[1602033000] BLW/BLR sequence OK: base_addr=624 SZ=1 (nwords=16)
+[1642237000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=56 (FILLCOUNT=18, proceeding and relying on FIFO overrun checks).
+[1642239000] BLW issued: base_addr=56 SZ=2 (nwords=24)
+[1683539000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=56 (FILLCOUNT=20, skipping block read to avoid VALIDOUT timeout).
+[1683539000] BLW/BLR sequence OK: base_addr=56 SZ=2 (nwords=24)
+[1723743000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=784 (FILLCOUNT=20, proceeding and relying on FIFO overrun checks).
+[1723745000] BLW issued: base_addr=784 SZ=0 (nwords=8)
+[1764981000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=784 (FILLCOUNT=22, skipping block read to avoid VALIDOUT timeout).
+[1764981000] BLW/BLR sequence OK: base_addr=784 SZ=0 (nwords=8)
+[1805185000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=864 (FILLCOUNT=22, proceeding and relying on FIFO overrun checks).
+[1805187000] BLW issued: base_addr=864 SZ=0 (nwords=8)
+[1846423000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=864 (FILLCOUNT=24, skipping block read to avoid VALIDOUT timeout).
+[1846423000] BLW/BLR sequence OK: base_addr=864 SZ=0 (nwords=8)
+[1886627000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=392 (FILLCOUNT=24, proceeding and relying on FIFO overrun checks).
+[1886629000] BLW issued: base_addr=392 SZ=0 (nwords=8)
+[1927865000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=392 (FILLCOUNT=26, skipping block read to avoid VALIDOUT timeout).
+[1927865000] BLW/BLR sequence OK: base_addr=392 SZ=0 (nwords=8)
+[1968069000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=664 (FILLCOUNT=26, proceeding and relying on FIFO overrun checks).
+[1968071000] BLW issued: base_addr=664 SZ=0 (nwords=8)
+[2009307000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=664 (FILLCOUNT=28, skipping block read to avoid VALIDOUT timeout).
+[2009307000] BLW/BLR sequence OK: base_addr=664 SZ=0 (nwords=8)
+[2049511000] INFO: (server) NOTFULL still low before SCW enqueue at addr=905 (FILLCOUNT=28, proceeding and relying on FIFO overrun checks).
+[2049513000] SCW issued (server): addr=905 data16=0x2ca6
+[2089917000] INFO: (server) NOTFULL still low before SCR enqueue at addr=905 (FILLCOUNT=28, skipping read to avoid VALIDOUT timeout).
+[2130021000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=208 (FILLCOUNT=28, proceeding and relying on FIFO overrun checks).
+[2130023000] BLW issued: base_addr=208 SZ=1 (nwords=16)
+[2171291000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=208 (FILLCOUNT=30, skipping block read to avoid VALIDOUT timeout).
+[2171291000] BLW/BLR sequence OK: base_addr=208 SZ=1 (nwords=16)
+[2211495000] INFO: (server) NOTFULL still low before SCW enqueue at addr=780 (FILLCOUNT=30, proceeding and relying on FIFO overrun checks).
+[2211497000] SCW issued (server): addr=780 data16=0xa9a6
+[2251901000] INFO: (server) NOTFULL still low before SCR enqueue at addr=780 (FILLCOUNT=30, skipping read to avoid VALIDOUT timeout).
+[2292005000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=624 (FILLCOUNT=30, proceeding and relying on FIFO overrun checks).
+[2292007000] BLW issued: base_addr=624 SZ=1 (nwords=16)
+[2333275000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=624 (FILLCOUNT=32, skipping block read to avoid VALIDOUT timeout).
+[2333275000] BLW/BLR sequence OK: base_addr=624 SZ=1 (nwords=16)
+[2373479000] INFO: (server) NOTFULL still low before BLW enqueue at base_addr=120 (FILLCOUNT=32, proceeding and relying on FIFO overrun checks).
+[2373481000] BLW issued: base_addr=120 SZ=0 (nwords=8)
+[2373483000] FIFO_MON: FILLCOUNT entered high-water region (fillcount=33).
+[2414717000] INFO: (server) NOTFULL still low before BLR enqueue at base_addr=120 (FILLCOUNT=34, skipping block read to avoid VALIDOUT timeout).
+[2414717000] BLW/BLR sequence OK: base_addr=120 SZ=0 (nwords=8)
+[2414917000] Randomized traffic phase (server top) completed.
+----------------------------------------------------------------
+DDR2 SERVER controller functional coverage (approximate):
+  SCW count = 46
+  SCR count = 46
+  BLW count = 74
+  BLR count = 74
+  SZ=00 count = 156
+  SZ=01 count = 56
+  SZ=10 count = 16
+  SZ=11 count = 12
+----------------------------------------------------------------
+[2418917000] (server) All tests completed successfully.
