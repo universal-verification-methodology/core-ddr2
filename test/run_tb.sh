@@ -144,6 +144,9 @@ for md in "${MEM_DEPTH_LIST[@]}"; do
                 "$DUT/ddr2_phy.v" \
                 "$DUT/ddr2_protocol_engine.v" \
                 "$DUT/ddr2_controller.v" \
+                "$DUT/ecc_secded.v" \
+                "$DUT/ddr2_scrubber.v" \
+                "$DUT/ddr2_ras_registers.v" \
                 "$DUT/ddr2_server_controller.v" \
                 "$TEST/ddr2_simple_mem.v" \
                 "$TEST/ddr2_timing_checker.v" \

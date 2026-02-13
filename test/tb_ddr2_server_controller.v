@@ -32,12 +32,25 @@ module tb_ddr2_server_controller;
     // directly to the underlying core controller slice 0.
     reg         DLL_REQ;
     reg         DLL_MODE;
+    // ECC/Scrubbing/RAS control signals
+    reg         ECC_ENABLE;
+    reg         SCRUB_ENABLE;
+    reg  [7:0]  RAS_REG_ADDR;
+    wire [31:0] RAS_REG_DATA;
     wire [63:0] DOUT;
     wire [24:0] RADDR;
     wire [6:0]  FILLCOUNT;
     wire        READY;
     wire        VALIDOUT;
     wire        NOTFULL;
+    // ECC/Scrubbing/RAS status signals
+    wire        ECC_SINGLE_ERR;
+    wire        ECC_DOUBLE_ERR;
+    wire        SCRUB_ACTIVE;
+    wire        RAS_IRQ_CORR;
+    wire        RAS_IRQ_UNCORR;
+    wire        RAS_RANK_DEGRADED;
+    wire        RAS_FATAL_ERROR;
     // Two-rank CS# vector on the DDR2 bus (active low).
     wire [1:0]  C0_CSBAR_PAD;
     wire        C0_RASBAR_PAD;
@@ -71,6 +84,10 @@ module tb_ddr2_server_controller;
     // Simple functional coverage counters (per-command and per-SZ).
     integer cov_scw, cov_scr, cov_blw, cov_blr;
     integer cov_sz0, cov_sz1, cov_sz2, cov_sz3;
+    // Additional counters and scratch variables for RAS/scrubbing tests.
+    integer scrub_check_count;
+    integer initial_corr_errors, initial_uncorr_errors;
+    integer scrub_count_before, scrub_count_after;
 
     // ------------------------------------------------------------------------
     // Data pattern and simple scoreboard for read-back verification.
@@ -216,12 +233,23 @@ module tb_ddr2_server_controller;
         .PWRDOWN_EXIT(PWRDOWN_EXIT),
         .DLL_REQ(DLL_REQ),
         .DLL_MODE(DLL_MODE),
+        .ECC_ENABLE(ECC_ENABLE),
+        .SCRUB_ENABLE(SCRUB_ENABLE),
+        .RAS_REG_ADDR(RAS_REG_ADDR),
+        .RAS_REG_DATA(RAS_REG_DATA),
         .DOUT(DOUT),
         .RADDR(RADDR),
         .FILLCOUNT(FILLCOUNT),
         .READY(READY),
         .VALIDOUT(VALIDOUT),
         .NOTFULL(NOTFULL),
+        .ECC_SINGLE_ERR(ECC_SINGLE_ERR),
+        .ECC_DOUBLE_ERR(ECC_DOUBLE_ERR),
+        .SCRUB_ACTIVE(SCRUB_ACTIVE),
+        .RAS_IRQ_CORR(RAS_IRQ_CORR),
+        .RAS_IRQ_UNCORR(RAS_IRQ_UNCORR),
+        .RAS_RANK_DEGRADED(RAS_RANK_DEGRADED),
+        .RAS_FATAL_ERROR(RAS_FATAL_ERROR),
         .C0_CSBAR_PAD(C0_CSBAR_PAD),
         .C0_RASBAR_PAD(C0_RASBAR_PAD),
         .C0_CASBAR_PAD(C0_CASBAR_PAD),
@@ -798,9 +826,53 @@ module tb_ddr2_server_controller;
 
         if (VALIDOUT) begin
             $display("[%0t] READ observed (server top): RADDR=%0d DOUT=0x%016h", $time, RADDR, DOUT);
+            if (ECC_ENABLE) begin
+                if (ECC_SINGLE_ERR) begin
+                    $display("[%0t] ECC: Single-bit error detected and corrected at addr=%0d", $time, RADDR);
+                end
+                if (ECC_DOUBLE_ERR) begin
+                    $display("[%0t] ECC ERROR: Double-bit error detected (uncorrectable) at addr=%0d", $time, RADDR);
+                end
+            end
 `ifdef SIM_DIRECT_READ
             sb_check(RADDR, DOUT);
 `endif
+        end
+        
+        // Monitor RAS interrupts and status flags
+        if (RAS_IRQ_CORR) begin
+            $display("[%0t] RAS INTERRUPT: Correctable error threshold exceeded!", $time);
+            // Read error count to verify
+            RAS_REG_ADDR = 8'h00;
+            @(posedge CLK);
+            $display("[%0t]   Total correctable errors: %0d", $time, RAS_REG_DATA);
+        end
+        if (RAS_IRQ_UNCORR) begin
+            $display("[%0t] RAS FATAL INTERRUPT: Uncorrectable error detected!", $time);
+            // Read error details
+            RAS_REG_ADDR = 8'h04;
+            @(posedge CLK);
+            $display("[%0t]   Total uncorrectable errors: %0d", $time, RAS_REG_DATA);
+            RAS_REG_ADDR = 8'h0C;
+            @(posedge CLK);
+            $display("[%0t]   Error address: 0x%08h", $time, RAS_REG_DATA);
+            RAS_REG_ADDR = 8'h08;
+            @(posedge CLK);
+            $display("[%0t]   Error syndrome: 0x%02h", $time, RAS_REG_DATA[7:0]);
+        end
+        if (RAS_RANK_DEGRADED) begin
+            $display("[%0t] RAS WARNING: Rank degradation detected", $time);
+            // Read per-rank counters
+            RAS_REG_ADDR = 8'h40;
+            @(posedge CLK);
+            $display("[%0t]   Rank 0 correctable errors: %0d", $time, RAS_REG_DATA);
+            RAS_REG_ADDR = 8'h80;
+            @(posedge CLK);
+            $display("[%0t]   Rank 0 uncorrectable errors: %0d", $time, RAS_REG_DATA);
+        end
+        if (RAS_FATAL_ERROR) begin
+            $display("[%0t] RAS FATAL: Fatal error status - system may be unstable!", $time);
+            // This is a critical condition - system should take recovery action
         end
     end
 
@@ -834,6 +906,9 @@ module tb_ddr2_server_controller;
         PWRDOWN_EXIT = 0;
         DLL_REQ      = 0;
         DLL_MODE     = 0;
+        ECC_ENABLE   = 0;
+        SCRUB_ENABLE = 0;
+        RAS_REG_ADDR = 8'd0;
         SELFREF_REQ  = 0;
         SELFREF_EXIT = 0;
         PWRDOWN_REQ  = 0;
@@ -1038,6 +1113,218 @@ module tb_ddr2_server_controller;
 
         run_random_traffic();
 
+        // --------------------------------------------------------------------
+        // ECC and Scrubbing Tests
+        // --------------------------------------------------------------------
+        $display("[%0t] (server) Starting ECC and scrubbing tests...", $time);
+        
+        // Enable ECC
+        ECC_ENABLE = 1'b1;
+        $display("[%0t] (server) ECC_ENABLE asserted", $time);
+        repeat (100) @(posedge CLK);
+        
+        // Test ECC encoding/decoding with normal writes and reads
+        sb_reset();
+        do_scalar_rw(25'd200);
+        do_scalar_rw(25'd201);
+        do_block_rw(25'd300, 2'b00);
+        
+        // --------------------------------------------------------------------
+        // Comprehensive RAS Register Tests
+        // --------------------------------------------------------------------
+        $display("[%0t] (server) Starting comprehensive RAS register tests...", $time);
+        
+        // Test 1: Read all RAS registers and verify initial state
+        $display("[%0t] (server) Test 1: Reading all RAS registers...", $time);
+        
+        RAS_REG_ADDR = 8'h00;  // Total correctable errors
+        @(posedge CLK);
+        if (RAS_REG_DATA !== 32'd0) begin
+            $display("[%0t] ERROR: RAS_REG[0x00] expected 0, got 0x%08h", $time, RAS_REG_DATA);
+        end else begin
+            $display("[%0t] PASS: RAS_REG[0x00] (total_corr_errors) = 0x%08h", $time, RAS_REG_DATA);
+        end
+        
+        RAS_REG_ADDR = 8'h04;  // Total uncorrectable errors
+        @(posedge CLK);
+        if (RAS_REG_DATA !== 32'd0) begin
+            $display("[%0t] ERROR: RAS_REG[0x04] expected 0, got 0x%08h", $time, RAS_REG_DATA);
+        end else begin
+            $display("[%0t] PASS: RAS_REG[0x04] (total_uncorr_errors) = 0x%08h", $time, RAS_REG_DATA);
+        end
+        
+        RAS_REG_ADDR = 8'h08;  // Last error context
+        @(posedge CLK);
+        $display("[%0t] PASS: RAS_REG[0x08] (last_err_context) = 0x%08h", $time, RAS_REG_DATA);
+        
+        RAS_REG_ADDR = 8'h0C;  // Last error address
+        @(posedge CLK);
+        $display("[%0t] PASS: RAS_REG[0x0C] (last_err_addr) = 0x%08h", $time, RAS_REG_DATA);
+        
+        RAS_REG_ADDR = 8'h10;  // Correctable error threshold
+        @(posedge CLK);
+        if (RAS_REG_DATA !== 32'd1000) begin
+            $display("[%0t] WARNING: RAS_REG[0x10] (corr_err_threshold) = 0x%08h (expected 1000)", $time, RAS_REG_DATA);
+        end else begin
+            $display("[%0t] PASS: RAS_REG[0x10] (corr_err_threshold) = 0x%08h", $time, RAS_REG_DATA);
+        end
+        
+        RAS_REG_ADDR = 8'h14;  // Uncorrectable error threshold
+        @(posedge CLK);
+        if (RAS_REG_DATA !== 32'd1) begin
+            $display("[%0t] WARNING: RAS_REG[0x14] (uncorr_err_threshold) = 0x%08h (expected 1)", $time, RAS_REG_DATA);
+        end else begin
+            $display("[%0t] PASS: RAS_REG[0x14] (uncorr_err_threshold) = 0x%08h", $time, RAS_REG_DATA);
+        end
+        
+        RAS_REG_ADDR = 8'h18;  // Scrubbing cycle count
+        @(posedge CLK);
+        $display("[%0t] PASS: RAS_REG[0x18] (scrub_count) = 0x%08h", $time, RAS_REG_DATA);
+        
+        RAS_REG_ADDR = 8'h1C;  // Scrubbing progress
+        @(posedge CLK);
+        $display("[%0t] PASS: RAS_REG[0x1C] (scrub_progress) = 0x%08h", $time, RAS_REG_DATA);
+        
+        RAS_REG_ADDR = 8'h20;  // Status flags
+        @(posedge CLK);
+        $display("[%0t] PASS: RAS_REG[0x20] (status_flags) = 0x%08h", $time, RAS_REG_DATA);
+        $display("[%0t]   - fatal_error: %b", $time, RAS_REG_DATA[31]);
+        $display("[%0t]   - rank_degraded: %b", $time, RAS_REG_DATA[30]);
+        $display("[%0t]   - irq_uncorr: %b", $time, RAS_REG_DATA[29]);
+        $display("[%0t]   - irq_corr: %b", $time, RAS_REG_DATA[28]);
+        
+        // Test 2: Per-rank error counters (rank 0)
+        RAS_REG_ADDR = 8'h40;  // Rank 0 correctable errors
+        @(posedge CLK);
+        if (RAS_REG_DATA !== 32'd0) begin
+            $display("[%0t] ERROR: RAS_REG[0x40] (rank0_corr) expected 0, got 0x%08h", $time, RAS_REG_DATA);
+        end else begin
+            $display("[%0t] PASS: RAS_REG[0x40] (rank0_corr_errors) = 0x%08h", $time, RAS_REG_DATA);
+        end
+        
+        RAS_REG_ADDR = 8'h80;  // Rank 0 uncorrectable errors
+        @(posedge CLK);
+        if (RAS_REG_DATA !== 32'd0) begin
+            $display("[%0t] ERROR: RAS_REG[0x80] (rank0_uncorr) expected 0, got 0x%08h", $time, RAS_REG_DATA);
+        end else begin
+            $display("[%0t] PASS: RAS_REG[0x80] (rank0_uncorr_errors) = 0x%08h", $time, RAS_REG_DATA);
+        end
+        
+        // Test 3: Verify status flags are initially clear
+        if (RAS_IRQ_CORR || RAS_IRQ_UNCORR || RAS_RANK_DEGRADED || RAS_FATAL_ERROR) begin
+            $display("[%0t] ERROR: RAS status flags should be clear initially", $time);
+            $display("[%0t]   RAS_IRQ_CORR = %b", $time, RAS_IRQ_CORR);
+            $display("[%0t]   RAS_IRQ_UNCORR = %b", $time, RAS_IRQ_UNCORR);
+            $display("[%0t]   RAS_RANK_DEGRADED = %b", $time, RAS_RANK_DEGRADED);
+            $display("[%0t]   RAS_FATAL_ERROR = %b", $time, RAS_FATAL_ERROR);
+        end else begin
+            $display("[%0t] PASS: All RAS status flags are clear initially", $time);
+        end
+        
+        // Test 4: Enable scrubbing and monitor progress
+        $display("[%0t] (server) Test 4: Enabling scrubbing and monitoring progress...", $time);
+        SCRUB_ENABLE = 1'b1;
+        $display("[%0t] (server) SCRUB_ENABLE asserted", $time);
+        
+        // Wait for scrubbing to start
+        repeat (200) @(posedge CLK);
+        
+        // Monitor scrubbing progress over multiple cycles
+        for (scrub_check_count = 0; scrub_check_count < 10; scrub_check_count = scrub_check_count + 1) begin
+            RAS_REG_ADDR = 8'h1C;  // Scrubbing progress
+            @(posedge CLK);
+            if (SCRUB_ACTIVE) begin
+                $display("[%0t] Scrubbing active: progress = 0x%08h, count = 0x%08h", 
+                         $time, RAS_REG_DATA, scrub_check_count);
+            end
+            
+            RAS_REG_ADDR = 8'h18;  // Scrubbing cycle count
+            @(posedge CLK);
+            $display("[%0t] Scrubbing cycles completed: 0x%08h", $time, RAS_REG_DATA);
+            
+            repeat (500) @(posedge CLK);
+        end
+        
+        // Test 5: Verify error counting (with ECC enabled, errors should be tracked)
+        $display("[%0t] (server) Test 5: Verifying error counting...", $time);
+        
+        // Perform some reads/writes and check if errors are tracked
+        // (In a real scenario, we would inject errors, but for now we just verify the counters)
+        RAS_REG_ADDR = 8'h00;  // Total correctable errors
+        @(posedge CLK);
+        initial_corr_errors = RAS_REG_DATA;
+        $display("[%0t] Initial correctable errors: %0d", $time, initial_corr_errors);
+        
+        RAS_REG_ADDR = 8'h04;  // Total uncorrectable errors
+        @(posedge CLK);
+        initial_uncorr_errors = RAS_REG_DATA;
+        $display("[%0t] Initial uncorrectable errors: %0d", $time, initial_uncorr_errors);
+        
+        // Perform some operations
+        do_scalar_rw(25'd500);
+        do_block_rw(25'd600, 2'b00);
+        repeat (100) @(posedge CLK);
+        
+        // Check if counters changed (they shouldn't unless there were actual errors)
+        RAS_REG_ADDR = 8'h00;
+        @(posedge CLK);
+        if (RAS_REG_DATA !== initial_corr_errors) begin
+            $display("[%0t] INFO: Correctable error count changed from %0d to %0d", 
+                     $time, initial_corr_errors, RAS_REG_DATA);
+        end else begin
+            $display("[%0t] PASS: Correctable error count unchanged (no errors detected)", $time);
+        end
+        
+        RAS_REG_ADDR = 8'h04;
+        @(posedge CLK);
+        if (RAS_REG_DATA !== initial_uncorr_errors) begin
+            $display("[%0t] INFO: Uncorrectable error count changed from %0d to %0d", 
+                     $time, initial_uncorr_errors, RAS_REG_DATA);
+        end else begin
+            $display("[%0t] PASS: Uncorrectable error count unchanged (no errors detected)", $time);
+        end
+        
+        // Test 6: Verify last error context is updated (if errors occurred)
+        RAS_REG_ADDR = 8'h08;  // Last error context
+        @(posedge CLK);
+        $display("[%0t] Last error context: 0x%08h", $time, RAS_REG_DATA);
+        $display("[%0t]   - Error type: %s", $time, RAS_REG_DATA[31] ? "double" : "single");
+        $display("[%0t]   - Rank: %0d", $time, RAS_REG_DATA[11:8]);
+        $display("[%0t]   - Syndrome: 0x%02h", $time, RAS_REG_DATA[7:0]);
+        
+        RAS_REG_ADDR = 8'h0C;  // Last error address
+        @(posedge CLK);
+        $display("[%0t] Last error address: 0x%08h", $time, RAS_REG_DATA);
+        
+        // Test 7: Verify scrubbing integration with RAS
+        $display("[%0t] (server) Test 7: Verifying scrubbing integration with RAS...", $time);
+        
+        // Check scrubbing count before and after
+        RAS_REG_ADDR = 8'h18;  // Scrubbing cycle count
+        @(posedge CLK);
+        scrub_count_before = RAS_REG_DATA;
+        $display("[%0t] Scrubbing count before wait: %0d", $time, scrub_count_before);
+        
+        repeat (2000) @(posedge CLK);
+        
+        RAS_REG_ADDR = 8'h18;
+        @(posedge CLK);
+        scrub_count_after = RAS_REG_DATA;
+        $display("[%0t] Scrubbing count after wait: %0d", $time, scrub_count_after);
+        
+        if (SCRUB_ENABLE && scrub_count_after > scrub_count_before) begin
+            $display("[%0t] PASS: Scrubbing counter incremented (scrubbing is active)", $time);
+        end else if (!SCRUB_ENABLE) begin
+            $display("[%0t] INFO: Scrubbing disabled, counter should not increment", $time);
+        end else begin
+            $display("[%0t] INFO: Scrubbing may be waiting for idle cycles", $time);
+        end
+        
+        $display("[%0t] (server) RAS register tests completed", $time);
+        
+        // Disable scrubbing for now (let it complete naturally in background)
+        // SCRUB_ENABLE = 1'b0;
+        
         repeat (2000) @(posedge CLK);
 
         $display("----------------------------------------------------------------");

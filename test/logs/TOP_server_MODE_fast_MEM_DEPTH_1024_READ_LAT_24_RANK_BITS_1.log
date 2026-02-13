@@ -4,10 +4,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [867000] Detected AUTO REFRESH command on DDR2 bus (server top).
 [1899000] (server) READY asserted at cycle 938
 [1901000] (server) NOTFULL=1 (FIFOs can accept commands)
-[1903000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
-[1903000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
-[1903000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
-[1903000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
 [1905000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
 [1905000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
 [1905000] CTRL: ENQUEUE CMD addr=0 cmd=10 sz=0
@@ -37,10 +33,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [1929000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=1
 [1945000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [1995000] DQS_MON: window complete, edge_cnt=7.
-[2327000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
-[2327000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
-[2327000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
-[2327000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
 [2329000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
 [2329000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
 [2329000] CTRL: ENQUEUE CMD addr=0 cmd=1 sz=0
@@ -80,10 +72,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2409000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
 [2411000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
 [2413000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
-[2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
-[2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
-[2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
-[2437000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
 [2439000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
 [2439000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
 [2439000] CTRL: ENQUEUE CMD addr=1 cmd=10 sz=0
@@ -113,10 +101,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2463000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=3
 [2479000] MEM: WRITE burst committed base_idx=3 data=0x0000
 [2529000] DQS_MON: window complete, edge_cnt=7.
-[2861000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
-[2861000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
-[2861000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
-[2861000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
 [2863000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
 [2863000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
 [2863000] CTRL: ENQUEUE CMD addr=1 cmd=1 sz=0
@@ -156,10 +140,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2943000] MEM: READ beat=5 rank=0 idx=8 data=0x0000
 [2945000] MEM: READ beat=6 rank=0 idx=9 data=0x0000
 [2947000] MEM: READ beat=7 rank=0 idx=10 data=0x0000
-[2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
-[2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
-[2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
-[2971000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [2973000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [2973000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [2973000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
@@ -189,10 +169,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [2997000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=65
 [3013000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [3063000] DQS_MON: window complete, edge_cnt=7.
-[3395000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
-[3395000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
-[3395000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
-[3395000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
 [3397000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
 [3397000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
 [3397000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
@@ -232,10 +208,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [3477000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
 [3479000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
 [3481000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
-[3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
-[3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
-[3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
-[3505000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
 [3507000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
 [3507000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
 [3507000] CTRL: ENQUEUE CMD addr=512 cmd=10 sz=0
@@ -265,10 +237,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [3531000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=257
 [3547000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [3597000] DQS_MON: window complete, edge_cnt=7.
-[3929000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
-[3929000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
-[3929000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
-[3929000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
 [3931000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
 [3931000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
 [3931000] CTRL: ENQUEUE CMD addr=512 cmd=1 sz=0
@@ -308,10 +276,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [4011000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
 [4013000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
 [4015000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
-[4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
-[4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
-[4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
-[4039000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
 [4041000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
 [4041000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
 [4041000] CTRL: ENQUEUE CMD addr=32 cmd=100 sz=0
@@ -341,10 +305,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [4079000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=17
 [4095000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [4145000] DQS_MON: window complete, edge_cnt=7.
-[5295000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
-[5295000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
-[5295000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
-[5295000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
 [5297000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
 [5297000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
 [5297000] CTRL: ENQUEUE CMD addr=32 cmd=11 sz=0
@@ -396,10 +356,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [5391000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [5393000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [5395000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
-[5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
-[5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
-[5517000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
 [5519000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
 [5519000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
 [5519000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
@@ -434,10 +390,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [5669000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [5719000] DQS_MON: window complete, edge_cnt=7.
 [6525000] REF_MON: First AUTO REFRESH observed.
-[6805000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
-[6805000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
-[6805000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
-[6805000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
 [6807000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
 [6807000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
 [6807000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=1
@@ -505,10 +457,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [6901000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
 [6903000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
 [6905000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
-[7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
-[7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
-[7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
-[7043000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
 [7045000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
 [7045000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
 [7045000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
@@ -546,10 +494,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [7307000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=225
 [7323000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [7373000] DQS_MON: window complete, edge_cnt=7.
-[8363000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
-[8363000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
-[8363000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
-[8363000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
 [8365000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
 [8365000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
 [8365000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=10
@@ -633,10 +577,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [8459000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
 [8461000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
 [8463000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
-[8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
-[8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
-[8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
-[8617000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
 [8619000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
 [8619000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
 [8619000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
@@ -678,10 +618,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [9041000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=305
 [9057000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [9107000] DQS_MON: window complete, edge_cnt=7.
-[9969000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
-[9969000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
-[9969000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
-[9969000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
 [9971000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
 [9971000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
 [9971000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=11
@@ -782,10 +718,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10067000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
 [10069000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
 [10237000] (server) Starting FIFO stress / refresh-interleaving test...
-[10239000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
-[10239000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
-[10239000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
-[10239000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
 [10241000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
 [10241000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
 [10241000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
@@ -815,10 +747,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10265000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=289
 [10281000] MEM: WRITE burst committed base_idx=97 data=0x0000
 [10331000] DQS_MON: window complete, edge_cnt=7.
-[10663000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
-[10663000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
-[10663000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
-[10663000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
 [10665000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
 [10665000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
 [10665000] CTRL: ENQUEUE CMD addr=600 cmd=1 sz=0
@@ -858,10 +786,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10745000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
 [10747000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
 [10749000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
-[10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
-[10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
-[10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
-[10773000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
 [10775000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
 [10775000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
 [10775000] CTRL: ENQUEUE CMD addr=700 cmd=100 sz=1
@@ -896,10 +820,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [10925000] MEM: WRITE burst committed base_idx=105 data=0x0000
 [10975000] DQS_MON: window complete, edge_cnt=7.
 [11151000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[12061000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
-[12061000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
-[12061000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
-[12061000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
 [12063000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
 [12063000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
 [12063000] CTRL: ENQUEUE CMD addr=700 cmd=11 sz=1
@@ -967,10 +887,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12157000] MEM: READ beat=5 rank=0 idx=125 data=0x0000
 [12159000] MEM: READ beat=6 rank=0 idx=126 data=0x0000
 [12161000] MEM: READ beat=7 rank=0 idx=127 data=0x0000
-[12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
-[12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
-[12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
-[12299000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
 [12301000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
 [12301000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
 [12301000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
@@ -1000,10 +916,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12325000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=291
 [12341000] MEM: WRITE burst committed base_idx=99 data=0x0000
 [12391000] DQS_MON: window complete, edge_cnt=7.
-[12723000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
-[12723000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
-[12723000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
-[12723000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
 [12725000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
 [12725000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
 [12725000] CTRL: ENQUEUE CMD addr=601 cmd=1 sz=0
@@ -1043,10 +955,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12805000] MEM: READ beat=5 rank=0 idx=104 data=0x0000
 [12807000] MEM: READ beat=6 rank=0 idx=105 data=0x0000
 [12809000] MEM: READ beat=7 rank=0 idx=106 data=0x0000
-[12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
-[12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
-[12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
-[12833000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
 [12835000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
 [12835000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
 [12835000] CTRL: ENQUEUE CMD addr=740 cmd=100 sz=1
@@ -1080,10 +988,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [12969000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=393
 [12985000] MEM: WRITE burst committed base_idx=9 data=0x0000
 [13035000] DQS_MON: window complete, edge_cnt=7.
-[14121000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
-[14121000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
-[14121000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
-[14121000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
 [14123000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
 [14123000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
 [14123000] CTRL: ENQUEUE CMD addr=740 cmd=11 sz=1
@@ -1151,10 +1055,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [14217000] MEM: READ beat=5 rank=0 idx=29 data=0x0000
 [14219000] MEM: READ beat=6 rank=0 idx=30 data=0x0000
 [14221000] MEM: READ beat=7 rank=0 idx=31 data=0x0000
-[14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
-[14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
-[14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
-[14359000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
 [14361000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
 [14361000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
 [14361000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
@@ -1184,10 +1084,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [14385000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=293
 [14401000] MEM: WRITE burst committed base_idx=101 data=0x0000
 [14451000] DQS_MON: window complete, edge_cnt=7.
-[14783000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
-[14783000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
-[14783000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
-[14783000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
 [14785000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
 [14785000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
 [14785000] CTRL: ENQUEUE CMD addr=602 cmd=1 sz=0
@@ -1227,10 +1123,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [14865000] MEM: READ beat=5 rank=0 idx=106 data=0x0000
 [14867000] MEM: READ beat=6 rank=0 idx=107 data=0x0000
 [14869000] MEM: READ beat=7 rank=0 idx=108 data=0x0000
-[14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
-[14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
-[14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
-[14893000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
 [14895000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
 [14895000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
 [14895000] CTRL: ENQUEUE CMD addr=780 cmd=100 sz=1
@@ -1265,10 +1157,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [15045000] MEM: WRITE burst committed base_idx=57 data=0x0000
 [15095000] DQS_MON: window complete, edge_cnt=7.
 [15777000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[16181000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
-[16181000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
-[16181000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
-[16181000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
 [16183000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
 [16183000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
 [16183000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
@@ -1336,10 +1224,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16277000] MEM: READ beat=5 rank=0 idx=45 data=0x0000
 [16279000] MEM: READ beat=6 rank=0 idx=46 data=0x0000
 [16281000] MEM: READ beat=7 rank=0 idx=47 data=0x0000
-[16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
-[16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
-[16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
-[16419000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
 [16421000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
 [16421000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
 [16421000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
@@ -1369,10 +1253,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16445000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=295
 [16461000] MEM: WRITE burst committed base_idx=103 data=0x0000
 [16511000] DQS_MON: window complete, edge_cnt=7.
-[16843000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
-[16843000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
-[16843000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
-[16843000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
 [16845000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
 [16845000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
 [16845000] CTRL: ENQUEUE CMD addr=603 cmd=1 sz=0
@@ -1412,10 +1292,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [16925000] MEM: READ beat=5 rank=0 idx=108 data=0x0000
 [16927000] MEM: READ beat=6 rank=0 idx=109 data=0x0000
 [16929000] MEM: READ beat=7 rank=0 idx=110 data=0x0000
-[16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
-[16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
-[16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
-[16953000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
 [16955000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
 [16955000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
 [16955000] CTRL: ENQUEUE CMD addr=820 cmd=100 sz=1
@@ -1449,10 +1325,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [17089000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=425
 [17105000] MEM: WRITE burst committed base_idx=73 data=0x0000
 [17155000] DQS_MON: window complete, edge_cnt=7.
-[18241000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
-[18241000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
-[18241000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
-[18241000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
 [18243000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
 [18243000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
 [18243000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
@@ -1520,10 +1392,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [18337000] MEM: READ beat=5 rank=0 idx=93 data=0x0000
 [18339000] MEM: READ beat=6 rank=0 idx=94 data=0x0000
 [18341000] MEM: READ beat=7 rank=0 idx=95 data=0x0000
-[18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
-[18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
-[18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
-[18479000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
 [18481000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
 [18481000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
 [18481000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
@@ -1553,10 +1421,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [18505000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=297
 [18521000] MEM: WRITE burst committed base_idx=105 data=0x0000
 [18571000] DQS_MON: window complete, edge_cnt=7.
-[18903000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
-[18903000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
-[18903000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
-[18903000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
 [18905000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
 [18905000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
 [18905000] CTRL: ENQUEUE CMD addr=604 cmd=1 sz=0
@@ -1596,10 +1460,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [18985000] MEM: READ beat=5 rank=0 idx=110 data=0x0000
 [18987000] MEM: READ beat=6 rank=0 idx=111 data=0x0000
 [18989000] MEM: READ beat=7 rank=0 idx=112 data=0x0000
-[19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
-[19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
-[19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
-[19013000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
 [19015000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
 [19015000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
 [19015000] CTRL: ENQUEUE CMD addr=860 cmd=100 sz=1
@@ -1633,10 +1493,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [19149000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=441
 [19165000] MEM: WRITE burst committed base_idx=121 data=0x0000
 [19215000] DQS_MON: window complete, edge_cnt=7.
-[20301000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
-[20301000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
-[20301000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
-[20301000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
 [20303000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
 [20303000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
 [20303000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
@@ -1705,10 +1561,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [20399000] MEM: READ beat=6 rank=0 idx=110 data=0x0000
 [20401000] MEM: READ beat=7 rank=0 idx=111 data=0x0000
 [20413000] REF_MON: AUTO REFRESH interval = 2318 cycles.
-[20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
-[20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
-[20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
-[20539000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
 [20541000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
 [20541000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
 [20541000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
@@ -1738,10 +1590,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [20635000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=299
 [20651000] MEM: WRITE burst committed base_idx=107 data=0x0000
 [20701000] DQS_MON: window complete, edge_cnt=7.
-[20963000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
-[20963000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
-[20963000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
-[20963000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
 [20965000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
 [20965000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
 [20965000] CTRL: ENQUEUE CMD addr=605 cmd=1 sz=0
@@ -1781,10 +1629,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [21045000] MEM: READ beat=5 rank=0 idx=112 data=0x0000
 [21047000] MEM: READ beat=6 rank=0 idx=113 data=0x0000
 [21049000] MEM: READ beat=7 rank=0 idx=114 data=0x0000
-[21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
-[21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
-[21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
-[21073000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
 [21075000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
 [21075000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
 [21075000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
@@ -1818,10 +1662,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [21209000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=473
 [21225000] MEM: WRITE burst committed base_idx=25 data=0x0000
 [21275000] DQS_MON: window complete, edge_cnt=7.
-[22361000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
-[22361000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
-[22361000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
-[22361000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
 [22363000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
 [22363000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
 [22363000] CTRL: ENQUEUE CMD addr=900 cmd=11 sz=1
@@ -1889,10 +1729,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [22457000] MEM: READ beat=5 rank=0 idx=13 data=0x0000
 [22459000] MEM: READ beat=6 rank=0 idx=14 data=0x0000
 [22461000] MEM: READ beat=7 rank=0 idx=15 data=0x0000
-[22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
-[22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
-[22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
-[22599000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
 [22601000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
 [22601000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
 [22601000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
@@ -1922,10 +1758,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [22625000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=301
 [22641000] MEM: WRITE burst committed base_idx=109 data=0x0000
 [22691000] DQS_MON: window complete, edge_cnt=7.
-[23023000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
-[23023000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
-[23023000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
-[23023000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
 [23025000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
 [23025000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
 [23025000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
@@ -1965,10 +1797,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [23105000] MEM: READ beat=5 rank=0 idx=114 data=0x0000
 [23107000] MEM: READ beat=6 rank=0 idx=115 data=0x0000
 [23109000] MEM: READ beat=7 rank=0 idx=116 data=0x0000
-[23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
-[23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
-[23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
-[23133000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
 [23135000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
 [23135000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
 [23135000] CTRL: ENQUEUE CMD addr=940 cmd=100 sz=1
@@ -2002,10 +1830,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [23269000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=489
 [23285000] MEM: WRITE burst committed base_idx=41 data=0x0000
 [23335000] DQS_MON: window complete, edge_cnt=7.
-[24421000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
-[24421000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
-[24421000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
-[24421000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
 [24423000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
 [24423000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
 [24423000] CTRL: ENQUEUE CMD addr=940 cmd=11 sz=1
@@ -2073,10 +1897,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [24517000] MEM: READ beat=5 rank=0 idx=61 data=0x0000
 [24519000] MEM: READ beat=6 rank=0 idx=62 data=0x0000
 [24521000] MEM: READ beat=7 rank=0 idx=63 data=0x0000
-[24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
-[24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
-[24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
-[24659000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
 [24661000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
 [24661000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
 [24661000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
@@ -2107,20 +1927,12 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [24701000] MEM: WRITE burst committed base_idx=111 data=0x0000
 [24751000] DQS_MON: window complete, edge_cnt=7.
 [25039000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[25083000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
-[25083000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
-[25083000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
-[25083000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
 [25085000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
 [25085000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
 [25085000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
 [25085000] CTRL: ENQUEUE CMD addr=607 cmd=1 sz=0
 [25085000] SCR issued: addr=607
 [25089000] READ observed (server top): RADDR=607 DOUT=0xfaa7faa7faa7faa7
-[25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
-[25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
-[25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
-[25193000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
 [25195000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
 [25195000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
 [25195000] CTRL: ENQUEUE CMD addr=980 cmd=100 sz=1
@@ -2187,10 +1999,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [25457000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=505
 [25473000] MEM: WRITE burst committed base_idx=89 data=0x0000
 [25523000] DQS_MON: window complete, edge_cnt=7.
-[26481000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
-[26481000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
-[26481000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
-[26481000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
 [26483000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
 [26483000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
 [26483000] CTRL: ENQUEUE CMD addr=980 cmd=11 sz=1
@@ -2259,10 +2067,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [26579000] MEM: READ beat=6 rank=0 idx=78 data=0x0000
 [26581000] MEM: READ beat=7 rank=0 idx=79 data=0x0000
 [26717000] (server) Starting reset-during-traffic robustness test...
-[26719000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
-[26719000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
-[26719000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
-[26719000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
 [26721000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
 [26721000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
 [26721000] CTRL: ENQUEUE CMD addr=900 cmd=10 sz=0
@@ -2292,10 +2096,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [26745000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=457
 [26761000] MEM: WRITE burst committed base_idx=9 data=0x0000
 [26811000] DQS_MON: window complete, edge_cnt=7.
-[27143000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
-[27143000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
-[27143000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
-[27143000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
 [27145000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
 [27145000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
 [27145000] CTRL: ENQUEUE CMD addr=900 cmd=1 sz=0
@@ -2335,10 +2135,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [27225000] MEM: READ beat=5 rank=0 idx=14 data=0x0000
 [27227000] MEM: READ beat=6 rank=0 idx=15 data=0x0000
 [27229000] MEM: READ beat=7 rank=0 idx=16 data=0x0000
-[27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
-[27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
-[27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
-[27253000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
 [27255000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
 [27255000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
 [27255000] CTRL: ENQUEUE CMD addr=920 cmd=100 sz=0
@@ -2368,10 +2164,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [27293000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=449
 [27309000] MEM: WRITE burst committed base_idx=97 data=0x0000
 [27359000] DQS_MON: window complete, edge_cnt=7.
-[28509000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
-[28509000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
-[28509000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
-[28509000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
 [28511000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
 [28511000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
 [28511000] CTRL: ENQUEUE CMD addr=920 cmd=11 sz=0
@@ -2428,10 +2220,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [29395000] Detected AUTO REFRESH command on DDR2 bus (server top).
 [29597000] Detected AUTO REFRESH command on DDR2 bus (server top).
 [30629000] (server) READY re-asserted after reset at cycle 938
-[30631000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
-[30631000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
-[30631000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
-[30631000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
 [30633000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
 [30633000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
 [30633000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
@@ -2461,10 +2249,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [30657000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=17
 [30673000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [30723000] DQS_MON: window complete, edge_cnt=7.
-[31055000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
-[31055000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
-[31055000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
-[31055000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
 [31057000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
 [31057000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
 [31057000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
@@ -2504,10 +2288,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [31137000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [31139000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [31141000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
-[31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
-[31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
-[31165000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
 [31167000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
 [31167000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
 [31167000] CTRL: ENQUEUE CMD addr=64 cmd=100 sz=1
@@ -2541,10 +2321,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [31301000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=49
 [31317000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [31367000] DQS_MON: window complete, edge_cnt=7.
-[32453000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
-[32453000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
-[32453000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
-[32453000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
 [32455000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
 [32455000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
 [32455000] CTRL: ENQUEUE CMD addr=64 cmd=11 sz=1
@@ -2620,10 +2396,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [36897000] PROT: SREF_EXIT_WAIT complete, transitioning to IDLE (selfref_active=0, pdown_active_o=0, need_refresh=0, emptyBar_cmdFIFO_i=0)
 [36897000] PROT: SREF_EXIT_WAIT complete, transitioning to IDLE (selfref_active=0, pdown_active_o=0, need_refresh=0, emptyBar_cmdFIFO_i=0)
 [36923000] REF_MON: First AUTO REFRESH observed.
-[40715000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
-[40715000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
-[40715000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
-[40715000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
 [40717000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
 [40717000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
 [40717000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
@@ -2653,10 +2425,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [40741000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=17
 [40757000] MEM: WRITE burst committed base_idx=49 data=0x0000
 [40807000] DQS_MON: window complete, edge_cnt=7.
-[41139000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
-[41139000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
-[41139000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
-[41139000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
 [41141000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
 [41141000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
 [41141000] CTRL: ENQUEUE CMD addr=40 cmd=1 sz=0
@@ -2696,10 +2464,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [41221000] MEM: READ beat=5 rank=0 idx=54 data=0x0000
 [41223000] MEM: READ beat=6 rank=0 idx=55 data=0x0000
 [41225000] MEM: READ beat=7 rank=0 idx=56 data=0x0000
-[41249000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
-[41249000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
-[41249000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
-[41249000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
 [41251000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
 [41251000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
 [41251000] CTRL: ENQUEUE CMD addr=72 cmd=100 sz=0
@@ -2730,10 +2494,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [41305000] MEM: WRITE burst committed base_idx=33 data=0x0000
 [41355000] DQS_MON: window complete, edge_cnt=7.
 [41549000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[42505000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
-[42505000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
-[42505000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
-[42505000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
 [42507000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
 [42507000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
 [42507000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
@@ -2792,10 +2552,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [46797000] PROT: PD_EXIT_WAIT complete, transitioning to IDLE (selfref_active=0, pdown_active_o=0, need_refresh=0, emptyBar_cmdFIFO_i=0)
 [46797000] PROT: PD_EXIT_WAIT complete, transitioning to IDLE (selfref_active=0, pdown_active_o=0, need_refresh=0, emptyBar_cmdFIFO_i=0)
 [46823000] REF_MON: AUTO REFRESH interval = 645 cycles.
-[48751000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
-[48751000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
-[48751000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
-[48751000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
 [48753000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
 [48753000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
 [48753000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
@@ -2825,10 +2581,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [48777000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=49
 [48793000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [48843000] DQS_MON: window complete, edge_cnt=7.
-[49175000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
-[49175000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
-[49175000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
-[49175000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
 [49177000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
 [49177000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
 [49177000] CTRL: ENQUEUE CMD addr=96 cmd=1 sz=0
@@ -2868,10 +2620,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [49257000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [49259000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [49261000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[49285000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
-[49285000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
-[49285000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
-[49285000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
 [49287000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
 [49287000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
 [49287000] CTRL: ENQUEUE CMD addr=128 cmd=100 sz=1
@@ -2905,10 +2653,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [49421000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=81
 [49437000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [49487000] DQS_MON: window complete, edge_cnt=7.
-[50573000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
-[50573000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
-[50573000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
-[50573000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
 [50575000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
 [50575000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
 [50575000] CTRL: ENQUEUE CMD addr=128 cmd=11 sz=1
@@ -2977,10 +2721,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [50671000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
 [50673000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
 [50809000] (server) Starting multi-rank bus-level exercise (rank 0 vs rank 1)...
-[50811000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
-[50811000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
-[50811000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
-[50811000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
 [50813000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
 [50813000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
 [50813000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
@@ -3010,10 +2750,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [50837000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=17
 [50853000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [50903000] DQS_MON: window complete, edge_cnt=7.
-[51235000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
-[51235000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
-[51235000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
-[51235000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
 [51237000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
 [51237000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
 [51237000] CTRL: ENQUEUE CMD addr=32 cmd=1 sz=0
@@ -3053,10 +2789,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [51317000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [51319000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [51321000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[51345000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
-[51345000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
-[51345000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
-[51345000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
 [51347000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
 [51347000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
 [51347000] CTRL: ENQUEUE CMD addr=16777248 cmd=10 sz=0
@@ -3087,10 +2819,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [51387000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [51437000] DQS_MON: window complete, edge_cnt=7.
 [51473000] REF_MON: AUTO REFRESH interval = 2325 cycles.
-[51769000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
-[51769000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
-[51769000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
-[51769000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
 [51771000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
 [51771000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
 [51771000] CTRL: ENQUEUE CMD addr=16777248 cmd=1 sz=0
@@ -3130,10 +2858,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [51851000] MEM: READ beat=5 rank=1 idx=22 data=0x0000
 [51853000] MEM: READ beat=6 rank=1 idx=23 data=0x0000
 [51855000] MEM: READ beat=7 rank=1 idx=24 data=0x0000
-[51879000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
-[51879000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
-[51879000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
-[51879000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [51881000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [51881000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
 [51881000] CTRL: ENQUEUE CMD addr=128 cmd=10 sz=0
@@ -3163,10 +2887,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [51905000] MEM: WRITE cmd received rank=1 bank=0 row=4096 col=65
 [51921000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [51971000] DQS_MON: window complete, edge_cnt=7.
-[52303000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
-[52303000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
-[52303000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
-[52303000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
 [52305000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
 [52305000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
 [52305000] CTRL: ENQUEUE CMD addr=128 cmd=1 sz=0
@@ -3206,10 +2926,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [52385000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
 [52387000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
 [52389000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
-[52413000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
-[52413000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
-[52413000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
-[52413000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
 [52415000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
 [52415000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
 [52415000] CTRL: ENQUEUE CMD addr=16777344 cmd=10 sz=0
@@ -3239,10 +2955,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [52439000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=65
 [52455000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [52505000] DQS_MON: window complete, edge_cnt=7.
-[52837000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
-[52837000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
-[52837000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
-[52837000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
 [52839000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
 [52839000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
 [52839000] CTRL: ENQUEUE CMD addr=16777344 cmd=1 sz=0
@@ -3282,10 +2994,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [52919000] MEM: READ beat=5 rank=1 idx=6 data=0x0000
 [52921000] MEM: READ beat=6 rank=1 idx=7 data=0x0000
 [52923000] MEM: READ beat=7 rank=1 idx=8 data=0x0000
-[52947000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
-[52947000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
-[52947000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
-[52947000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
 [52949000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
 [52949000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
 [52949000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
@@ -3315,10 +3023,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [52987000] MEM: WRITE cmd received rank=1 bank=0 row=4096 col=129
 [53003000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [53053000] DQS_MON: window complete, edge_cnt=7.
-[54203000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
-[54203000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
-[54203000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
-[54203000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
 [54205000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
 [54205000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
 [54205000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
@@ -3370,10 +3074,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [54299000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
 [54301000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
 [54303000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
-[54425000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
-[54425000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
-[54425000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
-[54425000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
 [54427000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
 [54427000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
 [54427000] CTRL: ENQUEUE CMD addr=16777472 cmd=100 sz=0
@@ -3403,10 +3103,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [54465000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=129
 [54481000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [54531000] DQS_MON: window complete, edge_cnt=7.
-[55681000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
-[55681000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
-[55681000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
-[55681000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
 [55683000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
 [55683000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
 [55683000] CTRL: ENQUEUE CMD addr=16777472 cmd=11 sz=0
@@ -3459,10 +3155,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [55779000] MEM: READ beat=6 rank=1 idx=7 data=0x0000
 [55781000] MEM: READ beat=7 rank=1 idx=8 data=0x0000
 [55901000] Starting randomized traffic phase (server top)...
-[55903000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
-[55903000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
-[55903000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
-[55903000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
 [55905000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
 [55905000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
 [55905000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
@@ -3493,10 +3185,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [55959000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [56009000] DQS_MON: window complete, edge_cnt=7.
 [56099000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[57159000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
-[57159000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
-[57159000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
-[57159000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
 [57161000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
 [57161000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
 [57161000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
@@ -3548,10 +3236,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [57255000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [57257000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [57259000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[57381000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
-[57381000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
-[57381000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
-[57381000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
 [57383000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
 [57383000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
 [57383000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
@@ -3581,10 +3265,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [57421000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=305
 [57437000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [57487000] DQS_MON: window complete, edge_cnt=7.
-[58637000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
-[58637000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
-[58637000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
-[58637000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
 [58639000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
 [58639000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
 [58639000] CTRL: ENQUEUE CMD addr=608 cmd=11 sz=0
@@ -3636,10 +3316,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [58733000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [58735000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [58737000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[58859000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
-[58859000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
-[58859000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
-[58859000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
 [58861000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
 [58861000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
 [58861000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
@@ -3669,10 +3345,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [58899000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=49
 [58915000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [58965000] DQS_MON: window complete, edge_cnt=7.
-[60115000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
-[60115000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
-[60115000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
-[60115000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
 [60117000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
 [60117000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
 [60117000] CTRL: ENQUEUE CMD addr=96 cmd=11 sz=0
@@ -3724,10 +3396,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [60211000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [60213000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [60215000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[60337000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
-[60337000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
-[60337000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
-[60337000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
 [60339000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
 [60339000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
 [60339000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
@@ -3758,10 +3426,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [60393000] MEM: WRITE burst committed base_idx=33 data=0x0000
 [60443000] DQS_MON: window complete, edge_cnt=7.
 [60725000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[61593000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
-[61593000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
-[61593000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
-[61593000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
 [61595000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
 [61595000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
 [61595000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
@@ -3813,10 +3477,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [61689000] MEM: READ beat=5 rank=0 idx=38 data=0x0000
 [61691000] MEM: READ beat=6 rank=0 idx=39 data=0x0000
 [61693000] MEM: READ beat=7 rank=0 idx=40 data=0x0000
-[61815000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
-[61815000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
-[61815000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
-[61815000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
 [61817000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
 [61817000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
 [61817000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
@@ -3846,10 +3506,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [61855000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=497
 [61871000] MEM: WRITE burst committed base_idx=49 data=0x0000
 [61921000] DQS_MON: window complete, edge_cnt=7.
-[63071000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
-[63071000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
-[63071000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
-[63071000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
 [63073000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
 [63073000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
 [63073000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
@@ -3901,10 +3557,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [63167000] MEM: READ beat=5 rank=0 idx=54 data=0x0000
 [63169000] MEM: READ beat=6 rank=0 idx=55 data=0x0000
 [63171000] MEM: READ beat=7 rank=0 idx=56 data=0x0000
-[63293000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
-[63293000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
-[63293000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
-[63293000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
 [63295000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
 [63295000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
 [63295000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
@@ -3938,10 +3590,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [63429000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=113
 [63445000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [63495000] DQS_MON: window complete, edge_cnt=7.
-[64581000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
-[64581000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
-[64581000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
-[64581000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
 [64583000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
 [64583000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
 [64583000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
@@ -4009,10 +3657,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [64677000] MEM: READ beat=5 rank=0 idx=5 data=0x0000
 [64679000] MEM: READ beat=6 rank=0 idx=6 data=0x0000
 [64681000] MEM: READ beat=7 rank=0 idx=7 data=0x0000
-[64819000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
-[64819000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
-[64819000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
-[64819000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
 [64821000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
 [64821000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
 [64821000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
@@ -4055,10 +3699,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [65259000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [65309000] DQS_MON: window complete, edge_cnt=7.
 [65393000] REF_MON: AUTO REFRESH interval = 2334 cycles.
-[66171000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
-[66171000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
-[66171000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
-[66171000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
 [66173000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
 [66173000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
 [66173000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
@@ -4158,10 +3798,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [66267000] MEM: READ beat=5 rank=0 idx=21 data=0x0000
 [66269000] MEM: READ beat=6 rank=0 idx=22 data=0x0000
 [66271000] MEM: READ beat=7 rank=0 idx=23 data=0x0000
-[66441000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
-[66441000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
-[66441000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
-[66441000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
 [66443000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
 [66443000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
 [66443000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
@@ -4199,10 +3835,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [66705000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=481
 [66721000] MEM: WRITE burst committed base_idx=33 data=0x0000
 [66771000] DQS_MON: window complete, edge_cnt=7.
-[67761000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
-[67761000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
-[67761000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
-[67761000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
 [67763000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
 [67763000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
 [67763000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
@@ -4286,10 +3918,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [67857000] MEM: READ beat=5 rank=0 idx=37 data=0x0000
 [67859000] MEM: READ beat=6 rank=0 idx=38 data=0x0000
 [67861000] MEM: READ beat=7 rank=0 idx=39 data=0x0000
-[68015000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
-[68015000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
-[68015000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
-[68015000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
 [68017000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
 [68017000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
 [68017000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
@@ -4319,10 +3947,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [68041000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=369
 [68057000] MEM: WRITE burst committed base_idx=49 data=0x0000
 [68107000] DQS_MON: window complete, edge_cnt=7.
-[68439000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
-[68439000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
-[68439000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
-[68439000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
 [68441000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
 [68441000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
 [68441000] CTRL: ENQUEUE CMD addr=744 cmd=1 sz=0
@@ -4362,10 +3986,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [68521000] MEM: READ beat=5 rank=0 idx=54 data=0x0000
 [68523000] MEM: READ beat=6 rank=0 idx=55 data=0x0000
 [68525000] MEM: READ beat=7 rank=0 idx=56 data=0x0000
-[68549000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
-[68549000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
-[68549000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
-[68549000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
 [68551000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
 [68551000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
 [68551000] CTRL: ENQUEUE CMD addr=184 cmd=100 sz=0
@@ -4395,10 +4015,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [68589000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=81
 [68605000] MEM: WRITE burst committed base_idx=113 data=0x0000
 [68655000] DQS_MON: window complete, edge_cnt=7.
-[69805000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
-[69805000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
-[69805000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
-[69805000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
 [69807000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
 [69807000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
 [69807000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
@@ -4451,10 +4067,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [69903000] MEM: READ beat=6 rank=0 idx=119 data=0x0000
 [69905000] MEM: READ beat=7 rank=0 idx=120 data=0x0000
 [70019000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[70027000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
-[70027000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
-[70027000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
-[70027000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
 [70029000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
 [70029000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
 [70029000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
@@ -4484,10 +4096,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [70241000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=311
 [70257000] MEM: WRITE burst committed base_idx=23 data=0x0000
 [70307000] DQS_MON: window complete, edge_cnt=7.
-[70451000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
-[70451000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
-[70451000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
-[70451000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
 [70453000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
 [70453000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
 [70453000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
@@ -4527,10 +4135,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [70533000] MEM: READ beat=5 rank=0 idx=28 data=0x0000
 [70535000] MEM: READ beat=6 rank=0 idx=29 data=0x0000
 [70537000] MEM: READ beat=7 rank=0 idx=30 data=0x0000
-[70561000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
-[70561000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
-[70561000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
-[70561000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
 [70563000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
 [70563000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
 [70563000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
@@ -4560,10 +4164,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [70601000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=145
 [70617000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [70667000] DQS_MON: window complete, edge_cnt=7.
-[71817000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
-[71817000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
-[71817000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
-[71817000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
 [71819000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
 [71819000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
 [71819000] CTRL: ENQUEUE CMD addr=288 cmd=11 sz=0
@@ -4615,10 +4215,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [71913000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [71915000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [71917000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[72039000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
-[72039000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
-[72039000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
-[72039000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
 [72041000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
 [72041000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
 [72041000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
@@ -4648,10 +4244,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [72079000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=321
 [72095000] MEM: WRITE burst committed base_idx=65 data=0x0000
 [72145000] DQS_MON: window complete, edge_cnt=7.
-[73295000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
-[73295000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
-[73295000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
-[73295000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
 [73297000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
 [73297000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
 [73297000] CTRL: ENQUEUE CMD addr=656 cmd=11 sz=0
@@ -4703,10 +4295,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [73391000] MEM: READ beat=5 rank=0 idx=70 data=0x0000
 [73393000] MEM: READ beat=6 rank=0 idx=71 data=0x0000
 [73395000] MEM: READ beat=7 rank=0 idx=72 data=0x0000
-[73517000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
-[73517000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
-[73517000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
-[73517000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
 [73519000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
 [73519000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
 [73519000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
@@ -4737,10 +4325,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [73573000] MEM: WRITE burst committed base_idx=65 data=0x0000
 [73623000] DQS_MON: window complete, edge_cnt=7.
 [74645000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[74773000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
-[74773000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
-[74773000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
-[74773000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
 [74775000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
 [74775000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
 [74775000] CTRL: ENQUEUE CMD addr=592 cmd=11 sz=0
@@ -4792,10 +4376,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [74937000] MEM: READ beat=5 rank=0 idx=70 data=0x0000
 [74939000] MEM: READ beat=6 rank=0 idx=71 data=0x0000
 [74941000] MEM: READ beat=7 rank=0 idx=72 data=0x0000
-[74995000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
-[74995000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
-[74995000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
-[74995000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
 [74997000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
 [74997000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
 [74997000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
@@ -4825,10 +4405,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [75035000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=257
 [75051000] MEM: WRITE burst committed base_idx=1 data=0x0000
 [75101000] DQS_MON: window complete, edge_cnt=7.
-[76251000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
-[76251000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
-[76251000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
-[76251000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
 [76253000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
 [76253000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
 [76253000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
@@ -4880,10 +4456,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [76347000] MEM: READ beat=5 rank=0 idx=6 data=0x0000
 [76349000] MEM: READ beat=6 rank=0 idx=7 data=0x0000
 [76351000] MEM: READ beat=7 rank=0 idx=8 data=0x0000
-[76473000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
-[76473000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
-[76473000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
-[76473000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
 [76475000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
 [76475000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
 [76475000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
@@ -4925,10 +4497,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [76897000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=401
 [76913000] MEM: WRITE burst committed base_idx=49 data=0x0000
 [76963000] DQS_MON: window complete, edge_cnt=7.
-[77825000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
-[77825000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
-[77825000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
-[77825000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
 [77827000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
 [77827000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
 [77827000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
@@ -5028,10 +4596,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [77921000] MEM: READ beat=5 rank=0 idx=37 data=0x0000
 [77923000] MEM: READ beat=6 rank=0 idx=38 data=0x0000
 [77925000] MEM: READ beat=7 rank=0 idx=39 data=0x0000
-[78095000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
-[78095000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
-[78095000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
-[78095000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
 [78097000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
 [78097000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
 [78097000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
@@ -5062,10 +4626,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [78151000] MEM: WRITE burst committed base_idx=33 data=0x0000
 [78201000] DQS_MON: window complete, edge_cnt=7.
 [79271000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[79351000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
-[79351000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
-[79351000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
-[79351000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
 [79353000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
 [79353000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
 [79353000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
@@ -5117,10 +4677,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [79563000] MEM: READ beat=5 rank=0 idx=38 data=0x0000
 [79565000] MEM: READ beat=6 rank=0 idx=39 data=0x0000
 [79567000] MEM: READ beat=7 rank=0 idx=40 data=0x0000
-[79573000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
-[79573000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
-[79573000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
-[79573000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
 [79575000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
 [79575000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
 [79575000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
@@ -5150,10 +4706,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [79599000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=197
 [79615000] MEM: WRITE burst committed base_idx=37 data=0x0000
 [79665000] DQS_MON: window complete, edge_cnt=7.
-[79997000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
-[79997000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
-[79997000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
-[79997000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
 [79999000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
 [79999000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
 [79999000] CTRL: ENQUEUE CMD addr=394 cmd=1 sz=0
@@ -5193,10 +4745,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [80079000] MEM: READ beat=5 rank=0 idx=42 data=0x0000
 [80081000] MEM: READ beat=6 rank=0 idx=43 data=0x0000
 [80083000] MEM: READ beat=7 rank=0 idx=44 data=0x0000
-[80107000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
-[80107000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
-[80107000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
-[80107000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
 [80109000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
 [80109000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
 [80109000] CTRL: ENQUEUE CMD addr=888 cmd=100 sz=1
@@ -5230,10 +4778,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [80243000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=449
 [80259000] MEM: WRITE burst committed base_idx=97 data=0x0000
 [80309000] DQS_MON: window complete, edge_cnt=7.
-[81395000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
-[81395000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
-[81395000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
-[81395000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
 [81397000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
 [81397000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
 [81397000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
@@ -5301,10 +4845,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [81491000] MEM: READ beat=5 rank=0 idx=117 data=0x0000
 [81493000] MEM: READ beat=6 rank=0 idx=118 data=0x0000
 [81495000] MEM: READ beat=7 rank=0 idx=119 data=0x0000
-[81633000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
-[81633000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
-[81633000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
-[81633000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
 [81635000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
 [81635000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
 [81635000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
@@ -5342,10 +4882,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [81897000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=241
 [81913000] MEM: WRITE burst committed base_idx=81 data=0x0000
 [81963000] DQS_MON: window complete, edge_cnt=7.
-[82953000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
-[82953000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
-[82953000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
-[82953000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
 [82955000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
 [82955000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
 [82955000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
@@ -5429,10 +4965,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [83049000] MEM: READ beat=5 rank=0 idx=85 data=0x0000
 [83051000] MEM: READ beat=6 rank=0 idx=86 data=0x0000
 [83053000] MEM: READ beat=7 rank=0 idx=87 data=0x0000
-[83207000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
-[83207000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
-[83207000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
-[83207000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
 [83209000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
 [83209000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
 [83209000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
@@ -5471,10 +5003,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [83487000] MEM: WRITE burst committed base_idx=113 data=0x0000
 [83537000] DQS_MON: window complete, edge_cnt=7.
 [83897000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[84527000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
-[84527000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
-[84527000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
-[84527000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
 [84529000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
 [84529000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
 [84529000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
@@ -5558,10 +5086,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [84623000] MEM: READ beat=5 rank=0 idx=117 data=0x0000
 [84625000] MEM: READ beat=6 rank=0 idx=118 data=0x0000
 [84627000] MEM: READ beat=7 rank=0 idx=119 data=0x0000
-[84781000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
-[84781000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
-[84781000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
-[84781000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
 [84783000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
 [84783000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
 [84783000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
@@ -5595,10 +5119,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [84917000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=321
 [84933000] MEM: WRITE burst committed base_idx=65 data=0x0000
 [84983000] DQS_MON: window complete, edge_cnt=7.
-[86069000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
-[86069000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
-[86069000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
-[86069000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [86071000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [86071000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [86071000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
@@ -5666,10 +5186,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [86165000] MEM: READ beat=5 rank=0 idx=85 data=0x0000
 [86167000] MEM: READ beat=6 rank=0 idx=86 data=0x0000
 [86169000] MEM: READ beat=7 rank=0 idx=87 data=0x0000
-[86307000] CTRL: ENQUEUE CMD addr=56 cmd=100 sz=10
-[86307000] CTRL: ENQUEUE CMD addr=56 cmd=100 sz=10
-[86307000] CTRL: ENQUEUE CMD addr=56 cmd=100 sz=10
-[86307000] CTRL: ENQUEUE CMD addr=56 cmd=100 sz=10
 [86309000] CTRL: ENQUEUE CMD addr=56 cmd=100 sz=10
 [86309000] CTRL: ENQUEUE CMD addr=56 cmd=100 sz=10
 [86309000] CTRL: ENQUEUE CMD addr=56 cmd=100 sz=10
@@ -5707,10 +5223,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [86571000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=49
 [86587000] MEM: WRITE burst committed base_idx=113 data=0x0000
 [86637000] DQS_MON: window complete, edge_cnt=7.
-[87627000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
-[87627000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
-[87627000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
-[87627000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
 [87629000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
 [87629000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
 [87629000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
@@ -5794,10 +5306,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [87723000] MEM: READ beat=5 rank=0 idx=117 data=0x0000
 [87725000] MEM: READ beat=6 rank=0 idx=118 data=0x0000
 [87727000] MEM: READ beat=7 rank=0 idx=119 data=0x0000
-[87881000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
-[87881000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
-[87881000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
-[87881000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
 [87883000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
 [87883000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
 [87883000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
@@ -5828,10 +5336,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [87937000] MEM: WRITE burst committed base_idx=65 data=0x0000
 [87987000] DQS_MON: window complete, edge_cnt=7.
 [88523000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[89137000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
-[89137000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
-[89137000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
-[89137000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
 [89139000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
 [89139000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
 [89139000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
@@ -5883,10 +5387,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [89233000] MEM: READ beat=5 rank=0 idx=70 data=0x0000
 [89235000] MEM: READ beat=6 rank=0 idx=71 data=0x0000
 [89237000] MEM: READ beat=7 rank=0 idx=72 data=0x0000
-[89359000] CTRL: ENQUEUE CMD addr=864 cmd=100 sz=0
-[89359000] CTRL: ENQUEUE CMD addr=864 cmd=100 sz=0
-[89359000] CTRL: ENQUEUE CMD addr=864 cmd=100 sz=0
-[89359000] CTRL: ENQUEUE CMD addr=864 cmd=100 sz=0
 [89361000] CTRL: ENQUEUE CMD addr=864 cmd=100 sz=0
 [89361000] CTRL: ENQUEUE CMD addr=864 cmd=100 sz=0
 [89361000] CTRL: ENQUEUE CMD addr=864 cmd=100 sz=0
@@ -5916,10 +5416,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [89399000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=433
 [89415000] MEM: WRITE burst committed base_idx=17 data=0x0000
 [89465000] DQS_MON: window complete, edge_cnt=7.
-[90615000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
-[90615000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
-[90615000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
-[90615000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
 [90617000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
 [90617000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
 [90617000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
@@ -5971,10 +5467,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [90711000] MEM: READ beat=5 rank=0 idx=22 data=0x0000
 [90713000] MEM: READ beat=6 rank=0 idx=23 data=0x0000
 [90715000] MEM: READ beat=7 rank=0 idx=24 data=0x0000
-[90837000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
-[90837000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
-[90837000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
-[90837000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
 [90839000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
 [90839000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
 [90839000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
@@ -6004,10 +5496,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [90877000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=193
 [90893000] MEM: WRITE burst committed base_idx=33 data=0x0000
 [90943000] DQS_MON: window complete, edge_cnt=7.
-[92093000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
-[92093000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
-[92093000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
-[92093000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
 [92095000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
 [92095000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
 [92095000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
@@ -6059,10 +5547,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [92189000] MEM: READ beat=5 rank=0 idx=38 data=0x0000
 [92191000] MEM: READ beat=6 rank=0 idx=39 data=0x0000
 [92193000] MEM: READ beat=7 rank=0 idx=40 data=0x0000
-[92315000] CTRL: ENQUEUE CMD addr=664 cmd=100 sz=0
-[92315000] CTRL: ENQUEUE CMD addr=664 cmd=100 sz=0
-[92315000] CTRL: ENQUEUE CMD addr=664 cmd=100 sz=0
-[92315000] CTRL: ENQUEUE CMD addr=664 cmd=100 sz=0
 [92317000] CTRL: ENQUEUE CMD addr=664 cmd=100 sz=0
 [92317000] CTRL: ENQUEUE CMD addr=664 cmd=100 sz=0
 [92317000] CTRL: ENQUEUE CMD addr=664 cmd=100 sz=0
@@ -6093,10 +5577,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [92371000] MEM: WRITE burst committed base_idx=97 data=0x0000
 [92421000] DQS_MON: window complete, edge_cnt=7.
 [93149000] REF_MON: AUTO REFRESH interval = 2313 cycles.
-[93571000] CTRL: ENQUEUE CMD addr=664 cmd=11 sz=0
-[93571000] CTRL: ENQUEUE CMD addr=664 cmd=11 sz=0
-[93571000] CTRL: ENQUEUE CMD addr=664 cmd=11 sz=0
-[93571000] CTRL: ENQUEUE CMD addr=664 cmd=11 sz=0
 [93573000] CTRL: ENQUEUE CMD addr=664 cmd=11 sz=0
 [93573000] CTRL: ENQUEUE CMD addr=664 cmd=11 sz=0
 [93573000] CTRL: ENQUEUE CMD addr=664 cmd=11 sz=0
@@ -6148,10 +5628,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [93667000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
 [93669000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
 [93671000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
-[93793000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
-[93793000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
-[93793000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
-[93793000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
 [93795000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
 [93795000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
 [93795000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
@@ -6181,10 +5657,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [93819000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=451
 [93835000] MEM: WRITE burst committed base_idx=35 data=0x0000
 [93885000] DQS_MON: window complete, edge_cnt=7.
-[94217000] CTRL: ENQUEUE CMD addr=905 cmd=1 sz=0
-[94217000] CTRL: ENQUEUE CMD addr=905 cmd=1 sz=0
-[94217000] CTRL: ENQUEUE CMD addr=905 cmd=1 sz=0
-[94217000] CTRL: ENQUEUE CMD addr=905 cmd=1 sz=0
 [94219000] CTRL: ENQUEUE CMD addr=905 cmd=1 sz=0
 [94219000] CTRL: ENQUEUE CMD addr=905 cmd=1 sz=0
 [94219000] CTRL: ENQUEUE CMD addr=905 cmd=1 sz=0
@@ -6224,10 +5696,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [94299000] MEM: READ beat=5 rank=0 idx=40 data=0x0000
 [94301000] MEM: READ beat=6 rank=0 idx=41 data=0x0000
 [94303000] MEM: READ beat=7 rank=0 idx=42 data=0x0000
-[94327000] CTRL: ENQUEUE CMD addr=208 cmd=100 sz=1
-[94327000] CTRL: ENQUEUE CMD addr=208 cmd=100 sz=1
-[94327000] CTRL: ENQUEUE CMD addr=208 cmd=100 sz=1
-[94327000] CTRL: ENQUEUE CMD addr=208 cmd=100 sz=1
 [94329000] CTRL: ENQUEUE CMD addr=208 cmd=100 sz=1
 [94329000] CTRL: ENQUEUE CMD addr=208 cmd=100 sz=1
 [94329000] CTRL: ENQUEUE CMD addr=208 cmd=100 sz=1
@@ -6261,10 +5729,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [94463000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=113
 [94479000] MEM: WRITE burst committed base_idx=81 data=0x0000
 [94529000] DQS_MON: window complete, edge_cnt=7.
-[95615000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
-[95615000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
-[95615000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
-[95615000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
 [95617000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
 [95617000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
 [95617000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
@@ -6332,10 +5796,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [95711000] MEM: READ beat=5 rank=0 idx=69 data=0x0000
 [95713000] MEM: READ beat=6 rank=0 idx=70 data=0x0000
 [95715000] MEM: READ beat=7 rank=0 idx=71 data=0x0000
-[95853000] CTRL: ENQUEUE CMD addr=780 cmd=10 sz=0
-[95853000] CTRL: ENQUEUE CMD addr=780 cmd=10 sz=0
-[95853000] CTRL: ENQUEUE CMD addr=780 cmd=10 sz=0
-[95853000] CTRL: ENQUEUE CMD addr=780 cmd=10 sz=0
 [95855000] CTRL: ENQUEUE CMD addr=780 cmd=10 sz=0
 [95855000] CTRL: ENQUEUE CMD addr=780 cmd=10 sz=0
 [95855000] CTRL: ENQUEUE CMD addr=780 cmd=10 sz=0
@@ -6365,10 +5825,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [95879000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=393
 [95895000] MEM: WRITE burst committed base_idx=41 data=0x0000
 [95945000] DQS_MON: window complete, edge_cnt=7.
-[96277000] CTRL: ENQUEUE CMD addr=780 cmd=1 sz=0
-[96277000] CTRL: ENQUEUE CMD addr=780 cmd=1 sz=0
-[96277000] CTRL: ENQUEUE CMD addr=780 cmd=1 sz=0
-[96277000] CTRL: ENQUEUE CMD addr=780 cmd=1 sz=0
 [96279000] CTRL: ENQUEUE CMD addr=780 cmd=1 sz=0
 [96279000] CTRL: ENQUEUE CMD addr=780 cmd=1 sz=0
 [96279000] CTRL: ENQUEUE CMD addr=780 cmd=1 sz=0
@@ -6408,10 +5864,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [96359000] MEM: READ beat=5 rank=0 idx=46 data=0x0000
 [96361000] MEM: READ beat=6 rank=0 idx=47 data=0x0000
 [96363000] MEM: READ beat=7 rank=0 idx=48 data=0x0000
-[96387000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
-[96387000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
-[96387000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
-[96387000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
 [96389000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
 [96389000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
 [96389000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
@@ -6445,10 +5897,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [96523000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=321
 [96539000] MEM: WRITE burst committed base_idx=65 data=0x0000
 [96589000] DQS_MON: window complete, edge_cnt=7.
-[97675000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
-[97675000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
-[97675000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
-[97675000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [97677000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [97677000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [97677000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
@@ -6517,10 +5965,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [97773000] MEM: READ beat=6 rank=0 idx=86 data=0x0000
 [97775000] MEM: READ beat=7 rank=0 idx=87 data=0x0000
 [97787000] REF_MON: AUTO REFRESH interval = 2319 cycles.
-[97913000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
-[97913000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
-[97913000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
-[97913000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
 [97915000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
 [97915000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
 [97915000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
@@ -6550,10 +5994,6 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [98023000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=49
 [98039000] MEM: WRITE burst committed base_idx=113 data=0x0000
 [98089000] DQS_MON: window complete, edge_cnt=7.
-[99169000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
-[99169000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
-[99169000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
-[99169000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
 [99171000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
 [99171000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
 [99171000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
@@ -6606,16 +6046,431 @@ VCD info: dumpfile tb_ddr2_server_controller.iverilog.vcd opened for output.
 [99267000] MEM: READ beat=6 rank=0 idx=119 data=0x0000
 [99269000] MEM: READ beat=7 rank=0 idx=120 data=0x0000
 [99389000] Randomized traffic phase (server top) completed.
+[99389000] (server) Starting ECC and scrubbing tests...
+[99389000] (server) ECC_ENABLE asserted
+[99593000] CTRL: ENQUEUE CMD addr=200 cmd=10 sz=0
+[99593000] CTRL: ENQUEUE CMD addr=200 cmd=10 sz=0
+[99593000] CTRL: ENQUEUE CMD addr=200 cmd=10 sz=0
+[99593000] CTRL: ENQUEUE CMD addr=200 cmd=10 sz=0
+[99593000] SCW issued (server): addr=200 data16=0x6da5
+[99595000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[99595000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[99595000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[99595000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[99597000] PROT: GETCMD state cnt=2
+[99597000] PROT: GETCMD state cnt=2
+[99597000] PROT: GETCMD state cnt=2
+[99597000] PROT: GETCMD state cnt=2
+[99599000] PROT: GETCMD state cnt=1
+[99599000] PROT: GETCMD state cnt=1
+[99599000] PROT: GETCMD state cnt=1
+[99599000] PROT: GETCMD state cnt=1
+[99601000] PROT: GETCMD state cnt=0
+[99601000] PROT: GETCMD addr=200 cmd=10 sz=0 rank_sel=0
+[99601000] PROT: GETCMD state cnt=0
+[99601000] PROT: GETCMD addr=200 cmd=10 sz=0 rank_sel=0
+[99601000] PROT: GETCMD state cnt=0
+[99601000] PROT: GETCMD addr=200 cmd=10 sz=0 rank_sel=0
+[99601000] PROT: GETCMD state cnt=0
+[99601000] PROT: GETCMD addr=200 cmd=10 sz=0 rank_sel=0
+[99617000] DQS_MON: WRITE detected, starting DQS observation window.
+[99617000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=97
+[99633000] MEM: WRITE burst committed base_idx=33 data=0x0000
+[99683000] DQS_MON: window complete, edge_cnt=7.
+[100017000] CTRL: ENQUEUE CMD addr=200 cmd=1 sz=0
+[100017000] CTRL: ENQUEUE CMD addr=200 cmd=1 sz=0
+[100017000] CTRL: ENQUEUE CMD addr=200 cmd=1 sz=0
+[100017000] CTRL: ENQUEUE CMD addr=200 cmd=1 sz=0
+[100017000] SCR issued: addr=200
+[100019000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100019000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100019000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100019000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100021000] PROT: GETCMD state cnt=2
+[100021000] PROT: GETCMD state cnt=2
+[100021000] PROT: GETCMD state cnt=2
+[100021000] PROT: GETCMD state cnt=2
+[100021000] READ observed (server top): RADDR=200 DOUT=0x6da56da56da56da5
+[100023000] PROT: GETCMD state cnt=1
+[100023000] PROT: GETCMD state cnt=1
+[100023000] PROT: GETCMD state cnt=1
+[100023000] PROT: GETCMD state cnt=1
+[100025000] PROT: GETCMD state cnt=0
+[100025000] PROT: GETCMD addr=200 cmd=1 sz=0 rank_sel=0
+[100025000] PROT: GETCMD state cnt=0
+[100025000] PROT: GETCMD addr=200 cmd=1 sz=0 rank_sel=0
+[100025000] PROT: GETCMD state cnt=0
+[100025000] PROT: GETCMD addr=200 cmd=1 sz=0 rank_sel=0
+[100025000] PROT: GETCMD state cnt=0
+[100025000] PROT: GETCMD addr=200 cmd=1 sz=0 rank_sel=0
+[100039000] PROT: ISSUE_READ bank=1 row=0 col=48 cs=1 ras=1 cas=1 we=1
+[100039000] PROT: ISSUE_READ bank=1 row=0 col=48 cs=1 ras=1 cas=1 we=1
+[100039000] PROT: ISSUE_READ bank=1 row=0 col=48 cs=1 ras=1 cas=1 we=1
+[100039000] PROT: ISSUE_READ bank=1 row=0 col=48 cs=1 ras=1 cas=1 we=1
+[100041000] MEM: READ decode rank=0 bank=1 row=0 col=97
+[100041000] MEM: READ cmd received rank=0 bank=1 row=0 col=97
+[100089000] MEM: READ beat=1 rank=0 idx=34 data=0x0000
+[100091000] MEM: READ beat=2 rank=0 idx=35 data=0x0000
+[100093000] MEM: READ beat=3 rank=0 idx=36 data=0x0000
+[100095000] MEM: READ beat=4 rank=0 idx=37 data=0x0000
+[100097000] MEM: READ beat=5 rank=0 idx=38 data=0x0000
+[100099000] MEM: READ beat=6 rank=0 idx=39 data=0x0000
+[100101000] MEM: READ beat=7 rank=0 idx=40 data=0x0000
+[100127000] CTRL: ENQUEUE CMD addr=201 cmd=10 sz=0
+[100127000] CTRL: ENQUEUE CMD addr=201 cmd=10 sz=0
+[100127000] CTRL: ENQUEUE CMD addr=201 cmd=10 sz=0
+[100127000] CTRL: ENQUEUE CMD addr=201 cmd=10 sz=0
+[100127000] SCW issued (server): addr=201 data16=0x6ca5
+[100129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100129000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100131000] PROT: GETCMD state cnt=2
+[100131000] PROT: GETCMD state cnt=2
+[100131000] PROT: GETCMD state cnt=2
+[100131000] PROT: GETCMD state cnt=2
+[100133000] PROT: GETCMD state cnt=1
+[100133000] PROT: GETCMD state cnt=1
+[100133000] PROT: GETCMD state cnt=1
+[100133000] PROT: GETCMD state cnt=1
+[100135000] PROT: GETCMD state cnt=0
+[100135000] PROT: GETCMD addr=201 cmd=10 sz=0 rank_sel=0
+[100135000] PROT: GETCMD state cnt=0
+[100135000] PROT: GETCMD addr=201 cmd=10 sz=0 rank_sel=0
+[100135000] PROT: GETCMD state cnt=0
+[100135000] PROT: GETCMD addr=201 cmd=10 sz=0 rank_sel=0
+[100135000] PROT: GETCMD state cnt=0
+[100135000] PROT: GETCMD addr=201 cmd=10 sz=0 rank_sel=0
+[100151000] DQS_MON: WRITE detected, starting DQS observation window.
+[100151000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=99
+[100167000] MEM: WRITE burst committed base_idx=35 data=0x0000
+[100217000] DQS_MON: window complete, edge_cnt=7.
+[100551000] CTRL: ENQUEUE CMD addr=201 cmd=1 sz=0
+[100551000] CTRL: ENQUEUE CMD addr=201 cmd=1 sz=0
+[100551000] CTRL: ENQUEUE CMD addr=201 cmd=1 sz=0
+[100551000] CTRL: ENQUEUE CMD addr=201 cmd=1 sz=0
+[100551000] SCR issued: addr=201
+[100553000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100553000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100553000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100553000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100555000] READ observed (server top): RADDR=201 DOUT=0x6ca56ca56ca56ca5
+[100555000] PROT: GETCMD state cnt=2
+[100555000] PROT: GETCMD state cnt=2
+[100555000] PROT: GETCMD state cnt=2
+[100555000] PROT: GETCMD state cnt=2
+[100557000] PROT: GETCMD state cnt=1
+[100557000] PROT: GETCMD state cnt=1
+[100557000] PROT: GETCMD state cnt=1
+[100557000] PROT: GETCMD state cnt=1
+[100559000] PROT: GETCMD state cnt=0
+[100559000] PROT: GETCMD addr=201 cmd=1 sz=0 rank_sel=0
+[100559000] PROT: GETCMD state cnt=0
+[100559000] PROT: GETCMD addr=201 cmd=1 sz=0 rank_sel=0
+[100559000] PROT: GETCMD state cnt=0
+[100559000] PROT: GETCMD addr=201 cmd=1 sz=0 rank_sel=0
+[100559000] PROT: GETCMD state cnt=0
+[100559000] PROT: GETCMD addr=201 cmd=1 sz=0 rank_sel=0
+[100573000] PROT: ISSUE_READ bank=1 row=0 col=49 cs=1 ras=1 cas=1 we=1
+[100573000] PROT: ISSUE_READ bank=1 row=0 col=49 cs=1 ras=1 cas=1 we=1
+[100573000] PROT: ISSUE_READ bank=1 row=0 col=49 cs=1 ras=1 cas=1 we=1
+[100573000] PROT: ISSUE_READ bank=1 row=0 col=49 cs=1 ras=1 cas=1 we=1
+[100575000] MEM: READ decode rank=0 bank=1 row=0 col=99
+[100575000] MEM: READ cmd received rank=0 bank=1 row=0 col=99
+[100623000] MEM: READ beat=1 rank=0 idx=36 data=0x0000
+[100625000] MEM: READ beat=2 rank=0 idx=37 data=0x0000
+[100627000] MEM: READ beat=3 rank=0 idx=38 data=0x0000
+[100629000] MEM: READ beat=4 rank=0 idx=39 data=0x0000
+[100631000] MEM: READ beat=5 rank=0 idx=40 data=0x0000
+[100633000] MEM: READ beat=6 rank=0 idx=41 data=0x0000
+[100635000] MEM: READ beat=7 rank=0 idx=42 data=0x0000
+[100661000] CTRL: ENQUEUE CMD addr=300 cmd=100 sz=0
+[100661000] CTRL: ENQUEUE CMD addr=300 cmd=100 sz=0
+[100661000] CTRL: ENQUEUE CMD addr=300 cmd=100 sz=0
+[100661000] CTRL: ENQUEUE CMD addr=300 cmd=100 sz=0
+[100661000] BLW issued: base_addr=300 SZ=0 (nwords=8)
+[100663000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100663000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100663000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100663000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[100665000] PROT: GETCMD state cnt=2
+[100665000] PROT: GETCMD state cnt=2
+[100665000] PROT: GETCMD state cnt=2
+[100665000] PROT: GETCMD state cnt=2
+[100667000] PROT: GETCMD state cnt=1
+[100667000] PROT: GETCMD state cnt=1
+[100667000] PROT: GETCMD state cnt=1
+[100667000] PROT: GETCMD state cnt=1
+[100669000] PROT: GETCMD state cnt=0
+[100669000] PROT: GETCMD addr=300 cmd=100 sz=0 rank_sel=0
+[100669000] PROT: GETCMD state cnt=0
+[100669000] PROT: GETCMD addr=300 cmd=100 sz=0 rank_sel=0
+[100669000] PROT: GETCMD state cnt=0
+[100669000] PROT: GETCMD addr=300 cmd=100 sz=0 rank_sel=0
+[100669000] PROT: GETCMD state cnt=0
+[100669000] PROT: GETCMD addr=300 cmd=100 sz=0 rank_sel=0
+[100699000] DQS_MON: WRITE detected, starting DQS observation window.
+[100699000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=153
+[100715000] MEM: WRITE burst committed base_idx=57 data=0x0000
+[100765000] DQS_MON: window complete, edge_cnt=7.
+[101917000] CTRL: ENQUEUE CMD addr=300 cmd=11 sz=0
+[101917000] CTRL: ENQUEUE CMD addr=300 cmd=11 sz=0
+[101917000] CTRL: ENQUEUE CMD addr=300 cmd=11 sz=0
+[101917000] CTRL: ENQUEUE CMD addr=300 cmd=11 sz=0
+[101917000] BLR issued: base_addr=300 SZ=0 (expect 8 beats)
+[101919000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[101919000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[101919000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[101919000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[101921000] READ observed (server top): RADDR=300 DOUT=0x89a489a489a489a4
+[101921000] PROT: GETCMD state cnt=2
+[101921000] PROT: GETCMD state cnt=2
+[101921000] PROT: GETCMD state cnt=2
+[101921000] PROT: GETCMD state cnt=2
+[101921000] BLR beat 0 observed: RADDR=300 DOUT=0x89a489a489a489a4
+[101923000] READ observed (server top): RADDR=301 DOUT=0x88a488a488a488a4
+[101923000] BLR beat 1 observed: RADDR=301 DOUT=0x88a488a488a488a4
+[101923000] PROT: GETCMD state cnt=1
+[101923000] PROT: GETCMD state cnt=1
+[101923000] PROT: GETCMD state cnt=1
+[101923000] PROT: GETCMD state cnt=1
+[101925000] READ observed (server top): RADDR=302 DOUT=0x8ba48ba48ba48ba4
+[101925000] PROT: GETCMD state cnt=0
+[101925000] PROT: GETCMD addr=300 cmd=11 sz=0 rank_sel=0
+[101925000] PROT: GETCMD state cnt=0
+[101925000] PROT: GETCMD addr=300 cmd=11 sz=0 rank_sel=0
+[101925000] PROT: GETCMD state cnt=0
+[101925000] PROT: GETCMD addr=300 cmd=11 sz=0 rank_sel=0
+[101925000] PROT: GETCMD state cnt=0
+[101925000] PROT: GETCMD addr=300 cmd=11 sz=0 rank_sel=0
+[101925000] BLR beat 2 observed: RADDR=302 DOUT=0x8ba48ba48ba48ba4
+[101927000] READ observed (server top): RADDR=303 DOUT=0x8aa48aa48aa48aa4
+[101927000] BLR beat 3 observed: RADDR=303 DOUT=0x8aa48aa48aa48aa4
+[101929000] READ observed (server top): RADDR=304 DOUT=0x95a495a495a495a4
+[101929000] BLR beat 4 observed: RADDR=304 DOUT=0x95a495a495a495a4
+[101931000] READ observed (server top): RADDR=305 DOUT=0x94a494a494a494a4
+[101931000] BLR beat 5 observed: RADDR=305 DOUT=0x94a494a494a494a4
+[101933000] READ observed (server top): RADDR=306 DOUT=0x97a497a497a497a4
+[101933000] BLR beat 6 observed: RADDR=306 DOUT=0x97a497a497a497a4
+[101935000] READ observed (server top): RADDR=307 DOUT=0x96a496a496a496a4
+[101935000] BLR beat 7 observed: RADDR=307 DOUT=0x96a496a496a496a4
+[101935000] BLW/BLR sequence OK: base_addr=300 SZ=0 (nwords=8)
+[101955000] MEM: READ decode rank=0 bank=1 row=0 col=153
+[101955000] MEM: READ cmd received rank=0 bank=1 row=0 col=153
+[102003000] MEM: READ beat=1 rank=0 idx=58 data=0x0000
+[102005000] MEM: READ beat=2 rank=0 idx=59 data=0x0000
+[102007000] MEM: READ beat=3 rank=0 idx=60 data=0x0000
+[102009000] MEM: READ beat=4 rank=0 idx=61 data=0x0000
+[102011000] MEM: READ beat=5 rank=0 idx=62 data=0x0000
+[102013000] MEM: READ beat=6 rank=0 idx=63 data=0x0000
+[102015000] MEM: READ beat=7 rank=0 idx=32 data=0x0000
+[102135000] (server) Starting comprehensive RAS register tests...
+[102135000] (server) Test 1: Reading all RAS registers...
+[102137000] PASS: RAS_REG[0x00] (total_corr_errors) = 0x00000000
+[102139000] PASS: RAS_REG[0x04] (total_uncorr_errors) = 0x00000000
+[102141000] PASS: RAS_REG[0x08] (last_err_context) = 0x00000000
+[102143000] PASS: RAS_REG[0x0C] (last_err_addr) = 0x00000000
+[102145000] PASS: RAS_REG[0x10] (corr_err_threshold) = 0x000003e8
+[102147000] PASS: RAS_REG[0x14] (uncorr_err_threshold) = 0x00000001
+[102149000] PASS: RAS_REG[0x18] (scrub_count) = 0x00000000
+[102151000] PASS: RAS_REG[0x1C] (scrub_progress) = 0x00000000
+[102153000] PASS: RAS_REG[0x20] (status_flags) = 0x00000000
+[102153000]   - fatal_error: 0
+[102153000]   - rank_degraded: 0
+[102153000]   - irq_uncorr: 0
+[102153000]   - irq_corr: 0
+[102155000] PASS: RAS_REG[0x40] (rank0_corr_errors) = 0x00000000
+[102157000] PASS: RAS_REG[0x80] (rank0_uncorr_errors) = 0x00000000
+[102157000] PASS: All RAS status flags are clear initially
+[102157000] (server) Test 4: Enabling scrubbing and monitoring progress...
+[102157000] (server) SCRUB_ENABLE asserted
 [102413000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[102561000] Scrubbing cycles completed: 0x00000000
+[103565000] Scrubbing cycles completed: 0x00000000
+[104569000] Scrubbing cycles completed: 0x00000000
+[105573000] Scrubbing cycles completed: 0x00000000
+[106577000] Scrubbing cycles completed: 0x00000000
+[107039000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[107581000] Scrubbing cycles completed: 0x00000000
+[108585000] Scrubbing cycles completed: 0x00000000
+[109589000] Scrubbing cycles completed: 0x00000000
+[110593000] Scrubbing cycles completed: 0x00000000
+[111597000] Scrubbing cycles completed: 0x00000000
+[111665000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[112597000] (server) Test 5: Verifying error counting...
+[112599000] Initial correctable errors: 0
+[112601000] Initial uncorrectable errors: 0
+[112605000] CTRL: ENQUEUE CMD addr=500 cmd=10 sz=0
+[112605000] CTRL: ENQUEUE CMD addr=500 cmd=10 sz=0
+[112605000] CTRL: ENQUEUE CMD addr=500 cmd=10 sz=0
+[112605000] CTRL: ENQUEUE CMD addr=500 cmd=10 sz=0
+[112605000] SCW issued (server): addr=500 data16=0x51a4
+[112607000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[112607000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[112607000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[112607000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[112609000] PROT: GETCMD state cnt=2
+[112609000] PROT: GETCMD state cnt=2
+[112609000] PROT: GETCMD state cnt=2
+[112609000] PROT: GETCMD state cnt=2
+[112611000] PROT: GETCMD state cnt=1
+[112611000] PROT: GETCMD state cnt=1
+[112611000] PROT: GETCMD state cnt=1
+[112611000] PROT: GETCMD state cnt=1
+[112613000] PROT: GETCMD state cnt=0
+[112613000] PROT: GETCMD addr=500 cmd=10 sz=0 rank_sel=0
+[112613000] PROT: GETCMD state cnt=0
+[112613000] PROT: GETCMD addr=500 cmd=10 sz=0 rank_sel=0
+[112613000] PROT: GETCMD state cnt=0
+[112613000] PROT: GETCMD addr=500 cmd=10 sz=0 rank_sel=0
+[112613000] PROT: GETCMD state cnt=0
+[112613000] PROT: GETCMD addr=500 cmd=10 sz=0 rank_sel=0
+[112629000] DQS_MON: WRITE detected, starting DQS observation window.
+[112629000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=249
+[112645000] MEM: WRITE burst committed base_idx=89 data=0x0000
+[112695000] DQS_MON: window complete, edge_cnt=7.
+[113029000] CTRL: ENQUEUE CMD addr=500 cmd=1 sz=0
+[113029000] CTRL: ENQUEUE CMD addr=500 cmd=1 sz=0
+[113029000] CTRL: ENQUEUE CMD addr=500 cmd=1 sz=0
+[113029000] CTRL: ENQUEUE CMD addr=500 cmd=1 sz=0
+[113029000] SCR issued: addr=500
+[113031000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[113031000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[113031000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[113031000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[113033000] READ observed (server top): RADDR=500 DOUT=0x51a451a451a451a4
+[113033000] PROT: GETCMD state cnt=2
+[113033000] PROT: GETCMD state cnt=2
+[113033000] PROT: GETCMD state cnt=2
+[113033000] PROT: GETCMD state cnt=2
+[113035000] PROT: GETCMD state cnt=1
+[113035000] PROT: GETCMD state cnt=1
+[113035000] PROT: GETCMD state cnt=1
+[113035000] PROT: GETCMD state cnt=1
+[113037000] PROT: GETCMD state cnt=0
+[113037000] PROT: GETCMD addr=500 cmd=1 sz=0 rank_sel=0
+[113037000] PROT: GETCMD state cnt=0
+[113037000] PROT: GETCMD addr=500 cmd=1 sz=0 rank_sel=0
+[113037000] PROT: GETCMD state cnt=0
+[113037000] PROT: GETCMD addr=500 cmd=1 sz=0 rank_sel=0
+[113037000] PROT: GETCMD state cnt=0
+[113037000] PROT: GETCMD addr=500 cmd=1 sz=0 rank_sel=0
+[113051000] PROT: ISSUE_READ bank=2 row=0 col=124 cs=1 ras=1 cas=1 we=1
+[113051000] PROT: ISSUE_READ bank=2 row=0 col=124 cs=1 ras=1 cas=1 we=1
+[113051000] PROT: ISSUE_READ bank=2 row=0 col=124 cs=1 ras=1 cas=1 we=1
+[113051000] PROT: ISSUE_READ bank=2 row=0 col=124 cs=1 ras=1 cas=1 we=1
+[113053000] MEM: READ decode rank=0 bank=2 row=0 col=249
+[113053000] MEM: READ cmd received rank=0 bank=2 row=0 col=249
+[113101000] MEM: READ beat=1 rank=0 idx=90 data=0x0000
+[113103000] MEM: READ beat=2 rank=0 idx=91 data=0x0000
+[113105000] MEM: READ beat=3 rank=0 idx=92 data=0x0000
+[113107000] MEM: READ beat=4 rank=0 idx=93 data=0x0000
+[113109000] MEM: READ beat=5 rank=0 idx=94 data=0x0000
+[113111000] MEM: READ beat=6 rank=0 idx=95 data=0x0000
+[113113000] MEM: READ beat=7 rank=0 idx=64 data=0x0000
+[113139000] CTRL: ENQUEUE CMD addr=600 cmd=100 sz=0
+[113139000] CTRL: ENQUEUE CMD addr=600 cmd=100 sz=0
+[113139000] CTRL: ENQUEUE CMD addr=600 cmd=100 sz=0
+[113139000] CTRL: ENQUEUE CMD addr=600 cmd=100 sz=0
+[113139000] BLW issued: base_addr=600 SZ=0 (nwords=8)
+[113141000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[113141000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[113141000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[113141000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[113143000] PROT: GETCMD state cnt=2
+[113143000] PROT: GETCMD state cnt=2
+[113143000] PROT: GETCMD state cnt=2
+[113143000] PROT: GETCMD state cnt=2
+[113145000] PROT: GETCMD state cnt=1
+[113145000] PROT: GETCMD state cnt=1
+[113145000] PROT: GETCMD state cnt=1
+[113145000] PROT: GETCMD state cnt=1
+[113147000] PROT: GETCMD state cnt=0
+[113147000] PROT: GETCMD addr=600 cmd=100 sz=0 rank_sel=0
+[113147000] PROT: GETCMD state cnt=0
+[113147000] PROT: GETCMD addr=600 cmd=100 sz=0 rank_sel=0
+[113147000] PROT: GETCMD state cnt=0
+[113147000] PROT: GETCMD addr=600 cmd=100 sz=0 rank_sel=0
+[113147000] PROT: GETCMD state cnt=0
+[113147000] PROT: GETCMD addr=600 cmd=100 sz=0 rank_sel=0
+[113177000] DQS_MON: WRITE detected, starting DQS observation window.
+[113177000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=289
+[113193000] MEM: WRITE burst committed base_idx=97 data=0x0000
+[113243000] DQS_MON: window complete, edge_cnt=7.
+[114395000] CTRL: ENQUEUE CMD addr=600 cmd=11 sz=0
+[114395000] CTRL: ENQUEUE CMD addr=600 cmd=11 sz=0
+[114395000] CTRL: ENQUEUE CMD addr=600 cmd=11 sz=0
+[114395000] CTRL: ENQUEUE CMD addr=600 cmd=11 sz=0
+[114395000] BLR issued: base_addr=600 SZ=0 (expect 8 beats)
+[114397000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[114397000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[114397000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[114397000] PROT: IDLE sees cmdFIFO non-empty (need_refresh=0)
+[114399000] READ observed (server top): RADDR=600 DOUT=0xfda7fda7fda7fda7
+[114399000] PROT: GETCMD state cnt=2
+[114399000] PROT: GETCMD state cnt=2
+[114399000] PROT: GETCMD state cnt=2
+[114399000] PROT: GETCMD state cnt=2
+[114399000] BLR beat 0 observed: RADDR=600 DOUT=0xfda7fda7fda7fda7
+[114401000] READ observed (server top): RADDR=601 DOUT=0xfca7fca7fca7fca7
+[114401000] BLR beat 1 observed: RADDR=601 DOUT=0xfca7fca7fca7fca7
+[114401000] PROT: GETCMD state cnt=1
+[114401000] PROT: GETCMD state cnt=1
+[114401000] PROT: GETCMD state cnt=1
+[114401000] PROT: GETCMD state cnt=1
+[114403000] READ observed (server top): RADDR=602 DOUT=0xffa7ffa7ffa7ffa7
+[114403000] PROT: GETCMD state cnt=0
+[114403000] PROT: GETCMD addr=600 cmd=11 sz=0 rank_sel=0
+[114403000] PROT: GETCMD state cnt=0
+[114403000] PROT: GETCMD addr=600 cmd=11 sz=0 rank_sel=0
+[114403000] PROT: GETCMD state cnt=0
+[114403000] PROT: GETCMD addr=600 cmd=11 sz=0 rank_sel=0
+[114403000] PROT: GETCMD state cnt=0
+[114403000] PROT: GETCMD addr=600 cmd=11 sz=0 rank_sel=0
+[114403000] BLR beat 2 observed: RADDR=602 DOUT=0xffa7ffa7ffa7ffa7
+[114405000] READ observed (server top): RADDR=603 DOUT=0xfea7fea7fea7fea7
+[114405000] BLR beat 3 observed: RADDR=603 DOUT=0xfea7fea7fea7fea7
+[114407000] READ observed (server top): RADDR=604 DOUT=0xf9a7f9a7f9a7f9a7
+[114407000] BLR beat 4 observed: RADDR=604 DOUT=0xf9a7f9a7f9a7f9a7
+[114409000] READ observed (server top): RADDR=605 DOUT=0xf8a7f8a7f8a7f8a7
+[114409000] BLR beat 5 observed: RADDR=605 DOUT=0xf8a7f8a7f8a7f8a7
+[114411000] READ observed (server top): RADDR=606 DOUT=0xfba7fba7fba7fba7
+[114411000] BLR beat 6 observed: RADDR=606 DOUT=0xfba7fba7fba7fba7
+[114413000] READ observed (server top): RADDR=607 DOUT=0xfaa7faa7faa7faa7
+[114413000] BLR beat 7 observed: RADDR=607 DOUT=0xfaa7faa7faa7faa7
+[114413000] BLW/BLR sequence OK: base_addr=600 SZ=0 (nwords=8)
+[114433000] MEM: READ decode rank=0 bank=3 row=0 col=289
+[114433000] MEM: READ cmd received rank=0 bank=3 row=0 col=289
+[114481000] MEM: READ beat=1 rank=0 idx=98 data=0x0000
+[114483000] MEM: READ beat=2 rank=0 idx=99 data=0x0000
+[114485000] MEM: READ beat=3 rank=0 idx=100 data=0x0000
+[114487000] MEM: READ beat=4 rank=0 idx=101 data=0x0000
+[114489000] MEM: READ beat=5 rank=0 idx=102 data=0x0000
+[114491000] MEM: READ beat=6 rank=0 idx=103 data=0x0000
+[114493000] MEM: READ beat=7 rank=0 idx=104 data=0x0000
+[114815000] PASS: Correctable error count unchanged (no errors detected)
+[114817000] PASS: Uncorrectable error count unchanged (no errors detected)
+[114819000] Last error context: 0x00000000
+[114819000]   - Error type: single
+[114819000]   - Rank: 0
+[114819000]   - Syndrome: 0x00
+[114821000] Last error address: 0x00000000
+[114821000] (server) Test 7: Verifying scrubbing integration with RAS...
+[114823000] Scrubbing count before wait: 0
+[116291000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[118825000] Scrubbing count after wait: 0
+[118825000] INFO: Scrubbing may be waiting for idle cycles
+[118825000] (server) RAS register tests completed
+[120917000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 ----------------------------------------------------------------
 DDR2 SERVER controller functional coverage (approximate):
-  SCW count = 50
-  SCR count = 50
-  BLW count = 90
-  BLR count = 90
-  SZ=00 count = 184
+  SCW count = 56
+  SCR count = 56
+  BLW count = 94
+  BLR count = 94
+  SZ=00 count = 204
   SZ=01 count = 64
   SZ=10 count = 20
   SZ=11 count = 12
 ----------------------------------------------------------------
-[103389000] (server) All tests completed successfully.
+[122825000] (server) All tests completed successfully.
