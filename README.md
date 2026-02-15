@@ -3,10 +3,11 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status: Experimental](https://img.shields.io/badge/status-experimental-orange.svg)](https://github.com/your-org/core-ddr2)
 [![Tests: Icarus Verilog](https://img.shields.io/badge/tests-Icarus%20Verilog-brightgreen.svg)](https://github.com/your-org/core-ddr2/tree/main/test)
+[![UVM: Verilator](https://img.shields.io/badge/UVM-Verilator-blue.svg)](https://github.com/your-org/core-ddr2/tree/main/test-uvm)
 
 This repository contains a JEDEC-style DDR2 SDRAM controller targeting the memory device (512 Mb, x16, 4 banks). The controller exposes a simple FIFO-like front-end interface and maps host commands into DDR2 transactions, including full power-up initialization, periodic refresh, scalar and block reads/writes, and DQS-based data capture.
 
-The detailed architecture is specified in `DDR2.md`, and the verification and simulation flow is described in `test/TESTING.md`. This `README` provides a practical overview and entry point.
+The verification and simulation flow is described in `test/TESTING.md`; UVM-based verification is documented in `test-uvm/README_UVM.md`. This `README` provides a practical overview and entry point.
 
 ---
 
@@ -24,7 +25,7 @@ The detailed architecture is specified in `DDR2.md`, and the verification and si
   - 8‑deep read-data ring buffer using DQS edges for capture and alignment.
 - **PHY interface**: SSTL18 DDR2 PHY wrapper (`ddr2_phy`) driving CK/CK#, CKE, CS#, RAS#, CAS#, WE#, BA, A, DQ, DQS/DQS#, DM and ODT pins.
 
-For a full block‑level and state‑machine description, see `DDR2.md`.
+For block‑level and state‑machine details, see the project documentation in `docs/` and the JEDEC JESD79-2 reference where applicable.
 
 ---
 
@@ -44,7 +45,10 @@ For a full block‑level and state‑machine description, see `DDR2.md`.
   - `ddr2_timing_config.vh`: shared timing configuration header.
   - `TESTING.md`: detailed testing and monitor documentation.
   - `run_tb.sh`: convenience script to build and run simulations with Icarus Verilog.
-- `DDR2.md` – architecture and protocol specification for the controller.
+- `test-uvm/` – UVM-based SystemVerilog testbench (Verilator + UVM-2017): `tb_ddr2_controller_uvm.sv`, `ddr2_tb_pkg.sv`, `ddr2_host_if.sv`, `run_tb.sh`; see `test-uvm/README_UVM.md` for build and test instructions.
+- `tools/` – tool dependencies (e.g. `uvm-2017` for UVM verification).
+- `build-uvm/` – build output for the UVM testbench.
+- `docs/` – project documentation and reference material (e.g. JEDEC JESD79-2).
 
 ---
 
@@ -84,6 +88,10 @@ All verification is currently implemented in Verilog and intended to run with **
 
 For the full list of supported modes and monitors, see `test/TESTING.md`.
 
+5. **UVM testbench (Verilator + UVM-2017)**
+
+   A SystemVerilog UVM testbench lives in `test-uvm/` and uses the IEEE UVM-2017 library under `tools/uvm-2017`. It provides structured tests (e.g. init, scalar/block R/W, address edges, stress) and protocol checkers. Build and run instructions are in `test-uvm/README_UVM.md`.
+
 ---
 
 ## Host Interface Summary
@@ -106,7 +114,7 @@ At the top level, `ddr2_controller` exposes a simple, synchronous interface to a
   - `RADDR[24:0]`: address tag associated with `DOUT`.
   - `VALIDOUT`: high when `DOUT`/`RADDR` are valid.
 
-Address mapping, timing and protocol details are documented in `DDR2.md`.
+Address mapping, timing and protocol details are documented in the project `docs/` and in the JEDEC JESD79-2 specification.
 
 ---
 
@@ -130,7 +138,7 @@ Contributions are welcome, especially in the following areas:
 
 - Improved timing parameterization for additional DDR2 speed grades or devices.
 - Additional monitors and negative tests in `test/`.
-- Bug fixes or clarifications in `DDR2.md` and `TESTING.md`.
+- Bug fixes or clarifications in `docs/`, `test/TESTING.md`, and `test-uvm/README_UVM.md`.
 - Porting the testbench to additional simulators or adding CI scripts.
 
 If you plan a larger change, consider opening an issue first to discuss scope and direction.
