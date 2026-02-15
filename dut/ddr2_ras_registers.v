@@ -33,7 +33,8 @@ module ddr2_ras_registers #(
     output wire         irq_ecc_corr,        // Interrupt: correctable error threshold exceeded
     output wire         irq_ecc_uncorr,      // Interrupt: uncorrectable error detected
     output wire         rank_degraded,       // Rank degradation status (any rank)
-    output wire         fatal_error          // Fatal error status
+    output wire         fatal_error,         // Fatal error status
+    output wire [NUM_RANKS-1:0] rank_offline_o // Bitmap of ranks considered offline
 );
 
     // Error counters (per rank)
@@ -61,6 +62,11 @@ module ddr2_ras_registers #(
     reg irq_uncorr_reg;
     reg rank_degraded_reg;
     reg fatal_error_reg;
+    // Per-rank "offline" flags: set when a rank's uncorrectable error count
+    // has reached or exceeded the configured threshold. This can be used by
+    // higher-level firmware or hardware to steer traffic away from degraded
+    // ranks.
+    reg [NUM_RANKS-1:0] rank_offline;
     
     integer i;
     
@@ -84,6 +90,7 @@ module ddr2_ras_registers #(
         irq_uncorr_reg = 1'b0;
         rank_degraded_reg = 1'b0;
         fatal_error_reg = 1'b0;
+        rank_offline    = {NUM_RANKS{1'b0}};
     end
     
     // Error counter updates
@@ -103,6 +110,7 @@ module ddr2_ras_registers #(
             irq_uncorr_reg <= 1'b0;
             rank_degraded_reg <= 1'b0;
             fatal_error_reg <= 1'b0;
+            rank_offline    <= {NUM_RANKS{1'b0}};
         end else begin
             // Update error counters
             if (ecc_single_err) begin
@@ -137,10 +145,11 @@ module ddr2_ras_registers #(
                 irq_uncorr_reg <= 1'b1;
                 fatal_error_reg <= 1'b1;
                 
-                // Check threshold
+                // Check threshold for this rank and mark it degraded/offline
                 if (err_rank < NUM_RANKS && 
                     uncorrectable_err_cnt[err_rank] >= uncorr_err_threshold) begin
                     rank_degraded_reg <= 1'b1;
+                    rank_offline[err_rank] <= 1'b1;
                 end
             end
             
@@ -163,6 +172,7 @@ module ddr2_ras_registers #(
             8'h18: reg_data_out = scrub_count;
             8'h1C: reg_data_out = scrub_progress;
             8'h20: reg_data_out = {fatal_error_reg, rank_degraded_reg, irq_uncorr_reg, irq_corr_reg, 28'd0};
+            8'h24: reg_data_out = {{(32-NUM_RANKS){1'b0}}, rank_offline};
             default: begin
                 if (reg_addr >= 8'h40 && reg_addr < 8'h40 + (NUM_RANKS * 4)) begin
                     // Per-rank correctable error counters (starting at 0x40)
@@ -192,5 +202,6 @@ module ddr2_ras_registers #(
     assign irq_ecc_uncorr = irq_uncorr_reg;
     assign rank_degraded = rank_degraded_reg;
     assign fatal_error = fatal_error_reg;
+    assign rank_offline_o = rank_offline;
 
 endmodule

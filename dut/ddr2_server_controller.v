@@ -22,7 +22,10 @@ module ddr2_server_controller #(
     // Number of rank-selection bits in the host address. In future revisions
     // these high-order bits will be decoded into rank CS# lines; at present
     // they are only defined for documentation and future expansion.
-    parameter integer RANK_BITS      = 0
+    parameter integer RANK_BITS      = 0,
+    // When 1, only slice 0 is backed by physical memory; form 64-bit read data
+    // by replicating core_dout0 so ECC/single-memory testbenches see correct DOUT.
+    parameter integer SINGLE_PHY_MEMORY = 0
 ) (
     input  wire         CLK,
     input  wire         RESET,
@@ -137,10 +140,14 @@ module ddr2_server_controller #(
     // `ecc_secded`) prevents false positives from bus-level artifacts.
     assign ecc_enable_int = ECC_ENABLE;
     
-    // ECC encoder (for writes)
-    ecc_secded #(
-        .DATA_WIDTH (64),
-        .PARITY_BITS(7)
+    // ECC encoder (for writes) and decoder (for reads) using the generic
+    // ecc_core wrapper. Today we operate in SECDED mode (ECC_MODE=0) so this
+    // is functionally identical to the original ecc_secded instances. The
+    // ECC_MODE parameter exists for future chipkill/x4 experiments.
+    ecc_core #(
+        .DATA_WIDTH         (64),
+        .SECDED_PARITY_BITS(7),
+        .ECC_MODE           (0)
     ) u_ecc_encoder (
         .data_in       (DIN),
         .ecc_out       (ecc_code_write),
@@ -152,13 +159,16 @@ module ddr2_server_controller #(
         .syndrome      ()
     );
     
-    // ECC decoder (for reads)
-    wire [63:0] read_data_64 = {core_dout3, core_dout2, core_dout1, core_dout0};
+    // ECC decoder (for reads). When only one physical memory (slice 0), replicate
+    // its output so 64-bit DOUT is correct; otherwise use all four slice outputs.
+    wire [63:0] read_data_64 = (SINGLE_PHY_MEMORY != 0)
+        ? {4{core_dout0}} : {core_dout3, core_dout2, core_dout1, core_dout0};
     wire [7:0]  read_ecc_code;
     
-    ecc_secded #(
-        .DATA_WIDTH (64),
-        .PARITY_BITS(7)
+    ecc_core #(
+        .DATA_WIDTH         (64),
+        .SECDED_PARITY_BITS(7),
+        .ECC_MODE           (0)
     ) u_ecc_decoder (
         .data_in       ({64{1'b0}}),
         .ecc_out       (),
@@ -281,19 +291,73 @@ module ddr2_server_controller #(
     wire        arb_data_put;
     wire [63:0] arb_data_in;
     
-    assign arb_cmd     = cmd_put ? CMD : (scrub_cmd_req ? scrub_cmd : 3'b000);
-    assign arb_sz      = cmd_put ? SZ : (scrub_cmd_req ? scrub_sz : 2'b00);
-    assign arb_addr    = cmd_put ? core_addr : (scrub_cmd_req ? scrub_addr : {ADDR_WIDTH{1'b0}});
-    assign arb_cmd_put = cmd_put || (scrub_cmd_put && !cmd_put);
+    // Host command path can be fed through an optional CRC/retry front-end.
+    // For now this is a pass-through wrapper identical to direct wiring; it
+    // exists to provide a stable insertion point for future CRC+retry logic.
+    wire [2:0]   host_cmd_crc;
+    wire [1:0]   host_sz_crc;
+    wire [HOST_ADDR_WIDTH-1:0] host_addr_crc;
+    wire         host_cmd_put_crc;
+
+    ddr2_cmd_crc_frontend #(
+        .ADDR_WIDTH(HOST_ADDR_WIDTH)
+    ) u_server_cmd_crc_frontend (
+        .clk         (CLK),
+        .reset       (RESET),
+        .host_cmd    (CMD),
+        .host_sz     (SZ),
+        .host_addr   (ADDR),
+        .host_cmd_put(cmd_put),
+        .ctrl_cmd    (host_cmd_crc),
+        .ctrl_sz     (host_sz_crc),
+        .ctrl_addr   (host_addr_crc),
+        .ctrl_cmd_put(host_cmd_put_crc)
+    );
+
+    // Rank-based gating: when a rank has been marked offline by the RAS
+    // block, prevent new host commands targeting that rank from entering the
+    // arbiter. This provides a simple hardware "no new traffic to bad ranks"
+    // policy; higher-level firmware can still decide how to handle such
+    // requests at the system level.
+    wire        host_rank_offline;
+    generate
+        if (RANK_BITS > 0) begin : gen_host_rank_gating
+            wire [RANK_BITS-1:0] host_rank_idx =
+                host_addr_crc[HOST_ADDR_WIDTH-1 -: RANK_BITS];
+            assign host_rank_offline = ras_rank_offline[host_rank_idx];
+        end else begin : gen_host_rank_single
+            assign host_rank_offline = 1'b0;
+        end
+    endgenerate
+    wire        host_cmd_put_ok = host_cmd_put_crc && !host_rank_offline;
+
+    assign arb_cmd     = host_cmd_put_ok ? host_cmd_crc : (scrub_cmd_req ? scrub_cmd : 3'b000);
+    assign arb_sz      = host_cmd_put_ok ? host_sz_crc : (scrub_cmd_req ? scrub_sz : 2'b00);
+    assign arb_addr    = host_cmd_put_ok ? core_addr : (scrub_cmd_req ? scrub_addr : {ADDR_WIDTH{1'b0}});
+    assign arb_cmd_put = host_cmd_put_ok || (scrub_cmd_put && !host_cmd_put_ok);
     assign arb_data_put = put_dataFIFO || (scrub_data_put && !put_dataFIFO);
     assign arb_data_in = put_dataFIFO ? DIN : (scrub_data_put ? scrub_data_in : 64'd0);
     
     // RAS registers
-    wire [3:0] err_rank = 4'd0;  // Single rank for now
+    // Derive a logical error rank from the host-visible address's upper
+    // RANK_BITS. When RANK_BITS==0, all errors are attributed to rank 0.
+    localparam integer RAS_NUM_RANKS = (RANK_BITS > 0) ? (1 << RANK_BITS) : 1;
+    wire [3:0] err_rank;
+    generate
+        if (RANK_BITS > 0) begin : gen_err_rank_multi
+            wire [RANK_BITS-1:0] err_rank_idx =
+                host_addr[HOST_ADDR_WIDTH-1 -: RANK_BITS];
+            assign err_rank = { {(4-RANK_BITS){1'b0}}, err_rank_idx };
+        end else begin : gen_err_rank_single
+            assign err_rank = 4'd0;
+        end
+    endgenerate
+    
+    wire [RAS_NUM_RANKS-1:0] ras_rank_offline;
     
     ddr2_ras_registers #(
         .ADDR_WIDTH(ADDR_WIDTH),
-        .NUM_RANKS(1)
+        .NUM_RANKS(RAS_NUM_RANKS)
     ) u_ras_regs (
         .clk(CLK),
         .reset(RESET),
@@ -310,7 +374,8 @@ module ddr2_server_controller #(
         .irq_ecc_corr(RAS_IRQ_CORR),
         .irq_ecc_uncorr(RAS_IRQ_UNCORR),
         .rank_degraded(RAS_RANK_DEGRADED),
-        .fatal_error(RAS_FATAL_ERROR)
+        .fatal_error(RAS_FATAL_ERROR),
+        .rank_offline_o(ras_rank_offline)
     );
     
     // Output assignments
@@ -427,10 +492,9 @@ module ddr2_server_controller #(
 `endif
     );
 
-    // Slices 1–3: internal-only DDR2 instances. For now their pad-level
-    // interfaces are not exposed at the top level; they are intended to model
-    // additional x16 devices from a host/data-path perspective when using the
-    // simplified SIM_DIRECT_READ mode.
+    // Slices 1–3: DQ tied to slice 0 (C0_DQ_PAD) so a single physical memory
+    // drives all four lanes; 64-bit read data is then {core_dout0}×4. Other
+    // pad-level interfaces are internal dummies (not exposed at top level).
     wire [1:0]  csbar_pad_dummy1, csbar_pad_dummy2, csbar_pad_dummy3;
     wire        rasbar_pad_dummy1, rasbar_pad_dummy2, rasbar_pad_dummy3;
     wire        casbar_pad_dummy1, casbar_pad_dummy2, casbar_pad_dummy3;
@@ -484,7 +548,7 @@ module ddr2_server_controller #(
         .C0_CK_PAD     (ck_pad_dummy1),
         .C0_CKBAR_PAD  (ckbar_pad_dummy1),
         .C0_CKE_PAD    (cke_pad_dummy1),
-        .C0_DQ_PAD     (dq_pad_dummy1),
+        .C0_DQ_PAD     (C0_DQ_PAD),
         .C0_DQS_PAD    (dqs_pad_dummy1),
         .C0_DQSBAR_PAD (dqsn_pad_dummy1)
 `ifdef SIM_DIRECT_READ
@@ -532,7 +596,7 @@ module ddr2_server_controller #(
         .C0_CK_PAD     (ck_pad_dummy2),
         .C0_CKBAR_PAD  (ckbar_pad_dummy2),
         .C0_CKE_PAD    (cke_pad_dummy2),
-        .C0_DQ_PAD     (dq_pad_dummy2),
+        .C0_DQ_PAD     (C0_DQ_PAD),
         .C0_DQS_PAD    (dqs_pad_dummy2),
         .C0_DQSBAR_PAD (dqsn_pad_dummy2)
 `ifdef SIM_DIRECT_READ
@@ -580,7 +644,7 @@ module ddr2_server_controller #(
         .C0_CK_PAD     (ck_pad_dummy3),
         .C0_CKBAR_PAD  (ckbar_pad_dummy3),
         .C0_CKE_PAD    (cke_pad_dummy3),
-        .C0_DQ_PAD     (dq_pad_dummy3),
+        .C0_DQ_PAD     (C0_DQ_PAD),
         .C0_DQS_PAD    (dqs_pad_dummy3),
         .C0_DQSBAR_PAD (dqsn_pad_dummy3)
 `ifdef SIM_DIRECT_READ

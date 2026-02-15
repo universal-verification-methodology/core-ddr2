@@ -208,14 +208,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [5469000] MEM: READ beat=5 rank=0 idx=13 data=0xa5a7
 [5471000] MEM: READ beat=6 rank=0 idx=14 data=0xa5a7
 [5473000] MEM: READ beat=7 rank=0 idx=15 data=0xa5a7
+[6525000] Detected AUTO REFRESH command on DDR2 bus.
 [6525000] REF_MON: First AUTO REFRESH observed.
 [11151000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[11151000] Detected AUTO REFRESH command on DDR2 bus.
+[15777000] Detected AUTO REFRESH command on DDR2 bus.
 [15777000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [20403000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[20403000] Detected AUTO REFRESH command on DDR2 bus.
+[25029000] Detected AUTO REFRESH command on DDR2 bus.
 [25029000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [29655000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[29655000] Detected AUTO REFRESH command on DDR2 bus.
+[34281000] Detected AUTO REFRESH command on DDR2 bus.
 [34281000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [38907000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[38907000] Detected AUTO REFRESH command on DDR2 bus.
+[43533000] Detected AUTO REFRESH command on DDR2 bus.
 [43533000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [45421000] BLW/BLR sequence OK: base_addr=32 SZ=0 (nwords=8)
 [45623000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=1
@@ -252,14 +261,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [47009000] MEM: READ beat=6 rank=0 idx=6 data=0xa5a7
 [47011000] MEM: READ beat=7 rank=0 idx=7 data=0xa5a7
 [48159000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[48159000] Detected AUTO REFRESH command on DDR2 bus.
+[52785000] Detected AUTO REFRESH command on DDR2 bus.
 [52785000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [57411000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[57411000] Detected AUTO REFRESH command on DDR2 bus.
+[62037000] Detected AUTO REFRESH command on DDR2 bus.
 [62037000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [66663000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[66663000] Detected AUTO REFRESH command on DDR2 bus.
+[71289000] Detected AUTO REFRESH command on DDR2 bus.
 [71289000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [75915000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[75915000] Detected AUTO REFRESH command on DDR2 bus.
+[80541000] Detected AUTO REFRESH command on DDR2 bus.
 [80541000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [85167000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[85167000] Detected AUTO REFRESH command on DDR2 bus.
 [86915000] BLW/BLR sequence OK: base_addr=256 SZ=1 (nwords=16)
 [87117000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
 [87119000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=10
@@ -298,14 +316,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [88533000] MEM: READ beat=5 rank=0 idx=5 data=0xa5a7
 [88535000] MEM: READ beat=6 rank=0 idx=6 data=0xa5a7
 [88537000] MEM: READ beat=7 rank=0 idx=7 data=0xa5a7
+[89793000] Detected AUTO REFRESH command on DDR2 bus.
 [89793000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [94419000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[94419000] Detected AUTO REFRESH command on DDR2 bus.
+[99045000] Detected AUTO REFRESH command on DDR2 bus.
 [99045000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [103671000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[103671000] Detected AUTO REFRESH command on DDR2 bus.
+[108297000] Detected AUTO REFRESH command on DDR2 bus.
 [108297000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [112923000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[112923000] Detected AUTO REFRESH command on DDR2 bus.
+[117549000] Detected AUTO REFRESH command on DDR2 bus.
 [117549000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [122175000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[122175000] Detected AUTO REFRESH command on DDR2 bus.
+[126801000] Detected AUTO REFRESH command on DDR2 bus.
 [126801000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [128441000] BLW/BLR sequence OK: base_addr=384 SZ=2 (nwords=24)
 [128643000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=11
@@ -350,14 +377,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [130093000] MEM: READ beat=6 rank=0 idx=6 data=0xa5a7
 [130095000] MEM: READ beat=7 rank=0 idx=7 data=0xa5a7
 [131427000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[131427000] Detected AUTO REFRESH command on DDR2 bus.
+[136053000] Detected AUTO REFRESH command on DDR2 bus.
 [136053000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [140679000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[140679000] Detected AUTO REFRESH command on DDR2 bus.
+[145305000] Detected AUTO REFRESH command on DDR2 bus.
 [145305000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [149931000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[149931000] Detected AUTO REFRESH command on DDR2 bus.
+[154557000] Detected AUTO REFRESH command on DDR2 bus.
 [154557000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [159183000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[159183000] Detected AUTO REFRESH command on DDR2 bus.
+[163809000] Detected AUTO REFRESH command on DDR2 bus.
 [163809000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [168435000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[168435000] Detected AUTO REFRESH command on DDR2 bus.
 [169999000] BLW/BLR sequence OK: base_addr=512 SZ=3 (nwords=32)
 [170199000] Starting FIFO stress / refresh-interleaving test...
 [170201000] CTRL: ENQUEUE CMD addr=600 cmd=10 sz=0
@@ -436,14 +472,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [172191000] MEM: READ beat=5 rank=0 idx=113 data=0xfda7
 [172193000] MEM: READ beat=6 rank=0 idx=114 data=0xfda7
 [172195000] MEM: READ beat=7 rank=0 idx=115 data=0xfda7
+[173061000] Detected AUTO REFRESH command on DDR2 bus.
 [173061000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [177687000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[177687000] Detected AUTO REFRESH command on DDR2 bus.
+[182313000] Detected AUTO REFRESH command on DDR2 bus.
 [182313000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [186939000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[186939000] Detected AUTO REFRESH command on DDR2 bus.
+[191565000] Detected AUTO REFRESH command on DDR2 bus.
 [191565000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [196191000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[196191000] Detected AUTO REFRESH command on DDR2 bus.
+[200817000] Detected AUTO REFRESH command on DDR2 bus.
 [200817000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [205443000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[205443000] Detected AUTO REFRESH command on DDR2 bus.
+[210069000] Detected AUTO REFRESH command on DDR2 bus.
 [210069000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [212113000] BLW/BLR sequence OK: base_addr=700 SZ=1 (nwords=16)
 [212315000] CTRL: ENQUEUE CMD addr=601 cmd=10 sz=0
@@ -523,14 +568,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [214307000] MEM: READ beat=6 rank=0 idx=2 data=0xa5a7
 [214309000] MEM: READ beat=7 rank=0 idx=3 data=0xa5a7
 [214695000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[214695000] Detected AUTO REFRESH command on DDR2 bus.
+[219321000] Detected AUTO REFRESH command on DDR2 bus.
 [219321000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [223947000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[223947000] Detected AUTO REFRESH command on DDR2 bus.
+[228573000] Detected AUTO REFRESH command on DDR2 bus.
 [228573000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [233199000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[233199000] Detected AUTO REFRESH command on DDR2 bus.
+[237825000] Detected AUTO REFRESH command on DDR2 bus.
 [237825000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [242451000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[242451000] Detected AUTO REFRESH command on DDR2 bus.
+[247077000] Detected AUTO REFRESH command on DDR2 bus.
 [247077000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [251703000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[251703000] Detected AUTO REFRESH command on DDR2 bus.
 [254227000] BLW/BLR sequence OK: base_addr=740 SZ=1 (nwords=16)
 [254429000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
 [254431000] CTRL: ENQUEUE CMD addr=602 cmd=10 sz=0
@@ -584,6 +638,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [256323000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
 [256325000] CTRL: ENQUEUE CMD addr=780 cmd=11 sz=1
 [256325000] BLR issued: base_addr=780 SZ=1 (expect 16 beats)
+[256329000] Detected AUTO REFRESH command on DDR2 bus.
 [256329000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [256331000] BLR beat (bus mode) observed: RADDR=606 DOUT=0xffa7
 [256331000] READ observed: RADDR=606 DOUT=0xffa7
@@ -610,12 +665,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [256623000] MEM: READ beat=6 rank=0 idx=42 data=0xffa7
 [256625000] MEM: READ beat=7 rank=0 idx=43 data=0xffa7
 [260955000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[260955000] Detected AUTO REFRESH command on DDR2 bus.
+[265581000] Detected AUTO REFRESH command on DDR2 bus.
 [265581000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [270207000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[270207000] Detected AUTO REFRESH command on DDR2 bus.
+[274833000] Detected AUTO REFRESH command on DDR2 bus.
 [274833000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [279459000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[279459000] Detected AUTO REFRESH command on DDR2 bus.
+[284085000] Detected AUTO REFRESH command on DDR2 bus.
 [284085000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [288711000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[288711000] Detected AUTO REFRESH command on DDR2 bus.
+[293337000] Detected AUTO REFRESH command on DDR2 bus.
 [293337000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [296341000] BLW/BLR sequence OK: base_addr=780 SZ=1 (nwords=16)
 [296543000] CTRL: ENQUEUE CMD addr=603 cmd=10 sz=0
@@ -668,6 +731,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [297325000] MEM: WRITE burst committed base_idx=84 data=0xfea7
 [297351000] DQS_MON: window complete, edge_cnt=7.
 [297963000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[297963000] Detected AUTO REFRESH command on DDR2 bus.
 [298437000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
 [298439000] CTRL: ENQUEUE CMD addr=820 cmd=11 sz=1
 [298439000] BLR issued: base_addr=820 SZ=1 (expect 16 beats)
@@ -695,14 +759,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [298533000] MEM: READ beat=5 rank=0 idx=81 data=0xfea7
 [298535000] MEM: READ beat=6 rank=0 idx=82 data=0xfea7
 [298537000] MEM: READ beat=7 rank=0 idx=83 data=0xfea7
+[302589000] Detected AUTO REFRESH command on DDR2 bus.
 [302589000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [307215000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[307215000] Detected AUTO REFRESH command on DDR2 bus.
+[311841000] Detected AUTO REFRESH command on DDR2 bus.
 [311841000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [316467000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[316467000] Detected AUTO REFRESH command on DDR2 bus.
+[321093000] Detected AUTO REFRESH command on DDR2 bus.
 [321093000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [325719000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[325719000] Detected AUTO REFRESH command on DDR2 bus.
+[330345000] Detected AUTO REFRESH command on DDR2 bus.
 [330345000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [334971000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[334971000] Detected AUTO REFRESH command on DDR2 bus.
 [338455000] BLW/BLR sequence OK: base_addr=820 SZ=1 (nwords=16)
 [338657000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
 [338659000] CTRL: ENQUEUE CMD addr=604 cmd=10 sz=0
@@ -753,6 +825,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [339399000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=220
 [339439000] MEM: WRITE burst committed base_idx=124 data=0xf9a7
 [339465000] DQS_MON: window complete, edge_cnt=7.
+[339597000] Detected AUTO REFRESH command on DDR2 bus.
 [339597000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [340551000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
 [340553000] CTRL: ENQUEUE CMD addr=860 cmd=11 sz=1
@@ -782,12 +855,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [340649000] MEM: READ beat=6 rank=0 idx=122 data=0xf9a7
 [340651000] MEM: READ beat=7 rank=0 idx=123 data=0xf9a7
 [344223000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[344223000] Detected AUTO REFRESH command on DDR2 bus.
+[348849000] Detected AUTO REFRESH command on DDR2 bus.
 [348849000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [353475000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[353475000] Detected AUTO REFRESH command on DDR2 bus.
+[358101000] Detected AUTO REFRESH command on DDR2 bus.
 [358101000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [362727000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[362727000] Detected AUTO REFRESH command on DDR2 bus.
+[367353000] Detected AUTO REFRESH command on DDR2 bus.
 [367353000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [371979000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[371979000] Detected AUTO REFRESH command on DDR2 bus.
+[376605000] Detected AUTO REFRESH command on DDR2 bus.
 [376605000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [380569000] BLW/BLR sequence OK: base_addr=860 SZ=1 (nwords=16)
 [380771000] CTRL: ENQUEUE CMD addr=605 cmd=10 sz=0
@@ -823,6 +904,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [381277000] MEM: READ beat=5 rank=0 idx=122 data=0xf8a7
 [381279000] MEM: READ beat=6 rank=0 idx=123 data=0xf8a7
 [381281000] MEM: READ beat=7 rank=0 idx=124 data=0xf8a7
+[381309000] Detected AUTO REFRESH command on DDR2 bus.
 [381309000] REF_MON: AUTO REFRESH interval = 2352 cycles.
 [381377000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
 [381379000] CTRL: ENQUEUE CMD addr=900 cmd=100 sz=1
@@ -868,12 +950,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [382763000] MEM: READ beat=6 rank=0 idx=10 data=0xf8a7
 [382765000] MEM: READ beat=7 rank=0 idx=11 data=0xf8a7
 [385935000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[385935000] Detected AUTO REFRESH command on DDR2 bus.
+[390561000] Detected AUTO REFRESH command on DDR2 bus.
 [390561000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [395187000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[395187000] Detected AUTO REFRESH command on DDR2 bus.
+[399813000] Detected AUTO REFRESH command on DDR2 bus.
 [399813000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [404439000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[404439000] Detected AUTO REFRESH command on DDR2 bus.
+[409065000] Detected AUTO REFRESH command on DDR2 bus.
 [409065000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [413691000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[413691000] Detected AUTO REFRESH command on DDR2 bus.
+[418317000] Detected AUTO REFRESH command on DDR2 bus.
 [418317000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [422683000] BLW/BLR sequence OK: base_addr=900 SZ=1 (nwords=16)
 [422885000] CTRL: ENQUEUE CMD addr=606 cmd=10 sz=0
@@ -888,6 +978,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [422911000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=150
 [422951000] MEM: WRITE burst committed base_idx=118 data=0xfba7
 [422977000] DQS_MON: window complete, edge_cnt=7.
+[423013000] Detected AUTO REFRESH command on DDR2 bus.
 [423013000] REF_MON: AUTO REFRESH interval = 2348 cycles.
 [423309000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
 [423311000] CTRL: ENQUEUE CMD addr=606 cmd=1 sz=0
@@ -954,14 +1045,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [424877000] MEM: READ beat=6 rank=0 idx=50 data=0xfba7
 [424879000] MEM: READ beat=7 rank=0 idx=51 data=0xfba7
 [427639000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[427639000] Detected AUTO REFRESH command on DDR2 bus.
+[432265000] Detected AUTO REFRESH command on DDR2 bus.
 [432265000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [436891000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[436891000] Detected AUTO REFRESH command on DDR2 bus.
+[441517000] Detected AUTO REFRESH command on DDR2 bus.
 [441517000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [446143000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[446143000] Detected AUTO REFRESH command on DDR2 bus.
+[450769000] Detected AUTO REFRESH command on DDR2 bus.
 [450769000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [455395000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[455395000] Detected AUTO REFRESH command on DDR2 bus.
+[460021000] Detected AUTO REFRESH command on DDR2 bus.
 [460021000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [464647000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[464647000] Detected AUTO REFRESH command on DDR2 bus.
 [464797000] BLW/BLR sequence OK: base_addr=940 SZ=1 (nwords=16)
 [464999000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
 [465001000] CTRL: ENQUEUE CMD addr=607 cmd=10 sz=0
@@ -1039,14 +1139,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [466989000] MEM: READ beat=5 rank=0 idx=89 data=0xfaa7
 [466991000] MEM: READ beat=6 rank=0 idx=90 data=0xfaa7
 [466993000] MEM: READ beat=7 rank=0 idx=91 data=0xfaa7
+[469273000] Detected AUTO REFRESH command on DDR2 bus.
 [469273000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [473899000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[473899000] Detected AUTO REFRESH command on DDR2 bus.
+[478525000] Detected AUTO REFRESH command on DDR2 bus.
 [478525000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [483151000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[483151000] Detected AUTO REFRESH command on DDR2 bus.
+[487777000] Detected AUTO REFRESH command on DDR2 bus.
 [487777000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [492403000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[492403000] Detected AUTO REFRESH command on DDR2 bus.
+[497029000] Detected AUTO REFRESH command on DDR2 bus.
 [497029000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [501655000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[501655000] Detected AUTO REFRESH command on DDR2 bus.
+[506281000] Detected AUTO REFRESH command on DDR2 bus.
 [506281000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [506911000] BLW/BLR sequence OK: base_addr=980 SZ=1 (nwords=16)
 [507111000] Starting reset-during-traffic robustness test...
@@ -1123,14 +1232,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [509073000] MEM: READ beat=6 rank=0 idx=102 data=0x21a6
 [509075000] MEM: READ beat=7 rank=0 idx=103 data=0x21a6
 [510907000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[510907000] Detected AUTO REFRESH command on DDR2 bus.
+[515533000] Detected AUTO REFRESH command on DDR2 bus.
 [515533000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [520159000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[520159000] Detected AUTO REFRESH command on DDR2 bus.
+[524785000] Detected AUTO REFRESH command on DDR2 bus.
 [524785000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [529411000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[529411000] Detected AUTO REFRESH command on DDR2 bus.
+[534037000] Detected AUTO REFRESH command on DDR2 bus.
 [534037000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [538663000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[538663000] Detected AUTO REFRESH command on DDR2 bus.
+[543289000] Detected AUTO REFRESH command on DDR2 bus.
 [543289000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [547915000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[547915000] Detected AUTO REFRESH command on DDR2 bus.
 [548993000] BLW/BLR sequence OK: base_addr=920 SZ=0 (nwords=8)
 [549193000] Asserting RESET in the middle of activity...
 [549215000] INFO: Observed automatic self-refresh entry (CKE low with no host SELFREF_REQ).
@@ -1215,14 +1333,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [553087000] MEM: READ beat=6 rank=0 idx=22 data=0x85a5
 [553089000] MEM: READ beat=7 rank=0 idx=23 data=0x85a5
 [555719000] REF_MON: First AUTO REFRESH observed.
+[555719000] Detected AUTO REFRESH command on DDR2 bus.
+[560345000] Detected AUTO REFRESH command on DDR2 bus.
 [560345000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [564971000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[564971000] Detected AUTO REFRESH command on DDR2 bus.
+[569597000] Detected AUTO REFRESH command on DDR2 bus.
 [569597000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [574223000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[574223000] Detected AUTO REFRESH command on DDR2 bus.
+[578849000] Detected AUTO REFRESH command on DDR2 bus.
 [578849000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [583475000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[583475000] Detected AUTO REFRESH command on DDR2 bus.
+[588101000] Detected AUTO REFRESH command on DDR2 bus.
 [588101000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [592727000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[592727000] Detected AUTO REFRESH command on DDR2 bus.
 [593007000] BLW/BLR sequence OK: base_addr=64 SZ=1 (nwords=16)
 [593207000] Starting randomized traffic phase...
 [593209000] CTRL: ENQUEUE CMD addr=288 cmd=100 sz=0
@@ -1254,14 +1381,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [594561000] MEM: READ beat=5 rank=0 idx=13 data=0x85a5
 [594563000] MEM: READ beat=6 rank=0 idx=14 data=0x85a5
 [594565000] MEM: READ beat=7 rank=0 idx=15 data=0x85a5
+[597353000] Detected AUTO REFRESH command on DDR2 bus.
 [597353000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [601979000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[601979000] Detected AUTO REFRESH command on DDR2 bus.
+[606605000] Detected AUTO REFRESH command on DDR2 bus.
 [606605000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [611231000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[611231000] Detected AUTO REFRESH command on DDR2 bus.
+[615857000] Detected AUTO REFRESH command on DDR2 bus.
 [615857000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [620483000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[620483000] Detected AUTO REFRESH command on DDR2 bus.
+[625109000] Detected AUTO REFRESH command on DDR2 bus.
 [625109000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [629735000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[629735000] Detected AUTO REFRESH command on DDR2 bus.
+[634361000] Detected AUTO REFRESH command on DDR2 bus.
 [634361000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [634469000] BLW/BLR sequence OK: base_addr=288 SZ=0 (nwords=8)
 [634671000] CTRL: ENQUEUE CMD addr=608 cmd=100 sz=0
@@ -1294,15 +1430,24 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [636025000] MEM: READ beat=6 rank=0 idx=30 data=0x85a5
 [636027000] MEM: READ beat=7 rank=0 idx=31 data=0x85a5
 [638987000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[638987000] Detected AUTO REFRESH command on DDR2 bus.
+[643613000] Detected AUTO REFRESH command on DDR2 bus.
 [643613000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [648239000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[648239000] Detected AUTO REFRESH command on DDR2 bus.
+[652865000] Detected AUTO REFRESH command on DDR2 bus.
 [652865000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [657491000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[657491000] Detected AUTO REFRESH command on DDR2 bus.
+[662117000] Detected AUTO REFRESH command on DDR2 bus.
 [662117000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [666743000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[666743000] Detected AUTO REFRESH command on DDR2 bus.
+[671369000] Detected AUTO REFRESH command on DDR2 bus.
 [671369000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [675931000] BLW/BLR sequence OK: base_addr=608 SZ=0 (nwords=8)
 [675995000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[675995000] Detected AUTO REFRESH command on DDR2 bus.
 [676133000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
 [676135000] CTRL: ENQUEUE CMD addr=96 cmd=100 sz=0
 [676135000] BLW issued: base_addr=96 SZ=0 (nwords=8)
@@ -1332,14 +1477,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [677485000] MEM: READ beat=5 rank=0 idx=29 data=0x85a5
 [677487000] MEM: READ beat=6 rank=0 idx=30 data=0x85a5
 [677489000] MEM: READ beat=7 rank=0 idx=31 data=0x85a5
+[680621000] Detected AUTO REFRESH command on DDR2 bus.
 [680621000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [685247000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[685247000] Detected AUTO REFRESH command on DDR2 bus.
+[689873000] Detected AUTO REFRESH command on DDR2 bus.
 [689873000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [694499000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[694499000] Detected AUTO REFRESH command on DDR2 bus.
+[699125000] Detected AUTO REFRESH command on DDR2 bus.
 [699125000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [703751000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[703751000] Detected AUTO REFRESH command on DDR2 bus.
+[708377000] Detected AUTO REFRESH command on DDR2 bus.
 [708377000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [713003000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[713003000] Detected AUTO REFRESH command on DDR2 bus.
 [717393000] BLW/BLR sequence OK: base_addr=96 SZ=0 (nwords=8)
 [717595000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
 [717597000] CTRL: ENQUEUE CMD addr=264 cmd=100 sz=0
@@ -1353,6 +1506,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [717635000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=64
 [717675000] MEM: WRITE burst committed base_idx=32 data=0x85a5
 [717701000] DQS_MON: window complete, edge_cnt=7.
+[717737000] Detected AUTO REFRESH command on DDR2 bus.
 [717737000] REF_MON: AUTO REFRESH interval = 2367 cycles.
 [718851000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
 [718853000] CTRL: ENQUEUE CMD addr=264 cmd=11 sz=0
@@ -1372,12 +1526,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [718949000] MEM: READ beat=6 rank=0 idx=38 data=0x85a5
 [718951000] MEM: READ beat=7 rank=0 idx=39 data=0x85a5
 [722363000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[722363000] Detected AUTO REFRESH command on DDR2 bus.
+[726989000] Detected AUTO REFRESH command on DDR2 bus.
 [726989000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [731615000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[731615000] Detected AUTO REFRESH command on DDR2 bus.
+[736241000] Detected AUTO REFRESH command on DDR2 bus.
 [736241000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [740867000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[740867000] Detected AUTO REFRESH command on DDR2 bus.
+[745493000] Detected AUTO REFRESH command on DDR2 bus.
 [745493000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [750119000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[750119000] Detected AUTO REFRESH command on DDR2 bus.
+[754745000] Detected AUTO REFRESH command on DDR2 bus.
 [754745000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [758855000] BLW/BLR sequence OK: base_addr=264 SZ=0 (nwords=8)
 [759057000] CTRL: ENQUEUE CMD addr=1000 cmd=100 sz=0
@@ -1393,6 +1555,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [759137000] MEM: WRITE burst committed base_idx=56 data=0x85a5
 [759163000] DQS_MON: window complete, edge_cnt=7.
 [759371000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[759371000] Detected AUTO REFRESH command on DDR2 bus.
 [760313000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
 [760315000] CTRL: ENQUEUE CMD addr=1000 cmd=11 sz=0
 [760315000] BLR issued: base_addr=1000 SZ=0 (expect 8 beats)
@@ -1410,14 +1573,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [760409000] MEM: READ beat=5 rank=0 idx=61 data=0x85a5
 [760411000] MEM: READ beat=6 rank=0 idx=62 data=0x85a5
 [760413000] MEM: READ beat=7 rank=0 idx=63 data=0x85a5
+[763997000] Detected AUTO REFRESH command on DDR2 bus.
 [763997000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [768623000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[768623000] Detected AUTO REFRESH command on DDR2 bus.
+[773249000] Detected AUTO REFRESH command on DDR2 bus.
 [773249000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [777875000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[777875000] Detected AUTO REFRESH command on DDR2 bus.
+[782501000] Detected AUTO REFRESH command on DDR2 bus.
 [782501000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [787127000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[787127000] Detected AUTO REFRESH command on DDR2 bus.
+[791753000] Detected AUTO REFRESH command on DDR2 bus.
 [791753000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [796379000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[796379000] Detected AUTO REFRESH command on DDR2 bus.
 [800317000] BLW/BLR sequence OK: base_addr=1000 SZ=0 (nwords=8)
 [800519000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
 [800521000] CTRL: ENQUEUE CMD addr=192 cmd=100 sz=1
@@ -1435,6 +1606,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [800655000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=56
 [800695000] MEM: WRITE burst committed base_idx=24 data=0x85a5
 [800721000] DQS_MON: window complete, edge_cnt=7.
+[801005000] Detected AUTO REFRESH command on DDR2 bus.
 [801005000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [801807000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
 [801809000] CTRL: ENQUEUE CMD addr=192 cmd=11 sz=1
@@ -1454,12 +1626,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [801905000] MEM: READ beat=6 rank=0 idx=22 data=0x85a5
 [801907000] MEM: READ beat=7 rank=0 idx=23 data=0x85a5
 [805631000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[805631000] Detected AUTO REFRESH command on DDR2 bus.
+[810257000] Detected AUTO REFRESH command on DDR2 bus.
 [810257000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [814883000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[814883000] Detected AUTO REFRESH command on DDR2 bus.
+[819509000] Detected AUTO REFRESH command on DDR2 bus.
 [819509000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [824135000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[824135000] Detected AUTO REFRESH command on DDR2 bus.
+[828761000] Detected AUTO REFRESH command on DDR2 bus.
 [828761000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [833387000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[833387000] Detected AUTO REFRESH command on DDR2 bus.
+[838013000] Detected AUTO REFRESH command on DDR2 bus.
 [838013000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [841811000] BLW/BLR sequence OK: base_addr=192 SZ=1 (nwords=16)
 [842013000] CTRL: ENQUEUE CMD addr=992 cmd=100 sz=11
@@ -1487,6 +1667,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [842477000] MEM: WRITE burst committed base_idx=16 data=0x85a5
 [842503000] DQS_MON: window complete, edge_cnt=7.
 [842639000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[842639000] Detected AUTO REFRESH command on DDR2 bus.
 [843365000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
 [843367000] CTRL: ENQUEUE CMD addr=992 cmd=11 sz=11
 [843367000] BLR issued: base_addr=992 SZ=3 (expect 32 beats)
@@ -1504,14 +1685,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [843461000] MEM: READ beat=5 rank=0 idx=29 data=0x85a5
 [843463000] MEM: READ beat=6 rank=0 idx=30 data=0x85a5
 [843465000] MEM: READ beat=7 rank=0 idx=31 data=0x85a5
+[847265000] Detected AUTO REFRESH command on DDR2 bus.
 [847265000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [851891000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[851891000] Detected AUTO REFRESH command on DDR2 bus.
+[856517000] Detected AUTO REFRESH command on DDR2 bus.
 [856517000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [861143000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[861143000] Detected AUTO REFRESH command on DDR2 bus.
+[865769000] Detected AUTO REFRESH command on DDR2 bus.
 [865769000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [870395000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[870395000] Detected AUTO REFRESH command on DDR2 bus.
+[875021000] Detected AUTO REFRESH command on DDR2 bus.
 [875021000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [879647000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[879647000] Detected AUTO REFRESH command on DDR2 bus.
 [883369000] BLW/BLR sequence OK: base_addr=992 SZ=3 (nwords=32)
 [883571000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
 [883573000] CTRL: ENQUEUE CMD addr=904 cmd=100 sz=10
@@ -1533,6 +1722,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [883835000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=240
 [883875000] MEM: WRITE burst committed base_idx=48 data=0x85a5
 [883901000] DQS_MON: window complete, edge_cnt=7.
+[884273000] Detected AUTO REFRESH command on DDR2 bus.
 [884273000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [884891000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
 [884893000] CTRL: ENQUEUE CMD addr=904 cmd=11 sz=10
@@ -1552,12 +1742,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [884989000] MEM: READ beat=6 rank=0 idx=38 data=0x85a5
 [884991000] MEM: READ beat=7 rank=0 idx=39 data=0x85a5
 [888899000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[888899000] Detected AUTO REFRESH command on DDR2 bus.
+[893525000] Detected AUTO REFRESH command on DDR2 bus.
 [893525000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [898151000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[898151000] Detected AUTO REFRESH command on DDR2 bus.
+[902777000] Detected AUTO REFRESH command on DDR2 bus.
 [902777000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [907403000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[907403000] Detected AUTO REFRESH command on DDR2 bus.
+[912029000] Detected AUTO REFRESH command on DDR2 bus.
 [912029000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [916655000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[916655000] Detected AUTO REFRESH command on DDR2 bus.
+[921281000] Detected AUTO REFRESH command on DDR2 bus.
 [921281000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [924895000] BLW/BLR sequence OK: base_addr=904 SZ=2 (nwords=24)
 [925097000] CTRL: ENQUEUE CMD addr=744 cmd=10 sz=0
@@ -1606,6 +1804,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [925783000] MEM: WRITE burst committed base_idx=104 data=0x4da7
 [925809000] DQS_MON: window complete, edge_cnt=7.
 [925907000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[925907000] Detected AUTO REFRESH command on DDR2 bus.
 [926959000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
 [926961000] CTRL: ENQUEUE CMD addr=184 cmd=11 sz=0
 [926961000] BLR issued: base_addr=184 SZ=0 (expect 8 beats)
@@ -1633,14 +1832,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [927055000] MEM: READ beat=5 rank=0 idx=109 data=0x4da7
 [927057000] MEM: READ beat=6 rank=0 idx=110 data=0x4da7
 [927059000] MEM: READ beat=7 rank=0 idx=111 data=0x4da7
+[930533000] Detected AUTO REFRESH command on DDR2 bus.
 [930533000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [935159000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[935159000] Detected AUTO REFRESH command on DDR2 bus.
+[939785000] Detected AUTO REFRESH command on DDR2 bus.
 [939785000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [944411000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[944411000] Detected AUTO REFRESH command on DDR2 bus.
+[949037000] Detected AUTO REFRESH command on DDR2 bus.
 [949037000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [953663000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[953663000] Detected AUTO REFRESH command on DDR2 bus.
+[958289000] Detected AUTO REFRESH command on DDR2 bus.
 [958289000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [962915000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[962915000] Detected AUTO REFRESH command on DDR2 bus.
 [966977000] BLW/BLR sequence OK: base_addr=184 SZ=0 (nwords=8)
 [967179000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
 [967181000] CTRL: ENQUEUE CMD addr=611 cmd=10 sz=0
@@ -1654,6 +1861,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [967205000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=155
 [967245000] MEM: WRITE burst committed base_idx=27 data=0xc6a7
 [967271000] DQS_MON: window complete, edge_cnt=7.
+[967541000] Detected AUTO REFRESH command on DDR2 bus.
 [967541000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [967603000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
 [967605000] CTRL: ENQUEUE CMD addr=611 cmd=1 sz=0
@@ -1717,14 +1925,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [969273000] MEM: READ beat=6 rank=0 idx=14 data=0xc6a7
 [969275000] MEM: READ beat=7 rank=0 idx=15 data=0xc6a7
 [972167000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[972167000] Detected AUTO REFRESH command on DDR2 bus.
+[976793000] Detected AUTO REFRESH command on DDR2 bus.
 [976793000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [981419000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[981419000] Detected AUTO REFRESH command on DDR2 bus.
+[986045000] Detected AUTO REFRESH command on DDR2 bus.
 [986045000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [990671000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[990671000] Detected AUTO REFRESH command on DDR2 bus.
+[995297000] Detected AUTO REFRESH command on DDR2 bus.
 [995297000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [999923000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[999923000] Detected AUTO REFRESH command on DDR2 bus.
+[1004549000] Detected AUTO REFRESH command on DDR2 bus.
 [1004549000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1009175000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1009175000] Detected AUTO REFRESH command on DDR2 bus.
 [1009193000] BLW/BLR sequence OK: base_addr=288 SZ=0 (nwords=8)
 [1009395000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
 [1009397000] CTRL: ENQUEUE CMD addr=656 cmd=100 sz=0
@@ -1755,15 +1972,24 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1010747000] MEM: READ beat=5 rank=0 idx=69 data=0xc6a7
 [1010749000] MEM: READ beat=6 rank=0 idx=70 data=0xc6a7
 [1010751000] MEM: READ beat=7 rank=0 idx=71 data=0xc6a7
+[1013801000] Detected AUTO REFRESH command on DDR2 bus.
 [1013801000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1018427000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1018427000] Detected AUTO REFRESH command on DDR2 bus.
+[1023053000] Detected AUTO REFRESH command on DDR2 bus.
 [1023053000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1027679000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1027679000] Detected AUTO REFRESH command on DDR2 bus.
+[1032305000] Detected AUTO REFRESH command on DDR2 bus.
 [1032305000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1036931000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1036931000] Detected AUTO REFRESH command on DDR2 bus.
+[1041557000] Detected AUTO REFRESH command on DDR2 bus.
 [1041557000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1046183000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1046183000] Detected AUTO REFRESH command on DDR2 bus.
 [1050655000] BLW/BLR sequence OK: base_addr=656 SZ=0 (nwords=8)
+[1050809000] Detected AUTO REFRESH command on DDR2 bus.
 [1050809000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1050857000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
 [1050859000] CTRL: ENQUEUE CMD addr=592 cmd=100 sz=0
@@ -1795,12 +2021,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1052211000] MEM: READ beat=6 rank=0 idx=86 data=0xc6a7
 [1052213000] MEM: READ beat=7 rank=0 idx=87 data=0xc6a7
 [1055435000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1055435000] Detected AUTO REFRESH command on DDR2 bus.
+[1060061000] Detected AUTO REFRESH command on DDR2 bus.
 [1060061000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1064687000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1064687000] Detected AUTO REFRESH command on DDR2 bus.
+[1069313000] Detected AUTO REFRESH command on DDR2 bus.
 [1069313000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1073939000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1073939000] Detected AUTO REFRESH command on DDR2 bus.
+[1078565000] Detected AUTO REFRESH command on DDR2 bus.
 [1078565000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1083191000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1083191000] Detected AUTO REFRESH command on DDR2 bus.
+[1087817000] Detected AUTO REFRESH command on DDR2 bus.
 [1087817000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1092117000] BLW/BLR sequence OK: base_addr=592 SZ=0 (nwords=8)
 [1092319000] CTRL: ENQUEUE CMD addr=512 cmd=100 sz=0
@@ -1815,6 +2049,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1092359000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=128
 [1092399000] MEM: WRITE burst committed base_idx=0 data=0xc6a7
 [1092425000] DQS_MON: window complete, edge_cnt=7.
+[1092461000] Detected AUTO REFRESH command on DDR2 bus.
 [1092461000] REF_MON: AUTO REFRESH interval = 2322 cycles.
 [1093575000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
 [1093577000] CTRL: ENQUEUE CMD addr=512 cmd=11 sz=0
@@ -1834,12 +2069,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1093673000] MEM: READ beat=6 rank=0 idx=6 data=0xc6a7
 [1093675000] MEM: READ beat=7 rank=0 idx=7 data=0xc6a7
 [1097087000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1097087000] Detected AUTO REFRESH command on DDR2 bus.
+[1101713000] Detected AUTO REFRESH command on DDR2 bus.
 [1101713000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1106339000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1106339000] Detected AUTO REFRESH command on DDR2 bus.
+[1110965000] Detected AUTO REFRESH command on DDR2 bus.
 [1110965000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1115591000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1115591000] Detected AUTO REFRESH command on DDR2 bus.
+[1120217000] Detected AUTO REFRESH command on DDR2 bus.
 [1120217000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1124843000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1124843000] Detected AUTO REFRESH command on DDR2 bus.
+[1129469000] Detected AUTO REFRESH command on DDR2 bus.
 [1129469000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1133579000] BLW/BLR sequence OK: base_addr=512 SZ=0 (nwords=8)
 [1133781000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=11
@@ -1867,6 +2110,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1134245000] MEM: WRITE burst committed base_idx=40 data=0xc6a7
 [1134271000] DQS_MON: window complete, edge_cnt=7.
 [1134355000] REF_MON: AUTO REFRESH interval = 2443 cycles.
+[1134355000] Detected AUTO REFRESH command on DDR2 bus.
 [1135133000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
 [1135135000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=11
 [1135135000] BLR issued: base_addr=712 SZ=3 (expect 32 beats)
@@ -1884,14 +2128,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1135229000] MEM: READ beat=5 rank=0 idx=53 data=0xc6a7
 [1135231000] MEM: READ beat=6 rank=0 idx=54 data=0xc6a7
 [1135233000] MEM: READ beat=7 rank=0 idx=55 data=0xc6a7
+[1138981000] Detected AUTO REFRESH command on DDR2 bus.
 [1138981000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1143607000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1143607000] Detected AUTO REFRESH command on DDR2 bus.
+[1148233000] Detected AUTO REFRESH command on DDR2 bus.
 [1148233000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1152859000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1152859000] Detected AUTO REFRESH command on DDR2 bus.
+[1157485000] Detected AUTO REFRESH command on DDR2 bus.
 [1157485000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1162111000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1162111000] Detected AUTO REFRESH command on DDR2 bus.
+[1166737000] Detected AUTO REFRESH command on DDR2 bus.
 [1166737000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1171363000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1171363000] Detected AUTO REFRESH command on DDR2 bus.
 [1175137000] BLW/BLR sequence OK: base_addr=712 SZ=3 (nwords=32)
 [1175339000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
 [1175341000] CTRL: ENQUEUE CMD addr=712 cmd=100 sz=0
@@ -1905,6 +2157,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1175379000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=176
 [1175419000] MEM: WRITE burst committed base_idx=48 data=0xc6a7
 [1175445000] DQS_MON: window complete, edge_cnt=7.
+[1175989000] Detected AUTO REFRESH command on DDR2 bus.
 [1175989000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1176595000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
 [1176597000] CTRL: ENQUEUE CMD addr=712 cmd=11 sz=0
@@ -1924,12 +2177,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1176693000] MEM: READ beat=6 rank=0 idx=54 data=0xc6a7
 [1176695000] MEM: READ beat=7 rank=0 idx=55 data=0xc6a7
 [1180615000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1180615000] Detected AUTO REFRESH command on DDR2 bus.
+[1185241000] Detected AUTO REFRESH command on DDR2 bus.
 [1185241000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1189867000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1189867000] Detected AUTO REFRESH command on DDR2 bus.
+[1194493000] Detected AUTO REFRESH command on DDR2 bus.
 [1194493000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1199119000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1199119000] Detected AUTO REFRESH command on DDR2 bus.
+[1203745000] Detected AUTO REFRESH command on DDR2 bus.
 [1203745000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1208371000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1208371000] Detected AUTO REFRESH command on DDR2 bus.
+[1212997000] Detected AUTO REFRESH command on DDR2 bus.
 [1212997000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1216599000] BLW/BLR sequence OK: base_addr=712 SZ=0 (nwords=8)
 [1216801000] CTRL: ENQUEUE CMD addr=394 cmd=10 sz=0
@@ -1981,6 +2242,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1217543000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=224
 [1217583000] MEM: WRITE burst committed base_idx=96 data=0x2fa4
 [1217609000] DQS_MON: window complete, edge_cnt=7.
+[1217661000] Detected AUTO REFRESH command on DDR2 bus.
 [1217661000] REF_MON: AUTO REFRESH interval = 2332 cycles.
 [1218695000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
 [1218697000] CTRL: ENQUEUE CMD addr=888 cmd=11 sz=1
@@ -2010,12 +2272,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1218793000] MEM: READ beat=6 rank=0 idx=126 data=0x2fa4
 [1218795000] MEM: READ beat=7 rank=0 idx=127 data=0x2fa4
 [1222287000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1222287000] Detected AUTO REFRESH command on DDR2 bus.
+[1226913000] Detected AUTO REFRESH command on DDR2 bus.
 [1226913000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1231539000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1231539000] Detected AUTO REFRESH command on DDR2 bus.
+[1236165000] Detected AUTO REFRESH command on DDR2 bus.
 [1236165000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1240791000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1240791000] Detected AUTO REFRESH command on DDR2 bus.
+[1245417000] Detected AUTO REFRESH command on DDR2 bus.
 [1245417000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1250043000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1250043000] Detected AUTO REFRESH command on DDR2 bus.
+[1254669000] Detected AUTO REFRESH command on DDR2 bus.
 [1254669000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1258713000] BLW/BLR sequence OK: base_addr=888 SZ=1 (nwords=16)
 [1258915000] CTRL: ENQUEUE CMD addr=432 cmd=100 sz=10
@@ -2038,6 +2308,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1259179000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=120
 [1259219000] MEM: WRITE burst committed base_idx=88 data=0x2fa4
 [1259245000] DQS_MON: window complete, edge_cnt=7.
+[1259313000] Detected AUTO REFRESH command on DDR2 bus.
 [1259313000] REF_MON: AUTO REFRESH interval = 2322 cycles.
 [1260235000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
 [1260237000] CTRL: ENQUEUE CMD addr=432 cmd=11 sz=10
@@ -2057,12 +2328,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1260333000] MEM: READ beat=6 rank=0 idx=78 data=0x2fa4
 [1260335000] MEM: READ beat=7 rank=0 idx=79 data=0x2fa4
 [1263939000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1263939000] Detected AUTO REFRESH command on DDR2 bus.
+[1268565000] Detected AUTO REFRESH command on DDR2 bus.
 [1268565000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1273191000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1273191000] Detected AUTO REFRESH command on DDR2 bus.
+[1277817000] Detected AUTO REFRESH command on DDR2 bus.
 [1277817000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1282443000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1282443000] Detected AUTO REFRESH command on DDR2 bus.
+[1287069000] Detected AUTO REFRESH command on DDR2 bus.
 [1287069000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1291695000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1291695000] Detected AUTO REFRESH command on DDR2 bus.
+[1296321000] Detected AUTO REFRESH command on DDR2 bus.
 [1296321000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1300239000] BLW/BLR sequence OK: base_addr=432 SZ=2 (nwords=24)
 [1300441000] CTRL: ENQUEUE CMD addr=696 cmd=100 sz=10
@@ -2086,6 +2365,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1300745000] MEM: WRITE burst committed base_idx=120 data=0x2fa4
 [1300771000] DQS_MON: window complete, edge_cnt=7.
 [1300947000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1300947000] Detected AUTO REFRESH command on DDR2 bus.
 [1301761000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
 [1301763000] CTRL: ENQUEUE CMD addr=696 cmd=11 sz=10
 [1301763000] BLR issued: base_addr=696 SZ=2 (expect 24 beats)
@@ -2103,14 +2383,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1301857000] MEM: READ beat=5 rank=0 idx=109 data=0x2fa4
 [1301859000] MEM: READ beat=6 rank=0 idx=110 data=0x2fa4
 [1301861000] MEM: READ beat=7 rank=0 idx=111 data=0x2fa4
+[1305573000] Detected AUTO REFRESH command on DDR2 bus.
 [1305573000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1310199000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1310199000] Detected AUTO REFRESH command on DDR2 bus.
+[1314825000] Detected AUTO REFRESH command on DDR2 bus.
 [1314825000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1319451000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1319451000] Detected AUTO REFRESH command on DDR2 bus.
+[1324077000] Detected AUTO REFRESH command on DDR2 bus.
 [1324077000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1328703000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1328703000] Detected AUTO REFRESH command on DDR2 bus.
+[1333329000] Detected AUTO REFRESH command on DDR2 bus.
 [1333329000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1337955000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1337955000] Detected AUTO REFRESH command on DDR2 bus.
 [1341765000] BLW/BLR sequence OK: base_addr=696 SZ=2 (nwords=24)
 [1341967000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
 [1341969000] CTRL: ENQUEUE CMD addr=624 cmd=100 sz=1
@@ -2128,6 +2416,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1342103000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=160
 [1342143000] MEM: WRITE burst committed base_idx=64 data=0x2fa4
 [1342169000] DQS_MON: window complete, edge_cnt=7.
+[1342581000] Detected AUTO REFRESH command on DDR2 bus.
 [1342581000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1343255000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [1343257000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
@@ -2147,12 +2436,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1343353000] MEM: READ beat=6 rank=0 idx=94 data=0x2fa4
 [1343355000] MEM: READ beat=7 rank=0 idx=95 data=0x2fa4
 [1347207000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1347207000] Detected AUTO REFRESH command on DDR2 bus.
+[1351833000] Detected AUTO REFRESH command on DDR2 bus.
 [1351833000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1356459000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1356459000] Detected AUTO REFRESH command on DDR2 bus.
+[1361085000] Detected AUTO REFRESH command on DDR2 bus.
 [1361085000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1365711000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1365711000] Detected AUTO REFRESH command on DDR2 bus.
+[1370337000] Detected AUTO REFRESH command on DDR2 bus.
 [1370337000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1374963000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1374963000] Detected AUTO REFRESH command on DDR2 bus.
+[1379589000] Detected AUTO REFRESH command on DDR2 bus.
 [1379589000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1383259000] BLW/BLR sequence OK: base_addr=624 SZ=1 (nwords=16)
 [1383461000] CTRL: ENQUEUE CMD addr=56 cmd=100 sz=10
@@ -2176,6 +2473,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1383765000] MEM: WRITE burst committed base_idx=120 data=0x2fa4
 [1383791000] DQS_MON: window complete, edge_cnt=7.
 [1384215000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1384215000] Detected AUTO REFRESH command on DDR2 bus.
 [1384781000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
 [1384783000] CTRL: ENQUEUE CMD addr=56 cmd=11 sz=10
 [1384783000] BLR issued: base_addr=56 SZ=2 (expect 24 beats)
@@ -2193,14 +2491,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1384877000] MEM: READ beat=5 rank=0 idx=109 data=0x2fa4
 [1384879000] MEM: READ beat=6 rank=0 idx=110 data=0x2fa4
 [1384881000] MEM: READ beat=7 rank=0 idx=111 data=0x2fa4
+[1388841000] Detected AUTO REFRESH command on DDR2 bus.
 [1388841000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1393467000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1393467000] Detected AUTO REFRESH command on DDR2 bus.
+[1398093000] Detected AUTO REFRESH command on DDR2 bus.
 [1398093000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1402719000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1402719000] Detected AUTO REFRESH command on DDR2 bus.
+[1407345000] Detected AUTO REFRESH command on DDR2 bus.
 [1407345000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1411971000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1411971000] Detected AUTO REFRESH command on DDR2 bus.
+[1416597000] Detected AUTO REFRESH command on DDR2 bus.
 [1416597000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1421223000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1421223000] Detected AUTO REFRESH command on DDR2 bus.
 [1424785000] BLW/BLR sequence OK: base_addr=56 SZ=2 (nwords=24)
 [1424987000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
 [1424989000] CTRL: ENQUEUE CMD addr=784 cmd=100 sz=0
@@ -2214,6 +2520,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1425027000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=192
 [1425067000] MEM: WRITE burst committed base_idx=64 data=0x2fa4
 [1425093000] DQS_MON: window complete, edge_cnt=7.
+[1425849000] Detected AUTO REFRESH command on DDR2 bus.
 [1425849000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1426243000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
 [1426245000] CTRL: ENQUEUE CMD addr=784 cmd=11 sz=0
@@ -2233,12 +2540,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1426341000] MEM: READ beat=6 rank=0 idx=70 data=0x2fa4
 [1426343000] MEM: READ beat=7 rank=0 idx=71 data=0x2fa4
 [1430475000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1430475000] Detected AUTO REFRESH command on DDR2 bus.
+[1435101000] Detected AUTO REFRESH command on DDR2 bus.
 [1435101000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1439727000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1439727000] Detected AUTO REFRESH command on DDR2 bus.
+[1444353000] Detected AUTO REFRESH command on DDR2 bus.
 [1444353000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1448979000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1448979000] Detected AUTO REFRESH command on DDR2 bus.
+[1453605000] Detected AUTO REFRESH command on DDR2 bus.
 [1453605000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1458231000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1458231000] Detected AUTO REFRESH command on DDR2 bus.
+[1462857000] Detected AUTO REFRESH command on DDR2 bus.
 [1462857000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1466247000] BLW/BLR sequence OK: base_addr=784 SZ=0 (nwords=8)
 [1466449000] CTRL: ENQUEUE CMD addr=864 cmd=100 sz=0
@@ -2254,6 +2569,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1466529000] MEM: WRITE burst committed base_idx=24 data=0x2fa4
 [1466555000] DQS_MON: window complete, edge_cnt=7.
 [1467483000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1467483000] Detected AUTO REFRESH command on DDR2 bus.
 [1467705000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
 [1467707000] CTRL: ENQUEUE CMD addr=864 cmd=11 sz=0
 [1467707000] BLR issued: base_addr=864 SZ=0 (expect 8 beats)
@@ -2271,14 +2587,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1467801000] MEM: READ beat=5 rank=0 idx=29 data=0x2fa4
 [1467803000] MEM: READ beat=6 rank=0 idx=30 data=0x2fa4
 [1467805000] MEM: READ beat=7 rank=0 idx=31 data=0x2fa4
+[1472109000] Detected AUTO REFRESH command on DDR2 bus.
 [1472109000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1476735000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1476735000] Detected AUTO REFRESH command on DDR2 bus.
+[1481361000] Detected AUTO REFRESH command on DDR2 bus.
 [1481361000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1485987000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1485987000] Detected AUTO REFRESH command on DDR2 bus.
+[1490613000] Detected AUTO REFRESH command on DDR2 bus.
 [1490613000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1495239000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1495239000] Detected AUTO REFRESH command on DDR2 bus.
+[1499865000] Detected AUTO REFRESH command on DDR2 bus.
 [1499865000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1504491000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1504491000] Detected AUTO REFRESH command on DDR2 bus.
 [1507709000] BLW/BLR sequence OK: base_addr=864 SZ=0 (nwords=8)
 [1507911000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
 [1507913000] CTRL: ENQUEUE CMD addr=392 cmd=100 sz=0
@@ -2292,6 +2616,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1507951000] MEM: WRITE cmd received rank=0 bank=1 row=0 col=96
 [1507991000] MEM: WRITE burst committed base_idx=32 data=0x2fa4
 [1508017000] DQS_MON: window complete, edge_cnt=7.
+[1509117000] Detected AUTO REFRESH command on DDR2 bus.
 [1509117000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1509167000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
 [1509169000] CTRL: ENQUEUE CMD addr=392 cmd=11 sz=0
@@ -2311,12 +2636,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1509411000] MEM: READ beat=6 rank=0 idx=38 data=0x2fa4
 [1509413000] MEM: READ beat=7 rank=0 idx=39 data=0x2fa4
 [1513743000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1513743000] Detected AUTO REFRESH command on DDR2 bus.
+[1518369000] Detected AUTO REFRESH command on DDR2 bus.
 [1518369000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1522995000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1522995000] Detected AUTO REFRESH command on DDR2 bus.
+[1527621000] Detected AUTO REFRESH command on DDR2 bus.
 [1527621000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1532247000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1532247000] Detected AUTO REFRESH command on DDR2 bus.
+[1536873000] Detected AUTO REFRESH command on DDR2 bus.
 [1536873000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1541499000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1541499000] Detected AUTO REFRESH command on DDR2 bus.
+[1546125000] Detected AUTO REFRESH command on DDR2 bus.
 [1546125000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1549171000] BLW/BLR sequence OK: base_addr=392 SZ=0 (nwords=8)
 [1549373000] CTRL: ENQUEUE CMD addr=664 cmd=100 sz=0
@@ -2349,14 +2682,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1550727000] MEM: READ beat=6 rank=0 idx=102 data=0x2fa4
 [1550729000] MEM: READ beat=7 rank=0 idx=103 data=0x2fa4
 [1550751000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1550751000] Detected AUTO REFRESH command on DDR2 bus.
+[1555377000] Detected AUTO REFRESH command on DDR2 bus.
 [1555377000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1560003000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1560003000] Detected AUTO REFRESH command on DDR2 bus.
+[1564629000] Detected AUTO REFRESH command on DDR2 bus.
 [1564629000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1569255000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1569255000] Detected AUTO REFRESH command on DDR2 bus.
+[1573881000] Detected AUTO REFRESH command on DDR2 bus.
 [1573881000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1578507000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1578507000] Detected AUTO REFRESH command on DDR2 bus.
+[1583133000] Detected AUTO REFRESH command on DDR2 bus.
 [1583133000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1587759000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1587759000] Detected AUTO REFRESH command on DDR2 bus.
 [1590633000] BLW/BLR sequence OK: base_addr=664 SZ=0 (nwords=8)
 [1590835000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
 [1590837000] CTRL: ENQUEUE CMD addr=905 cmd=10 sz=0
@@ -2407,6 +2749,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1591577000] MEM: WRITE cmd received rank=0 bank=2 row=0 col=56
 [1591617000] MEM: WRITE burst committed base_idx=88 data=0x2ca6
 [1591643000] DQS_MON: window complete, edge_cnt=7.
+[1592385000] Detected AUTO REFRESH command on DDR2 bus.
 [1592385000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1592729000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
 [1592731000] CTRL: ENQUEUE CMD addr=208 cmd=11 sz=1
@@ -2436,12 +2779,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1592827000] MEM: READ beat=6 rank=0 idx=86 data=0x2ca6
 [1592829000] MEM: READ beat=7 rank=0 idx=87 data=0x2ca6
 [1597011000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1597011000] Detected AUTO REFRESH command on DDR2 bus.
+[1601637000] Detected AUTO REFRESH command on DDR2 bus.
 [1601637000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1606263000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1606263000] Detected AUTO REFRESH command on DDR2 bus.
+[1610889000] Detected AUTO REFRESH command on DDR2 bus.
 [1610889000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1615515000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1615515000] Detected AUTO REFRESH command on DDR2 bus.
+[1620141000] Detected AUTO REFRESH command on DDR2 bus.
 [1620141000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1624767000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1624767000] Detected AUTO REFRESH command on DDR2 bus.
+[1629393000] Detected AUTO REFRESH command on DDR2 bus.
 [1629393000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1632747000] BLW/BLR sequence OK: base_addr=208 SZ=1 (nwords=16)
 [1632949000] CTRL: ENQUEUE CMD addr=780 cmd=10 sz=0
@@ -2494,6 +2845,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1633731000] MEM: WRITE burst committed base_idx=64 data=0xa9a6
 [1633757000] DQS_MON: window complete, edge_cnt=7.
 [1634019000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1634019000] Detected AUTO REFRESH command on DDR2 bus.
 [1634843000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [1634845000] CTRL: ENQUEUE CMD addr=624 cmd=11 sz=1
 [1634845000] BLR issued: base_addr=624 SZ=1 (expect 16 beats)
@@ -2521,14 +2873,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1634939000] MEM: READ beat=5 rank=0 idx=93 data=0xa9a6
 [1634941000] MEM: READ beat=6 rank=0 idx=94 data=0xa9a6
 [1634943000] MEM: READ beat=7 rank=0 idx=95 data=0xa9a6
+[1638645000] Detected AUTO REFRESH command on DDR2 bus.
 [1638645000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1643271000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1643271000] Detected AUTO REFRESH command on DDR2 bus.
+[1647897000] Detected AUTO REFRESH command on DDR2 bus.
 [1647897000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1652523000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1652523000] Detected AUTO REFRESH command on DDR2 bus.
+[1657149000] Detected AUTO REFRESH command on DDR2 bus.
 [1657149000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1661775000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1661775000] Detected AUTO REFRESH command on DDR2 bus.
+[1666401000] Detected AUTO REFRESH command on DDR2 bus.
 [1666401000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1671027000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1671027000] Detected AUTO REFRESH command on DDR2 bus.
 [1674861000] BLW/BLR sequence OK: base_addr=624 SZ=1 (nwords=16)
 [1675063000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
 [1675065000] CTRL: ENQUEUE CMD addr=120 cmd=100 sz=0
@@ -2542,6 +2902,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1675103000] MEM: WRITE cmd received rank=0 bank=3 row=0 col=24
 [1675143000] MEM: WRITE burst committed base_idx=120 data=0xa9a6
 [1675169000] DQS_MON: window complete, edge_cnt=7.
+[1675653000] Detected AUTO REFRESH command on DDR2 bus.
 [1675653000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1676319000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
 [1676321000] CTRL: ENQUEUE CMD addr=120 cmd=11 sz=0
@@ -2561,12 +2922,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1676417000] MEM: READ beat=6 rank=0 idx=126 data=0xa9a6
 [1676419000] MEM: READ beat=7 rank=0 idx=127 data=0xa9a6
 [1680279000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1680279000] Detected AUTO REFRESH command on DDR2 bus.
+[1684905000] Detected AUTO REFRESH command on DDR2 bus.
 [1684905000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1689531000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1689531000] Detected AUTO REFRESH command on DDR2 bus.
+[1694157000] Detected AUTO REFRESH command on DDR2 bus.
 [1694157000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1698783000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1698783000] Detected AUTO REFRESH command on DDR2 bus.
+[1703409000] Detected AUTO REFRESH command on DDR2 bus.
 [1703409000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1708035000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1708035000] Detected AUTO REFRESH command on DDR2 bus.
+[1712661000] Detected AUTO REFRESH command on DDR2 bus.
 [1712661000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1716323000] BLW/BLR sequence OK: base_addr=120 SZ=0 (nwords=8)
 [1716523000] Randomized traffic phase completed.
@@ -2574,6 +2943,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1716525000] Asserting SELFREF_REQ...
 [1720527000] Asserting SELFREF_EXIT...
 [1720731000] PROT: SREF_EXIT_WAIT complete, transitioning to IDLE (selfref_active=0, pdown_active_o=0, need_refresh=0, emptyBar_cmdFIFO_i=0)
+[1720757000] Detected AUTO REFRESH command on DDR2 bus.
 [1720757000] REF_MON: AUTO REFRESH interval = 2057 cycles.
 [1724549000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
 [1724551000] CTRL: ENQUEUE CMD addr=40 cmd=10 sz=0
@@ -2621,6 +2991,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1725235000] MEM: WRITE burst committed base_idx=48 data=0x8da5
 [1725261000] DQS_MON: window complete, edge_cnt=7.
 [1725383000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1725383000] Detected AUTO REFRESH command on DDR2 bus.
 [1726411000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
 [1726413000] CTRL: ENQUEUE CMD addr=72 cmd=11 sz=0
 [1726413000] BLR issued: base_addr=72 SZ=0 (expect 8 beats)
@@ -2648,19 +3019,28 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1726507000] MEM: READ beat=5 rank=0 idx=53 data=0x8da5
 [1726509000] MEM: READ beat=6 rank=0 idx=54 data=0x8da5
 [1726511000] MEM: READ beat=7 rank=0 idx=55 data=0x8da5
+[1730009000] Detected AUTO REFRESH command on DDR2 bus.
 [1730009000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1734635000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1734635000] Detected AUTO REFRESH command on DDR2 bus.
+[1739261000] Detected AUTO REFRESH command on DDR2 bus.
 [1739261000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1743887000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1743887000] Detected AUTO REFRESH command on DDR2 bus.
+[1748513000] Detected AUTO REFRESH command on DDR2 bus.
 [1748513000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1753139000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1753139000] Detected AUTO REFRESH command on DDR2 bus.
+[1757765000] Detected AUTO REFRESH command on DDR2 bus.
 [1757765000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1762391000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1762391000] Detected AUTO REFRESH command on DDR2 bus.
 [1766429000] BLW/BLR sequence OK: base_addr=72 SZ=0 (nwords=8)
 [1766631000] Asserting PWRDOWN_REQ...
 [1770633000] Asserting PWRDOWN_EXIT...
 [1770701000] PROT: PD_EXIT_WAIT complete, transitioning to IDLE (selfref_active=0, pdown_active_o=0, need_refresh=0, emptyBar_cmdFIFO_i=0)
 [1770727000] REF_MON: AUTO REFRESH interval = 2176 cycles.
+[1770727000] Detected AUTO REFRESH command on DDR2 bus.
 [1772655000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
 [1772657000] CTRL: ENQUEUE CMD addr=96 cmd=10 sz=0
 [1772657000] SCW issued: addr=96 data=0xc5a5
@@ -2737,18 +3117,29 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1774645000] MEM: READ beat=5 rank=0 idx=5 data=0xc5a5
 [1774647000] MEM: READ beat=6 rank=0 idx=6 data=0xc5a5
 [1774649000] MEM: READ beat=7 rank=0 idx=7 data=0xc5a5
+[1775353000] Detected AUTO REFRESH command on DDR2 bus.
 [1775353000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1779979000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1779979000] Detected AUTO REFRESH command on DDR2 bus.
+[1784605000] Detected AUTO REFRESH command on DDR2 bus.
 [1784605000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1789231000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1789231000] Detected AUTO REFRESH command on DDR2 bus.
+[1793857000] Detected AUTO REFRESH command on DDR2 bus.
 [1793857000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1798483000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1798483000] Detected AUTO REFRESH command on DDR2 bus.
+[1803109000] Detected AUTO REFRESH command on DDR2 bus.
 [1803109000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1807735000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1807735000] Detected AUTO REFRESH command on DDR2 bus.
+[1812361000] Detected AUTO REFRESH command on DDR2 bus.
 [1812361000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1814567000] BLW/BLR sequence OK: base_addr=128 SZ=1 (nwords=16)
 [1814767000] Starting automatic self-refresh idle test (core)...
 [1816987000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1816987000] Detected AUTO REFRESH command on DDR2 bus.
+[1821613000] Detected AUTO REFRESH command on DDR2 bus.
 [1821613000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1822767000] PASS: Automatic self-refresh observed during extended idle window.
 [1822767000] Starting runtime DLL mode control test (core)...
@@ -2827,14 +3218,23 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1824733000] MEM: READ beat=6 rank=0 idx=22 data=0x05a5
 [1824735000] MEM: READ beat=7 rank=0 idx=23 data=0x05a5
 [1826239000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1826239000] Detected AUTO REFRESH command on DDR2 bus.
+[1830865000] Detected AUTO REFRESH command on DDR2 bus.
 [1830865000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1835491000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1835491000] Detected AUTO REFRESH command on DDR2 bus.
+[1840117000] Detected AUTO REFRESH command on DDR2 bus.
 [1840117000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1844743000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1844743000] Detected AUTO REFRESH command on DDR2 bus.
+[1849369000] Detected AUTO REFRESH command on DDR2 bus.
 [1849369000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1853995000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1853995000] Detected AUTO REFRESH command on DDR2 bus.
+[1858621000] Detected AUTO REFRESH command on DDR2 bus.
 [1858621000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1863247000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1863247000] Detected AUTO REFRESH command on DDR2 bus.
 [1864653000] BLW/BLR sequence OK: base_addr=192 SZ=0 (nwords=8)
 [1864853000] Starting multi-rank bus-level exercise (rank 0 vs rank 1)...
 [1864855000] CTRL: ENQUEUE CMD addr=32 cmd=10 sz=0
@@ -2984,6 +3384,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1867109000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=64
 [1867149000] MEM: WRITE burst committed base_idx=0 data=0x25a5
 [1867175000] DQS_MON: window complete, edge_cnt=7.
+[1867873000] Detected AUTO REFRESH command on DDR2 bus.
 [1867873000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1868325000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
 [1868327000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
@@ -3043,12 +3444,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1868423000] MEM: READ beat=6 rank=0 idx=6 data=0x25a5
 [1868425000] MEM: READ beat=7 rank=0 idx=7 data=0x25a5
 [1872499000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1872499000] Detected AUTO REFRESH command on DDR2 bus.
+[1877125000] Detected AUTO REFRESH command on DDR2 bus.
 [1877125000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1881751000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1881751000] Detected AUTO REFRESH command on DDR2 bus.
+[1886377000] Detected AUTO REFRESH command on DDR2 bus.
 [1886377000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1891003000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1891003000] Detected AUTO REFRESH command on DDR2 bus.
+[1895629000] Detected AUTO REFRESH command on DDR2 bus.
 [1895629000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1900255000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1900255000] Detected AUTO REFRESH command on DDR2 bus.
+[1904881000] Detected AUTO REFRESH command on DDR2 bus.
 [1904881000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1908373000] BLW/BLR sequence OK: base_addr=256 SZ=0 (nwords=8)
 [1908575000] CTRL: ENQUEUE CMD addr=256 cmd=100 sz=0
@@ -3064,6 +3473,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1908655000] MEM: WRITE burst committed base_idx=0 data=0x25a5
 [1908681000] DQS_MON: window complete, edge_cnt=7.
 [1909507000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1909507000] Detected AUTO REFRESH command on DDR2 bus.
 [1909831000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
 [1909833000] CTRL: ENQUEUE CMD addr=256 cmd=11 sz=0
 [1909833000] BLR issued: base_addr=256 SZ=0 (expect 8 beats)
@@ -3081,14 +3491,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1909927000] MEM: READ beat=5 rank=0 idx=5 data=0x25a5
 [1909929000] MEM: READ beat=6 rank=0 idx=6 data=0x25a5
 [1909931000] MEM: READ beat=7 rank=0 idx=7 data=0x25a5
+[1914133000] Detected AUTO REFRESH command on DDR2 bus.
 [1914133000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1918759000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1918759000] Detected AUTO REFRESH command on DDR2 bus.
+[1923385000] Detected AUTO REFRESH command on DDR2 bus.
 [1923385000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1928011000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1928011000] Detected AUTO REFRESH command on DDR2 bus.
+[1932637000] Detected AUTO REFRESH command on DDR2 bus.
 [1932637000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1937263000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1937263000] Detected AUTO REFRESH command on DDR2 bus.
+[1941889000] Detected AUTO REFRESH command on DDR2 bus.
 [1941889000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1946515000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1946515000] Detected AUTO REFRESH command on DDR2 bus.
 [1949835000] BLW/BLR sequence OK: base_addr=256 SZ=0 (nwords=8)
 [1950037000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=1
 [1950039000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=1
@@ -3106,6 +3524,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1950173000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=104
 [1950213000] MEM: WRITE burst committed base_idx=8 data=0x25a5
 [1950239000] DQS_MON: window complete, edge_cnt=7.
+[1951141000] Detected AUTO REFRESH command on DDR2 bus.
 [1951141000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1951325000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=1
 [1951327000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=1
@@ -3125,12 +3544,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1951435000] MEM: READ beat=6 rank=0 idx=6 data=0x25a5
 [1951437000] MEM: READ beat=7 rank=0 idx=7 data=0x25a5
 [1955767000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1955767000] Detected AUTO REFRESH command on DDR2 bus.
+[1960393000] Detected AUTO REFRESH command on DDR2 bus.
 [1960393000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1965019000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1965019000] Detected AUTO REFRESH command on DDR2 bus.
+[1969645000] Detected AUTO REFRESH command on DDR2 bus.
 [1969645000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1974271000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1974271000] Detected AUTO REFRESH command on DDR2 bus.
+[1978897000] Detected AUTO REFRESH command on DDR2 bus.
 [1978897000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1983523000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1983523000] Detected AUTO REFRESH command on DDR2 bus.
+[1988149000] Detected AUTO REFRESH command on DDR2 bus.
 [1988149000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [1991329000] BLW/BLR sequence OK: base_addr=384 SZ=1 (nwords=16)
 [1991531000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=1
@@ -3150,6 +3577,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1991707000] MEM: WRITE burst committed base_idx=8 data=0x25a5
 [1991733000] DQS_MON: window complete, edge_cnt=7.
 [1992775000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[1992775000] Detected AUTO REFRESH command on DDR2 bus.
 [1992819000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=1
 [1992821000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=1
 [1992821000] BLR issued: base_addr=384 SZ=1 (expect 16 beats)
@@ -3167,15 +3595,24 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [1993067000] MEM: READ beat=5 rank=0 idx=5 data=0x25a5
 [1993069000] MEM: READ beat=6 rank=0 idx=6 data=0x25a5
 [1993071000] MEM: READ beat=7 rank=0 idx=7 data=0x25a5
+[1997401000] Detected AUTO REFRESH command on DDR2 bus.
 [1997401000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2002027000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2002027000] Detected AUTO REFRESH command on DDR2 bus.
+[2006653000] Detected AUTO REFRESH command on DDR2 bus.
 [2006653000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2011279000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2011279000] Detected AUTO REFRESH command on DDR2 bus.
+[2015905000] Detected AUTO REFRESH command on DDR2 bus.
 [2015905000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2020531000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2020531000] Detected AUTO REFRESH command on DDR2 bus.
+[2025157000] Detected AUTO REFRESH command on DDR2 bus.
 [2025157000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2029783000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2029783000] Detected AUTO REFRESH command on DDR2 bus.
 [2032823000] BLW/BLR sequence OK: base_addr=384 SZ=1 (nwords=16)
+[2034409000] Detected AUTO REFRESH command on DDR2 bus.
 [2034409000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2037023000] Starting tWTR / tRTW turnaround stress...
 [2037025000] CTRL: ENQUEUE CMD addr=100 cmd=10 sz=0
@@ -3293,6 +3730,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [2038769000] MEM: WRITE burst committed base_idx=0 data=0xa5a4
 [2038795000] DQS_MON: window complete, edge_cnt=7.
 [2039035000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2039035000] Detected AUTO REFRESH command on DDR2 bus.
 [2039127000] CTRL: ENQUEUE CMD addr=256 cmd=1 sz=0
 [2039129000] CTRL: ENQUEUE CMD addr=256 cmd=1 sz=0
 [2039129000] SCR issued: addr=256
@@ -3599,6 +4037,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [2043553000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=68
 [2043593000] MEM: WRITE burst committed base_idx=4 data=0xa1a4
 [2043619000] DQS_MON: window complete, edge_cnt=7.
+[2043661000] Detected AUTO REFRESH command on DDR2 bus.
 [2043661000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2043951000] CTRL: ENQUEUE CMD addr=260 cmd=1 sz=0
 [2043953000] CTRL: ENQUEUE CMD addr=260 cmd=1 sz=0
@@ -3843,6 +4282,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [2047455000] MEM: WRITE burst committed base_idx=8 data=0xa2a4
 [2047481000] DQS_MON: window complete, edge_cnt=7.
 [2048287000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2048287000] Detected AUTO REFRESH command on DDR2 bus.
 [2048567000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=1
 [2048569000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=1
 [2048569000] BLR issued: base_addr=384 SZ=1 (expect 16 beats)
@@ -4041,14 +4481,22 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [2048761000] BLR beat (bus mode) observed: RADDR=270 DOUT=0xzzzz
 [2048763000] BLR beat (bus mode) observed: RADDR=270 DOUT=0xzzzz
 [2048763000] READ observed: RADDR=270 DOUT=0xzzzz
+[2052913000] Detected AUTO REFRESH command on DDR2 bus.
 [2052913000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2057539000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2057539000] Detected AUTO REFRESH command on DDR2 bus.
+[2062165000] Detected AUTO REFRESH command on DDR2 bus.
 [2062165000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2066791000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2066791000] Detected AUTO REFRESH command on DDR2 bus.
+[2071417000] Detected AUTO REFRESH command on DDR2 bus.
 [2071417000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2076043000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2076043000] Detected AUTO REFRESH command on DDR2 bus.
+[2080669000] Detected AUTO REFRESH command on DDR2 bus.
 [2080669000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2085295000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2085295000] Detected AUTO REFRESH command on DDR2 bus.
 [2088765000] BLW/BLR sequence OK: base_addr=384 SZ=1 (nwords=16)
 [2088967000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=1
 [2088969000] CTRL: ENQUEUE CMD addr=384 cmd=100 sz=1
@@ -4066,6 +4514,7 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [2089103000] MEM: WRITE cmd received rank=0 bank=0 row=0 col=104
 [2089143000] MEM: WRITE burst committed base_idx=8 data=0xa2a4
 [2089169000] DQS_MON: window complete, edge_cnt=7.
+[2089921000] Detected AUTO REFRESH command on DDR2 bus.
 [2089921000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2090255000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=1
 [2090257000] CTRL: ENQUEUE CMD addr=384 cmd=11 sz=1
@@ -4085,12 +4534,20 @@ VCD info: dumpfile tb_ddr2_controller.iverilog.vcd opened for output.
 [2090353000] MEM: READ beat=6 rank=0 idx=6 data=0xa2a4
 [2090355000] MEM: READ beat=7 rank=0 idx=7 data=0xa2a4
 [2094547000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2094547000] Detected AUTO REFRESH command on DDR2 bus.
+[2099173000] Detected AUTO REFRESH command on DDR2 bus.
 [2099173000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2103799000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2103799000] Detected AUTO REFRESH command on DDR2 bus.
+[2108425000] Detected AUTO REFRESH command on DDR2 bus.
 [2108425000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2113051000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2113051000] Detected AUTO REFRESH command on DDR2 bus.
+[2117677000] Detected AUTO REFRESH command on DDR2 bus.
 [2117677000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2122303000] REF_MON: AUTO REFRESH interval = 2313 cycles.
+[2122303000] Detected AUTO REFRESH command on DDR2 bus.
+[2126929000] Detected AUTO REFRESH command on DDR2 bus.
 [2126929000] REF_MON: AUTO REFRESH interval = 2313 cycles.
 [2130259000] BLW/BLR sequence OK: base_addr=384 SZ=1 (nwords=16)
 ----------------------------------------------------------------

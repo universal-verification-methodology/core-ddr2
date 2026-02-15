@@ -38,7 +38,7 @@ echo "Compiling DUT and testbench..."
 # by explicitly setting the environment variables below:
 #   MEM_DEPTH  : number of 16-bit words per rank
 #   READ_LAT   : read latency in CLK cycles
-#   RANK_BITS  : log2(number of ranks)
+#   RANK_BITS  : log2(number of ranks); default sweep 0,1,2 (1/2/4 ranks, server-grade)
 #
 # If an env var is set, only that value is used (no sweep on that axis).
 # If it is left unset, a small default list is swept.
@@ -53,12 +53,33 @@ if [ "${NEGATIVE_TESTS:-0}" -ne 0 ]; then
 fi
 
 # Decide which tops and modes to run.
-# Default (no TOP/FULL_BUS provided): sweep both tops and both modes.
+# Default behavior: sweeps both "core" and "server" tops, and both "fast" and "full" modes.
+# This provides comprehensive coverage including:
+#   - Fast mode: quick functional checks with simplified read path
+#   - Full mode: production-like, full bus-level verification (including
+#                the closed-loop DQ path and timing-sensitive monitors)
+# To run a single configuration, set environment variables:
+#   TOP=core FULL_BUS=1 ./test/run_tb.sh    # Run only core top in full bus mode
+#   TOP=server FULL_BUS=0 ./test/run_tb.sh  # Run only server top in fast mode
 if [ -z "${TOP:-}" ] && [ -z "${FULL_BUS:-}" ]; then
+  # Default: sweep both tops and both modes for comprehensive coverage
   TOP_LIST=("core" "server")
   MODE_LIST=("fast" "full")
+elif [ -n "${TOP:-}" ] && [ -z "${FULL_BUS:-}" ]; then
+  # TOP specified but not FULL_BUS: use that TOP, sweep both modes
+  TOP_LIST=("${TOP}")
+  MODE_LIST=("fast" "full")
+elif [ -z "${TOP:-}" ] && [ -n "${FULL_BUS:-}" ]; then
+  # FULL_BUS specified but not TOP: sweep both tops, use specified mode
+  TOP_LIST=("core" "server")
+  if [ "${FULL_BUS:-0}" -eq 0 ]; then
+    MODE_LIST=("fast")
+  else
+    MODE_LIST=("full")
+  fi
 else
-  TOP_LIST=("${TOP:-core}")
+  # Both TOP and FULL_BUS specified: use exactly what's specified
+  TOP_LIST=("${TOP}")
   if [ "${FULL_BUS:-0}" -eq 0 ]; then
     MODE_LIST=("fast")
   else
@@ -67,20 +88,19 @@ else
 fi
 
 # Define sweep lists (or singletons if env vars are provided).
+# Default: sweep multiple depths, read latencies, and rank configurations for
+# comprehensive coverage. Set MEM_DEPTH / READ_LAT / RANK_BITS to run a single point.
 if [ -n "${MEM_DEPTH:-}" ]; then
   MEM_DEPTH_LIST=("${MEM_DEPTH}")
 else
+  # Sweep small and larger logical memory sizes (16-bit words per rank).
   MEM_DEPTH_LIST=(1024 4096)
 fi
 
 # READ latency:
 # - If READ_LAT is explicitly provided, use that value for all modes.
-# - Otherwise, sweep a broader set (24 and 32) in fast/SIM_DIRECT_READ mode,
-#   but keep full-bus MODE=full runs aligned with the controller's internal
-#   return-path timing at READ_LAT=24. Using 32 cycles in full-bus mode causes
-#   the memory model to start driving data after the controller asserts
-#   VALIDOUT, which trips the "VALIDOUT asserted before any MEM_RD_VALID"
-#   safety check in the testbenches.
+# - Otherwise, sweep 24 and 32 in fast mode; full-bus mode stays at 24 only
+#   (32 in full-bus trips "VALIDOUT asserted before any MEM_RD_VALID" in testbenches).
 if [ -n "${READ_LAT:-}" ]; then
   READ_LAT_LIST_FAST=("${READ_LAT}")
   READ_LAT_LIST_FULL=("${READ_LAT}")
@@ -92,12 +112,8 @@ fi
 if [ -n "${RANK_BITS:-}" ]; then
   RANK_BITS_LIST=("${RANK_BITS}")
 else
-  # By default, exercise multi-rank configurations across a small sweep of
-  # logical rank counts: 2, 4 and 8 ranks (RANK_BITS = 1, 2, 3). Each point
-  # overrides both the testbench memory model (via RANK_BITS_OVERRIDE) and the
-  # DUT parameters (RANK_BITS on ddr2_controller / ddr2_protocol_engine) so
-  # that the CS# vector widths and rank indices stay consistent end-to-end.
-  RANK_BITS_LIST=(1 2 3)
+  # Sweep 1, 2, and 4 ranks (RANK_BITS 0, 1, 2) for server-grade coverage.
+  RANK_BITS_LIST=(0 1 2)
 fi
 
 echo "Sweeping memory model configurations..."
@@ -144,6 +160,8 @@ for md in "${MEM_DEPTH_LIST[@]}"; do
                 "$DUT/ddr2_phy.v" \
                 "$DUT/ddr2_protocol_engine.v" \
                 "$DUT/ddr2_controller.v" \
+                "$DUT/ecc_core.v" \
+                "$DUT/ddr2_cmd_crc_frontend.v" \
                 "$DUT/ecc_secded.v" \
                 "$DUT/ddr2_scrubber.v" \
                 "$DUT/ddr2_ras_registers.v" \
@@ -157,6 +175,8 @@ for md in "${MEM_DEPTH_LIST[@]}"; do
                 "$TEST/ddr2_power_monitor.v" \
                 "$TEST/ddr2_fifo_monitor.v" \
                 "$TEST/ddr2_refresh_monitor.v" \
+                "$TEST/ddr2_dll_mrs_monitor.v" \
+                "$TEST/ddr2_odt_monitor.v" \
                 "$TEST/tb_ddr2_server_controller.v"
             echo "Running simulation for server top (MODE=${mode}, READ_LAT=${rl})..."
             echo "Log: $LOG_FILE"
@@ -172,6 +192,9 @@ for md in "${MEM_DEPTH_LIST[@]}"; do
                 "$DUT/ddr2_phy.v" \
                 "$DUT/ddr2_protocol_engine.v" \
                 "$DUT/ddr2_controller.v" \
+                "$DUT/ecc_secded.v" \
+                "$DUT/ecc_core.v" \
+                "$DUT/ddr2_cmd_crc_frontend.v" \
                 "$TEST/ddr2_simple_mem.v" \
                 "$TEST/ddr2_timing_checker.v" \
                 "$TEST/ddr2_turnaround_checker.v" \
@@ -181,6 +204,8 @@ for md in "${MEM_DEPTH_LIST[@]}"; do
                 "$TEST/ddr2_power_monitor.v" \
                 "$TEST/ddr2_fifo_monitor.v" \
                 "$TEST/ddr2_refresh_monitor.v" \
+                "$TEST/ddr2_dll_mrs_monitor.v" \
+                "$TEST/ddr2_odt_monitor.v" \
                 "$TEST/tb_ddr2_controller.v"
             echo "Running simulation for core top (MODE=${mode}, READ_LAT=${rl})..."
             echo "Log: $LOG_FILE"

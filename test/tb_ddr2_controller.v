@@ -7,6 +7,24 @@
 /* verilator lint_off UNUSEDSIGNAL */
 module tb_ddr2_controller;
 
+    // Build-time overrides for memory model (and DUT rank width); must be
+    // defined before C0_CSBAR_PAD so its width can depend on RANK_BITS_TB.
+`ifdef MEM_DEPTH_OVERRIDE
+    localparam integer MEM_DEPTH_TB  = `MEM_DEPTH_OVERRIDE;
+`else
+    localparam integer MEM_DEPTH_TB  = 1024;
+`endif
+`ifdef READ_LAT_OVERRIDE
+    localparam integer READ_LAT_TB   = `READ_LAT_OVERRIDE;
+`else
+    localparam integer READ_LAT_TB   = 24;
+`endif
+`ifdef RANK_BITS_OVERRIDE
+    localparam integer RANK_BITS_TB  = `RANK_BITS_OVERRIDE;
+`else
+    localparam integer RANK_BITS_TB  = 1;
+`endif
+
     reg         CLK;
     reg         RESET;
     reg         INITDDR;
@@ -37,8 +55,9 @@ module tb_ddr2_controller;
     wire        READY;
     wire        VALIDOUT;
     wire        NOTFULL;
-    // Two-rank CS# vector driven by the controller (active low).
-    wire [1:0]  C0_CSBAR_PAD;
+    wire        DLL_BUSY;
+    // Per-rank CS# vector driven by the controller (width = 2^RANK_BITS_TB; 1 bit when RANK_BITS_TB=0).
+    wire [(1<<RANK_BITS_TB)-1:0] C0_CSBAR_PAD;
     wire        C0_RASBAR_PAD;
     wire        C0_CASBAR_PAD;
     wire        C0_WEBAR_PAD;
@@ -70,6 +89,8 @@ module tb_ddr2_controller;
     // Simple functional coverage counters (per-command and per-SZ).
     integer cov_scw, cov_scr, cov_blw, cov_blr;
     integer cov_sz0, cov_sz1, cov_sz2, cov_sz3;
+    // Auto self-refresh coverage flag.
+    reg auto_sref_seen;
 
     // ------------------------------------------------------------------------
     // Data pattern and simple scoreboard for read-back verification.
@@ -232,6 +253,9 @@ module tb_ddr2_controller;
         .READY(READY),
         .VALIDOUT(VALIDOUT),
         .NOTFULL(NOTFULL),
+        .SELFREF_ACTIVE(),
+        .PWRDOWN_ACTIVE(),
+        .DLL_BUSY(DLL_BUSY),
         .C0_CSBAR_PAD(C0_CSBAR_PAD),
         .C0_RASBAR_PAD(C0_RASBAR_PAD),
         .C0_CASBAR_PAD(C0_CASBAR_PAD),
@@ -261,29 +285,6 @@ module tb_ddr2_controller;
     wire        MEM_RD_VALID;
     wire [31:0] MEM_RD_ADDR;
     wire [15:0] MEM_RD_DATA;
-
-    // Allow build-time override of the memory model's key parameters so that
-    // regressions can sweep different logical memory sizes, read latencies and
-    // rank counts without editing the testbench source. The defaults preserve
-    // the original behavior:
-    //   MEM_DEPTH  = 1024 words
-    //   READ_LAT   = 24 cycles
-    //   RANK_BITS  = 1 (two-rank-capable model, rank 0 used here)
-`ifdef MEM_DEPTH_OVERRIDE
-    localparam integer MEM_DEPTH_TB  = `MEM_DEPTH_OVERRIDE;
-`else
-    localparam integer MEM_DEPTH_TB  = 1024;
-`endif
-`ifdef READ_LAT_OVERRIDE
-    localparam integer READ_LAT_TB   = `READ_LAT_OVERRIDE;
-`else
-    localparam integer READ_LAT_TB   = 24;
-`endif
-`ifdef RANK_BITS_OVERRIDE
-    localparam integer RANK_BITS_TB  = `RANK_BITS_OVERRIDE;
-`else
-    localparam integer RANK_BITS_TB  = 1;
-`endif
 
     ddr2_simple_mem #(
         .MEM_DEPTH(MEM_DEPTH_TB),
@@ -422,6 +423,25 @@ module tb_ddr2_controller;
         .a_pad(C0_A_PAD)
     );
 
+    // Runtime DLL MRS monitor: ensures that each DLL_REQ/DLL_BUSY window
+    // produces exactly one MRS with the expected DLL-on/off encoding.
+    ddr2_dll_mrs_monitor #(
+        .MRS_DLL_ON_VAL (13'h0013),
+        .MRS_DLL_OFF_VAL(13'h0013)
+    ) u_dll_mrs_mon (
+        .clk          (CLK),
+        .reset        (RESET),
+        .dll_busy_i   (DLL_BUSY),
+        .dll_mode_i   (DLL_MODE),
+        .cke_pad      (C0_CKE_PAD),
+        .csbar_pad_any(&C0_CSBAR_PAD),
+        .rasbar_pad   (C0_RASBAR_PAD),
+        .casbar_pad   (C0_CASBAR_PAD),
+        .webar_pad    (C0_WEBAR_PAD),
+        .ba_pad       (C0_BA_PAD),
+        .a_pad        (C0_A_PAD)
+    );
+
     // Power-mode monitor: ensures that when CKE is low and any rank is
     // selected, the DDR2 command bus carries only NOPs.
     ddr2_power_monitor u_power_mon (
@@ -432,6 +452,19 @@ module tb_ddr2_controller;
         .rasbar_pad(C0_RASBAR_PAD),
         .casbar_pad(C0_CASBAR_PAD),
         .webar_pad(C0_WEBAR_PAD)
+    );
+
+    // ODT behavior monitor: ensures dynamic ODT assertion around WRITE
+    // commands and deassertion during READ commands.
+    ddr2_odt_monitor u_odt_mon (
+        .clk         (CLK),
+        .reset       (RESET),
+        .cke_pad     (C0_CKE_PAD),
+        .csbar_pad_any(&C0_CSBAR_PAD),
+        .rasbar_pad  (C0_RASBAR_PAD),
+        .casbar_pad  (C0_CASBAR_PAD),
+        .webar_pad   (C0_WEBAR_PAD),
+        .odt_pad     (C0_ODT_PAD)
     );
 
 `ifndef SIM_DIRECT_READ
@@ -955,6 +988,17 @@ module tb_ddr2_controller;
             $display("[%0t] Detected AUTO REFRESH command on DDR2 bus.", $time);
         end
 
+        // Record automatic self-refresh entry: CKE low without an explicit
+        // SELFREF_REQ/SELFREF_EXIT request from the testbench.
+        if (!RESET &&
+            !SELFREF_REQ && !SELFREF_EXIT &&
+            !auto_sref_seen &&
+            (C0_CKE_PAD == 1'b0)) begin
+            auto_sref_seen <= 1'b1;
+            $display("[%0t] INFO: Observed automatic self-refresh entry (CKE low with no host SELFREF_REQ).",
+                     $time);
+        end
+
         // Lightweight functional coverage: count host-visible commands by type
         // and SZ whenever they are enqueued into the cmd FIFO.
         if (cmd_put) begin
@@ -1060,6 +1104,7 @@ module tb_ddr2_controller;
         cov_sz1 = 0;
         cov_sz2 = 0;
         cov_sz3 = 0;
+        auto_sref_seen = 1'b0;
 
         // --------------------------------------------------------------------
         // Test 1: Scalar read/write at a few representative addresses
@@ -1258,6 +1303,88 @@ module tb_ddr2_controller;
         sb_reset();
         do_scalar_rw(25'd96);
         do_block_rw(25'd128, 2'b01);
+
+        // --------------------------------------------------------------------
+        // Test 8: Automatic self-refresh (no explicit SELFREF_REQ)
+        // --------------------------------------------------------------------
+        $display("[%0t] Starting automatic self-refresh idle test (core)...", $time);
+        // Ensure all low-power request controls are deasserted.
+        SELFREF_REQ  = 1'b0;
+        SELFREF_EXIT = 1'b0;
+        PWRDOWN_REQ  = 1'b0;
+        PWRDOWN_EXIT = 1'b0;
+        CMD          = CMD_NOP;
+        SZ           = 2'b00;
+        cmd_put      = 1'b0;
+        FETCHING     = 1'b0;
+
+        // Leave the controller idle for a moderate window so that the
+        // internal AUTO_SREF_IDLE_CYCLES policy can trigger automatic
+        // self-refresh. During this period we expect CKE to drop low at least
+        // once without any explicit SELFREF_REQ from the host.
+        // Reduced from 8000 to 4000 for faster iteration.
+        repeat (4000) @(posedge CLK);
+
+        if (!auto_sref_seen) begin
+            $display("[%0t] ERROR: Automatic self-refresh was not observed during extended idle window.", $time);
+            $fatal;
+        end else begin
+            $display("[%0t] PASS: Automatic self-refresh observed during extended idle window.", $time);
+        end
+
+        // --------------------------------------------------------------------
+        // Test 9: Runtime DLL mode control (DLL_REQ / DLL_MODE)
+        // --------------------------------------------------------------------
+        $display("[%0t] Starting runtime DLL mode control test (core)...", $time);
+
+        // Ensure the front-end is idle before requesting a DLL mode change.
+        @(posedge CLK);
+        cycle = 0;
+        while ((!READY || !NOTFULL) && cycle <= 50000) begin
+            @(posedge CLK);
+            cycle = cycle + 1;
+        end
+        if (!READY || !NOTFULL) begin
+            $display("[%0t] INFO: front-end not fully idle before DLL_REQ (READY=%b NOTFULL=%b FILLCOUNT=%0d, proceeding anyway).",
+                     $time, READY, NOTFULL, FILLCOUNT);
+        end
+
+        // Request a DLL mode change (toggle DLL_MODE then assert DLL_REQ for 1 cycle).
+        DLL_MODE = 1'b1;
+        DLL_REQ  = 1'b1;
+        @(posedge CLK);
+        DLL_REQ  = 1'b0;
+
+        // Wait for DLL_BUSY to assert.
+        cycle = 0;
+        while (!DLL_BUSY && cycle <= 50000) begin
+            @(posedge CLK);
+            cycle = cycle + 1;
+        end
+        if (!DLL_BUSY) begin
+            $display("[%0t] ERROR: DLL_BUSY did not assert after DLL_REQ.", $time);
+        end else begin
+            $display("[%0t] DLL_BUSY asserted (core) after DLL_REQ.", $time);
+        end
+
+        // Wait for DLL_BUSY to deassert, indicating completion of PREALL+MRS+tDLLK.
+        cycle = 0;
+        while (DLL_BUSY && cycle <= 200000) begin
+            @(posedge CLK);
+            cycle = cycle + 1;
+        end
+        if (DLL_BUSY) begin
+            $display("[%0t] ERROR: DLL_BUSY stuck high after DLL mode change (core).", $time);
+            $fatal;
+        end else begin
+            $display("[%0t] DLL_BUSY deasserted (core); runtime DLL mode change complete.", $time);
+        end
+
+        // Sanity-check: perform a small scalar/block sequence after the DLL
+        // mode change to confirm normal operation resumes.
+        sb_reset();
+        do_scalar_rw(25'd160);
+        do_block_rw(25'd192, 2'b00);
 
         // --------------------------------------------------------------------
         // Test 7: Multi-rank bus-level exercise

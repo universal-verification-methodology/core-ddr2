@@ -107,6 +107,7 @@ module ddr2_protocol_engine #(
     output reg  [15:0]  dq_SSTL_o,
     output reg  [1:0]   dm_SSTL_o,
     output reg  [1:0]   dqs_SSTL_o,
+    output reg          odt_o,
     output reg          ts_i_o,
     output reg          ri_i_o,
     // Indicates that a DLL on/off reconfiguration is in progress and that the
@@ -335,6 +336,7 @@ module ddr2_protocol_engine #(
             dqs_SSTL_o <= 2'b00;
             ts_i_o   <= 1'b0;
             ri_i_o   <= 1'b0;
+            odt_o    <= 1'b0;
             addr_reg <= {ADDR_WIDTH{1'b0}};
             cmd_reg  <= NOP;
             sz_reg   <= 2'b00;
@@ -418,6 +420,7 @@ module ddr2_protocol_engine #(
                     rasbar_o <= 1'b1;
                     casbar_o <= 1'b1;
                     webar_o  <= 1'b1;
+                    odt_o   <= 1'b0;
                     // Power-management / DLL entry ordering:
                     //   1) Self-refresh (explicit or auto) has highest priority.
                     //   2) Precharge power-down is next.
@@ -557,6 +560,8 @@ module ddr2_protocol_engine #(
                     rasbar_o <= 1'b1;
                     casbar_o <= 1'b0;
                     webar_o  <= 1'b1;
+                    // ODT deasserted during reads.
+                    odt_o   <= 1'b0;
                     ba_o     <= bank_reg;
                     a_o      <= {3'b0, col_a_bus, 1'b1};  // A10=1 auto precharge
                     $display("[%0t] PROT: ISSUE_READ bank=%0d row=%0d col=%0d cs=%b ras=%b cas=%b we=%b",
@@ -601,6 +606,8 @@ module ddr2_protocol_engine #(
                     rasbar_o <= 1'b1;
                     casbar_o <= 1'b0;
                     webar_o  <= 1'b0;
+                    // Begin asserting ODT in advance of write data window.
+                    odt_o   <= 1'b1;
                     ba_o     <= bank_reg;
                     a_o      <= {3'b0, col_a_bus, 1'b1};  // A10=1 auto precharge
                     state    <= SCWRITE;
@@ -651,6 +658,8 @@ module ddr2_protocol_engine #(
                             state <= BLW_ISSUE;
                         end else
                             state <= IDLE;
+                            // Deassert ODT after write/postamble window.
+                            odt_o <= 1'b0;
                     end
                 end
 
@@ -715,6 +724,7 @@ module ddr2_protocol_engine #(
                     rasbar_o <= 1'b1;
                     casbar_o <= 1'b0;
                     webar_o  <= 1'b0;
+                    odt_o   <= 1'b1;
                     ba_o     <= bank_reg;
                     a_o      <= (blk_cnt == sz_reg)
                                    ? {3'b0, col_with_blk, 1'b1}

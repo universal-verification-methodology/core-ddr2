@@ -99,7 +99,31 @@ module ddr2_controller #(
     localparam CMD_BLW  = 3'b100;
 `endif
 
-    wire [CMD_FIFO_W-1:0] cmd_fifo_in  = {ADDR, CMD, SZ, 3'b000};
+    // Optional CRC/retry front-end: for now this is a pass-through wrapper
+    // around the host-visible command fields. It exists so that future
+    // CRC/checking logic can be inserted without changing the controller's
+    // internal interfaces.
+    wire [2:0]   crc_cmd;
+    wire [1:0]   crc_sz;
+    wire [ADDR_WIDTH-1:0] crc_addr;
+    wire         crc_cmd_put;
+
+    ddr2_cmd_crc_frontend #(
+        .ADDR_WIDTH(ADDR_WIDTH)
+    ) u_cmd_crc_frontend (
+        .clk        (CLK),
+        .reset      (RESET),
+        .host_cmd   (CMD),
+        .host_sz    (SZ),
+        .host_addr  (ADDR),
+        .host_cmd_put(cmd_put),
+        .ctrl_cmd   (crc_cmd),
+        .ctrl_sz    (crc_sz),
+        .ctrl_addr  (crc_addr),
+        .ctrl_cmd_put(crc_cmd_put)
+    );
+
+    wire [CMD_FIFO_W-1:0] cmd_fifo_in  = {crc_addr, crc_cmd, crc_sz, 3'b000};
     wire [CMD_FIFO_W-1:0] cmd_fifo_out;
     wire [ADDR_WIDTH-1:0] addr_cmd;
     wire [2:0]  cmd_cmd;
@@ -139,10 +163,7 @@ module ddr2_controller #(
     wire [1:0]  prot_ba;
     wire [12:0] prot_a;
     wire [1:0]  prot_dm;
-    // ODT is not actively driven by the protocol engine in this design; tie it
-    // off low to avoid undriven-signal warnings while keeping the interface
-    // explicit.
-    wire        prot_odt = 1'b0;
+    wire        prot_odt;
     wire [15:0] prot_dq_o;
     wire [1:0]  prot_dqs_o;
     wire        ts_i, ri_i;
@@ -174,7 +195,7 @@ module ddr2_controller #(
         .clk(CLK),
         .reset(RESET),
         .data_in(cmd_fifo_in),
-        .put(cmd_put && NOTFULL),
+        .put(crc_cmd_put && NOTFULL),
         .get(get_cmdFIFO),
         .data_out(cmd_fifo_out),
         .fillcount(),
@@ -398,6 +419,7 @@ module ddr2_controller #(
         .dq_SSTL_o(prot_dq_o),
         .dm_SSTL_o(prot_dm),
         .dqs_SSTL_o(prot_dqs_o),
+        .odt_o     (prot_odt),
         .ts_i_o(ts_i),
         .ri_i_o(ri_i),
         .selfref_active_o(selfref_active),
